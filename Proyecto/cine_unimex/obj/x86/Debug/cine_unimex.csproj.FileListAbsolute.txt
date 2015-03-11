@@ -1,0 +1,10 @@
+c:\users\beto\documents\visual studio 2010\Projects\cine_unimex\cine_unimex\bin\Debug\cine_unimex.exe
+c:\users\beto\documents\visual studio 2010\Projects\cine_unimex\cine_unimex\bin\Debug\cine_unimex.pdb
+c:\users\beto\documents\visual studio 2010\Projects\cine_unimex\cine_unimex\obj\x86\Debug\unimex.lenguajesv.cine.views.views.LoginScreen.resources
+c:\users\beto\documents\visual studio 2010\Projects\cine_unimex\cine_unimex\obj\x86\Debug\unimex.lenguajesv.cine.views.MainScreen.resources
+c:\users\beto\documents\visual studio 2010\Projects\cine_unimex\cine_unimex\obj\x86\Debug\unimex.lenguajesv.cine.Properties.Resources.resources
+c:\users\beto\documents\visual studio 2010\Projects\cine_unimex\cine_unimex\obj\x86\Debug\cine_unimex.csproj.GenerateResource.Cache
+c:\users\beto\documents\visual studio 2010\Projects\cine_unimex\cine_unimex\obj\x86\Debug\cine_unimex.exe
+c:\users\beto\documents\visual studio 2010\Projects\cine_unimex\cine_unimex\obj\x86\Debug\cine_unimex.pdb
+c:\users\beto\documents\visual studio 2010\Projects\cine_unimex\cine_unimex\obj\x86\Debug\unimex.lenguajesv.cine.views.AcercaDeScreen.resources
+C:\Users\Beto\documents\visual studio 2010\Projects\cine_unimex\cine_unimex\obj\x86\Debug\cine_unimex.csprojResolveAssemblyReference.cache
