@@ -1,4 +1,4 @@
-﻿# Unimex-cinema (PRUEBA)
+﻿# Unimex-cinema (prueba del video) 
 
 Sistema de control de cine para Lenguajes de programación V
 
