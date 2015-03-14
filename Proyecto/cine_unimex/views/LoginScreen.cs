@@ -47,7 +47,7 @@ namespace unimex.lenguajesv.cine.views.views
                 if (usuarioDto != null)
                 {
                     Sesion.addElement("USUARIO", usuarioDto);
-                    MessageBox.Show("Bienvenido " + usuarioDto.NombreUsuario);
+                    MessageBox.Show("Bienvenido " + usuarioDto.Nombre + " " + usuarioDto.ApellidPaterno);
 
                     //Despliega la nueva ventana de la aplicacion
                     MainScreen screen = new MainScreen();
