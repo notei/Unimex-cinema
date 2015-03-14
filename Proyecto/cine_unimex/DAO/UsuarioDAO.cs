@@ -24,7 +24,7 @@ namespace unimex.lenguajesv.cine.DAO
         {
             SqlConnection con = null;
             con = new SqlConnection();
-            con.ConnectionString = "Data Source=192.168.56.101;Initial Catalog=unimex_cinema_db;User ID=sa;Password=12345678";
+            con.ConnectionString = "Data Source=LOCALHOST;Initial Catalog=unimex_cinema_db;Integrated Security=true";
             
             
             con.Open();
@@ -45,7 +45,7 @@ namespace unimex.lenguajesv.cine.DAO
                 usrDto.Nombre = (String)sqlReader["nombre"];
                 usrDto.ApellidPaterno = (String)sqlReader["apellido_paterno"];
                 usrDto.NombreUsuario = (String)sqlReader["nombre_usuario"];
-                usrDto.IdUsuario = (int)sqlReader["id_usuario"];
+                usrDto.IdUsuario = (int)sqlReader["idUsuario"];
             }
 
             return usrDto;
