@@ -1,4 +1,4 @@
-# Unimex-cinema (Esta es mi prueba Ayala Tovar Jessica Aline 2 modifica Alex ) 
+﻿# Unimex-cinema (Esta es mi prueba Ayala Tovar Jessica Aline 2 modifica Alex ) 
 
 Sistema de control de cine para Lenguajes de programación V
 
@@ -10,5 +10,10 @@ Prueba de conexión bilateral.
 
 Jueguen un poco con este archivo antes de comenzar a modificar el código. 
 
+Favor de pasar a firmar este archivo colocando su nombre en la parte inferior
+Este sera su Hello World. 
+
 Saludos Cordiales a todos. 
 
+
+Alejandro Gutiérrez Leguízamo
