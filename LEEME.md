@@ -10,5 +10,9 @@ Jueguen un poco con este archivo antes de comenzar a modificar el código.
 
 Saludos Cordiales a todos. 
 
+<<<<<<< HEAD
 
 Alejandro Gutiérrez Leguízamo
+=======
+Ayala tovar Jessica Aline
+>>>>>>> origin/master
