@@ -1,8 +1,4 @@
-﻿<<<<<<< HEAD
-﻿# Unimex-cinema
-=======
-# Unimex-cinema
->>>>>>> parent of 2e1e4ba... Agrega
+﻿﻿# Unimex-cinema
 
 Sistema de control de cine para Lenguajes de programación V
 
