@@ -1,4 +1,4 @@
-﻿﻿# Unimex-cinema (Esta es mi prueba Ayala Tovar Jessica Aline 2 modifica Alex ) 
+# Unimex-cinema (Esta es mi prueba Ayala Tovar Jessica Aline 2 modifica Alex ) 
 
 Sistema de control de cine para Lenguajes de programación V
 
