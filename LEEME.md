@@ -10,7 +10,7 @@ Jueguen un poco con este archivo antes de comenzar a modificar el código.
 
 Saludos Cordiales a todos. 
 
-Alejandro Gutiérrez Leguízamo
+Alejandro Gutiérrez Leguízamo (Proyecciones) 
 
 Ayala tovar Jessica Aline
 
