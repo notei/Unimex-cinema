@@ -1,4 +1,8 @@
-﻿# Unimex-cinema (Esta es mi prueba Ayala Tovar Jessica Aline ) 
+﻿<<<<<<< HEAD
+﻿# Unimex-cinema (Esta es mi prueba Ayala Tovar Jessica Aline 2 ) 
+=======
+﻿# Unimex-cinema (prueba 2 de video) 
+>>>>>>> origin/master
 
 Sistema de control de cine para Lenguajes de programación V
 
