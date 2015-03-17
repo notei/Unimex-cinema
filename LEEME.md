@@ -1,4 +1,8 @@
+﻿<<<<<<< HEAD
 ﻿# Unimex-cinema
+=======
+# Unimex-cinema
+>>>>>>> parent of 2e1e4ba... Agrega
 
 Sistema de control de cine para Lenguajes de programación V
 
@@ -17,3 +21,5 @@ Ayala tovar Jessica Aline
 Suarez Carrillo Luis Mario (Usuarios) 
 
 González Reyes Berenice Izamar 
+
+Lopez Hernandez karina yazmin (Sonidos)
