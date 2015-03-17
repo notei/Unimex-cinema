@@ -19,3 +19,5 @@ Suarez Carrillo Luis Mario (Usuarios)
 González Reyes Berenice Izamar (Proveedores de productos) 
 
 Lopez Hernandez karina yazmin (Sonidos)
+
+Muñoz Sanchez Benito("Estrenos")
