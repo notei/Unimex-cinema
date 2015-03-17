@@ -18,3 +18,13 @@ F:\Documentos\GitHub\Unimex-cinema\Proyecto\cine_unimex\obj\x86\Debug\unimex.len
 F:\Documentos\GitHub\Unimex-cinema\Proyecto\cine_unimex\obj\x86\Debug\unimex.lenguajesv.cine.views.MainScreen.resources
 F:\Documentos\GitHub\Unimex-cinema\Proyecto\cine_unimex\obj\x86\Debug\unimex.lenguajesv.cine.Properties.Resources.resources
 F:\Documentos\GitHub\Unimex-cinema\Proyecto\cine_unimex\obj\x86\Debug\cine_unimex.csproj.GenerateResource.Cache
+C:\Users\MARIO\Documents\GitHub\Unimex-cinema\Proyecto\cine_unimex\obj\x86\Debug\cine_unimex.exe
+C:\Users\MARIO\Documents\GitHub\Unimex-cinema\Proyecto\cine_unimex\obj\x86\Debug\cine_unimex.pdb
+C:\Users\MARIO\Documents\GitHub\Unimex-cinema\Proyecto\cine_unimex\bin\Debug\cine_unimex.exe
+C:\Users\MARIO\Documents\GitHub\Unimex-cinema\Proyecto\cine_unimex\bin\Debug\cine_unimex.pdb
+C:\Users\MARIO\Documents\GitHub\Unimex-cinema\Proyecto\cine_unimex\obj\x86\Debug\cine_unimex.csprojResolveAssemblyReference.cache
+C:\Users\MARIO\Documents\GitHub\Unimex-cinema\Proyecto\cine_unimex\obj\x86\Debug\unimex.lenguajesv.cine.views.AcercaDeScreen.resources
+C:\Users\MARIO\Documents\GitHub\Unimex-cinema\Proyecto\cine_unimex\obj\x86\Debug\unimex.lenguajesv.cine.views.views.LoginScreen.resources
+C:\Users\MARIO\Documents\GitHub\Unimex-cinema\Proyecto\cine_unimex\obj\x86\Debug\unimex.lenguajesv.cine.views.MainScreen.resources
+C:\Users\MARIO\Documents\GitHub\Unimex-cinema\Proyecto\cine_unimex\obj\x86\Debug\unimex.lenguajesv.cine.Properties.Resources.resources
+C:\Users\MARIO\Documents\GitHub\Unimex-cinema\Proyecto\cine_unimex\obj\x86\Debug\cine_unimex.csproj.GenerateResource.Cache
