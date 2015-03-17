@@ -21,3 +21,5 @@ González Reyes Berenice Izamar (Proveedores de productos)
 Lopez Hernandez karina yazmin (Sonidos)
 
 Muñoz Sanchez Benito("Estrenos")
+
+Recuerden que pueden usar la seccion de Issues (circulo con signo de admiración) para mandar mesnajes sobre la app. 
