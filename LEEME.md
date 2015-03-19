@@ -25,3 +25,5 @@ Muñoz Sanchez Benito("Estrenos")
 Miranda Martinez Sandra Lizeth (" tipos de productos")
 
 Recuerden que pueden usar la seccion de Issues (circulo con signo de admiración) para mandar mesnajes sobre la app. 
+
+Ricardo Hernandez Meza(Productos Combos)
