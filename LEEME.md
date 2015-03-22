@@ -29,3 +29,18 @@ Recuerden que pueden usar la seccion de Issues (circulo con signo de admiración
 Ricardo Hernandez Meza(Productos Combos)
 
 Miranda Olivares Juan Rene(Precios de Boletos)
+
+
+
+Conexión a base de datos disponible en internet
+
+BD: unimexcinema
+USR: unimexcinema
+Pass: UnmX2015%cine
+
+Hostname
+unimexcinema.db.11774693.hostedresource.com
+
+Admin URL 
+https://p3nmssqladmin.secureserver.net/2012/1
+
