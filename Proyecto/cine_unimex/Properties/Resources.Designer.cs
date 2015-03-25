@@ -61,6 +61,15 @@ namespace unimex.lenguajesv.cine.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Data Source=unimexcinema.db.11774693.hostedresource.com;Initial Catalog=unimexcinema;user=unimexcinema;password=UnmX2015%cine.
+        /// </summary>
+        internal static string CADENA_CONEXION {
+            get {
+                return ResourceManager.GetString("CADENA_CONEXION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap Movie {
