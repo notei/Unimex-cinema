@@ -46,6 +46,14 @@ namespace unimex.lenguajesv.cine.views
             screen.Show();
         }
 
+        private void proyeccionesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProyeccionesForm frmProy = new ProyeccionesForm();
+            frmProy.MdiParent = this;
+            frmProy.StartPosition = FormStartPosition.CenterScreen;
+            frmProy.Show();
+        }
+
         
     }
 }
