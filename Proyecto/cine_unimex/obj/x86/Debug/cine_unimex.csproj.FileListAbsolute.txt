@@ -28,7 +28,6 @@ C:\Users\MARIO\Documents\GitHub\Unimex-cinema\Proyecto\cine_unimex\obj\x86\Debug
 C:\Users\MARIO\Documents\GitHub\Unimex-cinema\Proyecto\cine_unimex\obj\x86\Debug\unimex.lenguajesv.cine.views.MainScreen.resources
 C:\Users\MARIO\Documents\GitHub\Unimex-cinema\Proyecto\cine_unimex\obj\x86\Debug\unimex.lenguajesv.cine.Properties.Resources.resources
 C:\Users\MARIO\Documents\GitHub\Unimex-cinema\Proyecto\cine_unimex\obj\x86\Debug\cine_unimex.csproj.GenerateResource.Cache
-F:\Documentos\GitHub\Unimex-cinema\Proyecto\cine_unimex\obj\x86\Debug\unimex.lenguajesv.cine.views.ProyeccionesFRM.resources
 C:\Users\Beto\Documents\GitHub\Unimex-cinema\Proyecto\cine_unimex\obj\x86\Debug\cine_unimex.exe
 C:\Users\Beto\Documents\GitHub\Unimex-cinema\Proyecto\cine_unimex\obj\x86\Debug\cine_unimex.pdb
 C:\Users\Beto\Documents\GitHub\Unimex-cinema\Proyecto\cine_unimex\bin\Debug\cine_unimex.exe
