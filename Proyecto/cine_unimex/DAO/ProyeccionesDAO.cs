@@ -10,7 +10,7 @@ namespace unimex.lenguajesv.cine.DAO
     class ProyeccionesDAO
     {
 
-        private String SQL_Consulta_Proyecciones = "select proyecciones.id_proyeccion, cat_salas_complejos.nombre_sala, peliculas.pelicula, convert (varchar,proyecciones.horario,100)as Hora from  proyecciones inner join cat_salas_complejos on proyecciones.id_sala = cat_salas_complejos.id_sala inner join peliculas on peliculas.id_pelicula = proyecciones.id_pelicula";
+        private String SQL_Consulta_Proyecciones = "select proyecciones.id_proyeccion AS Id , cat_salas_complejos.nombre_sala AS Sala, peliculas.pelicula AS Película, convert (varchar,proyecciones.horario,100)as Horario from proyecciones inner join cat_salas_complejos on proyecciones.id_sala = cat_salas_complejos.id_sala inner join peliculas on peliculas.id_pelicula = proyecciones.id_pelicula";
         private String Cadena = Properties.Resources.CADENA_CONEXION;
 
         public DataTable LoadProyecciones()
