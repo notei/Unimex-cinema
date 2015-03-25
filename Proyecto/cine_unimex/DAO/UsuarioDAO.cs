@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 // Añadimos los espacios de nombres necesarios para trabajar con SQL Server
 using System.Data;

@@ -12,8 +12,8 @@ namespace unimex.lenguajesv.cine.DAO
     class ProyeccionesDAO
     {
         private String SQL_CONPROYECCIONES = "select proyecciones.id_proyeccion, cat_salas_complejos.nombre_sala, peliculas.pelicula, convert (varchar,proyecciones.horario,100)as Hora from  proyecciones inner join cat_salas_complejos on proyecciones.id_sala = cat_salas_complejos.id_sala inner join peliculas on peliculas.id_pelicula = proyecciones.id_pelicula";
-        private String cadena = "Data Source=LOCALHOST;Initial Catalog=unimex_cinema_db;Integrated Security=true";
-
+        private String cadena = Properties.Resources.CADENA_CONEXION;
+        //private String SQL_CONPROYECCIONES = "select * from usuarios";
        public DataTable LoadProyecciones()
         {
             
