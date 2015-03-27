@@ -54,6 +54,14 @@ namespace unimex.lenguajesv.cine.views
             frmProy.Show();
         }
 
+        private void usuariosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            UsuariosForm frmUsuarios = new UsuariosForm();
+            frmUsuarios.MdiParent = this;
+            frmUsuarios.StartPosition = FormStartPosition.CenterScreen;
+            frmUsuarios.Show();
+        }
+
         
     }
 }
