@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="DAO\ProyeccionesDAO.cs" />
     <Compile Include="DAO\UsuarioDAO.cs" />
+    <Compile Include="DTO\ProyeccionesDTO.cs" />
     <Compile Include="DTO\UsuarioDTO.cs" />
     <Compile Include="Sesion.cs" />
     <Compile Include="views\AcercaDeScreen.cs">
