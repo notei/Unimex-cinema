@@ -23,8 +23,8 @@ namespace unimex.lenguajesv.cine.DAO
         {
             SqlConnection con = null;
             con = new SqlConnection();
-            //con.ConnectionString = "Data Source=LOCALHOST;Initial Catalog=unimex_cinema_db;Integrated Security=true";
-            con.ConnectionString = Properties.Resources.CADENA_CONEXION;
+            con.ConnectionString = "Data Source=LOCALHOST;Initial Catalog=unimex_cinema_db;Integrated Security=true";
+            //con.ConnectionString = Properties.Resources.CADENA_CONEXION;
             
             
             con.Open();

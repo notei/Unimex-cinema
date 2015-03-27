@@ -10,7 +10,7 @@ namespace unimex.lenguajesv.cine.DTO
         private int id_proyeccion ;
         private int id_sala;
         private int id_pelicula;
-        private DateTime fecha;
+        private String fecha;
 
         public int idproyeccion
         {
@@ -30,9 +30,9 @@ namespace unimex.lenguajesv.cine.DTO
         public int idpelicula
         {
             get { return id_pelicula; }
-            set { idpelicula = value; }
+            set { id_pelicula = value; }
         }
-        public DateTime fechas
+        public String fechas
         {
             get { return fecha; }
             set {fecha = value;}

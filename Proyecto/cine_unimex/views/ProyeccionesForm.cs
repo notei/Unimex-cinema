@@ -36,5 +36,12 @@ namespace unimex.lenguajesv.cine.views
                 MessageBox.Show("" + ex);
             }
         }
+
+        private void NewProy_Click(object sender, EventArgs e)
+        {
+            NewProyecciones frmNewProy = new NewProyecciones();
+            frmNewProy.ShowDialog();
+
+        }
     }
 }
