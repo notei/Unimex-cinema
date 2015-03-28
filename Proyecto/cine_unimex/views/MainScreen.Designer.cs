@@ -37,7 +37,11 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+<<<<<<< HEAD
             this.preciosDeBoletosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+=======
+            this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+>>>>>>> origin/master
             this.menuBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -73,15 +77,25 @@
             // 
             this.catálogosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.proyeccionesToolStripMenuItem,
+<<<<<<< HEAD
             this.preciosDeBoletosToolStripMenuItem});
             this.catálogosToolStripMenuItem.Name = "catálogosToolStripMenuItem";
             this.catálogosToolStripMenuItem.Size = new System.Drawing.Size(72, 22);
+=======
+            this.usuariosToolStripMenuItem});
+            this.catálogosToolStripMenuItem.Name = "catálogosToolStripMenuItem";
+            this.catálogosToolStripMenuItem.Size = new System.Drawing.Size(88, 24);
+>>>>>>> origin/master
             this.catálogosToolStripMenuItem.Text = "Catálogos";
             // 
             // proyeccionesToolStripMenuItem
             // 
             this.proyeccionesToolStripMenuItem.Name = "proyeccionesToolStripMenuItem";
+<<<<<<< HEAD
             this.proyeccionesToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+=======
+            this.proyeccionesToolStripMenuItem.Size = new System.Drawing.Size(175, 24);
+>>>>>>> origin/master
             this.proyeccionesToolStripMenuItem.Text = "Proyecciones";
             this.proyeccionesToolStripMenuItem.Click += new System.EventHandler(this.proyeccionesToolStripMenuItem_Click);
             // 
@@ -96,7 +110,11 @@
             // acercaDeToolStripMenuItem
             // 
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
+<<<<<<< HEAD
             this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(126, 22);
+=======
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(144, 24);
+>>>>>>> origin/master
             this.acercaDeToolStripMenuItem.Text = "Acerca de";
             this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.acercaDeToolStripMenuItem_Click);
             // 
@@ -109,12 +127,21 @@
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
+<<<<<<< HEAD
             // preciosDeBoletosToolStripMenuItem
             // 
             this.preciosDeBoletosToolStripMenuItem.Name = "preciosDeBoletosToolStripMenuItem";
             this.preciosDeBoletosToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.preciosDeBoletosToolStripMenuItem.Text = "Precios de Boletos";
             this.preciosDeBoletosToolStripMenuItem.Click += new System.EventHandler(this.preciosDeBoletosToolStripMenuItem_Click);
+=======
+            // usuariosToolStripMenuItem
+            // 
+            this.usuariosToolStripMenuItem.Name = "usuariosToolStripMenuItem";
+            this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(175, 24);
+            this.usuariosToolStripMenuItem.Text = "Usuarios";
+            this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
+>>>>>>> origin/master
             // 
             // MainScreen
             // 
@@ -150,7 +177,11 @@
         private System.Windows.Forms.StatusStrip statusStrip1;
         private System.Windows.Forms.ToolStripMenuItem catálogosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem proyeccionesToolStripMenuItem;
+<<<<<<< HEAD
         private System.Windows.Forms.ToolStripMenuItem preciosDeBoletosToolStripMenuItem;
+=======
+        private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
+>>>>>>> origin/master
     }
 }
 

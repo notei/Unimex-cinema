@@ -65,6 +65,8 @@
     <Compile Include="DAO\PreciosDAO.cs" />
     <Compile Include="DAO\ProyeccionesDAO.cs" />
     <Compile Include="DAO\UsuarioDAO.cs" />
+    <Compile Include="DAO\UsuariosDAO.cs" />
+    <Compile Include="DTO\ProyeccionesDTO.cs" />
     <Compile Include="DTO\UsuarioDTO.cs" />
     <Compile Include="Sesion.cs" />
     <Compile Include="views\AcercaDeScreen.cs">
@@ -87,17 +89,31 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+<<<<<<< HEAD
     <Compile Include="views\PreciosForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="views\PreciosForm.Designer.cs">
       <DependentUpon>PreciosForm.cs</DependentUpon>
+=======
+    <Compile Include="views\NewProyecciones.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\NewProyecciones.Designer.cs">
+      <DependentUpon>NewProyecciones.cs</DependentUpon>
+>>>>>>> origin/master
     </Compile>
     <Compile Include="views\ProyeccionesForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="views\ProyeccionesForm.Designer.cs">
       <DependentUpon>ProyeccionesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\UsuariosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\UsuariosForm.Designer.cs">
+      <DependentUpon>UsuariosForm.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="views\AcercaDeScreen.resx">
       <DependentUpon>AcercaDeScreen.cs</DependentUpon>
@@ -118,11 +134,19 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+<<<<<<< HEAD
     <EmbeddedResource Include="views\PreciosForm.resx">
       <DependentUpon>PreciosForm.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="views\NewProyecciones.resx">
+      <DependentUpon>NewProyecciones.cs</DependentUpon>
+>>>>>>> origin/master
     </EmbeddedResource>
     <EmbeddedResource Include="views\ProyeccionesForm.resx">
       <DependentUpon>ProyeccionesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\UsuariosForm.resx">
+      <DependentUpon>UsuariosForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

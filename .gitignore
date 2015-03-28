@@ -44,3 +44,6 @@ Temporary Items
 .apdisk
 *.exe
 debug/
+*.suo
+*.suo
+*.cache
