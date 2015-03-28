@@ -45,3 +45,5 @@ Temporary Items
 *.exe
 debug/
 *.suo
+*.suo
+*.cache
