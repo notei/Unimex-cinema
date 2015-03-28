@@ -18,11 +18,13 @@ namespace unimex.lenguajesv.cine.DAO
         {
             SqlConnection con = new SqlConnection();
             con.ConnectionString = Cadena;
+            con.Open();
             using (SqlDataAdapter adapter = new SqlDataAdapter(SQL_Consulta_Usuarios, con))
             {
 
                 DataTable tbl = new DataTable();
                 adapter.Fill(tbl);
+                con.Close();
                 return tbl;
             }
 
