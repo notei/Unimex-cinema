@@ -54,6 +54,14 @@ namespace unimex.lenguajesv.cine.views
             frmProy.Show();
         }
 
+        private void preciosDeBoletosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PreciosForm frmPre = new PreciosForm();
+            frmPre.MdiParent = this;
+            frmPre.StartPosition = FormStartPosition.CenterScreen;
+            frmPre.Show();
+        }
+
         
     }
 }
