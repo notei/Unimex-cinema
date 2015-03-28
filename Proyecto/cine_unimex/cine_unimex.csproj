@@ -64,6 +64,7 @@
   <ItemGroup>
     <Compile Include="DAO\ProyeccionesDAO.cs" />
     <Compile Include="DAO\UsuarioDAO.cs" />
+    <Compile Include="DAO\UsuariosDAO.cs" />
     <Compile Include="DTO\ProyeccionesDTO.cs" />
     <Compile Include="DTO\UsuarioDTO.cs" />
     <Compile Include="Sesion.cs" />
@@ -93,6 +94,12 @@
     <Compile Include="views\ProyeccionesForm.Designer.cs">
       <DependentUpon>ProyeccionesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\UsuariosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\UsuariosForm.Designer.cs">
+      <DependentUpon>UsuariosForm.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="views\AcercaDeScreen.resx">
       <DependentUpon>AcercaDeScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +121,9 @@
     </Compile>
     <EmbeddedResource Include="views\ProyeccionesForm.resx">
       <DependentUpon>ProyeccionesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\UsuariosForm.resx">
+      <DependentUpon>UsuariosForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
