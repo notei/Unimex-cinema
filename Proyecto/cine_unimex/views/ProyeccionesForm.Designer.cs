@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProyeccionesForm));
             this.ProyeccionesDgv = new System.Windows.Forms.DataGridView();
             this.NewProy = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ProyeccionesDgv)).BeginInit();
@@ -66,8 +67,9 @@
             this.ClientSize = new System.Drawing.Size(744, 359);
             this.Controls.Add(this.NewProy);
             this.Controls.Add(this.ProyeccionesDgv);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "ProyeccionesForm";
-            this.Text = "ProyeccionesForm";
+            this.Text = "Proyecciones";
             this.Load += new System.EventHandler(this.ProyeccionesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ProyeccionesDgv)).EndInit();
             this.ResumeLayout(false);

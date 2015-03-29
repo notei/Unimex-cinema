@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewProyecciones));
             this.idsalaTXT = new System.Windows.Forms.TextBox();
-            this.idpeliculaTXT = new System.Windows.Forms.TextBox();
             this.Horario = new System.Windows.Forms.DateTimePicker();
             this.Cancelbtn = new System.Windows.Forms.Button();
             this.acceptbtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.peliculaCb = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // idsalaTXT
@@ -44,13 +45,6 @@
             this.idsalaTXT.Name = "idsalaTXT";
             this.idsalaTXT.Size = new System.Drawing.Size(151, 22);
             this.idsalaTXT.TabIndex = 0;
-            // 
-            // idpeliculaTXT
-            // 
-            this.idpeliculaTXT.Location = new System.Drawing.Point(95, 108);
-            this.idpeliculaTXT.Name = "idpeliculaTXT";
-            this.idpeliculaTXT.Size = new System.Drawing.Size(151, 22);
-            this.idpeliculaTXT.TabIndex = 1;
             // 
             // Horario
             // 
@@ -106,21 +100,31 @@
             this.label3.TabIndex = 7;
             this.label3.Text = "horario:";
             // 
+            // peliculaCb
+            // 
+            this.peliculaCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.peliculaCb.FormattingEnabled = true;
+            this.peliculaCb.Location = new System.Drawing.Point(95, 108);
+            this.peliculaCb.Name = "peliculaCb";
+            this.peliculaCb.Size = new System.Drawing.Size(151, 24);
+            this.peliculaCb.TabIndex = 8;
+            // 
             // NewProyecciones
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(309, 295);
+            this.Controls.Add(this.peliculaCb);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.acceptbtn);
             this.Controls.Add(this.Cancelbtn);
             this.Controls.Add(this.Horario);
-            this.Controls.Add(this.idpeliculaTXT);
             this.Controls.Add(this.idsalaTXT);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NewProyecciones";
-            this.Text = "NewProyecciones";
+            this.Text = "Nueva Proyección";
             this.Load += new System.EventHandler(this.NewProyecciones_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -130,12 +134,12 @@
         #endregion
 
         private System.Windows.Forms.TextBox idsalaTXT;
-        private System.Windows.Forms.TextBox idpeliculaTXT;
         private System.Windows.Forms.DateTimePicker Horario;
         private System.Windows.Forms.Button Cancelbtn;
         private System.Windows.Forms.Button acceptbtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ComboBox peliculaCb;
     }
 }

@@ -22,13 +22,31 @@ namespace unimex.lenguajesv.cine.views
             Horario.ShowUpDown = true;
             Horario.CustomFormat = "yyyy-MM-dd HH:mm";
             Horario.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            consultaPeliculas();
+        }
+        public void consultaPeliculas()
+        {
+            ProyeccionesDAO P_DAO = new ProyeccionesDAO();
+
+            try
+            {
+                DataTable dt = P_DAO.Loadpeliculas();
+                peliculaCb.DataSource = dt;
+                peliculaCb.DisplayMember = "pelicula";
+                peliculaCb.ValueMember = "id_pelicula";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
         }
         public void newproyecciones()
         {
+            String id = "" + peliculaCb.SelectedValue;
 
             ProyeccionesDTO proy_dto = new ProyeccionesDTO();
             proy_dto.idsala = Int32.Parse(idsalaTXT.Text);
-            proy_dto.idpelicula = Int32.Parse(idpeliculaTXT.Text);
+            proy_dto.idpelicula = Int32.Parse(id);
             proy_dto.fechas = Horario.Text;
             try
             {

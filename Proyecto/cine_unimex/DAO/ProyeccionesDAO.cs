@@ -44,6 +44,23 @@ namespace unimex.lenguajesv.cine.DAO
 
         }
 
+        public DataTable Loadpeliculas()
+        {
+            String SQL_Consulta_Peliculas = "select id_pelicula, pelicula from peliculas";
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            using (SqlDataAdapter adapter = new SqlDataAdapter(SQL_Consulta_Peliculas, con))
+            {
 
+                DataTable tbl = new DataTable();
+                adapter.Fill(tbl);
+                con.Close();
+                return tbl;
+            }
+
+
+
+        }
     }
 }
