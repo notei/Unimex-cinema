@@ -26,7 +26,8 @@ namespace unimex.lenguajesv.cine.views
         {
             PreciosDAO daoPrecios = new PreciosDAO();
             DataTable dtp = daoPrecios.loadPrecios();
-            dgvPrecios.DataSource=dtp;     
+            dgvPrecios.DataSource=dtp;
+            dgvPrecios.Columns[0].Visible = false;
         }
             
     }
