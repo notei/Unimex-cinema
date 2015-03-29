@@ -29,9 +29,7 @@ namespace unimex.lenguajesv.cine.views
             ProyeccionesDTO proy_dto = new ProyeccionesDTO();
             proy_dto.idsala = Int32.Parse(idsalaTXT.Text);
             proy_dto.idpelicula = Int32.Parse(idpeliculaTXT.Text);
-            // captura incorrecta en la fecha verificar conversión de date a text 
             proy_dto.fechas = Horario.Text;
-            label1.Text = Horario.Text;
             try
             {
                 ProyeccionesDAO proy_dao = new ProyeccionesDAO();
@@ -46,6 +44,7 @@ namespace unimex.lenguajesv.cine.views
         private void acceptbtn_Click(object sender, EventArgs e)
         {
             newproyecciones();
+            this.Dispose();
             
         }
 

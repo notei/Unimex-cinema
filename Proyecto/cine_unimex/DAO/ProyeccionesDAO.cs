@@ -38,7 +38,7 @@ namespace unimex.lenguajesv.cine.DAO
             SqlConnection con = new SqlConnection();
             con.ConnectionString = Cadena;
             con.Open();
-            SqlCommand cmd = new SqlCommand(SQL_Consulta_Proyecciones, con);
+            SqlCommand cmd = new SqlCommand(SQL_NewProyeccion, con);
             cmd.ExecuteNonQuery();
             con.Close();
 
