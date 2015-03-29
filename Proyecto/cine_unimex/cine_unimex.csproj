@@ -62,6 +62,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\PreciosDAO.cs" />
     <Compile Include="DAO\ProyeccionesDAO.cs" />
     <Compile Include="DAO\UsuarioDAO.cs" />
     <Compile Include="DAO\UsuariosDAO.cs" />
@@ -93,6 +94,12 @@
     </Compile>
     <Compile Include="views\NewProyecciones.Designer.cs">
       <DependentUpon>NewProyecciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\PreciosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\PreciosForm.designer.cs">
+      <DependentUpon>PreciosForm.cs</DependentUpon>
     </Compile>
     <Compile Include="views\ProyeccionesForm.cs">
       <SubType>Form</SubType>
@@ -127,6 +134,9 @@
     </Compile>
     <EmbeddedResource Include="views\NewProyecciones.resx">
       <DependentUpon>NewProyecciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\PreciosForm.resx">
+      <DependentUpon>PreciosForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\ProyeccionesForm.resx">
       <DependentUpon>ProyeccionesForm.cs</DependentUpon>
