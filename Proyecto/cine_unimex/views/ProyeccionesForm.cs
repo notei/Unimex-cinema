@@ -11,6 +11,7 @@ namespace unimex.lenguajesv.cine.views
 {
     public partial class ProyeccionesForm : Form
     {
+        
         public ProyeccionesForm()
         {
             InitializeComponent();
@@ -18,10 +19,13 @@ namespace unimex.lenguajesv.cine.views
 
         private void ProyeccionesForm_Load(object sender, EventArgs e)
         {
+
+            ProyeccionesDgv.DefaultCellStyle.BackColor = Color.LightGray;
+            ProyeccionesDgv.AlternatingRowsDefaultCellStyle.BackColor = Color.LightYellow;
             consultaProyecciones();
-
+            
         }
-
+        
         public void consultaProyecciones()
         {
             ProyeccionesDAO P_DAO = new ProyeccionesDAO();
@@ -36,12 +40,17 @@ namespace unimex.lenguajesv.cine.views
                 MessageBox.Show("" + ex);
             }
         }
-
+        public void disposeNew(object Source, EventArgs args)
+        {
+            consultaProyecciones();
+        }
         private void NewProy_Click(object sender, EventArgs e)
         {
             NewProyecciones frmNewProy = new NewProyecciones();
-            frmNewProy.ShowDialog();
-
+            frmNewProy.Show();
+            frmNewProy.Disposed += new EventHandler(disposeNew);
+           
         }
+
     }
 }

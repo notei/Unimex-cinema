@@ -35,12 +35,16 @@
             // 
             // ProyeccionesDgv
             // 
+            this.ProyeccionesDgv.AllowUserToAddRows = false;
+            this.ProyeccionesDgv.AllowUserToDeleteRows = false;
             this.ProyeccionesDgv.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.ProyeccionesDgv.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.ProyeccionesDgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProyeccionesDgv.Location = new System.Drawing.Point(112, 12);
             this.ProyeccionesDgv.Name = "ProyeccionesDgv";
+            this.ProyeccionesDgv.ReadOnly = true;
             this.ProyeccionesDgv.RowTemplate.Height = 24;
             this.ProyeccionesDgv.Size = new System.Drawing.Size(620, 335);
             this.ProyeccionesDgv.TabIndex = 0;
@@ -49,9 +53,9 @@
             // 
             this.NewProy.Location = new System.Drawing.Point(13, 54);
             this.NewProy.Name = "NewProy";
-            this.NewProy.Size = new System.Drawing.Size(75, 23);
+            this.NewProy.Size = new System.Drawing.Size(75, 27);
             this.NewProy.TabIndex = 1;
-            this.NewProy.Text = "button1";
+            this.NewProy.Text = "Nuevo";
             this.NewProy.UseVisualStyleBackColor = true;
             this.NewProy.Click += new System.EventHandler(this.NewProy_Click);
             // 
