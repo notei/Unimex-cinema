@@ -16,7 +16,7 @@ Ayala tovar Jessica Aline
 
 Suarez Carrillo Luis Mario (Usuarios) 
 
-González Reyes Berenice Izamar (Proveedores de productos) 
+González Reyes Berenice Izamar (Proveedores de Productos) 
 
 Lopez Hernandez karina yazmin (Sonidos)
 
