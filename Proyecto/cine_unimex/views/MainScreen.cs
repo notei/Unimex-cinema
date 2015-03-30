@@ -70,6 +70,14 @@ namespace unimex.lenguajesv.cine.views
             frmPrecios.Show();
         }
 
+        private void proveedoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProveedoresForm frmProveedores = new ProveedoresForm ();
+            frmProveedores.MdiParent = this;
+            frmProveedores.StartPosition = FormStartPosition.CenterScreen;
+            frmProveedores.Show();
+        }
+
         
     }
 }
