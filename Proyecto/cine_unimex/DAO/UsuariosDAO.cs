@@ -32,7 +32,11 @@ namespace unimex.lenguajesv.cine.DAO
 
         public void agregarUsuario(UsuariosDTO n)
         {
-            String SQL_Agregar_Usuario = " insert into usuarios (idUsuario, nombre, apellido_paterno, nombre_usuario, contrasena, id_tipo_usuario) values ( " + n.idusuario + " , " + n.Nombre + " , " + n.ApPaterno + "," + n.NomUsuario + "," + n.Contrasena + "," + n.Id_Tipo_Usuario + ")";
+            /* verificar consulta con respecto al nombre de usuario, no necesita ser ingresado
+             * Faltan apostrofos (comillas simples) para los campos de tipo texto
+             * Modifico campo nombre para mostrar ejemplo.
+             */
+            String SQL_Agregar_Usuario = " insert into usuarios (idUsuario, nombre, apellido_paterno, nombre_usuario, contrasena, id_tipo_usuario) values ( " + n.idusuario + " , '" + n.Nombre + "' , " + n.ApPaterno + "," + n.NomUsuario + "," + n.Contrasena + "," + n.Id_Tipo_Usuario + ")";
 
             SqlConnection con = new SqlConnection();
             con.ConnectionString = Cadena;
