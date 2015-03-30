@@ -33,13 +33,14 @@
             this.archivoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.catálogosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.preciosDeBoletosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.proyeccionesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.preciosDeBoletosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.proveedoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nacionalidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,10 +78,25 @@
             this.preciosDeBoletosToolStripMenuItem,
             this.proveedoresToolStripMenuItem,
             this.proyeccionesToolStripMenuItem,
-            this.usuariosToolStripMenuItem});
+            this.usuariosToolStripMenuItem,
+            this.nacionalidadesToolStripMenuItem});
             this.catálogosToolStripMenuItem.Name = "catálogosToolStripMenuItem";
             this.catálogosToolStripMenuItem.Size = new System.Drawing.Size(72, 22);
             this.catálogosToolStripMenuItem.Text = "Catálogos";
+            // 
+            // preciosDeBoletosToolStripMenuItem
+            // 
+            this.preciosDeBoletosToolStripMenuItem.Name = "preciosDeBoletosToolStripMenuItem";
+            this.preciosDeBoletosToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.preciosDeBoletosToolStripMenuItem.Text = "Precios de Boletos";
+            this.preciosDeBoletosToolStripMenuItem.Click += new System.EventHandler(this.preciosDeBoletosToolStripMenuItem_Click);
+            // 
+            // proveedoresToolStripMenuItem
+            // 
+            this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
+            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.proveedoresToolStripMenuItem.Text = "Proveedores";
+            this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.proveedoresToolStripMenuItem_Click);
             // 
             // proyeccionesToolStripMenuItem
             // 
@@ -95,13 +111,6 @@
             this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
-            // 
-            // preciosDeBoletosToolStripMenuItem
-            // 
-            this.preciosDeBoletosToolStripMenuItem.Name = "preciosDeBoletosToolStripMenuItem";
-            this.preciosDeBoletosToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.preciosDeBoletosToolStripMenuItem.Text = "Precios de Boletos";
-            this.preciosDeBoletosToolStripMenuItem.Click += new System.EventHandler(this.preciosDeBoletosToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -127,12 +136,12 @@
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // proveedoresToolStripMenuItem
+            // nacionalidadesToolStripMenuItem
             // 
-            this.proveedoresToolStripMenuItem.Name = "proveedoresToolStripMenuItem";
-            this.proveedoresToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.proveedoresToolStripMenuItem.Text = "Proveedores";
-            this.proveedoresToolStripMenuItem.Click += new System.EventHandler(this.proveedoresToolStripMenuItem_Click);
+            this.nacionalidadesToolStripMenuItem.Name = "nacionalidadesToolStripMenuItem";
+            this.nacionalidadesToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.nacionalidadesToolStripMenuItem.Text = "Nacionalidades";
+            this.nacionalidadesToolStripMenuItem.Click += new System.EventHandler(this.nacionalidadesToolStripMenuItem_Click);
             // 
             // MainScreen
             // 
@@ -171,6 +180,7 @@
         private System.Windows.Forms.ToolStripMenuItem usuariosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem preciosDeBoletosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem proveedoresToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nacionalidadesToolStripMenuItem;
     }
 }
 

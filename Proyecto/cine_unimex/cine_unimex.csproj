@@ -70,9 +70,11 @@
     <Compile Include="DAO\ProyeccionesDAO.cs" />
     <Compile Include="DAO\UsuarioDAO.cs" />
     <Compile Include="DAO\UsuariosDAO.cs" />
+    <Compile Include="DTO\NacionalidadesDTO.cs" />
     <Compile Include="DTO\ProveedoresDTO.cs" />
     <Compile Include="DTO\ProyeccionesDTO.cs" />
     <Compile Include="DTO\UsuarioDTO.cs" />
+    <Compile Include="DAO\NacionalidadesDAO.cs" />
     <Compile Include="Sesion.cs" />
     <Compile Include="views\AcercaDeScreen.cs">
       <SubType>Form</SubType>
@@ -94,6 +96,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="views\NacionalidadesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\NacionalidadesForm.Designer.cs">
+      <DependentUpon>NacionalidadesForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\NewProyecciones.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -143,6 +151,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="views\NacionalidadesForm.resx">
+      <DependentUpon>NacionalidadesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\NewProyecciones.resx">
       <DependentUpon>NewProyecciones.cs</DependentUpon>
     </EmbeddedResource>

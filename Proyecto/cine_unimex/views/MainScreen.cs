@@ -78,6 +78,14 @@ namespace unimex.lenguajesv.cine.views
             frmProveedores.Show();
         }
 
+        private void nacionalidadesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            NacionalidadesForm frmNacional = new NacionalidadesForm();
+            frmNacional.MdiParent = this;
+            frmNacional.StartPosition = FormStartPosition.CenterScreen;
+            frmNacional.Show();
+        }
+
         
     }
 }
