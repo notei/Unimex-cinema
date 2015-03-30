@@ -30,6 +30,8 @@ Ricardo Hernandez Meza(Productos Combos)
 
 Miranda Olivares Juan Rene(Precios de Boletos)
 
+Yocelin Gutierrez Perez (Productos)
+
 
 
 Conexión a base de datos disponible en internet
