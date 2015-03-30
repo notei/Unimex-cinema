@@ -28,6 +28,14 @@ namespace unimex.lenguajesv.cine.views
             dgvNacionalidades.Columns[0].Visible = false;
         }
 
+        private void btnAgregarNac_Click(object sender, EventArgs e)
+        {
+            NewNacionalidades formanac = new NewNacionalidades();
+            formanac.ShowDialog();
+
+
+        }
+
 
     }
 }

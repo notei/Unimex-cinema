@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dgvNacionalidades = new System.Windows.Forms.DataGridView();
+            this.btnAgregarNac = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNacionalidades)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,11 +46,23 @@
             this.dgvNacionalidades.Size = new System.Drawing.Size(240, 150);
             this.dgvNacionalidades.TabIndex = 0;
             // 
+            // btnAgregarNac
+            // 
+            this.btnAgregarNac.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregarNac.Location = new System.Drawing.Point(13, 39);
+            this.btnAgregarNac.Name = "btnAgregarNac";
+            this.btnAgregarNac.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarNac.TabIndex = 1;
+            this.btnAgregarNac.Text = "Agregar";
+            this.btnAgregarNac.UseVisualStyleBackColor = true;
+            this.btnAgregarNac.Click += new System.EventHandler(this.btnAgregarNac_Click);
+            // 
             // NacionalidadesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(392, 252);
+            this.Controls.Add(this.btnAgregarNac);
             this.Controls.Add(this.dgvNacionalidades);
             this.Name = "NacionalidadesForm";
             this.Text = "NacionalidadesForm";
@@ -62,5 +75,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvNacionalidades;
+        private System.Windows.Forms.Button btnAgregarNac;
     }
 }
