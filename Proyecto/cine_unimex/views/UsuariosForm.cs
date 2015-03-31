@@ -1,4 +1,5 @@
-﻿using System;
+﻿
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -38,6 +39,13 @@ namespace unimex.lenguajesv.cine.views
             {
                 MessageBox.Show("" + ex);
             }
+        }
+
+        
+        private void modbtn_Click_1(object sender, EventArgs e)
+        {
+            NewUsuarios frmNewUsua = new NewUsuarios();
+            frmNewUsua.Show();
         }
     }
 }

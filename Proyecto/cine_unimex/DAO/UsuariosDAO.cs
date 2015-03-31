@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using unimex.lenguajesv.cine.DTO;
 
 namespace unimex.lenguajesv.cine.DAO
 {
@@ -27,7 +28,19 @@ namespace unimex.lenguajesv.cine.DAO
                 con.Close();
                 return tbl;
             }
+        }
 
+        public void agregarUsuario(UsuariosDTO n)
+        {
+            String SQL_Agregar_Usuario = " insert into usuarios (idUsuario, nombre, apellido_paterno, nombre_usuario, contrasena, id_tipo_usuario) values ( " + n.idusuario + " , " + n.Nombre + " , " + n.ApPaterno + "," + n.NomUsuario + "," + n.Contrasena + "," + n.Id_Tipo_Usuario + ")";
+
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+
+            SqlCommand cmd = new SqlCommand(SQL_Agregar_Usuario, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
 
 
         }
