@@ -36,7 +36,7 @@ namespace unimex.lenguajesv.cine
         {
             
 
-           String SQL_Agregar_Nacionalidad = " insert into nacionalidades (id_nacionalidad, nacionalidad, habilitado) values ( " + n.id_Nacionalidad + " , '" + n.Nacionalidad + "' , "+ n.Habilitado +")";
+           String SQL_Agregar_Nacionalidad = " insert into nacionalidades (nacionalidad, habilitado) values ( '" + n.Nacionalidad + "' , '"+ n.Habilitado +"')";
 
            
 
