@@ -103,6 +103,7 @@
             this.Controls.Add(this.label1);
             this.Name = "NewNacionalidades";
             this.Text = "NewNacionalidades";
+            this.Load += new System.EventHandler(this.NewNacionalidades_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -51,5 +51,10 @@ namespace unimex.lenguajesv.cine.views
             }
             this.Dispose();
         }
+
+        private void NewNacionalidades_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

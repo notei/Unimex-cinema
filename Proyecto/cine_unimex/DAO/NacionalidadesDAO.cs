@@ -33,16 +33,21 @@ namespace unimex.lenguajesv.cine
 
         public void agregarNacionalidad( NacionalidadesDTO n )
        
-        { 
-           String SQL_Agregar_Nacionalidad = " insert into nacionalidades (id_nacionalidad, nacionalidad, habilitado) values ( " + n.id_Nacionalidad + " , " + n.Nacionalidad + " , " + n.Habilitado +" )";
+        {
+            
 
-     SqlConnection con = new SqlConnection();
-          con.ConnectionString = Cadena;
-          con.Open();
+           String SQL_Agregar_Nacionalidad = " insert into nacionalidades (id_nacionalidad, nacionalidad, habilitado) values ( " + n.id_Nacionalidad + " , '" + n.Nacionalidad + "' , "+ n.Habilitado +")";
 
-          SqlCommand cmd = new SqlCommand(SQL_Agregar_Nacionalidad, con);
-          cmd.ExecuteNonQuery();
-          con.Close();
+           
+
+           SqlConnection con;
+           con = new SqlConnection();
+           con.ConnectionString = Cadena;
+           con.Open();
+           SqlCommand comando;
+           comando = new SqlCommand(SQL_Agregar_Nacionalidad, con);
+           comando.ExecuteNonQuery();
+           con.Close();
 
         
         }
