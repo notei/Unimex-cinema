@@ -86,6 +86,14 @@ namespace unimex.lenguajesv.cine.views
             frmNacional.Show();
         }
 
+        private void productosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProductosForm frmProductos = new ProductosForm();
+            frmProductos.MdiParent = this;
+            frmProductos.StartPosition = FormStartPosition.CenterScreen;
+            frmProductos.Show();
+        }
+
         
     }
 }
