@@ -37,7 +37,7 @@ namespace unimex.lenguajesv.cine.views
              if (nombreuser.Text != "")
             {
                 UsuariosDTO n = new UsuariosDTO();
-                n.idusuario = Int32.Parse(iduser.Text);//El id del usuario es identity no requiere ser ingresado verifica consulta 
+                
                 n.NomUsuario = nombreuser.Text;
                 n.ApPaterno = apuser.Text;
                 n.NomUsuario = nomus.Text;
