@@ -37,8 +37,7 @@ namespace unimex.lenguajesv.cine.views
              if (nombreuser.Text != "")
             {
                 UsuariosDTO n = new UsuariosDTO();
-                
-                n.NomUsuario = nombreuser.Text;
+                n.Nombre  = nombreuser.Text;
                 n.ApPaterno = apuser.Text;
                 n.NomUsuario = nomus.Text;
                 n.Contrasena = passuser.Text;
