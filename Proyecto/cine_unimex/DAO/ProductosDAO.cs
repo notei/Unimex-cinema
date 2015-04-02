@@ -27,13 +27,12 @@ namespace unimex.lenguajesv.cine.DAO
                 return tbl;
             }
         }
-
-        /* public void agregarUsuario(ProductosDTO n)
+/*
+ //el nombre del metoo es agregarUsuario 
+         public void agregarUsuario(ProductosDTO n)
         {
-            verificar consulta con respecto al nombre de usuario, no necesita ser ingresado
-             * Faltan apostrofos (comillas simples) para los campos de tipo texto
-             * Modifico campo nombre para mostrar ejemplo.
            
+            //la consulta está sobre la tabla usuarios la tuya es sobre productos con los campos requeridos de productos insert into USUARIOS?
             String SQL_Agregar_Productos= " insert into usuarios (idUsuario, nombre, apellido_paterno, nombre_usuario, contrasena, id_tipo_usuario) values ( " + n.idusuario + " , '" + n.Nombre + "' , " + n.ApPaterno + "," + n.NomUsuario + "," + n.Contrasena + "," + n.Id_Tipo_Usuario + ")";
 
             SqlConnection con = new SqlConnection();
@@ -44,8 +43,8 @@ namespace unimex.lenguajesv.cine.DAO
             cmd.ExecuteNonQuery();
             con.Close();  
 
-        }*/
-
+        }
+        */
 
     }
 }

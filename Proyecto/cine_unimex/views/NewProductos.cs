@@ -25,7 +25,7 @@ namespace unimex.lenguajesv.cine.views
                 if (txtidproducto.Text != "")
             {
 
-                n.Id_producto = Int32.Parse(txtidproducto.Text);
+                n.IdTipoProducto = Int32.Parse(txtidproducto.Text);
                 n.Nombre = txtnombre.Text;
                 n.Descripcion  = txtdescripcion.Text;
                 n.Habilitar = btnradio.Checked;
@@ -40,7 +40,8 @@ namespace unimex.lenguajesv.cine.views
                 try
                 {
                     ProductosDAO dao = new ProductosDAO();
-                    dao.AgregarProductos (n);
+                    //No existe el método "AgregarProductos" 
+                    //dao.AgregarProductos (n);
                 }
                 catch (Exception ex)
                 {
@@ -60,6 +61,11 @@ namespace unimex.lenguajesv.cine.views
         private void btncancelar_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void NewProductos_Load(object sender, EventArgs e)
+        {
+
         }
         }
 
