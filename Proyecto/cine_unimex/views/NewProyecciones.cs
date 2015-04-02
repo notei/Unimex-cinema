@@ -23,6 +23,10 @@ namespace unimex.lenguajesv.cine.views
             Horario.CustomFormat = "yyyy-MM-dd HH:mm";
             Horario.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             consultaPeliculas();
+            consultaComplejos();
+            consultaSalas();
+            complejosCb.SelectedIndexChanged += new EventHandler(ComboChange);
+            
         }
         public void consultaPeliculas()
         {
@@ -40,13 +44,46 @@ namespace unimex.lenguajesv.cine.views
                 MessageBox.Show("" + ex);
             }
         }
+        public void consultaComplejos()
+        {
+            ProyeccionesDAO P_DAO = new ProyeccionesDAO();
+
+            try
+            {
+                DataTable dt = P_DAO.LoadComplejos();
+                complejosCb.DataSource = dt;
+                complejosCb.DisplayMember = "nombre";
+                complejosCb.ValueMember = "id_complejo";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
+        }
+        public void consultaSalas()
+        {
+            ProyeccionesDAO P_DAO = new ProyeccionesDAO();
+
+            try
+            {
+                DataTable dt = P_DAO.LoadSalas(Int32.Parse("" + complejosCb.SelectedValue));
+                salasCB.DataSource = dt;
+                salasCB.DisplayMember = "nombre_sala";
+                salasCB.ValueMember = "id_sala";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
+        }
         public void newproyecciones()
         {
-            String id = "" + peliculaCb.SelectedValue;
+            String idpelicula = "" + peliculaCb.SelectedValue;
+            String idSala = "" + salasCB.SelectedValue;
 
             ProyeccionesDTO proy_dto = new ProyeccionesDTO();
-            proy_dto.idsala = Int32.Parse(idsalaTXT.Text);
-            proy_dto.idpelicula = Int32.Parse(id);
+            proy_dto.idsala = Int32.Parse(idSala);
+            proy_dto.idpelicula = Int32.Parse(idpelicula);
             proy_dto.fechas = Horario.Text;
             try
             {
@@ -70,7 +107,12 @@ namespace unimex.lenguajesv.cine.views
         {
             this.Dispose();
         }
-        
+
+        public void ComboChange(object Source, EventArgs args)
+        {
+            consultaSalas();
+        }
+              
         }
     }
 
