@@ -37,5 +37,11 @@ namespace unimex.lenguajesv.cine.views
                 MessageBox.Show("" + ex);
             }
         }
+
+        private void btnmodificar_Click(object sender, EventArgs e)
+        {
+            NewProductos frmNewPro = new NewProductos();
+            frmNewPro.Show();
+        }
     }
 }

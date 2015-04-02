@@ -56,5 +56,15 @@ namespace unimex.lenguajesv.cine.views
         {
 
         }
+
+        private void txtNewNacionalidad_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void chkHabilitado_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

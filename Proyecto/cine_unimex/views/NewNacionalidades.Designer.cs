@@ -60,6 +60,7 @@
             this.txtNewNacionalidad.Name = "txtNewNacionalidad";
             this.txtNewNacionalidad.Size = new System.Drawing.Size(100, 20);
             this.txtNewNacionalidad.TabIndex = 2;
+            this.txtNewNacionalidad.TextChanged += new System.EventHandler(this.txtNewNacionalidad_TextChanged);
             // 
             // chkHabilitado
             // 
@@ -69,6 +70,7 @@
             this.chkHabilitado.Size = new System.Drawing.Size(15, 14);
             this.chkHabilitado.TabIndex = 3;
             this.chkHabilitado.UseVisualStyleBackColor = true;
+            this.chkHabilitado.CheckedChanged += new System.EventHandler(this.chkHabilitado_CheckedChanged);
             // 
             // btnAceptar
             // 
