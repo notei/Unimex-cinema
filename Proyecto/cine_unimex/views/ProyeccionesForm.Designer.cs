@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProyeccionesForm));
             this.ProyeccionesDgv = new System.Windows.Forms.DataGridView();
             this.NewProy = new System.Windows.Forms.Button();
+            this.updateBtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.ProyeccionesDgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -60,11 +61,22 @@
             this.NewProy.UseVisualStyleBackColor = true;
             this.NewProy.Click += new System.EventHandler(this.NewProy_Click);
             // 
+            // updateBtn
+            // 
+            this.updateBtn.Location = new System.Drawing.Point(13, 133);
+            this.updateBtn.Name = "updateBtn";
+            this.updateBtn.Size = new System.Drawing.Size(75, 23);
+            this.updateBtn.TabIndex = 2;
+            this.updateBtn.Text = "Actualizar";
+            this.updateBtn.UseVisualStyleBackColor = true;
+            this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
+            // 
             // ProyeccionesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(744, 359);
+            this.Controls.Add(this.updateBtn);
             this.Controls.Add(this.NewProy);
             this.Controls.Add(this.ProyeccionesDgv);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -80,5 +92,6 @@
 
         private System.Windows.Forms.DataGridView ProyeccionesDgv;
         private System.Windows.Forms.Button NewProy;
+        private System.Windows.Forms.Button updateBtn;
     }
 }

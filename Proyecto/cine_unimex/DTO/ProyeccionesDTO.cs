@@ -11,7 +11,8 @@ namespace unimex.lenguajesv.cine.DTO
         private int id_sala;
         private int id_pelicula;
         private String fecha;
-
+        private DateTime fechasdt;
+        private int id_Complejo;
         public int idproyeccion
         {
             //Obtener
@@ -36,6 +37,17 @@ namespace unimex.lenguajesv.cine.DTO
         {
             get { return fecha; }
             set {fecha = value;}
+        }
+
+        public DateTime fechasDT
+        {
+            get { return fechasdt; }
+            set { fechasdt = value; }
+        }
+        public int idcomplejo
+        {
+            get { return id_Complejo; }
+            set { id_Complejo = value; }
         }
     }
     }
