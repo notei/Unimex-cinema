@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using unimex.lenguajesv.cine.DTO;
 
 //DAO realizado por Gonzalez Reyes Berenice Izamar
 
@@ -28,9 +29,27 @@ namespace unimex.lenguajesv.cine.DAO
                 con.Close();
                 return tbl;
             }
+        }
 
+            public void agregarProveedor(ProveedoresDTO q)
+        {
+
+            String SQL_Agregar_Proveedor = " insert into cat_proveedor (proveedor,detalles, habilitado) values ( '" + q.proveedores  + "' , '"+ q.detalle +"' , '" + q.Habilitado + "')";
+
+
+
+            SqlConnection con;
+            con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+
+            SqlCommand comando;
+            comando = new SqlCommand(SQL_Agregar_Proveedor, con);
+            comando.ExecuteNonQuery();
+            con.Close();
+
+        }
 
 
         }
     }
-}
