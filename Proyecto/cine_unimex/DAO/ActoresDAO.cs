@@ -32,7 +32,7 @@ namespace unimex.lenguajesv.cine
         public void Actoragregar(ActoresDTO a)
         {
 
-            String agregar = " insert into cat_actores (nombre,apellido_paterno, apellido_materno, sexo, nacionalidad) values ( '" + a.Nombre + "' , '" + a.ApellidoP + "' , '" + a.ApellidoM + "', '" + a.Sexo + "')";
+            String agregar = " insert into cat_actores (nombre,apellido_paterno, apellido_materno, sexo, id_nacionalidad) values ( '" + a.Nombre + "' , '" + a.ApellidoP + "' , '" + a.ApellidoM + "'," + a.Sexo + "," + a.Id_Nacionalidad + ")";
 
           
 

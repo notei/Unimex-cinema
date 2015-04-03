@@ -11,7 +11,7 @@ namespace unimex.lenguajesv.cine
         private String nombre;
         private String apellido_paterno;
         private String apellido_materno;
-        private String sexo;
+        private int sexo;// cambio a integer porque los datos a extraer y a ingresar son enteros 0 o 1 
         private int id_nacionalidad;
         
 
@@ -44,7 +44,7 @@ namespace unimex.lenguajesv.cine
 
             set { apellido_materno = value; }
         }
-        public String Sexo
+        public int Sexo
         {
             get { return sexo; }
 
