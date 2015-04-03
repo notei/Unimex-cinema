@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using unimex.lenguajesv.cine.DTO;
 using unimex.lenguajesv.cine.DAO;
 
+
 namespace unimex.lenguajesv.cine.views
 {
     public partial class NewProductos : Form
@@ -17,21 +18,24 @@ namespace unimex.lenguajesv.cine.views
         {
             InitializeComponent();
         }
+        private void NewProductos_Load(object sender, EventArgs e)
+        {
+        }
 
         private void btnaceptar_Click(object sender, EventArgs e)
         {
            
                 ProductosDTO n = new ProductosDTO();
-                if (txtidproducto.Text != "")
+                if (txtnombre.Text != "")
             {
 
-                n.IdTipoProducto = Int32.Parse(txtidproducto.Text);
+                
                 n.Nombre = txtnombre.Text;
                 n.Descripcion  = txtdescripcion.Text;
-                n.Habilitar = btnradio.Checked;
-                
+                n.Habilitar = btncheck.Checked;
 
 
+             
 
               
 
@@ -40,8 +44,8 @@ namespace unimex.lenguajesv.cine.views
                 try
                 {
                     ProductosDAO dao = new ProductosDAO();
-                    //No existe el método "AgregarProductos" 
-                    //dao.AgregarProductos (n);
+
+                  
                 }
                 catch (Exception ex)
                 {
@@ -63,16 +67,24 @@ namespace unimex.lenguajesv.cine.views
             this.Dispose();
         }
 
-        private void NewProductos_Load(object sender, EventArgs e)
-        {
+    }
+}
 
-        }
-        }
+       
 
+        
+
+      
+        
+
+
+
+
+        
 
      
             
-        }
+        
 
     
 

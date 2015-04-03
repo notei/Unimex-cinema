@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using unimex.lenguajesv.cine.DTO;
 
+
 namespace unimex.lenguajesv.cine.DAO
 {
     class ProductosDAO
@@ -27,13 +28,11 @@ namespace unimex.lenguajesv.cine.DAO
                 return tbl;
             }
         }
-/*
- //el nombre del metoo es agregarUsuario 
-         public void agregarUsuario(ProductosDTO n)
+
+        public void agregarProducto(ProductosDTO n)
         {
-           
-            //la consulta está sobre la tabla usuarios la tuya es sobre productos con los campos requeridos de productos insert into USUARIOS?
-            String SQL_Agregar_Productos= " insert into usuarios (idUsuario, nombre, apellido_paterno, nombre_usuario, contrasena, id_tipo_usuario) values ( " + n.idusuario + " , '" + n.Nombre + "' , " + n.ApPaterno + "," + n.NomUsuario + "," + n.Contrasena + "," + n.Id_Tipo_Usuario + ")";
+
+            String SQL_Agregar_Productos = " insert into productos (  Nombre,Descripcion, Habilitar) values ( '" + n.Nombre + "' , '" + n.Descripcion + "' , '" + n.Habilitar + "," + n.IdTipoProducto + "," + ")";
 
             SqlConnection con = new SqlConnection();
             con.ConnectionString = Cadena;
@@ -41,10 +40,10 @@ namespace unimex.lenguajesv.cine.DAO
 
             SqlCommand cmd = new SqlCommand(SQL_Agregar_Productos, con);
             cmd.ExecuteNonQuery();
-            con.Close();  
+            con.Close();
 
         }
-        */
+
 
     }
 }
