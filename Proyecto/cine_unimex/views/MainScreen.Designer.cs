@@ -39,10 +39,11 @@
             this.nacionalidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.productosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tipoProyeccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.tipoProyeccionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.actoresToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -77,6 +78,7 @@
             // catálogosToolStripMenuItem
             // 
             this.catálogosToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.actoresToolStripMenuItem,
             this.preciosDeBoletosToolStripMenuItem,
             this.proveedoresToolStripMenuItem,
             this.proyeccionesToolStripMenuItem,
@@ -130,6 +132,13 @@
             this.productosToolStripMenuItem.Text = "Productos";
             this.productosToolStripMenuItem.Click += new System.EventHandler(this.productosToolStripMenuItem_Click);
             // 
+            // tipoProyeccionToolStripMenuItem
+            // 
+            this.tipoProyeccionToolStripMenuItem.Name = "tipoProyeccionToolStripMenuItem";
+            this.tipoProyeccionToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.tipoProyeccionToolStripMenuItem.Text = "Tipo Proyeccion";
+            this.tipoProyeccionToolStripMenuItem.Click += new System.EventHandler(this.tipoProyeccionToolStripMenuItem_Click);
+            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -154,12 +163,12 @@
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // tipoProyeccionToolStripMenuItem
+            // actoresToolStripMenuItem
             // 
-            this.tipoProyeccionToolStripMenuItem.Name = "tipoProyeccionToolStripMenuItem";
-            this.tipoProyeccionToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.tipoProyeccionToolStripMenuItem.Text = "Tipo Proyeccion";
-            this.tipoProyeccionToolStripMenuItem.Click += new System.EventHandler(this.tipoProyeccionToolStripMenuItem_Click);
+            this.actoresToolStripMenuItem.Name = "actoresToolStripMenuItem";
+            this.actoresToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.actoresToolStripMenuItem.Text = "Actores";
+            this.actoresToolStripMenuItem.Click += new System.EventHandler(this.actoresToolStripMenuItem_Click);
             // 
             // MainScreen
             // 
@@ -201,6 +210,7 @@
         private System.Windows.Forms.ToolStripMenuItem nacionalidadesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem tipoProyeccionToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem actoresToolStripMenuItem;
     }
 }
 

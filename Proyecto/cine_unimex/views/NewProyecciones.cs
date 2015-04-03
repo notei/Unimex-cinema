@@ -164,6 +164,11 @@ namespace unimex.lenguajesv.cine.views
         {
             consultaSalas();
         }
+
+        private void complejosCb_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
               
         }
     }

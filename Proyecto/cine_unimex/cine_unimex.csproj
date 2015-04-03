@@ -65,6 +65,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DAO\ActoresDAO.cs" />
+    <Compile Include="DTO\ActoresDTO.cs" />
     <Compile Include="DAO\PreciosDAO.cs" />
     <Compile Include="DAO\ProductosDAO.cs" />
     <Compile Include="DAO\ProveedoresDAO.cs" />
@@ -80,12 +82,19 @@
     <Compile Include="DTO\UsuarioDTO.cs" />
     <Compile Include="DAO\NacionalidadesDAO.cs" />
     <Compile Include="DTO\UsuariosDTO.cs" />
+    <Compile Include="DTO\NacionalidadesActoresDTO.cs" />
     <Compile Include="Sesion.cs" />
     <Compile Include="views\AcercaDeScreen.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="views\AcercaDeScreen.Designer.cs">
       <DependentUpon>AcercaDeScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\Actores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\Actores.Designer.cs">
+      <DependentUpon>Actores.cs</DependentUpon>
     </Compile>
     <Compile Include="views\LoginScreen.cs">
       <SubType>Form</SubType>
@@ -106,6 +115,12 @@
     </Compile>
     <Compile Include="views\NacionalidadesForm.Designer.cs">
       <DependentUpon>NacionalidadesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\NewActores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\NewActores.Designer.cs">
+      <DependentUpon>NewActores.cs</DependentUpon>
     </Compile>
     <Compile Include="views\NewNacionalidades.cs">
       <SubType>Form</SubType>
@@ -176,6 +191,9 @@
     <EmbeddedResource Include="views\AcercaDeScreen.resx">
       <DependentUpon>AcercaDeScreen.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\Actores.resx">
+      <DependentUpon>Actores.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -194,6 +212,9 @@
     </Compile>
     <EmbeddedResource Include="views\NacionalidadesForm.resx">
       <DependentUpon>NacionalidadesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\NewActores.resx">
+      <DependentUpon>NewActores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\NewNacionalidades.resx">
       <DependentUpon>NewNacionalidades.cs</DependentUpon>

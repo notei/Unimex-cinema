@@ -103,6 +103,14 @@ namespace unimex.lenguajesv.cine.views
 
         }
 
+        private void actoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Actores frmActores = new Actores();
+            frmActores.MdiParent = this;
+            frmActores.StartPosition = FormStartPosition.CenterScreen;
+            frmActores.Show();
+        }
+
         
     }
 }
