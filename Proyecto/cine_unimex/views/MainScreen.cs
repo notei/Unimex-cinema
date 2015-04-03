@@ -111,6 +111,30 @@ namespace unimex.lenguajesv.cine.views
             frmActores.Show();
         }
 
+        private void películasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+
+
+        }
+
+        private void salasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+
+
+        }
+
+        private void cortosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+
+
+        }
+
         
     }
 }
