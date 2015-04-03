@@ -66,6 +66,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\ActoresDAO.cs" />
+    <Compile Include="DAO\CortosDAO.cs" />
+    <Compile Include="DAO\PeliculasDAO.cs" />
+    <Compile Include="DAO\SalasDAO.cs" />
     <Compile Include="DTO\ActoresDTO.cs" />
     <Compile Include="DAO\PreciosDAO.cs" />
     <Compile Include="DAO\ProductosDAO.cs" />
@@ -75,6 +78,7 @@
     <Compile Include="DAO\UsuarioDAO.cs" />
     <Compile Include="DAO\UsuariosDAO.cs" />
     <Compile Include="DTO\NacionalidadesDTO.cs" />
+    <Compile Include="DTO\PeliculasDTO.cs" />
     <Compile Include="DTO\ProductosDTO.cs" />
     <Compile Include="DTO\ProveedoresDTO.cs" />
     <Compile Include="DTO\ProyeccionesDTO.cs" />
@@ -95,6 +99,12 @@
     </Compile>
     <Compile Include="views\Actores.Designer.cs">
       <DependentUpon>Actores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\CortosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\CortosForm.Designer.cs">
+      <DependentUpon>CortosForm.cs</DependentUpon>
     </Compile>
     <Compile Include="views\LoginScreen.cs">
       <SubType>Form</SubType>
@@ -152,6 +162,12 @@
     <Compile Include="views\NewUsuarios.Designer.cs">
       <DependentUpon>NewUsuarios.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\Peliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\Peliculas.Designer.cs">
+      <DependentUpon>Peliculas.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\PreciosForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +192,12 @@
     <Compile Include="views\ProyeccionesForm.Designer.cs">
       <DependentUpon>ProyeccionesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\SalasForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\SalasForm.Designer.cs">
+      <DependentUpon>SalasForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\TipoProyeccionForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -193,6 +215,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\Actores.resx">
       <DependentUpon>Actores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\CortosForm.resx">
+      <DependentUpon>CortosForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\LoginScreen.resx">
       <DependentUpon>LoginScreen.cs</DependentUpon>
@@ -231,6 +256,9 @@
     <EmbeddedResource Include="views\NewUsuarios.resx">
       <DependentUpon>NewUsuarios.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\Peliculas.resx">
+      <DependentUpon>Peliculas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\PreciosForm.resx">
       <DependentUpon>PreciosForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -242,6 +270,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\ProyeccionesForm.resx">
       <DependentUpon>ProyeccionesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\SalasForm.resx">
+      <DependentUpon>SalasForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\TipoProyeccionForm.resx">
       <DependentUpon>TipoProyeccionForm.cs</DependentUpon>
