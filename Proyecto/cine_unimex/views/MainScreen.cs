@@ -113,10 +113,10 @@ namespace unimex.lenguajesv.cine.views
 
         private void películasToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
-
-
-
+            Peliculas frmPeli = new Peliculas();
+            frmPeli.MdiParent = this;
+            frmPeli.StartPosition = FormStartPosition.CenterScreen;
+            frmPeli.Show();
         }
 
         private void salasToolStripMenuItem_Click(object sender, EventArgs e)

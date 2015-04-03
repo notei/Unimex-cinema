@@ -29,7 +29,7 @@ namespace unimex.lenguajesv.cine.views
 
                 try
                 {
-                    DataTable dt = Pel_DAO.LoadPeliculas();
+                    DataTable dt = Pel_DAO.loadPeliculas();
                     peliculasdgv.DataSource = dt;
                 }
                 catch (Exception ex)

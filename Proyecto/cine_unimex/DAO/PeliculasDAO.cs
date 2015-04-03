@@ -27,41 +27,7 @@ namespace unimex.lenguajesv.cine.DAO
             }
 
         }
-        public void newPelicula(PeliculasDTO new_peli)
-        {
-            String SQL_newPelicula = "insert into peliculas (id_pelicula, pelicula, id_clasificacion, duracion_min, sinopsis, idioma, sonido, id_nacionalidad, id_genero, estreno) values ('" + new_peli.id_Pelicula + "," + new_peli.Pelicula + "," + new_peli.id_Clasificacion + "," + new_peli.Duracion_min + ", " + new_peli.Sinopsis + "," + new_peli.Sonido + "," + new_peli.id_Nacionalidad + "," + new_peli.id_Genero + "," + new_peli.Estreno + ")";
-
-            SqlConnection con = getConexion();
-            SqlCommand cmd = new SqlCommand(SQL_newPelicula, con);
-            cmd.ExecuteNonQuery();
-            con.Close();
-        
-            }
-        public DataTable Loadpeliculas()
-        {
-            String SQL_Consulta_Peliculas = "select id_pelicula, pelicula from peliculas";
-            SqlConnection con = getConexion();
-            using (SqlDataAdapter adapter = new SqlDataAdapter(SQL_Consulta_Peliculas, con))
-            {
-
-                DataTable tbl = new DataTable();
-                adapter.Fill(tbl);
-                con.Close();
-                return tbl;
-            }
-        }
-            private SqlConnection getConexion()
-        {
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = Cadena;
-            con.Open();
-            return con;
-        }
-
-            internal DataTable LoadPeliculas()
-            {
-                throw new NotImplementedException();
-            }
+       
     }
 }
 
