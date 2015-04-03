@@ -38,6 +38,11 @@ namespace unimex.lenguajesv.cine.views
 
         }
 
+        private void dgvNacionalidades_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
 
     }
 }

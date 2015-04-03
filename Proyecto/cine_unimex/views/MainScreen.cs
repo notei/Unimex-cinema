@@ -94,6 +94,15 @@ namespace unimex.lenguajesv.cine.views
             frmProductos.Show();
         }
 
+        private void tipoProyeccionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TipoProyeccionForm frmTproyeccion = new TipoProyeccionForm();
+            frmTproyeccion.MdiParent = this;
+            frmTproyeccion.StartPosition = FormStartPosition.CenterScreen;
+            frmTproyeccion.Show();
+
+        }
+
         
     }
 }

@@ -45,6 +45,7 @@
             this.dgvNacionalidades.Name = "dgvNacionalidades";
             this.dgvNacionalidades.Size = new System.Drawing.Size(240, 150);
             this.dgvNacionalidades.TabIndex = 0;
+            this.dgvNacionalidades.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNacionalidades_CellContentClick);
             // 
             // btnAgregarNac
             // 
