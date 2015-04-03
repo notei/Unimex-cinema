@@ -24,28 +24,20 @@ namespace unimex.lenguajesv.cine.views
 
         private void btnaceptar_Click(object sender, EventArgs e)
         {
-           
-                ProductosDTO n = new ProductosDTO();
-                if (txtnombre.Text != "")
+
+
+            if (txtnombre.Text != "")
             {
-
-                
+                ProductosDTO n = new ProductosDTO();
                 n.Nombre = txtnombre.Text;
-                n.Descripcion  = txtdescripcion.Text;
+                n.Descripcion = txtdescripcion.Text;
                 n.Habilitar = btncheck.Checked;
-
-
-             
-
-              
-
 
 
                 try
                 {
                     ProductosDAO dao = new ProductosDAO();
-
-                  
+                    dao.agregarProducto(n);
                 }
                 catch (Exception ex)
                 {
@@ -54,10 +46,9 @@ namespace unimex.lenguajesv.cine.views
 
             }
 
-
             else
             {
-                MessageBox.Show(" Agregue un producto ");
+                MessageBox.Show(" Ingrese un Producto ", " ERROR");
             }
             this.Dispose();
         }
@@ -80,12 +71,12 @@ namespace unimex.lenguajesv.cine.views
 
 
 
+
         
 
-     
-            
+      
         
 
-    
+
 
 

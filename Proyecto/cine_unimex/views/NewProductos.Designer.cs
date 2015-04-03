@@ -41,7 +41,7 @@
             // lblnombre
             // 
             this.lblnombre.AutoSize = true;
-            this.lblnombre.Location = new System.Drawing.Point(20, 107);
+            this.lblnombre.Location = new System.Drawing.Point(24, 39);
             this.lblnombre.Name = "lblnombre";
             this.lblnombre.Size = new System.Drawing.Size(44, 13);
             this.lblnombre.TabIndex = 1;
@@ -50,7 +50,7 @@
             // Lbldescripcion
             // 
             this.Lbldescripcion.AutoSize = true;
-            this.Lbldescripcion.Location = new System.Drawing.Point(23, 168);
+            this.Lbldescripcion.Location = new System.Drawing.Point(24, 107);
             this.Lbldescripcion.Name = "Lbldescripcion";
             this.Lbldescripcion.Size = new System.Drawing.Size(63, 13);
             this.Lbldescripcion.TabIndex = 2;
@@ -58,21 +58,21 @@
             // 
             // txtnombre
             // 
-            this.txtnombre.Location = new System.Drawing.Point(278, 107);
+            this.txtnombre.Location = new System.Drawing.Point(211, 32);
             this.txtnombre.Name = "txtnombre";
             this.txtnombre.Size = new System.Drawing.Size(100, 20);
             this.txtnombre.TabIndex = 5;
             // 
             // txtdescripcion
             // 
-            this.txtdescripcion.Location = new System.Drawing.Point(278, 168);
+            this.txtdescripcion.Location = new System.Drawing.Point(211, 100);
             this.txtdescripcion.Name = "txtdescripcion";
             this.txtdescripcion.Size = new System.Drawing.Size(100, 20);
             this.txtdescripcion.TabIndex = 6;
             // 
             // btnaceptar
             // 
-            this.btnaceptar.Location = new System.Drawing.Point(170, 324);
+            this.btnaceptar.Location = new System.Drawing.Point(27, 257);
             this.btnaceptar.Name = "btnaceptar";
             this.btnaceptar.Size = new System.Drawing.Size(75, 23);
             this.btnaceptar.TabIndex = 8;
@@ -82,7 +82,7 @@
             // 
             // btncancelar
             // 
-            this.btncancelar.Location = new System.Drawing.Point(406, 324);
+            this.btncancelar.Location = new System.Drawing.Point(211, 257);
             this.btncancelar.Name = "btncancelar";
             this.btncancelar.Size = new System.Drawing.Size(75, 23);
             this.btncancelar.TabIndex = 9;
@@ -93,7 +93,7 @@
             // txthabilitar
             // 
             this.txthabilitar.AutoSize = true;
-            this.txthabilitar.Location = new System.Drawing.Point(23, 232);
+            this.txthabilitar.Location = new System.Drawing.Point(24, 180);
             this.txthabilitar.Name = "txthabilitar";
             this.txthabilitar.Size = new System.Drawing.Size(45, 13);
             this.txthabilitar.TabIndex = 10;
@@ -102,7 +102,7 @@
             // btncheck
             // 
             this.btncheck.AutoSize = true;
-            this.btncheck.Location = new System.Drawing.Point(268, 232);
+            this.btncheck.Location = new System.Drawing.Point(211, 180);
             this.btncheck.Name = "btncheck";
             this.btncheck.Size = new System.Drawing.Size(15, 14);
             this.btncheck.TabIndex = 11;
@@ -112,7 +112,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(719, 392);
+            this.ClientSize = new System.Drawing.Size(407, 372);
             this.Controls.Add(this.btncheck);
             this.Controls.Add(this.txthabilitar);
             this.Controls.Add(this.btncancelar);

@@ -32,14 +32,18 @@ namespace unimex.lenguajesv.cine.DAO
         public void agregarProducto(ProductosDTO n)
         {
 
-            String SQL_Agregar_Productos = " insert into productos (  Nombre,Descripcion, Habilitar) values ( '" + n.Nombre + "' , '" + n.Descripcion + "' , '" + n.Habilitar + "," + n.IdTipoProducto + "," + ")";
+            String SQL_Agregar_Producto = " insert into cat_tipo_productos(nombre,descripcion, habilitado) values ( '" + n.Nombre + "' , '" + n.Descripcion + "' , '" + n.Habilitar + "')";
 
-            SqlConnection con = new SqlConnection();
+
+
+            SqlConnection con;
+            con = new SqlConnection();
             con.ConnectionString = Cadena;
             con.Open();
 
-            SqlCommand cmd = new SqlCommand(SQL_Agregar_Productos, con);
-            cmd.ExecuteNonQuery();
+            SqlCommand comando;
+            comando = new SqlCommand(SQL_Agregar_Producto, con);
+            comando.ExecuteNonQuery();
             con.Close();
 
         }
