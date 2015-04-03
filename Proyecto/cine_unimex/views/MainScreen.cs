@@ -123,6 +123,10 @@ namespace unimex.lenguajesv.cine.views
         {
 
 
+            SalasForm frmSalas = new SalasForm();
+            frmSalas.MdiParent = this;
+            frmSalas.StartPosition = FormStartPosition.CenterParent;
+            frmSalas.Show();
 
 
         }

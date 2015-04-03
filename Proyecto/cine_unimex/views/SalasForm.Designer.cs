@@ -45,14 +45,14 @@
             this.dataG.Size = new System.Drawing.Size(733, 576);
             this.dataG.TabIndex = 0;
             // 
-            // ComplejosForm
+            // SalasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(953, 629);
             this.Controls.Add(this.dataG);
-            this.Name = "ComplejosForm";
-            this.Text = "ComplejosForm";
+            this.Name = "SalasForm";
+            this.Text = "SalasForm";
             this.Load += new System.EventHandler(this.ComplejosForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataG)).EndInit();
             this.ResumeLayout(false);
