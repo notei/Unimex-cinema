@@ -24,8 +24,8 @@ namespace unimex.lenguajesv.cine.DTO
         }
         public int Id_Complejo 
         {
-            get { return Id_Complejo; }
-            set { id_sala = value; }
+            get { return id_complejo; }
+            set { id_complejo = value; }
 
         }
         public String Nombre_Sala 

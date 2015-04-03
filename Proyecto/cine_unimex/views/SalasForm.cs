@@ -42,7 +42,7 @@ namespace unimex.lenguajesv.cine.views
         {
             NewSalas frmNewSalas = new NewSalas();
             frmNewSalas.Show();
-            frmNewSalas.Dispose();
+            
         }
     }
 }
