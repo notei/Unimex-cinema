@@ -130,7 +130,10 @@ namespace unimex.lenguajesv.cine.views
         private void cortosToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-
+            CortosForm frmCortos = new CortosForm();
+            frmCortos.MdiParent = this;
+            frmCortos.StartPosition = FormStartPosition.CenterParent;
+            frmCortos.Show();
 
 
         }

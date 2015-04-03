@@ -10,7 +10,7 @@ namespace unimex.lenguajesv.cine.DAO
     class CortosDAO
     {
 
-        private String consulta_Actores = "select cat_cortos.id_corto, peliculas.pelicula, cat_cortos.nombre_corto,cat_cortos.duracion, cat_cortos.habilitado from peliculas inner join cat_cortos on cat_cortos.id_pelicula = peliculas.id_pelicula";
+        private String consulta_Cortos = "select cat_cortos.id_corto, peliculas.pelicula, cat_cortos.nombre_corto,cat_cortos.duracion, cat_cortos.habilitado from peliculas inner join cat_cortos on cat_cortos.id_pelicula = peliculas.id_pelicula";
         private String Cadena = Properties.Resources.CADENA_CONEXION;
 
         public DataTable loadCortos()
@@ -31,6 +31,6 @@ namespace unimex.lenguajesv.cine.DAO
 
 
 
-        public string consulta_Cortos { get; set; }
+        
     }
 }
