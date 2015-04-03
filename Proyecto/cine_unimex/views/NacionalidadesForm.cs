@@ -32,6 +32,7 @@ namespace unimex.lenguajesv.cine.views
         {
             NewNacionalidades formanac = new NewNacionalidades();
             formanac.ShowDialog();
+            consutaNacinalidades();
             /* Por favor agrega un evento para que al cerrar el formulario automaticamente
              * actualize el dataGridView sin necesidad de volverlo a abrir. atte Alex. */
 
