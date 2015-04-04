@@ -84,6 +84,7 @@
     <Compile Include="DTO\PeliculasDTO.cs" />
     <Compile Include="DTO\peliculas_estrenosDTO.cs" />
     <Compile Include="DTO\ProductosDTO.cs" />
+    <Compile Include="DTO\ProductosDTO2.cs" />
     <Compile Include="DTO\ProveedoresDTO.cs" />
     <Compile Include="DTO\ProyeccionesDTO.cs" />
     <Compile Include="DTO\SalasDTO.cs" />
