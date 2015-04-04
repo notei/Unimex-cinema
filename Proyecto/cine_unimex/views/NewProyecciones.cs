@@ -19,6 +19,8 @@ namespace unimex.lenguajesv.cine.views
             InitializeComponent();
             isInsertId = true;
             acceptbtn.Text = "Agregar";
+            label5.Text = "Nueva Proyección";
+            this.Text = "Nueva Proyección";
         }
         public NewProyecciones(int id)
         {
@@ -26,6 +28,8 @@ namespace unimex.lenguajesv.cine.views
             this.id = id;
             isInsertId = false;
             acceptbtn.Text = "Actualizar";
+            label5.Text = "Actualizar ";
+            this.Text = "Actualizar";
         }
 
         private void NewProyecciones_Load(object sender, EventArgs e)

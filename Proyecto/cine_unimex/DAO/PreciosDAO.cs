@@ -41,25 +41,5 @@ namespace unimex.lenguajesv.cine.DAO
             comando.ExecuteNonQuery();
             con.Close();
         }
-        public PreciosDTO cargarPreciosconsulta (int id)
-        {
-            String SQL_Cargar_Precio = "select * from cat_precios where id_precio = " + id;
-            PreciosDTO preciosdto = new PreciosDTO();
-            SqlConnection con = new SqlConnection();            
-            con.ConnectionString = Cadena;
-            con.Open();
-            SqlCommand cmd = new SqlCommand(SQL_Cargar_Precio, con);
-            SqlDataReader reaad = cmd.ExecuteReader();            
-            while (reaad.Read())
-            {
-                preciosdto.id_Precios = (int)reaad.GetSqlInt32(0);
-                preciosdto.Nombre = (String)reaad.GetString(1);
-                preciosdto.Descripcion = (String)reaad.GetString(2);
-                preciosdto.Precios = (float)reaad.GetFloat(3);
-            }
-            con.Close();
-            return preciosdto;
-            
-        }
     }
 }

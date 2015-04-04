@@ -39,22 +39,25 @@
             this.label4 = new System.Windows.Forms.Label();
             this.complejosCb = new System.Windows.Forms.ComboBox();
             this.salasCB = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // Horario
             // 
-            this.Horario.Location = new System.Drawing.Point(71, 126);
-            this.Horario.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Horario.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Horario.Location = new System.Drawing.Point(98, 200);
+            this.Horario.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Horario.Name = "Horario";
-            this.Horario.Size = new System.Drawing.Size(151, 20);
+            this.Horario.Size = new System.Drawing.Size(200, 23);
             this.Horario.TabIndex = 3;
             // 
             // Cancelbtn
             // 
-            this.Cancelbtn.Location = new System.Drawing.Point(6, 184);
-            this.Cancelbtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Cancelbtn.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Cancelbtn.Location = new System.Drawing.Point(12, 267);
+            this.Cancelbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Cancelbtn.Name = "Cancelbtn";
-            this.Cancelbtn.Size = new System.Drawing.Size(56, 23);
+            this.Cancelbtn.Size = new System.Drawing.Size(110, 58);
             this.Cancelbtn.TabIndex = 4;
             this.Cancelbtn.Text = "&Cancelar";
             this.Cancelbtn.UseVisualStyleBackColor = true;
@@ -62,10 +65,11 @@
             // 
             // acceptbtn
             // 
-            this.acceptbtn.Location = new System.Drawing.Point(128, 184);
-            this.acceptbtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.acceptbtn.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.acceptbtn.Location = new System.Drawing.Point(181, 267);
+            this.acceptbtn.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.acceptbtn.Name = "acceptbtn";
-            this.acceptbtn.Size = new System.Drawing.Size(56, 23);
+            this.acceptbtn.Size = new System.Drawing.Size(110, 58);
             this.acceptbtn.TabIndex = 5;
             this.acceptbtn.Text = "&Aceptar";
             this.acceptbtn.UseVisualStyleBackColor = true;
@@ -74,79 +78,93 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(10, 50);
-            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(12, 125);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(31, 13);
+            this.label1.Size = new System.Drawing.Size(43, 19);
             this.label1.TabIndex = 5;
             this.label1.Text = "Sala:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(9, 90);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 165);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(47, 13);
+            this.label2.Size = new System.Drawing.Size(67, 19);
             this.label2.TabIndex = 6;
             this.label2.Text = "Pelicula:";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(9, 130);
-            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 205);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.Size = new System.Drawing.Size(62, 19);
             this.label3.TabIndex = 7;
-            this.label3.Text = "horario:";
+            this.label3.Text = "Horario:";
             // 
             // peliculaCb
             // 
             this.peliculaCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.peliculaCb.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.peliculaCb.FormattingEnabled = true;
-            this.peliculaCb.Location = new System.Drawing.Point(71, 88);
-            this.peliculaCb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.peliculaCb.Location = new System.Drawing.Point(98, 162);
+            this.peliculaCb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.peliculaCb.Name = "peliculaCb";
-            this.peliculaCb.Size = new System.Drawing.Size(114, 21);
+            this.peliculaCb.Size = new System.Drawing.Size(151, 25);
             this.peliculaCb.TabIndex = 2;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 20);
-            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label4.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(12, 85);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(53, 13);
+            this.label4.Size = new System.Drawing.Size(80, 19);
             this.label4.TabIndex = 9;
             this.label4.Text = "Complejo:";
             // 
             // complejosCb
             // 
             this.complejosCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.complejosCb.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.complejosCb.FormattingEnabled = true;
-            this.complejosCb.Location = new System.Drawing.Point(71, 17);
-            this.complejosCb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.complejosCb.Location = new System.Drawing.Point(98, 82);
+            this.complejosCb.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.complejosCb.Name = "complejosCb";
-            this.complejosCb.Size = new System.Drawing.Size(114, 21);
+            this.complejosCb.Size = new System.Drawing.Size(151, 25);
             this.complejosCb.TabIndex = 0;
             this.complejosCb.SelectedIndexChanged += new System.EventHandler(this.complejosCb_SelectedIndexChanged);
             // 
             // salasCB
             // 
             this.salasCB.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.salasCB.Font = new System.Drawing.Font("Century Gothic", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.salasCB.FormattingEnabled = true;
-            this.salasCB.Location = new System.Drawing.Point(71, 50);
-            this.salasCB.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.salasCB.Location = new System.Drawing.Point(98, 122);
+            this.salasCB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.salasCB.Name = "salasCB";
-            this.salasCB.Size = new System.Drawing.Size(114, 21);
+            this.salasCB.Size = new System.Drawing.Size(151, 25);
             this.salasCB.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(6, 9);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(312, 39);
+            this.label5.TabIndex = 10;
+            this.label5.Text = "Nueva Proyección";
             // 
             // NewProyecciones
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(232, 240);
+            this.ClientSize = new System.Drawing.Size(320, 336);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.salasCB);
             this.Controls.Add(this.complejosCb);
             this.Controls.Add(this.label4);
@@ -158,7 +176,7 @@
             this.Controls.Add(this.Cancelbtn);
             this.Controls.Add(this.Horario);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "NewProyecciones";
             this.Text = "Nueva Proyección";
             this.Load += new System.EventHandler(this.NewProyecciones_Load);
@@ -179,5 +197,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox complejosCb;
         private System.Windows.Forms.ComboBox salasCB;
+        private System.Windows.Forms.Label label5;
     }
 }

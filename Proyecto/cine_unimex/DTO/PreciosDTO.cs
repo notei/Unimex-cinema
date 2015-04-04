@@ -7,16 +7,16 @@ namespace unimex.lenguajesv.cine.DTO
 {
     class PreciosDTO
     {
-        private int id_precio;
+        private int id_precios;
         private String nombre;
         private String descripcion;
-        private float precio;
+        private int precio;
 
 
         public int id_Precios
         {
-            get { return id_precio; }
-            set { id_precio = value; }
+            get { return id_precios; }
+            set { id_precios = value; }
         }
 
         public String Nombre
@@ -31,7 +31,7 @@ namespace unimex.lenguajesv.cine.DTO
             set { descripcion = value;}
         }
 
-        public float Precios
+        public int Precios
         {
             get { return precio; }
             set { precio = value;}

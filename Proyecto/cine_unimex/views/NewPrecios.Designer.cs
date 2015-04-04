@@ -103,7 +103,7 @@
             this.btnCancelarnew.Name = "btnCancelarnew";
             this.btnCancelarnew.Size = new System.Drawing.Size(75, 23);
             this.btnCancelarnew.TabIndex = 7;
-            this.btnCancelarnew.Text = "Cancelar";
+            this.btnCancelarnew.Text = "Agregar";
             this.btnCancelarnew.UseVisualStyleBackColor = true;
             this.btnCancelarnew.Click += new System.EventHandler(this.btnCancelarnew_Click);
             // 
@@ -122,7 +122,6 @@
             this.Controls.Add(this.txtNombrenew);
             this.Name = "NewPrecios";
             this.Text = "Nuevo Precio";
-            this.Load += new System.EventHandler(this.NewPrecios_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
