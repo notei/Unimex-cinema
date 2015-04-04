@@ -50,5 +50,9 @@ Pérez Acosta Arturo (Directores)
 Rosiles Romero David F. (Actores) 
 SAUCEDO MARTINEZ MARIA GPE (TIPOS DE USUARIOS)
 
-
+----------Agrego mi canal de youtube por quien no encuentre los vídeos que buscan
+----------Así como el vídeo que no pude subir por su larga duración
+ 
+https://www.youtube.com/channel/UC3AQEjjLXaMO-3QlTkByn4g (Canal)
+https://www.youtube.com/watch?v=_8YYK28ks74 (DAO C# SQL Server <Data Access Object> <vídeo 8> )
 
