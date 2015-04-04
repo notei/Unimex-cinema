@@ -37,5 +37,12 @@ namespace unimex.lenguajesv.cine.views
  
             }
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NewSalas frmNewSalas = new NewSalas();
+            frmNewSalas.Show();
+            frmNewSalas.Dispose();
+        }
     }
 }

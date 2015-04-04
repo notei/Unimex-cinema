@@ -82,6 +82,7 @@
     <Compile Include="DTO\ProductosDTO.cs" />
     <Compile Include="DTO\ProveedoresDTO.cs" />
     <Compile Include="DTO\ProyeccionesDTO.cs" />
+    <Compile Include="DTO\SalasDTO.cs" />
     <Compile Include="DTO\TipoProyeccionDTO.cs" />
     <Compile Include="DTO\UsuarioDTO.cs" />
     <Compile Include="DAO\NacionalidadesDAO.cs" />
@@ -155,6 +156,12 @@
     </Compile>
     <Compile Include="views\NewProyecciones.Designer.cs">
       <DependentUpon>NewProyecciones.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\NewSalas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\NewSalas.Designer.cs">
+      <DependentUpon>NewSalas.cs</DependentUpon>
     </Compile>
     <Compile Include="views\NewUsuarios.cs">
       <SubType>Form</SubType>
@@ -252,6 +259,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\NewProyecciones.resx">
       <DependentUpon>NewProyecciones.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\NewSalas.resx">
+      <DependentUpon>NewSalas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\NewUsuarios.resx">
       <DependentUpon>NewUsuarios.cs</DependentUpon>
