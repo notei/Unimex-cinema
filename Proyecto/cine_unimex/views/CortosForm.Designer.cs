@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dgvcortos = new System.Windows.Forms.DataGridView();
+            this.Agregarbtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcortos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,11 +45,22 @@
             this.dgvcortos.Size = new System.Drawing.Size(727, 387);
             this.dgvcortos.TabIndex = 0;
             // 
+            // Agregarbtn
+            // 
+            this.Agregarbtn.Location = new System.Drawing.Point(47, 56);
+            this.Agregarbtn.Name = "Agregarbtn";
+            this.Agregarbtn.Size = new System.Drawing.Size(75, 23);
+            this.Agregarbtn.TabIndex = 1;
+            this.Agregarbtn.Text = "Agregar";
+            this.Agregarbtn.UseVisualStyleBackColor = true;
+            this.Agregarbtn.Click += new System.EventHandler(this.Agregarbtn_Click);
+            // 
             // CortosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(894, 411);
+            this.Controls.Add(this.Agregarbtn);
             this.Controls.Add(this.dgvcortos);
             this.Name = "CortosForm";
             this.Text = "CortosForm";
@@ -61,5 +73,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvcortos;
+        private System.Windows.Forms.Button Agregarbtn;
     }
 }

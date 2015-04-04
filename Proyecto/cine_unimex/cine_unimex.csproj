@@ -68,6 +68,7 @@
     <Compile Include="DAO\ActoresDAO.cs" />
     <Compile Include="DAO\CortosDAO.cs" />
     <Compile Include="DAO\PeliculasDAO.cs" />
+    <Compile Include="DAO\peliculas_estrenosDAO.cs" />
     <Compile Include="DAO\SalasDAO.cs" />
     <Compile Include="DTO\ActoresDTO.cs" />
     <Compile Include="DAO\PreciosDAO.cs" />
@@ -77,8 +78,10 @@
     <Compile Include="DAO\TipoProyeccionDAO.cs" />
     <Compile Include="DAO\UsuarioDAO.cs" />
     <Compile Include="DAO\UsuariosDAO.cs" />
+    <Compile Include="DTO\CortosDTO.cs" />
     <Compile Include="DTO\NacionalidadesDTO.cs" />
     <Compile Include="DTO\PeliculasDTO.cs" />
+    <Compile Include="DTO\peliculas_estrenosDTO.cs" />
     <Compile Include="DTO\ProductosDTO.cs" />
     <Compile Include="DTO\ProveedoresDTO.cs" />
     <Compile Include="DTO\ProyeccionesDTO.cs" />
@@ -88,6 +91,18 @@
     <Compile Include="DAO\NacionalidadesDAO.cs" />
     <Compile Include="DTO\UsuariosDTO.cs" />
     <Compile Include="DTO\NacionalidadesActoresDTO.cs" />
+    <Compile Include="views\peliculas_estrenos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\peliculas_estrenos.Designer.cs">
+      <DependentUpon>peliculas_estrenos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\newpeliculas_estrenosfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\newpeliculas_estrenosfrm.Designer.cs">
+      <DependentUpon>newpeliculas_estrenosfrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Sesion.cs" />
     <Compile Include="views\AcercaDeScreen.cs">
       <SubType>Form</SubType>
@@ -133,11 +148,23 @@
     <Compile Include="views\NewActores.Designer.cs">
       <DependentUpon>NewActores.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\NewCortos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\NewCortos.Designer.cs">
+      <DependentUpon>NewCortos.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\NewNacionalidades.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="views\NewNacionalidades.Designer.cs">
       <DependentUpon>NewNacionalidades.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\Newpeliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\Newpeliculas.Designer.cs">
+      <DependentUpon>Newpeliculas.cs</DependentUpon>
     </Compile>
     <Compile Include="views\NewProductos.cs">
       <SubType>Form</SubType>
@@ -223,6 +250,12 @@
     <Compile Include="views\UsuariosForm.Designer.cs">
       <DependentUpon>UsuariosForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="views\peliculas_estrenos.resx">
+      <DependentUpon>peliculas_estrenos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\newpeliculas_estrenosfrm.resx">
+      <DependentUpon>newpeliculas_estrenosfrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\AcercaDeScreen.resx">
       <DependentUpon>AcercaDeScreen.cs</DependentUpon>
     </EmbeddedResource>
@@ -254,8 +287,14 @@
     <EmbeddedResource Include="views\NewActores.resx">
       <DependentUpon>NewActores.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\NewCortos.resx">
+      <DependentUpon>NewCortos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\NewNacionalidades.resx">
       <DependentUpon>NewNacionalidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\Newpeliculas.resx">
+      <DependentUpon>Newpeliculas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\NewProductos.resx">
       <DependentUpon>NewProductos.cs</DependentUpon>
