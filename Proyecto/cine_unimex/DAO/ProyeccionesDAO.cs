@@ -10,11 +10,12 @@ namespace unimex.lenguajesv.cine.DAO
     class ProyeccionesDAO
     {
 
-        private String SQL_Consulta_Proyecciones = "select proyecciones.id_proyeccion AS Id , cat_salas_complejos.nombre_sala AS Sala, peliculas.pelicula AS Película, convert (varchar,proyecciones.horario,100)as Horario from proyecciones inner join cat_salas_complejos on proyecciones.id_sala = cat_salas_complejos.id_sala inner join peliculas on peliculas.id_pelicula = proyecciones.id_pelicula";
+        
         private String Cadena = Properties.Resources.CADENA_CONEXION;
         //private String Cadena = "Data Source=LOCALHOST;Initial Catalog=unimex_cinema_db;Integrated Security=true";
         public DataTable LoadProyecciones()
         {
+            String SQL_Consulta_Proyecciones = "select proyecciones.id_proyeccion AS Id , cat_salas_complejos.nombre_sala AS Sala, peliculas.pelicula AS Película, convert (varchar,proyecciones.horario,100)as Horario from proyecciones inner join cat_salas_complejos on proyecciones.id_sala = cat_salas_complejos.id_sala inner join peliculas on peliculas.id_pelicula = proyecciones.id_pelicula";
             SqlConnection con = getConexion();
             using (SqlDataAdapter adapter = new SqlDataAdapter(SQL_Consulta_Proyecciones, con))
             {
@@ -25,8 +26,20 @@ namespace unimex.lenguajesv.cine.DAO
                 return tbl;
             }
 
+        }
 
+        public DataTable findPeliculas(ProyeccionesDTO BuscarDTO)
+        {
+            String SQL_FindPeliculas = "select proyecciones.id_proyeccion AS Id , cat_salas_complejos.nombre_sala AS Sala, peliculas.pelicula AS Película, convert (varchar,proyecciones.horario,100)as Horario from proyecciones inner join cat_salas_complejos on proyecciones.id_sala = cat_salas_complejos.id_sala inner join peliculas on peliculas.id_pelicula = proyecciones.id_pelicula Where proyecciones.id_pelicula = " + BuscarDTO.idpelicula;
+            SqlConnection con = getConexion();
+            using (SqlDataAdapter adapter = new SqlDataAdapter(SQL_FindPeliculas, con))
+            {
 
+                DataTable tbl = new DataTable();
+                adapter.Fill(tbl);
+                con.Close();
+                return tbl;
+            }
         }
 
         public void newProyeccion (ProyeccionesDTO new_proy)
