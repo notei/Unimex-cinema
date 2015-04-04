@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using unimex.lenguajesv.cine.DTO;
 
+
 namespace unimex.lenguajesv.cine.views
 {
     public partial class MainScreen : Form
@@ -140,6 +141,14 @@ namespace unimex.lenguajesv.cine.views
             frmCortos.Show();
 
 
+        }
+
+        private void estrenosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            peliculas_estrenos formestrenos = new peliculas_estrenos();
+            formestrenos.MdiParent = this;
+            formestrenos.StartPosition = FormStartPosition.CenterParent;
+            formestrenos.Show();
         }
 
         
