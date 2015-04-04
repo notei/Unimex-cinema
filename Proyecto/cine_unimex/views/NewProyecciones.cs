@@ -20,6 +20,7 @@ namespace unimex.lenguajesv.cine.views
             isInsertId = true;
             acceptbtn.Text = "Agregar";
             label5.Text = "Nueva Proyección";
+            label5.Location = new Point(6, 9); 
             this.Text = "Nueva Proyección";
         }
         public NewProyecciones(int id)
@@ -29,6 +30,7 @@ namespace unimex.lenguajesv.cine.views
             isInsertId = false;
             acceptbtn.Text = "Actualizar";
             label5.Text = "Actualizar ";
+            label5.Location = new Point(71, 9); 
             this.Text = "Actualizar";
         }
 
@@ -51,12 +53,14 @@ namespace unimex.lenguajesv.cine.views
                 Horario.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
                 consultaComplejos();
                 consultaPeliculas();
+                consultaSalas();
                 LoadupdateProyecciones();
                 complejosCb.SelectedIndexChanged += new EventHandler(ComboChange);
-                consultaSalas();
+                
             }
             
         }
+
         public void consultaPeliculas()
         {
             ProyeccionesDAO P_DAO = new ProyeccionesDAO();
@@ -124,7 +128,28 @@ namespace unimex.lenguajesv.cine.views
                 MessageBox.Show("" + ex);
             }
         }
+        public void updateproy()
+        {
+            String idpelicula = "" + peliculaCb.SelectedValue;
+            String idSala = "" + salasCB.SelectedValue;
 
+            ProyeccionesDTO proy_dto = new ProyeccionesDTO();
+            proy_dto.idsala = Int32.Parse(idSala);
+            proy_dto.idpelicula = Int32.Parse(idpelicula);
+            proy_dto.fechas = Horario.Text;
+            proy_dto.idproyeccion = id;
+            try
+            {
+                ProyeccionesDAO proy_dao = new ProyeccionesDAO();
+                proy_dao.updateProyeccion(proy_dto);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
+
+        }
+        
         private void acceptbtn_Click(object sender, EventArgs e)
         {
             if (isInsertId)
@@ -135,9 +160,13 @@ namespace unimex.lenguajesv.cine.views
             else
             {
                 //actualizar
+                updateproy();
+                this.Dispose();
             }
             
         }
+
+       
         //Método LoadProyecciones
         public void LoadupdateProyecciones()
         {
@@ -150,6 +179,7 @@ namespace unimex.lenguajesv.cine.views
                 peliculaCb.SelectedValue = Convert.ToString(proy_dto.idpelicula);
                 ProyeccionesDTO proy_dto_comp = proy_dao.LoadComplejoBySalas(proy_dto.idsala);
                 complejosCb.SelectedValue = Convert.ToString(proy_dto_comp.idcomplejo);
+                salasCB.SelectedValue = Convert.ToString(proy_dto.idsala);
                 
             }
             catch(Exception ex)

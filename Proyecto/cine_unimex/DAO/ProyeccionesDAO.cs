@@ -39,6 +39,14 @@ namespace unimex.lenguajesv.cine.DAO
             con.Close();
 
         }
+         public void updateProyeccion (ProyeccionesDTO update_proy)
+        {
+            String SQL_UpdateProyeccion = "UPDATE proyecciones SET id_sala = " + update_proy.idsala + "  , id_pelicula = "+ update_proy.idpelicula +", horario = convert(datetime,'"+ update_proy.fechas +"',102) WHERE id_proyeccion = "+ update_proy.idproyeccion;
+            SqlConnection con = getConexion();
+            SqlCommand cmd = new SqlCommand(SQL_UpdateProyeccion, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
 
         public DataTable Loadpeliculas()
         {

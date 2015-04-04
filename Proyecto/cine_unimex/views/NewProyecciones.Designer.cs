@@ -153,11 +153,11 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 9);
+            this.label5.Location = new System.Drawing.Point(71, 9);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(312, 39);
+            this.label5.Size = new System.Drawing.Size(178, 39);
             this.label5.TabIndex = 10;
-            this.label5.Text = "Nueva Proyección";
+            this.label5.Text = "Actualizar";
             // 
             // NewProyecciones
             // 

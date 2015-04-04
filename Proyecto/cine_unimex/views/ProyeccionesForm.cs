@@ -59,6 +59,7 @@ namespace unimex.lenguajesv.cine.views
             int id = Int32.Parse(valor);
             NewProyecciones frmNewProy = new NewProyecciones(id);
             frmNewProy.Show();
+            frmNewProy.Disposed += new EventHandler(disposeNew);
 
         }
 
