@@ -163,6 +163,12 @@
     <Compile Include="views\NewSalas.Designer.cs">
       <DependentUpon>NewSalas.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\NewTipoproyeccion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\NewTipoproyeccion.Designer.cs">
+      <DependentUpon>NewTipoproyeccion.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\NewUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -262,6 +268,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\NewSalas.resx">
       <DependentUpon>NewSalas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\NewTipoproyeccion.resx">
+      <DependentUpon>NewTipoproyeccion.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\NewUsuarios.resx">
       <DependentUpon>NewUsuarios.cs</DependentUpon>

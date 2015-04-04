@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dtgTipoProyeccion = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgTipoProyeccion)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,11 +45,21 @@
             this.dtgTipoProyeccion.Size = new System.Drawing.Size(385, 208);
             this.dtgTipoProyeccion.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(65, 53);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Agregar";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
             // TipoProyeccionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(639, 279);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dtgTipoProyeccion);
             this.Name = "TipoProyeccionForm";
             this.Text = "TipoProyeccionForm";
@@ -61,5 +72,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dtgTipoProyeccion;
+        private System.Windows.Forms.Button button1;
     }
 }
