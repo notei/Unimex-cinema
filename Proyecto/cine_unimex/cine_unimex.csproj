@@ -83,6 +83,7 @@
     <Compile Include="DTO\NacionalidadesDTO.cs" />
     <Compile Include="DTO\PeliculasDTO.cs" />
     <Compile Include="DTO\peliculas_estrenosDTO.cs" />
+    <Compile Include="DTO\PreciosDTO.cs" />
     <Compile Include="DTO\ProductosDTO.cs" />
     <Compile Include="DTO\ProductosDTO2.cs" />
     <Compile Include="DTO\ProveedoresDTO.cs" />
@@ -93,12 +94,20 @@
     <Compile Include="DAO\NacionalidadesDAO.cs" />
     <Compile Include="DTO\UsuariosDTO.cs" />
     <Compile Include="DTO\NacionalidadesActoresDTO.cs" />
+<<<<<<< HEAD
     <Compile Include="totalVentaBoletosyPorComplejoDAO.cs" />
     <Compile Include="VentasTotales.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="VentasTotales.Designer.cs">
       <DependentUpon>VentasTotales.cs</DependentUpon>
+=======
+    <Compile Include="views\NewPrecios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\NewPrecios.Designer.cs">
+      <DependentUpon>NewPrecios.cs</DependentUpon>
+>>>>>>> origin/master
     </Compile>
     <Compile Include="views\peliculas_estrenos.cs">
       <SubType>Form</SubType>
@@ -265,8 +274,13 @@
     <Compile Include="views\UsuariosForm.Designer.cs">
       <DependentUpon>UsuariosForm.cs</DependentUpon>
     </Compile>
+<<<<<<< HEAD
     <EmbeddedResource Include="VentasTotales.resx">
       <DependentUpon>VentasTotales.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="views\NewPrecios.resx">
+      <DependentUpon>NewPrecios.cs</DependentUpon>
+>>>>>>> origin/master
     </EmbeddedResource>
     <EmbeddedResource Include="views\peliculas_estrenos.resx">
       <DependentUpon>peliculas_estrenos.cs</DependentUpon>

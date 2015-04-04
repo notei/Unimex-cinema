@@ -19,7 +19,7 @@ namespace unimex.lenguajesv.cine.views
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            consultaProductos();
+            
         }
 
         public void consultaProductos()
@@ -37,6 +37,11 @@ namespace unimex.lenguajesv.cine.views
             {
                 MessageBox.Show("" + ex);
             }
+        }
+
+        private void ProductosForm2_Load(object sender, EventArgs e)
+        {
+           consultaProductos();
         }
     }
 }

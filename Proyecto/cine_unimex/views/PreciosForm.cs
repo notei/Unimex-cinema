@@ -12,6 +12,7 @@ namespace unimex.lenguajesv.cine.views
 {
     public partial class PreciosForm : Form
     {
+
         public PreciosForm()
         {
             InitializeComponent();
@@ -28,6 +29,22 @@ namespace unimex.lenguajesv.cine.views
             DataTable dtp = daoPrecios.loadPrecios();
             dgvPrecios.DataSource=dtp;
             dgvPrecios.Columns[0].Visible = false;
+        }
+
+        private void btnAgregarprecio_Click(object sender, EventArgs e)
+        {
+            NewPrecios formpre = new NewPrecios();
+            formpre.ShowDialog();
+            consultaPrecios();
+        }
+
+        private void btnActualizarPrecios_Click(object sender, EventArgs e)
+        {
+            int fila = dgvPrecios.CurrentCell.RowIndex;
+            String valor = dgvPrecios.Rows[fila].Cells[0].Value.ToString();
+            int id = Int32.Parse(valor);
+            NewPrecios frmNewPre = new NewPrecios(id);
+            frmNewPre.Show();
         }
             
     }
