@@ -48,5 +48,7 @@ https://p3nmssqladmin.secureserver.net/2012/1
 
 Pérez Acosta Arturo (Directores)
 Rosiles Romero David F. (Actores) 
+SAUCEDO MARTINEZ MARIA GPE (TIPOS DE USUARIOS)
+
 
 
