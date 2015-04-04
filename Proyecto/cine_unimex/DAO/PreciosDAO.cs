@@ -72,5 +72,17 @@ namespace unimex.lenguajesv.cine.DAO
             comando.ExecuteNonQuery();
             con.Close();
         }
+        public void deletePrecioDTO (PreciosDTO deletedto)
+        {
+            String SQL_Update_Precio = " DELETE FROM cat_precios WHERE id_precio = "+deletedto.id_Precios;
+            SqlConnection con;
+            con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            SqlCommand comando;
+            comando = new SqlCommand(SQL_Update_Precio, con);
+            comando.ExecuteNonQuery();
+            con.Close();
+        }
     }
 }
