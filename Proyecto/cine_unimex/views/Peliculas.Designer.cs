@@ -28,22 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnAgregarNac = new System.Windows.Forms.Button();
+            this.btnAgregar = new System.Windows.Forms.Button();
             this.peliculasdgv = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.peliculasdgv)).BeginInit();
             this.SuspendLayout();
             // 
-            // btnAgregarNac
+            // btnAgregar
             // 
-            this.btnAgregarNac.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarNac.Location = new System.Drawing.Point(27, 53);
-            this.btnAgregarNac.Name = "btnAgregarNac";
-            this.btnAgregarNac.Size = new System.Drawing.Size(75, 23);
-            this.btnAgregarNac.TabIndex = 3;
-            this.btnAgregarNac.Text = "Agregar";
-            this.btnAgregarNac.UseVisualStyleBackColor = true;
+            this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(27, 53);
+            this.btnAgregar.Name = "btnAgregar";
+            this.btnAgregar.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregar.TabIndex = 3;
+            this.btnAgregar.Text = "Agregar";
+            this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // peliculasdgv
             // 
@@ -85,7 +86,7 @@
             this.ClientSize = new System.Drawing.Size(450, 304);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.btnAgregarNac);
+            this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.peliculasdgv);
             this.Name = "Peliculas";
             this.Text = "Peliculas";
@@ -97,7 +98,7 @@
 
         #endregion
 
-        private System.Windows.Forms.Button btnAgregarNac;
+        private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.DataGridView peliculasdgv;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;

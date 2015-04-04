@@ -138,6 +138,12 @@
     <Compile Include="views\NewNacionalidades.Designer.cs">
       <DependentUpon>NewNacionalidades.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\Newpeliculas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\Newpeliculas.Designer.cs">
+      <DependentUpon>Newpeliculas.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\NewProductos.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -243,6 +249,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\NewNacionalidades.resx">
       <DependentUpon>NewNacionalidades.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\Newpeliculas.resx">
+      <DependentUpon>Newpeliculas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\NewProductos.resx">
       <DependentUpon>NewProductos.cs</DependentUpon>
