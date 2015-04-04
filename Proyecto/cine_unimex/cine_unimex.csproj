@@ -77,6 +77,7 @@
     <Compile Include="DAO\TipoProyeccionDAO.cs" />
     <Compile Include="DAO\UsuarioDAO.cs" />
     <Compile Include="DAO\UsuariosDAO.cs" />
+    <Compile Include="DTO\CortosDTO.cs" />
     <Compile Include="DTO\NacionalidadesDTO.cs" />
     <Compile Include="DTO\PeliculasDTO.cs" />
     <Compile Include="DTO\ProductosDTO.cs" />
@@ -131,6 +132,12 @@
     </Compile>
     <Compile Include="views\NewActores.Designer.cs">
       <DependentUpon>NewActores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\NewCortos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\NewCortos.Designer.cs">
+      <DependentUpon>NewCortos.cs</DependentUpon>
     </Compile>
     <Compile Include="views\NewNacionalidades.cs">
       <SubType>Form</SubType>
@@ -240,6 +247,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\NewActores.resx">
       <DependentUpon>NewActores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\NewCortos.resx">
+      <DependentUpon>NewCortos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\NewNacionalidades.resx">
       <DependentUpon>NewNacionalidades.cs</DependentUpon>

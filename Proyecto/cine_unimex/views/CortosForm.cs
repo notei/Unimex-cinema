@@ -38,5 +38,11 @@ namespace unimex.lenguajesv.cine.views
                 MessageBox.Show("" + ex);
             }
         }
+
+        private void Agregarbtn_Click(object sender, EventArgs e)
+        {
+            NewCortos frmNewCorto = new NewCortos();
+            frmNewCorto.Show();
+        }
     }
 }
