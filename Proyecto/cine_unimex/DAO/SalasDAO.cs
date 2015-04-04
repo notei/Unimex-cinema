@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using unimex.lenguajesv.cine.DTO;
 
 namespace unimex.lenguajesv.cine.DAO
 {
@@ -27,5 +28,17 @@ namespace unimex.lenguajesv.cine.DAO
             }
 
         }
+        public void newSalas(SalasDTO new_salas_DTO)
+        {
+            String SQL_NewSalas = "insert into cat_salas_complejos values (" +new_salas_DTO.Id_Complejo +",'" + new_salas_DTO.Nombre_Sala + "'," + new_salas_DTO.Capacidad +","+ new_salas_DTO.Butacas_Numeradas+","+ new_salas_DTO.Id_Tipo_Sonido+","+new_salas_DTO.Id_Tipo_Proyeccion+")";
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            SqlCommand cmd = new SqlCommand(SQL_NewSalas, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+        }
+
     }
+    
 }

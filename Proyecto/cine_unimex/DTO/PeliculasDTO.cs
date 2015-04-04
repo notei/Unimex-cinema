@@ -16,7 +16,7 @@ namespace unimex.lenguajesv.cine.DTO
         private String sonido;
         private int id_nacionalidad;
         private int id_genero;
-        private Boolean estreno;
+        private int estreno;
 
         public int id_Pelicula
         {
@@ -75,7 +75,7 @@ namespace unimex.lenguajesv.cine.DTO
              
             set { id_genero = value; }
         }
-        public Boolean Estreno
+        public int Estreno
         {
             get { return estreno; }
              

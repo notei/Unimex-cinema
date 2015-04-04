@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dataG = new System.Windows.Forms.DataGridView();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataG)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,11 +46,22 @@
             this.dataG.Size = new System.Drawing.Size(733, 576);
             this.dataG.TabIndex = 0;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(39, 50);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Insertar";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // SalasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(953, 629);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.dataG);
             this.Name = "SalasForm";
             this.Text = "SalasForm";
@@ -62,6 +74,7 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataG;
+        private System.Windows.Forms.Button button1;
 
     }
 }
