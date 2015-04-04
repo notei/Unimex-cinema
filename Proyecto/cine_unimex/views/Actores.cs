@@ -29,9 +29,14 @@ namespace unimex.lenguajesv.cine.views
         public void DataGridViewActores()
         {
             ActoresDAO dgvMostrar = new ActoresDAO();
-            DataTable dtp = dgvMostrar.loadPrecios();
+            DataTable dtp = dgvMostrar.loadActores();
             dgvActores.DataSource = dtp;
             dgvActores.Columns[0].Visible = false;
+        }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            DataGridViewActores();
         }
     }
 }

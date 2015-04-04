@@ -45,12 +45,13 @@
             this.dgvActores.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvActores.Location = new System.Drawing.Point(263, 12);
             this.dgvActores.Name = "dgvActores";
-            this.dgvActores.Size = new System.Drawing.Size(282, 370);
+            this.dgvActores.Size = new System.Drawing.Size(538, 291);
             this.dgvActores.TabIndex = 0;
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(44, 126);
+            this.btnAgregar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAgregar.Location = new System.Drawing.Point(31, 68);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(92, 45);
             this.btnAgregar.TabIndex = 1;
@@ -60,16 +61,19 @@
             // 
             // btnActualizar
             // 
-            this.btnActualizar.Location = new System.Drawing.Point(44, 214);
+            this.btnActualizar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActualizar.Location = new System.Drawing.Point(31, 152);
             this.btnActualizar.Name = "btnActualizar";
             this.btnActualizar.Size = new System.Drawing.Size(92, 45);
             this.btnActualizar.TabIndex = 2;
             this.btnActualizar.Text = "&Actualizar";
             this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(44, 300);
+            this.btnBorrar.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBorrar.Location = new System.Drawing.Point(31, 238);
             this.btnBorrar.Name = "btnBorrar";
             this.btnBorrar.Size = new System.Drawing.Size(92, 45);
             this.btnBorrar.TabIndex = 3;
@@ -79,9 +83,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 38);
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(28, 12);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 13);
+            this.label1.Size = new System.Drawing.Size(133, 16);
             this.label1.TabIndex = 4;
             this.label1.Text = "David F. Rosiles Romero";
             // 
@@ -89,7 +94,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(553, 394);
+            this.ClientSize = new System.Drawing.Size(809, 315);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnActualizar);

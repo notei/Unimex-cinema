@@ -160,6 +160,19 @@ namespace unimex.lenguajesv.cine.views
 
         }
 
+        private void totalDeBoletosVendidosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void totalDeVentasYBoletosVendidosPorComplejoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            VentasTotales frmVT = new VentasTotales();
+            frmVT.MdiParent = this;
+            frmVT.StartPosition = FormStartPosition.CenterScreen;
+            frmVT.Show();
+        }
+
         
     }
 }

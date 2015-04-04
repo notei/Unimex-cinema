@@ -45,10 +45,12 @@
             this.salasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cortosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estrenosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.peoductos2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.peoductos2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.reportesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.totalDeVentasYBoletosVendidosPorComplejoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +59,7 @@
             this.menuBar.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.catálogosToolStripMenuItem,
+            this.reportesToolStripMenuItem,
             this.toolStripMenuItem1});
             this.menuBar.Location = new System.Drawing.Point(0, 0);
             this.menuBar.Name = "menuBar";
@@ -76,7 +79,7 @@
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -184,6 +187,13 @@
             this.estrenosToolStripMenuItem.Text = "Estrenos";
             this.estrenosToolStripMenuItem.Click += new System.EventHandler(this.estrenosToolStripMenuItem_Click);
             // 
+            // peoductos2ToolStripMenuItem
+            // 
+            this.peoductos2ToolStripMenuItem.Name = "peoductos2ToolStripMenuItem";
+            this.peoductos2ToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.peoductos2ToolStripMenuItem.Text = "Productos2";
+            this.peoductos2ToolStripMenuItem.Click += new System.EventHandler(this.peoductos2ToolStripMenuItem_Click);
+            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -208,12 +218,20 @@
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // peoductos2ToolStripMenuItem
+            // reportesToolStripMenuItem
             // 
-            this.peoductos2ToolStripMenuItem.Name = "peoductos2ToolStripMenuItem";
-            this.peoductos2ToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.peoductos2ToolStripMenuItem.Text = "Productos2";
-            this.peoductos2ToolStripMenuItem.Click += new System.EventHandler(this.peoductos2ToolStripMenuItem_Click);
+            this.reportesToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.totalDeVentasYBoletosVendidosPorComplejoToolStripMenuItem});
+            this.reportesToolStripMenuItem.Name = "reportesToolStripMenuItem";
+            this.reportesToolStripMenuItem.Size = new System.Drawing.Size(65, 22);
+            this.reportesToolStripMenuItem.Text = "Reportes";
+            // 
+            // totalDeVentasYBoletosVendidosPorComplejoToolStripMenuItem
+            // 
+            this.totalDeVentasYBoletosVendidosPorComplejoToolStripMenuItem.Name = "totalDeVentasYBoletosVendidosPorComplejoToolStripMenuItem";
+            this.totalDeVentasYBoletosVendidosPorComplejoToolStripMenuItem.Size = new System.Drawing.Size(330, 22);
+            this.totalDeVentasYBoletosVendidosPorComplejoToolStripMenuItem.Text = "Total de ventas y Boletos vendidos por complejo";
+            this.totalDeVentasYBoletosVendidosPorComplejoToolStripMenuItem.Click += new System.EventHandler(this.totalDeVentasYBoletosVendidosPorComplejoToolStripMenuItem_Click);
             // 
             // MainScreen
             // 
@@ -261,6 +279,8 @@
         private System.Windows.Forms.ToolStripMenuItem cortosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estrenosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem peoductos2ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem reportesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem totalDeVentasYBoletosVendidosPorComplejoToolStripMenuItem;
     }
 }
 

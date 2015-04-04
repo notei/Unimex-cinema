@@ -13,7 +13,7 @@ namespace unimex.lenguajesv.cine
         private String consulta_Actores = "SELECT * FROM cat_actores";
         private String Cadena = Properties.Resources.CADENA_CONEXION;
 
-        public DataTable loadPrecios()
+        public DataTable loadActores()
         {
             SqlConnection con = new SqlConnection();
             con.ConnectionString = Cadena;
