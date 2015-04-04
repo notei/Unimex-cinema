@@ -151,6 +151,15 @@ namespace unimex.lenguajesv.cine.views
             formestrenos.Show();
         }
 
+        private void peoductos2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProductosForm2 frmProy = new ProductosForm2();
+            frmProy.MdiParent = this;
+            frmProy.StartPosition = FormStartPosition.CenterScreen;
+            frmProy.Show();
+
+        }
+
         
     }
 }

@@ -69,6 +69,7 @@
     <Compile Include="DAO\CortosDAO.cs" />
     <Compile Include="DAO\PeliculasDAO.cs" />
     <Compile Include="DAO\peliculas_estrenosDAO.cs" />
+    <Compile Include="DAO\ProductosDAO2.cs" />
     <Compile Include="DAO\SalasDAO.cs" />
     <Compile Include="DTO\ActoresDTO.cs" />
     <Compile Include="DAO\PreciosDAO.cs" />
@@ -220,6 +221,12 @@
     <Compile Include="views\ProductosForm.Designer.cs">
       <DependentUpon>ProductosForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\ProductosForm2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\ProductosForm2.Designer.cs">
+      <DependentUpon>ProductosForm2.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\ProveedoresForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -322,6 +329,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\ProductosForm.resx">
       <DependentUpon>ProductosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\ProductosForm2.resx">
+      <DependentUpon>ProductosForm2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\ProveedoresForm.resx">
       <DependentUpon>ProveedoresForm.cs</DependentUpon>

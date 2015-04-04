@@ -44,10 +44,11 @@
             this.películasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.cortosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estrenosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.estrenosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.peoductos2ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,7 +76,7 @@
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(96, 22);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salirToolStripMenuItem_Click);
             // 
@@ -93,7 +94,8 @@
             this.películasToolStripMenuItem,
             this.salasToolStripMenuItem,
             this.cortosToolStripMenuItem,
-            this.estrenosToolStripMenuItem});
+            this.estrenosToolStripMenuItem,
+            this.peoductos2ToolStripMenuItem});
             this.catálogosToolStripMenuItem.Name = "catálogosToolStripMenuItem";
             this.catálogosToolStripMenuItem.Size = new System.Drawing.Size(72, 22);
             this.catálogosToolStripMenuItem.Text = "Catálogos";
@@ -175,6 +177,13 @@
             this.cortosToolStripMenuItem.Text = "Cortos";
             this.cortosToolStripMenuItem.Click += new System.EventHandler(this.cortosToolStripMenuItem_Click);
             // 
+            // estrenosToolStripMenuItem
+            // 
+            this.estrenosToolStripMenuItem.Name = "estrenosToolStripMenuItem";
+            this.estrenosToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.estrenosToolStripMenuItem.Text = "Estrenos";
+            this.estrenosToolStripMenuItem.Click += new System.EventHandler(this.estrenosToolStripMenuItem_Click);
+            // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -199,12 +208,12 @@
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // estrenosToolStripMenuItem
+            // peoductos2ToolStripMenuItem
             // 
-            this.estrenosToolStripMenuItem.Name = "estrenosToolStripMenuItem";
-            this.estrenosToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
-            this.estrenosToolStripMenuItem.Text = "Estrenos";
-            this.estrenosToolStripMenuItem.Click += new System.EventHandler(this.estrenosToolStripMenuItem_Click);
+            this.peoductos2ToolStripMenuItem.Name = "peoductos2ToolStripMenuItem";
+            this.peoductos2ToolStripMenuItem.Size = new System.Drawing.Size(170, 22);
+            this.peoductos2ToolStripMenuItem.Text = "Productos2";
+            this.peoductos2ToolStripMenuItem.Click += new System.EventHandler(this.peoductos2ToolStripMenuItem_Click);
             // 
             // MainScreen
             // 
@@ -217,7 +226,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuBar;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "MainScreen";
             this.Text = "Cinema Unimex";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
@@ -251,6 +260,7 @@
         private System.Windows.Forms.ToolStripMenuItem salasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cortosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem estrenosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem peoductos2ToolStripMenuItem;
     }
 }
 
