@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using unimex.lenguajesv.cine.DTO;
 
 namespace unimex.lenguajesv.cine.DAO
 {
@@ -29,8 +30,22 @@ namespace unimex.lenguajesv.cine.DAO
 
         }
 
+        public void newCortos(CortosDTO new_Cortos_DTO)
+        {
+            String SQL_NewCortos = "insert into cat_cortos values ('" + new_Cortos_DTO.Id_Corto + "','" + new_Cortos_DTO.Nombre_Corto + "','" + new_Cortos_DTO.Duracion + "', '" + new_Cortos_DTO.Habilitado + "')";
+
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            SqlCommand cmd = new SqlCommand(SQL_NewCortos, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
 
 
-        
+
+
+
+
+        }
     }
 }

@@ -27,7 +27,18 @@ namespace unimex.lenguajesv.cine.DAO
             }
 
         }
-       
+
+        public void Newpeliculas(PeliculasDTO new_pel_DTO)
+        {
+            String SQL_NewPeliculas = "insert into peliculas values ('"+ new_pel_DTO.Pelicula + "," + new_pel_DTO.id_Clasificacion + "," + new_pel_DTO.Duracion_min + "," + new_pel_DTO.Sinopsis +","+ new_pel_DTO.Idioma +","+ new_pel_DTO.Sonido + "," + new_pel_DTO.id_Nacionalidad + "," + new_pel_DTO.id_Genero + "," + new_pel_DTO.Estreno + ")";
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            SqlCommand cmd = new SqlCommand(SQL_NewPeliculas, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
+
+        }
     }
 }
 
