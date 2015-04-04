@@ -43,8 +43,8 @@ namespace unimex.lenguajesv.cine.views
             int fila = dgvPrecios.CurrentCell.RowIndex;
             String valor = dgvPrecios.Rows[fila].Cells[0].Value.ToString();
             int id = Int32.Parse(valor);
-            NewPrecios frmNewProy = new NewPrecios(id);
-            frmNewProy.Show();
+            NewPrecios frmNewPre = new NewPrecios(id);
+            frmNewPre.Show();
         }
             
     }

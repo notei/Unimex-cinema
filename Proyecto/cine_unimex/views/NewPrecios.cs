@@ -25,7 +25,7 @@ namespace unimex.lenguajesv.cine.views
         {
             InitializeComponent();
             this.id = id;
-            insertId = true;
+            insertId = false;
             btnAgregarnew.Text = "Actualizar";
         }
         private void btnAgregarnew_Click(object sender, EventArgs e)
@@ -37,7 +37,7 @@ namespace unimex.lenguajesv.cine.views
                     PreciosDTO pdto = new PreciosDTO();
                     pdto.Nombre = txtNombrenew.Text;
                     pdto.Descripcion = txtDescnew.Text;
-                    pdto.Precios = Int32.Parse(txtPrecionew.Text);
+                    pdto.Precios = float.Parse(txtPrecionew.Text);
                     try
                     {
                         PreciosDAO daoprecio = new PreciosDAO();
@@ -56,14 +56,43 @@ namespace unimex.lenguajesv.cine.views
             }
             else
             {
-
-
+              
+                //Programar Actualizar
             }
         }
-
+        public void loadPreciosActualizar()
+        {
+            try
+            {
+                PreciosDAO preciodao = new PreciosDAO();
+                PreciosDTO preciodto = preciodao.cargarPreciosconsulta(id);
+                txtNombrenew.Text = preciodto.Nombre;
+                txtDescnew.Text = preciodto.Descripcion;
+                txtPrecionew.Text = Convert.ToString(preciodto.Precios);
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
+           
+        }
         private void btnCancelarnew_Click(object sender, EventArgs e)
         {
             this.Dispose();
+        }
+
+        private void NewPrecios_Load(object sender, EventArgs e)
+        {
+            if (insertId)
+            {
+                PreciosDAO predao = new PreciosDAO();
+                predao.loadPrecios();
+            }
+            else
+            {
+                
+                loadPreciosActualizar();
+            }
         }
     }
 }
