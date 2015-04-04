@@ -39,6 +39,12 @@ namespace unimex.lenguajesv.cine.views
             }
         }
 
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            Newpeliculas frmNewProy = new Newpeliculas();
+            frmNewProy.Show();
+        }
+
 
     }
 }

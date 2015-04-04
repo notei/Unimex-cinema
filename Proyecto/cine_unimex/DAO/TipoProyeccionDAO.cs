@@ -29,5 +29,10 @@ namespace unimex.lenguajesv.cine.DAO
             }
 
         }
+
+        internal void agregarTipoProyeccion(DTO.TipoProyeccionDTO tp)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
