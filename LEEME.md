@@ -32,7 +32,7 @@ Miranda Olivares Juan Rene(Precios de Boletos)
 
 Yocelin Gutierrez Perez (Productos)
 
-
+Daniel Gustavo Fernandez Morales (Peliculas)
 
 Conexión a base de datos disponible en internet
 

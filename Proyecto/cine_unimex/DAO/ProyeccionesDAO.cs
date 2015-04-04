@@ -52,18 +52,8 @@ namespace unimex.lenguajesv.cine.DAO
                 con.Close();
                 return tbl;
             }
-
-          
-
         }
-        private SqlConnection getConexion()
-        {
-            SqlConnection con = new SqlConnection();
-            con.ConnectionString = Cadena;
-            con.Open();
-            return con;
-        }
-
+       
         public DataTable LoadComplejos()
         {
             String SQL_Consulta_complejos = "select id_complejo, nombre from cat_complejos";
@@ -89,7 +79,45 @@ namespace unimex.lenguajesv.cine.DAO
                 con.Close();
                 return tbl;
             }
+             
+        }
+        public ProyeccionesDTO LoadProyecciones(int id)
+        {
+            String SQL_Conocer_Proyección = "select * from proyecciones where id_proyeccion = " + id ;
+            ProyeccionesDTO proy_dto = new ProyeccionesDTO();
+            SqlConnection con = getConexion();
+            SqlCommand cmd = new SqlCommand(SQL_Conocer_Proyección, con);
+            SqlDataReader rd = cmd.ExecuteReader();
+            while (rd.Read())
+            {
+                proy_dto.idproyeccion = (int)rd.GetSqlInt32(0);
+                proy_dto.idsala = (int)rd.GetInt32(1);
+                proy_dto.idpelicula = (int)rd.GetInt32(2);
+                proy_dto.fechasDT = (DateTime)rd.GetSqlDateTime(3);
+            }
 
+            return proy_dto; 
+        }
+        public ProyeccionesDTO LoadComplejoBySalas(int Idsala)
+        {
+            String SQL_Consulta_Salas = "select id_complejo from cat_salas_complejos where id_sala= " + Idsala;
+            SqlConnection con = getConexion();
+            ProyeccionesDTO proy_dto = new ProyeccionesDTO();
+            SqlCommand cmd = new SqlCommand(SQL_Consulta_Salas, con);
+            SqlDataReader rd = cmd.ExecuteReader();
+            while (rd.Read())
+            
+            {
+                proy_dto.idcomplejo = (int)rd.GetInt32(0);
+            }
+            return proy_dto;
+        }
+        private SqlConnection getConexion()
+        {
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            return con;
         }
     }
 }

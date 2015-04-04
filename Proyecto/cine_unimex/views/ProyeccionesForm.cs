@@ -52,5 +52,15 @@ namespace unimex.lenguajesv.cine.views
            
         }
 
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            int fila = ProyeccionesDgv.CurrentCell.RowIndex;
+            String valor = ProyeccionesDgv.Rows[fila].Cells[0].Value.ToString();
+            int id = Int32.Parse(valor);
+            NewProyecciones frmNewProy = new NewProyecciones(id);
+            frmNewProy.Show();
+
+        }
+
     }
 }

@@ -103,6 +103,45 @@ namespace unimex.lenguajesv.cine.views
 
         }
 
+        private void actoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Actores frmActores = new Actores();
+            frmActores.MdiParent = this;
+            frmActores.StartPosition = FormStartPosition.CenterScreen;
+            frmActores.Show();
+        }
+
+        private void películasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Peliculas frmPeli = new Peliculas();
+            frmPeli.MdiParent = this;
+            frmPeli.StartPosition = FormStartPosition.CenterScreen;
+            frmPeli.Show();
+        }
+
+        private void salasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+
+            SalasForm frmSalas = new SalasForm();
+            frmSalas.MdiParent = this;
+            frmSalas.StartPosition = FormStartPosition.CenterParent;
+            frmSalas.Show();
+
+
+        }
+
+        private void cortosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+            CortosForm frmCortos = new CortosForm();
+            frmCortos.MdiParent = this;
+            frmCortos.StartPosition = FormStartPosition.CenterParent;
+            frmCortos.Show();
+
+
+        }
+
         
     }
 }
