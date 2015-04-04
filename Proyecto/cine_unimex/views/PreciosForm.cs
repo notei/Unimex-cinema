@@ -12,6 +12,7 @@ namespace unimex.lenguajesv.cine.views
 {
     public partial class PreciosForm : Form
     {
+
         public PreciosForm()
         {
             InitializeComponent();
@@ -35,6 +36,15 @@ namespace unimex.lenguajesv.cine.views
             NewPrecios formpre = new NewPrecios();
             formpre.ShowDialog();
             consultaPrecios();
+        }
+
+        private void btnActualizarPrecios_Click(object sender, EventArgs e)
+        {
+            int fila = dgvPrecios.CurrentCell.RowIndex;
+            String valor = dgvPrecios.Rows[fila].Cells[0].Value.ToString();
+            int id = Int32.Parse(valor);
+            NewPrecios frmNewProy = new NewPrecios(id);
+            frmNewProy.Show();
         }
             
     }
