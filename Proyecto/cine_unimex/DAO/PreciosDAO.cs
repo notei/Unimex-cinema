@@ -4,6 +4,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Data.SqlClient;
+using unimex.lenguajesv.cine.DTO;
 
 namespace unimex.lenguajesv.cine.DAO
 {
@@ -28,6 +29,17 @@ namespace unimex.lenguajesv.cine.DAO
             }
            
         }
-
+        public void agregarPrecio(PreciosDTO pdto)
+        {
+            String SQL_Agregar_Precio = " insert into cat_precios (nombre, descripcion, precio) values ( '" + pdto.Nombre + "' , '" + pdto.Descripcion + "', " + pdto.Precios + ")";
+            SqlConnection con;
+            con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            SqlCommand comando;
+            comando = new SqlCommand(SQL_Agregar_Precio, con);
+            comando.ExecuteNonQuery();
+            con.Close();
+        }
     }
 }

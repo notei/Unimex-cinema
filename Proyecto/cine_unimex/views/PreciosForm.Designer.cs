@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dgvPrecios = new System.Windows.Forms.DataGridView();
+            this.btnAgregarprecio = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrecios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,11 +45,22 @@
             this.dgvPrecios.Size = new System.Drawing.Size(368, 294);
             this.dgvPrecios.TabIndex = 0;
             // 
+            // btnAgregarprecio
+            // 
+            this.btnAgregarprecio.Location = new System.Drawing.Point(23, 52);
+            this.btnAgregarprecio.Name = "btnAgregarprecio";
+            this.btnAgregarprecio.Size = new System.Drawing.Size(75, 23);
+            this.btnAgregarprecio.TabIndex = 1;
+            this.btnAgregarprecio.Text = "Agregar";
+            this.btnAgregarprecio.UseVisualStyleBackColor = true;
+            this.btnAgregarprecio.Click += new System.EventHandler(this.btnAgregarprecio_Click);
+            // 
             // PreciosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(518, 333);
+            this.Controls.Add(this.btnAgregarprecio);
             this.Controls.Add(this.dgvPrecios);
             this.Name = "PreciosForm";
             this.Text = "Precios de Boletos";
@@ -61,5 +73,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvPrecios;
+        private System.Windows.Forms.Button btnAgregarprecio;
     }
 }

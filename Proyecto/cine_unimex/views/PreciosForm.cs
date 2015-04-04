@@ -29,6 +29,13 @@ namespace unimex.lenguajesv.cine.views
             dgvPrecios.DataSource=dtp;
             dgvPrecios.Columns[0].Visible = false;
         }
+
+        private void btnAgregarprecio_Click(object sender, EventArgs e)
+        {
+            NewPrecios formpre = new NewPrecios();
+            formpre.ShowDialog();
+            consultaPrecios();
+        }
             
     }
 }
