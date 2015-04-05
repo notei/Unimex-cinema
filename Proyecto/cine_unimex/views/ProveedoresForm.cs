@@ -43,5 +43,10 @@ namespace unimex.lenguajesv.cine.views
             NewProveedores frmNewProvee = new NewProveedores();
             frmNewProvee.Show();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
