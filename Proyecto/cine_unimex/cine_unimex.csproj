@@ -71,6 +71,7 @@
     <Compile Include="DAO\PeliculasDAO.cs" />
     <Compile Include="DAO\peliculas_estrenosDAO.cs" />
     <Compile Include="DAO\ProductosDAO2.cs" />
+    <Compile Include="DAO\ReportePyCDAO.cs" />
     <Compile Include="DAO\SalasDAO.cs" />
     <Compile Include="DAO\TipoSonidoDAO.cs" />
     <Compile Include="DTO\ActoresDTO.cs" />
@@ -275,6 +276,12 @@
     <Compile Include="views\ProyeccionesForm.Designer.cs">
       <DependentUpon>ProyeccionesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\ReportePyCDAOForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\ReportePyCDAOForm.Designer.cs">
+      <DependentUpon>ReportePyCDAOForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\SalasForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -395,6 +402,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\ProyeccionesForm.resx">
       <DependentUpon>ProyeccionesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\ReportePyCDAOForm.resx">
+      <DependentUpon>ReportePyCDAOForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\SalasForm.resx">
       <DependentUpon>SalasForm.cs</DependentUpon>

@@ -64,6 +64,7 @@ namespace unimex.lenguajesv.cine.views
         private void button2_Click(object sender, EventArgs e)
         {
             newproductos2();
+            this.Dispose();
         }
 
         private void button1_Click(object sender, EventArgs e)

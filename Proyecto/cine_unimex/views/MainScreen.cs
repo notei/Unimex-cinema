@@ -176,6 +176,14 @@ namespace unimex.lenguajesv.cine.views
             formaTP.Show();
         }
 
+        private void películasYComplejoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReportePyCDAOForm frmReporte = new ReportePyCDAOForm();
+            frmReporte.MdiParent = this;
+            frmReporte.StartPosition = FormStartPosition.CenterScreen;
+            frmReporte.Show();
+        }
+
         
     }
 }
