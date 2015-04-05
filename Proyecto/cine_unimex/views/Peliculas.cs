@@ -45,6 +45,15 @@ namespace unimex.lenguajesv.cine.views
             frmNewProy.Show();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            int fil = peliculasdgv.CurrentCell.RowIndex;
+            String valor = peliculasdgv.Rows[fil].Cells[0].Value.ToString();
+            int id = Int32.Parse(valor);
+            Newpeliculas frmNewProy = new Newpeliculas(id);
+            frmNewProy.Show();
+        }
+
 
     }
 }

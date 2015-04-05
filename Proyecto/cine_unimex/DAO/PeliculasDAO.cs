@@ -28,6 +28,35 @@ namespace unimex.lenguajesv.cine.DAO
 
         }
 
+       public peliculas_estrenosDTO LoadPeliculas(int id)
+        {
+            String SQL_Conocer_pelicula = "Select * From peliculas where id_pelicula = " + id;
+            peliculas_estrenosDTO peli_DTO = new peliculas_estrenosDTO();
+            SqlConnection con = getConexion();
+            SqlCommand cmd = new SqlCommand(SQL_Conocer_pelicula, con);
+            SqlDataReader red = cmd.ExecuteReader();
+            while (red.Read())
+            {
+                peli_DTO.Id_estreno = (int)red.GetSqlInt32(0);
+                peli_DTO.Id_estreno = (int)red.GetSqlInt32(1);
+                peli_DTO.Id_estreno = (int)red.GetSqlInt32(2);
+                peli_DTO.Id_estreno = (int)red.GetSqlInt32(3);
+                peli_DTO.Id_estreno = (int)red.GetSqlInt32(4);
+                peli_DTO.Id_estreno = (int)red.GetSqlInt32(5);
+            }
+            return peli_DTO;
+
+        }
+
+
+        private SqlConnection getConexion()
+    {
+        SqlConnection con = new SqlConnection();
+        con.ConnectionString = Cadena;
+        con.Open();
+        return con;
+    }
+
         public void Newpeliculas(PeliculasDTO new_pel_DTO)
         {
             String SQL_NewPeliculas = "insert into peliculas values ('"+ new_pel_DTO.Pelicula + "," + new_pel_DTO.id_Clasificacion + "," + new_pel_DTO.Duracion_min + "," + new_pel_DTO.Sinopsis +","+ new_pel_DTO.Idioma +","+ new_pel_DTO.Sonido + "," + new_pel_DTO.id_Nacionalidad + "," + new_pel_DTO.id_Genero + "," + new_pel_DTO.Estreno + ")";

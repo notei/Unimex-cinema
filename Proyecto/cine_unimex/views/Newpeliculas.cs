@@ -13,9 +13,21 @@ namespace unimex.lenguajesv.cine.views
 {
     public partial class Newpeliculas : Form
     {
+        private int id;
+        Boolean isInsertid = false;
+
         public Newpeliculas()
         {
             InitializeComponent();
+            isInsertid = true;
+            btacept.Text = "Agregar";
+        }
+        public Newpeliculas(int id)
+        {
+            InitializeComponent();
+            this.id = id;
+            isInsertid = false;
+            btacept.Text = "Actualizar";
         }
 
         private void Newpeliculas_Load(object sender, EventArgs e)
@@ -30,7 +42,17 @@ namespace unimex.lenguajesv.cine.views
 
         private void btacept_Click(object sender, EventArgs e)
         {
-            
+            {
+                if (isInsertid)
+                {
+                    newpeliculas();
+                    this.Dispose();
+                }
+                else
+                {
+                    //actualiza
+                }
+            }
         }
         public void newpeliculas()
         {
@@ -51,6 +73,7 @@ namespace unimex.lenguajesv.cine.views
             {
                 MessageBox.Show("" + ex);
             }
+
         }
     }
 }

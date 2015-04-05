@@ -42,6 +42,7 @@
             this.labelestreno = new System.Windows.Forms.Label();
             this.btacept = new System.Windows.Forms.Button();
             this.btcancel = new System.Windows.Forms.Button();
+            this.label5 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // texpeli
@@ -160,11 +161,23 @@
             this.btcancel.UseVisualStyleBackColor = true;
             this.btcancel.Click += new System.EventHandler(this.btcancel_Click);
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(127, 9);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(145, 32);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "Actualizar";
+            // 
             // Newpeliculas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(393, 299);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btcancel);
             this.Controls.Add(this.btacept);
             this.Controls.Add(this.labelestreno);
@@ -203,5 +216,6 @@
         private System.Windows.Forms.Label labelestreno;
         private System.Windows.Forms.Button btacept;
         private System.Windows.Forms.Button btcancel;
+        private System.Windows.Forms.Label label5;
     }
 }
