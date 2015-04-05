@@ -43,7 +43,8 @@ namespace unimex.lenguajesv.cine.views
             String valor = dgvPrecios.Rows[fil].Cells[0].Value.ToString();
             int id = Int32.Parse(valor);
             NewPrecios formaupdate = new NewPrecios(id);
-            formaupdate.Show();
+            formaupdate.ShowDialog();
+            consultaPrecios();
         }
             
     }

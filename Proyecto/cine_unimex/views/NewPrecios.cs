@@ -57,6 +57,21 @@ namespace unimex.lenguajesv.cine.views
             else
             {
                 //Prgramar Actualizar
+                PreciosDTO pdtoup = new PreciosDTO();
+                pdtoup.id_Precios = id;
+                pdtoup.Nombre = txtNombrenew.Text;
+                pdtoup.Descripcion = txtDescnew.Text;
+                pdtoup.Precios = Single.Parse(txtPrecionew.Text);
+                try
+                {
+                    PreciosDAO daoprecio1 = new PreciosDAO();
+                    daoprecio1.updatePreciosDTO(pdtoup);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("" + ex);
+                }
+                this.Dispose();
             }
         }
         public void cargarNewPreciosUpdate ()

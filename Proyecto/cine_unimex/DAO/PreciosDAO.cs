@@ -55,10 +55,22 @@ namespace unimex.lenguajesv.cine.DAO
                 prdto.id_Precios = (int)red.GetInt32(0);
                 prdto.Nombre = (String)red.GetString(1);
                 prdto.Descripcion = (String)red.GetString(2);
-                prdto.Precios = (float)red.GetFloat(3);
+                prdto.Precios = (Single)red.GetDouble(3);
             }
             con.Close();
             return prdto;
+        }
+        public void updatePreciosDTO (PreciosDTO preciodtoup)
+        {
+            String SQL_Update_Precio = " UPDATE cat_precios SET nombre = '"+preciodtoup.Nombre+"', descripcion = '"+preciodtoup.Descripcion+"', precio = "+preciodtoup.Precios+" WHERE id_precio = "+preciodtoup.id_Precios;
+            SqlConnection con;
+            con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            SqlCommand comando;
+            comando = new SqlCommand(SQL_Update_Precio, con);
+            comando.ExecuteNonQuery();
+            con.Close();
         }
     }
 }
