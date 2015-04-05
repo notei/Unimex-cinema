@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using unimex.lenguajesv.cine.DTO;//Importamos DTO Para acceder a ella
-using unimex.lenguajesv.cine.DAO; //Importamos DAO
+using unimex.lenguajesv.cine.DAO;//Importamos DAO
 
 namespace unimex.lenguajesv.cine.views
 {
@@ -36,11 +36,6 @@ namespace unimex.lenguajesv.cine.views
             {
                 ProductosDAO2 proy_dao = new ProductosDAO2 ();
                 proy_dao.newproductos2(proy_dto);
-
-
-
-
-
             }
             catch (Exception ex)
             {
@@ -48,12 +43,6 @@ namespace unimex.lenguajesv.cine.views
             }
                 
 
-
-            {
-
-            }
-
-              
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -64,6 +53,7 @@ namespace unimex.lenguajesv.cine.views
         private void button2_Click(object sender, EventArgs e)
         {
             newproductos2();
+            this.Dispose();
         }
 
         private void button1_Click(object sender, EventArgs e)

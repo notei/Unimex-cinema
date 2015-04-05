@@ -24,10 +24,10 @@ namespace unimex.lenguajesv.cine.views
 
         public void consultaProductos2()
         {
-            ProductosDAO P_DAO = new ProductosDAO();
+            ProductosDAO2 P_DAO = new ProductosDAO2();
             try
             {
-                DataTable dt = P_DAO.LoadProductos();
+                DataTable dt = P_DAO.LoadProductos2();
                 ProductosDgv.DataSource = dt;
 
 
