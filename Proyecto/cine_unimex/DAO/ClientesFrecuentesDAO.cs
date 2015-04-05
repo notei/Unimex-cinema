@@ -28,7 +28,7 @@ namespace unimex.lenguajesv.cine.DAO
         }
         public void agregarClienteFrecuente (ClientesFrecuentesDTO cldto)
         {
-            String SQL_Agregar_CF = " insert into clientes_frecuentes (nombre, apellido_paterno, user_name, habilitado) values ( '" + cldto.Nombre + "' , '" + cldto.Apellido_Paterno + "', '" + cldto.User_Name + "',"+cldto.Habilitado+")";
+            String SQL_Agregar_CF = " insert into clientes_frecuentes (nombre, apellido_paterno, user_name, habilitado) values ( '" + cldto.Nombre + "' , '" + cldto.Apellido_Paterno + "', '" + cldto.User_Name + "','"+cldto.Habilitado+"')";
             SqlConnection con;
             con = new SqlConnection();
             con.ConnectionString = Cadena;

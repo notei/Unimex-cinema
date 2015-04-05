@@ -28,5 +28,12 @@ namespace unimex.lenguajesv.cine.views
             dgvClienteFrecuente.DataSource = dtp;
             dgvClienteFrecuente.Columns[0].Visible = false;
         }
+
+        private void btnNuevoCFform_Click(object sender, EventArgs e)
+        {
+            NewClientesFrecuentes formnewcf = new NewClientesFrecuentes();
+            formnewcf.ShowDialog();
+            consultaViewCF();
+        }
     }
 }

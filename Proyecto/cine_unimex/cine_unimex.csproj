@@ -288,6 +288,9 @@
     <EmbeddedResource Include="views\ClientesFrecuentesForm.resx">
       <DependentUpon>ClientesFrecuentesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\NewClientesFrecuentes.resx">
+      <DependentUpon>NewClientesFrecuentes.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\NewPrecios.resx">
       <DependentUpon>NewPrecios.cs</DependentUpon>
     </EmbeddedResource>
