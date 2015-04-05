@@ -41,7 +41,6 @@ namespace unimex.lenguajesv.cine.views
         }
 
         private void btacept_Click(object sender, EventArgs e)
-        {
             {
                 if (isInsertid)
                 {
@@ -52,7 +51,6 @@ namespace unimex.lenguajesv.cine.views
                 {
                     //actualiza
                 }
-            }
         }
         public void newpeliculas()
         {
