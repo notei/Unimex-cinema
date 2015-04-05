@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ProveedoresForm));
             this.viewProveedor = new System.Windows.Forms.DataGridView();
             this.btnmodificar = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -104,6 +105,7 @@
             this.Controls.Add(this.btnmodificar);
             this.Controls.Add(this.viewProveedor);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "ProveedoresForm";
             this.Text = "ProveedoresForm";
