@@ -33,7 +33,6 @@
             this.texsinopsis = new System.Windows.Forms.TextBox();
             this.texidioma = new System.Windows.Forms.TextBox();
             this.texsonido = new System.Windows.Forms.TextBox();
-            this.texestreno = new System.Windows.Forms.TextBox();
             this.peli = new System.Windows.Forms.Label();
             this.labeldura = new System.Windows.Forms.Label();
             this.labelsinop = new System.Windows.Forms.Label();
@@ -43,6 +42,7 @@
             this.btacept = new System.Windows.Forms.Button();
             this.btcancel = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.chec = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // texpeli
@@ -79,13 +79,6 @@
             this.texsonido.Name = "texsonido";
             this.texsonido.Size = new System.Drawing.Size(100, 20);
             this.texsonido.TabIndex = 6;
-            // 
-            // texestreno
-            // 
-            this.texestreno.Location = new System.Drawing.Point(192, 189);
-            this.texestreno.Name = "texestreno";
-            this.texestreno.Size = new System.Drawing.Size(100, 20);
-            this.texestreno.TabIndex = 7;
             // 
             // peli
             // 
@@ -172,11 +165,23 @@
             this.label5.TabIndex = 16;
             this.label5.Text = "Actualizar";
             // 
+            // chec
+            // 
+            this.chec.AutoSize = true;
+            this.chec.Location = new System.Drawing.Point(192, 196);
+            this.chec.Name = "chec";
+            this.chec.Size = new System.Drawing.Size(57, 17);
+            this.chec.TabIndex = 17;
+            this.chec.Text = "SI/NO";
+            this.chec.UseVisualStyleBackColor = true;
+            this.chec.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
             // Newpeliculas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(393, 299);
+            this.Controls.Add(this.chec);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btcancel);
             this.Controls.Add(this.btacept);
@@ -186,7 +191,6 @@
             this.Controls.Add(this.labelsinop);
             this.Controls.Add(this.labeldura);
             this.Controls.Add(this.peli);
-            this.Controls.Add(this.texestreno);
             this.Controls.Add(this.texsonido);
             this.Controls.Add(this.texidioma);
             this.Controls.Add(this.texsinopsis);
@@ -207,7 +211,6 @@
         private System.Windows.Forms.TextBox texsinopsis;
         private System.Windows.Forms.TextBox texidioma;
         private System.Windows.Forms.TextBox texsonido;
-        private System.Windows.Forms.TextBox texestreno;
         private System.Windows.Forms.Label peli;
         private System.Windows.Forms.Label labeldura;
         private System.Windows.Forms.Label labelsinop;
@@ -217,5 +220,6 @@
         private System.Windows.Forms.Button btacept;
         private System.Windows.Forms.Button btcancel;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.CheckBox chec;
     }
 }

@@ -28,21 +28,21 @@ namespace unimex.lenguajesv.cine.DAO
 
         }
 
-       public peliculas_estrenosDTO LoadPeliculas(int id)
+       public PeliculasDTO LoadPeliculas(int id)
         {
             String SQL_Conocer_pelicula = "Select * From peliculas where id_pelicula = " + id;
-            peliculas_estrenosDTO peli_DTO = new peliculas_estrenosDTO();
+            PeliculasDTO peli_DTO = new PeliculasDTO();
             SqlConnection con = getConexion();
             SqlCommand cmd = new SqlCommand(SQL_Conocer_pelicula, con);
             SqlDataReader red = cmd.ExecuteReader();
             while (red.Read())
             {
-                peli_DTO.Id_estreno = (int)red.GetSqlInt32(0);
-                peli_DTO.Id_estreno = (int)red.GetSqlInt32(1);
-                peli_DTO.Id_estreno = (int)red.GetSqlInt32(2);
-                peli_DTO.Id_estreno = (int)red.GetSqlInt32(3);
-                peli_DTO.Id_estreno = (int)red.GetSqlInt32(4);
-                peli_DTO.Id_estreno = (int)red.GetSqlInt32(5);
+                peli_DTO.Pelicula = (String)red.GetSqlString(0);
+                peli_DTO.Duracion_min = (int)red.GetSqlInt32(1);
+                peli_DTO.Sinopsis = (String)red.GetSqlString(2);
+                peli_DTO.Idioma = (String)red.GetSqlString(3);
+                peli_DTO.Sonido = (String)red.GetSqlString(4);
+                peli_DTO.Estreno = (int)red.GetSqlInt32(5);
             }
             return peli_DTO;
 
