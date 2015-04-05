@@ -21,6 +21,7 @@ namespace unimex.lenguajesv.cine.views
             InitializeComponent();
             insertId = true;
             btnAgregarnew.Text = "Agregar";
+            lblNewPrecios.Text = "Nuevo Precio de Boleto";
         }
         public NewPrecios(int id)
         {
@@ -28,6 +29,7 @@ namespace unimex.lenguajesv.cine.views
             this.id = id;
             insertId = false;
             btnAgregarnew.Text = "Actualizar";
+            lblNewPrecios.Text = "Actualizar Precio de Boleto";
         }
         private void btnAgregarnew_Click(object sender, EventArgs e)
         {
