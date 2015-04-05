@@ -22,8 +22,11 @@ namespace unimex.lenguajesv.cine.views
         {
             consultaPrecios();
             consultaBuscarPrecios();
+            queryBuscarPre();
             cbxPreciosBuscar.DataSource = null;
             cbxPreciosBuscar.Enabled = false;
+            cbxPrecioBuscpre.DataSource = null;
+            cbxPrecioBuscpre.Enabled = false;
         }
 
         public void consultaPrecios()
@@ -48,6 +51,21 @@ namespace unimex.lenguajesv.cine.views
                 MessageBox.Show(""+ex);
             }
         }
+        public void queryBuscarPre()
+        {
+            PreciosDAO pre_dao = new PreciosDAO();
+            try
+            {
+                DataTable dtbus = pre_dao.LoadPrecPrecio();
+                cbxPrecioBuscpre.DataSource = dtbus;
+                cbxPrecioBuscpre.DisplayMember = "precio";
+                cbxPrecioBuscpre.ValueMember = "id_precio";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
+        }
         public void buscarPrecio ()
         {
             String idpreciobus = "" + cbxPreciosBuscar.SelectedValue;
@@ -64,6 +82,24 @@ namespace unimex.lenguajesv.cine.views
                 MessageBox.Show(""+ex);
             }
             
+
+        }
+        public void buscarPreciodelprecio ()
+        {
+            String idpreciobus = "" + cbxPrecioBuscpre.SelectedValue;
+            PreciosDTO precio_dto = new PreciosDTO();
+            try
+            {
+                precio_dto.id_Precios = Int32.Parse(idpreciobus);
+                PreciosDAO pre_dao = new PreciosDAO();
+                DataTable dtbus1 = pre_dao.cargaBusquedaPrecio(precio_dto);
+                dgvPrecios.DataSource = dtbus1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
+
 
         }
         private void btnAgregarprecio_Click(object sender, EventArgs e)
@@ -133,6 +169,29 @@ namespace unimex.lenguajesv.cine.views
             if (checkPreciosbus.Checked)
             {
                 buscarPrecio();
+            }
+        }
+
+        private void checkPreciobolbus_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkPreciobolbus.Checked)
+            {
+                cbxPrecioBuscpre.Enabled = true;
+                queryBuscarPre();
+            }
+            else
+            {
+                cbxPrecioBuscpre.Enabled = false;
+                cbxPrecioBuscpre.DataSource = null;
+                consultaPrecios();
+            }
+        }
+
+        private void cbxPrecioBuscpre_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (checkPreciobolbus.Checked)
+            {
+                buscarPreciodelprecio();
             }
         }
             

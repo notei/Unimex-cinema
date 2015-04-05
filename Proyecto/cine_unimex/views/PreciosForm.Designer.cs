@@ -35,6 +35,9 @@
             this.btnBorrarPrecio = new System.Windows.Forms.Button();
             this.checkPreciosbus = new System.Windows.Forms.CheckBox();
             this.cbxPreciosBuscar = new System.Windows.Forms.ComboBox();
+            this.checkPreciobolbus = new System.Windows.Forms.CheckBox();
+            this.cbxPrecioBuscpre = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrecios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -53,7 +56,7 @@
             // btnAgregarprecio
             // 
             this.btnAgregarprecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarprecio.Location = new System.Drawing.Point(23, 52);
+            this.btnAgregarprecio.Location = new System.Drawing.Point(23, 30);
             this.btnAgregarprecio.Name = "btnAgregarprecio";
             this.btnAgregarprecio.Size = new System.Drawing.Size(75, 23);
             this.btnAgregarprecio.TabIndex = 1;
@@ -63,7 +66,7 @@
             // 
             // btnActualizarPrecios
             // 
-            this.btnActualizarPrecios.Location = new System.Drawing.Point(23, 93);
+            this.btnActualizarPrecios.Location = new System.Drawing.Point(23, 73);
             this.btnActualizarPrecios.Name = "btnActualizarPrecios";
             this.btnActualizarPrecios.Size = new System.Drawing.Size(75, 23);
             this.btnActualizarPrecios.TabIndex = 2;
@@ -73,7 +76,7 @@
             // 
             // btnBorrarPrecio
             // 
-            this.btnBorrarPrecio.Location = new System.Drawing.Point(23, 134);
+            this.btnBorrarPrecio.Location = new System.Drawing.Point(23, 114);
             this.btnBorrarPrecio.Name = "btnBorrarPrecio";
             this.btnBorrarPrecio.Size = new System.Drawing.Size(75, 23);
             this.btnBorrarPrecio.TabIndex = 3;
@@ -84,7 +87,7 @@
             // checkPreciosbus
             // 
             this.checkPreciosbus.AutoSize = true;
-            this.checkPreciosbus.Location = new System.Drawing.Point(23, 186);
+            this.checkPreciosbus.Location = new System.Drawing.Point(12, 180);
             this.checkPreciosbus.Name = "checkPreciosbus";
             this.checkPreciosbus.Size = new System.Drawing.Size(56, 17);
             this.checkPreciosbus.TabIndex = 4;
@@ -95,17 +98,49 @@
             // cbxPreciosBuscar
             // 
             this.cbxPreciosBuscar.FormattingEnabled = true;
-            this.cbxPreciosBuscar.Location = new System.Drawing.Point(11, 209);
+            this.cbxPreciosBuscar.Location = new System.Drawing.Point(11, 203);
             this.cbxPreciosBuscar.Name = "cbxPreciosBuscar";
             this.cbxPreciosBuscar.Size = new System.Drawing.Size(121, 21);
             this.cbxPreciosBuscar.TabIndex = 5;
             this.cbxPreciosBuscar.SelectedIndexChanged += new System.EventHandler(this.cbxPreciosBuscar_SelectedIndexChanged);
+            // 
+            // checkPreciobolbus
+            // 
+            this.checkPreciobolbus.AutoSize = true;
+            this.checkPreciobolbus.Location = new System.Drawing.Point(11, 239);
+            this.checkPreciobolbus.Name = "checkPreciobolbus";
+            this.checkPreciobolbus.Size = new System.Drawing.Size(104, 17);
+            this.checkPreciobolbus.TabIndex = 6;
+            this.checkPreciobolbus.Text = "Precio de Boleto";
+            this.checkPreciobolbus.UseVisualStyleBackColor = true;
+            this.checkPreciobolbus.CheckedChanged += new System.EventHandler(this.checkPreciobolbus_CheckedChanged);
+            // 
+            // cbxPrecioBuscpre
+            // 
+            this.cbxPrecioBuscpre.FormattingEnabled = true;
+            this.cbxPrecioBuscpre.Location = new System.Drawing.Point(11, 262);
+            this.cbxPrecioBuscpre.Name = "cbxPrecioBuscpre";
+            this.cbxPrecioBuscpre.Size = new System.Drawing.Size(121, 21);
+            this.cbxPrecioBuscpre.TabIndex = 7;
+            this.cbxPrecioBuscpre.SelectedIndexChanged += new System.EventHandler(this.cbxPrecioBuscpre_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(37, 150);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(61, 13);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Busqueda :";
             // 
             // PreciosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(518, 333);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cbxPrecioBuscpre);
+            this.Controls.Add(this.checkPreciobolbus);
             this.Controls.Add(this.cbxPreciosBuscar);
             this.Controls.Add(this.checkPreciosbus);
             this.Controls.Add(this.btnBorrarPrecio);
@@ -130,5 +165,8 @@
         private System.Windows.Forms.Button btnBorrarPrecio;
         private System.Windows.Forms.CheckBox checkPreciosbus;
         private System.Windows.Forms.ComboBox cbxPreciosBuscar;
+        private System.Windows.Forms.CheckBox checkPreciobolbus;
+        private System.Windows.Forms.ComboBox cbxPrecioBuscpre;
+        private System.Windows.Forms.Label label1;
     }
 }

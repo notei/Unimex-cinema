@@ -115,5 +115,20 @@ namespace unimex.lenguajesv.cine.DAO
                 return tbl;
             }
         }
+        public DataTable LoadPrecPrecio()
+        {
+            String SQL_Busc_Precio = "select id_precio, precio from cat_precios";
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            using (SqlDataAdapter adapter = new SqlDataAdapter(SQL_Busc_Precio, con))
+            {
+
+                DataTable tbl = new DataTable();
+                adapter.Fill(tbl);
+                con.Close();
+                return tbl;
+            }
+        }
     }
 }
