@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewPrecios));
             this.txtNombrenew = new System.Windows.Forms.TextBox();
             this.txtDescnew = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
@@ -120,6 +121,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtDescnew);
             this.Controls.Add(this.txtNombrenew);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NewPrecios";
             this.Text = "Nuevo Precio";
             this.Load += new System.EventHandler(this.NewPrecios_Load);

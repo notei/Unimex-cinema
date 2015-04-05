@@ -53,7 +53,8 @@ namespace unimex.lenguajesv.cine.views
             int fil = dgvPrecios.CurrentCell.RowIndex;
             String valor = dgvPrecios.Rows[fil].Cells[0].Value.ToString();
             int id2 = Int32.Parse(valor);
-            DialogResult boton = MessageBox.Show("Desea Eliminar el registro seleccionado", "Borrar Registro", MessageBoxButtons.OKCancel);
+            String reg = dgvPrecios.Rows[fil].Cells[1].Value.ToString();
+            DialogResult boton = MessageBox.Show("Desea Eliminar el Boleto: "+reg, "Borrar Registro", MessageBoxButtons.OKCancel);
             if (boton == DialogResult.OK)
             {
                 

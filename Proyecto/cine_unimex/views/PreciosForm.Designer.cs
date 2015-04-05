@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PreciosForm));
             this.dgvPrecios = new System.Windows.Forms.DataGridView();
             this.btnAgregarprecio = new System.Windows.Forms.Button();
             this.btnActualizarPrecios = new System.Windows.Forms.Button();
@@ -49,6 +50,7 @@
             // 
             // btnAgregarprecio
             // 
+            this.btnAgregarprecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarprecio.Location = new System.Drawing.Point(23, 52);
             this.btnAgregarprecio.Name = "btnAgregarprecio";
             this.btnAgregarprecio.Size = new System.Drawing.Size(75, 23);
@@ -86,6 +88,7 @@
             this.Controls.Add(this.btnActualizarPrecios);
             this.Controls.Add(this.btnAgregarprecio);
             this.Controls.Add(this.dgvPrecios);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "PreciosForm";
             this.Text = "Precios de Boletos";
             this.Load += new System.EventHandler(this.PreciosForm_Load);
