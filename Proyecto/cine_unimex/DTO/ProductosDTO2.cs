@@ -18,10 +18,10 @@ namespace unimex.lenguajesv.cine.DTO
 
         public int idproducto
         {
-
+            //obtener
             get { return id_produto; }
 
-
+            //poner , asignar valor
             set { id_produto = value; }
         }
 

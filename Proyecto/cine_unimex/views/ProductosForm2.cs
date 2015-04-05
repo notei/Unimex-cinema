@@ -22,7 +22,7 @@ namespace unimex.lenguajesv.cine.views
             
         }
 
-        public void consultaProductos()
+        public void consultaProductos2()
         {
             ProductosDAO P_DAO = new ProductosDAO();
             try
@@ -41,7 +41,18 @@ namespace unimex.lenguajesv.cine.views
 
         private void ProductosForm2_Load(object sender, EventArgs e)
         {
-           consultaProductos();
+            ProductosDgv.DefaultCellStyle.BackColor = Color.Aqua;
+            ProductosDgv.AlternatingRowsDefaultCellStyle.BackColor = Color.LightYellow;
+
+           consultaProductos2();
+        }
+
+        private void NewProy_Click(object sender, EventArgs e)
+        {
+            NewProductos2 frmNewProy = new NewProductos2();
+            frmNewProy.ShowDialog();
+            consultaProductos2();
+
         }
     }
 }
