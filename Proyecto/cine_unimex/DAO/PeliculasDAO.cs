@@ -6,7 +6,7 @@ using System.Data;
 using System.Data.SqlClient;
 using unimex.lenguajesv.cine.DTO;
 
-namespace unimex.lenguajesv.cine.DAO
+    namespace unimex.lenguajesv.cine.DAO
 {
     class PeliculasDAO
     {
@@ -27,6 +27,19 @@ namespace unimex.lenguajesv.cine.DAO
             }
 
         }
+        public void deletepeliculasDTO(PeliculasDTO deletedto)
+        {
+            String SQLLoadPeliculas = " DELETE FROM peliculas WHERE id_pelicula = " + deletedto.id_Pelicula;
+            SqlConnection con;
+            con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            SqlCommand comando;
+            comando = new SqlCommand(SQLLoadPeliculas, con);
+            comando.ExecuteNonQuery();
+            con.Close();
+        }
+
 
        public PeliculasDTO LoadPeliculas(int id)
         {
@@ -70,4 +83,3 @@ namespace unimex.lenguajesv.cine.DAO
         }
     }
 }
-
