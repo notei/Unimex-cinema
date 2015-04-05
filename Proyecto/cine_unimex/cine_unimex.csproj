@@ -285,6 +285,9 @@
     <Compile Include="views\UsuariosForm.Designer.cs">
       <DependentUpon>UsuariosForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="views\ClientesFrecuentesForm.resx">
+      <DependentUpon>ClientesFrecuentesForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\NewPrecios.resx">
       <DependentUpon>NewPrecios.cs</DependentUpon>
     </EmbeddedResource>

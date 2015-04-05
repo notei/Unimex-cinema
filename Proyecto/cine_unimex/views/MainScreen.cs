@@ -160,6 +160,14 @@ namespace unimex.lenguajesv.cine.views
 
         }
 
+        private void clientesFrecuentesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ClientesFrecuentesForm formCF = new ClientesFrecuentesForm();
+            formCF.MdiParent = this;
+            formCF.StartPosition = FormStartPosition.CenterScreen;
+            formCF.Show();
+        }
+
         
     }
 }
