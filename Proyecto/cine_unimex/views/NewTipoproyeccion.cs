@@ -13,11 +13,21 @@ namespace unimex.lenguajesv.cine.views
 {
     public partial class NewTipoproyeccion : Form
     {
+        private int id;
+        Boolean conocerId=false;
         public NewTipoproyeccion()
         {
             InitializeComponent();
+            conocerId = true;
+            btnAgregar.Text = "Agregar";
         }
-
+        public NewTipoproyeccion(int id)
+        {
+            InitializeComponent();
+            this.id = id;
+            conocerId = false;
+            btnAgregar.Text = "Actualizar";
+        }
         private void button3_Click(object sender, EventArgs e)
         {
            
@@ -29,28 +39,71 @@ namespace unimex.lenguajesv.cine.views
 
         private void NewTipoProyeccion_Load(object sender, EventArgs e)
         {
-
+            if (conocerId)
+            {
+                TipoProyeccionDAO pr = new TipoProyeccionDAO();
+                pr.loadTipoProyeccion();
+            }
+            else
+            {
+                cargarNewTPUpdate();
+            }
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            TipoProyeccionDTO tpdto = new TipoProyeccionDTO();
-            tpdto.tipoProyeccion = txtTipoproyeccion.Text;
-            tpdto.Descripcion = txtDescripcion.Text;
-            tpdto.Habilitado = checkHabilitado.Checked;
+            if (conocerId)
+            {
+                TipoProyeccionDTO tpdto = new TipoProyeccionDTO();
+                tpdto.tipoProyeccion = txtTipoproyeccion.Text;
+                tpdto.Descripcion = txtDescripcion.Text;
+                tpdto.Habilitado = checkHabilitado.Checked;
+                try
+                {
+                    TipoProyeccionDAO daoTP = new TipoProyeccionDAO();
+                    daoTP.agregarTipoproyeccion(tpdto);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("" + ex);
+                }
+                this.Dispose();
+            }
+            else
+            {
+                TipoProyeccionDTO tpdtoup = new TipoProyeccionDTO();
+                tpdtoup.id_TipoProyeccion = id;
+                tpdtoup.tipoProyeccion = txtTipoproyeccion.Text;
+                tpdtoup.Descripcion = txtDescripcion.Text;
+                tpdtoup.Habilitado = checkHabilitado.Checked;
+                try
+                {
+                    TipoProyeccionDAO daoprecio1 = new TipoProyeccionDAO();
+                    daoprecio1.updateTipoProyeccionDTO(tpdtoup);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("" + ex);
+                }
+                this.Dispose();
+            }
+        }
+        public void cargarNewTPUpdate()
+        {
             try
             {
-                TipoProyeccionDAO daoTP = new TipoProyeccionDAO();
-                daoTP.agregarTipoproyeccion(tpdto);
+                TipoProyeccionDAO TPdao = new TipoProyeccionDAO();
+                TipoProyeccionDTO presdto = TPdao.cargarTPUpdate(id);
+                txtTipoproyeccion.Text = presdto.tipoProyeccion;
+                txtDescripcion.Text = presdto.Descripcion;
+                checkHabilitado.Checked = presdto.Habilitado;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("" + ex);
             }
-            this.Dispose();
 
         }
-
         private void button4_Click_1(object sender, EventArgs e)
         {
             this.Dispose();
