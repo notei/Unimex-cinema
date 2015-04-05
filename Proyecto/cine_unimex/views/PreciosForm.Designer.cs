@@ -33,6 +33,8 @@
             this.btnAgregarprecio = new System.Windows.Forms.Button();
             this.btnActualizarPrecios = new System.Windows.Forms.Button();
             this.btnBorrarPrecio = new System.Windows.Forms.Button();
+            this.checkPreciosbus = new System.Windows.Forms.CheckBox();
+            this.cbxPreciosBuscar = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrecios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,11 +81,33 @@
             this.btnBorrarPrecio.UseVisualStyleBackColor = true;
             this.btnBorrarPrecio.Click += new System.EventHandler(this.btnBorrarPrecio_Click);
             // 
+            // checkPreciosbus
+            // 
+            this.checkPreciosbus.AutoSize = true;
+            this.checkPreciosbus.Location = new System.Drawing.Point(23, 186);
+            this.checkPreciosbus.Name = "checkPreciosbus";
+            this.checkPreciosbus.Size = new System.Drawing.Size(56, 17);
+            this.checkPreciosbus.TabIndex = 4;
+            this.checkPreciosbus.Text = "Boleto";
+            this.checkPreciosbus.UseVisualStyleBackColor = true;
+            this.checkPreciosbus.CheckedChanged += new System.EventHandler(this.checkPreciosbus_CheckedChanged);
+            // 
+            // cbxPreciosBuscar
+            // 
+            this.cbxPreciosBuscar.FormattingEnabled = true;
+            this.cbxPreciosBuscar.Location = new System.Drawing.Point(11, 209);
+            this.cbxPreciosBuscar.Name = "cbxPreciosBuscar";
+            this.cbxPreciosBuscar.Size = new System.Drawing.Size(121, 21);
+            this.cbxPreciosBuscar.TabIndex = 5;
+            this.cbxPreciosBuscar.SelectedIndexChanged += new System.EventHandler(this.cbxPreciosBuscar_SelectedIndexChanged);
+            // 
             // PreciosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(518, 333);
+            this.Controls.Add(this.cbxPreciosBuscar);
+            this.Controls.Add(this.checkPreciosbus);
             this.Controls.Add(this.btnBorrarPrecio);
             this.Controls.Add(this.btnActualizarPrecios);
             this.Controls.Add(this.btnAgregarprecio);
@@ -94,6 +118,7 @@
             this.Load += new System.EventHandler(this.PreciosForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrecios)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -103,5 +128,7 @@
         private System.Windows.Forms.Button btnAgregarprecio;
         private System.Windows.Forms.Button btnActualizarPrecios;
         private System.Windows.Forms.Button btnBorrarPrecio;
+        private System.Windows.Forms.CheckBox checkPreciosbus;
+        private System.Windows.Forms.ComboBox cbxPreciosBuscar;
     }
 }
