@@ -38,7 +38,7 @@ namespace unimex.lenguajesv.cine.views
                     PreciosDTO pdto = new PreciosDTO();
                     pdto.Nombre = txtNombrenew.Text;
                     pdto.Descripcion = txtDescnew.Text;
-                    pdto.Precios = Int32.Parse(txtPrecionew.Text);
+                    pdto.Precios = Single.Parse(txtPrecionew.Text);
                     try
                     {
                         PreciosDAO daoprecio = new PreciosDAO();

@@ -68,8 +68,7 @@ namespace unimex.lenguajesv.cine.views
                 catch (Exception ex)
                 {
                     MessageBox.Show("" + ex);
-                }
-                MessageBox.Show("Borrado con Exito!");
+                }                
                 consultaPrecios();
             }
             else
