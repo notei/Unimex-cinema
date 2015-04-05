@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using unimex.lenguajesv.cine.DAO;
+using unimex.lenguajesv.cine.DTO;
 
 namespace unimex.lenguajesv.cine.views
 {
@@ -45,6 +46,36 @@ namespace unimex.lenguajesv.cine.views
             NewPrecios formaupdate = new NewPrecios(id);
             formaupdate.ShowDialog();
             consultaPrecios();
+        }
+
+        private void btnBorrarPrecio_Click(object sender, EventArgs e)
+        {
+            int fil = dgvPrecios.CurrentCell.RowIndex;
+            String valor = dgvPrecios.Rows[fil].Cells[0].Value.ToString();
+            int id2 = Int32.Parse(valor);
+            DialogResult boton = MessageBox.Show("Desea Eliminar el registro seleccionado", "Borrar Registro", MessageBoxButtons.OKCancel);
+            if (boton == DialogResult.OK)
+            {
+                
+                PreciosDTO pdtoup = new PreciosDTO();
+                pdtoup.id_Precios = id2;
+
+                try
+                {
+                    PreciosDAO daoprecio1 = new PreciosDAO();
+                    daoprecio1.deletePrecioDTO(pdtoup);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("" + ex);
+                }
+                MessageBox.Show("Borrado con Exito!");
+                consultaPrecios();
+            }
+            else
+            {
+                
+            }
         }
             
     }

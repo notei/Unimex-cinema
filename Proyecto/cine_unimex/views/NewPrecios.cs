@@ -9,6 +9,7 @@ using System.Windows.Forms;
 using unimex.lenguajesv.cine.DAO;
 using unimex.lenguajesv.cine.DTO;
 
+
 namespace unimex.lenguajesv.cine.views
 {
     public partial class NewPrecios : Form

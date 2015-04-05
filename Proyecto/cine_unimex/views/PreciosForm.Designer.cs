@@ -31,6 +31,7 @@
             this.dgvPrecios = new System.Windows.Forms.DataGridView();
             this.btnAgregarprecio = new System.Windows.Forms.Button();
             this.btnActualizarPrecios = new System.Windows.Forms.Button();
+            this.btnBorrarPrecio = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPrecios)).BeginInit();
             this.SuspendLayout();
             // 
@@ -58,7 +59,7 @@
             // 
             // btnActualizarPrecios
             // 
-            this.btnActualizarPrecios.Location = new System.Drawing.Point(23, 122);
+            this.btnActualizarPrecios.Location = new System.Drawing.Point(23, 93);
             this.btnActualizarPrecios.Name = "btnActualizarPrecios";
             this.btnActualizarPrecios.Size = new System.Drawing.Size(75, 23);
             this.btnActualizarPrecios.TabIndex = 2;
@@ -66,11 +67,22 @@
             this.btnActualizarPrecios.UseVisualStyleBackColor = true;
             this.btnActualizarPrecios.Click += new System.EventHandler(this.btnActualizarPrecios_Click);
             // 
+            // btnBorrarPrecio
+            // 
+            this.btnBorrarPrecio.Location = new System.Drawing.Point(23, 134);
+            this.btnBorrarPrecio.Name = "btnBorrarPrecio";
+            this.btnBorrarPrecio.Size = new System.Drawing.Size(75, 23);
+            this.btnBorrarPrecio.TabIndex = 3;
+            this.btnBorrarPrecio.Text = "Borrar";
+            this.btnBorrarPrecio.UseVisualStyleBackColor = true;
+            this.btnBorrarPrecio.Click += new System.EventHandler(this.btnBorrarPrecio_Click);
+            // 
             // PreciosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(518, 333);
+            this.Controls.Add(this.btnBorrarPrecio);
             this.Controls.Add(this.btnActualizarPrecios);
             this.Controls.Add(this.btnAgregarprecio);
             this.Controls.Add(this.dgvPrecios);
@@ -87,5 +99,6 @@
         private System.Windows.Forms.DataGridView dgvPrecios;
         private System.Windows.Forms.Button btnAgregarprecio;
         private System.Windows.Forms.Button btnActualizarPrecios;
+        private System.Windows.Forms.Button btnBorrarPrecio;
     }
 }
