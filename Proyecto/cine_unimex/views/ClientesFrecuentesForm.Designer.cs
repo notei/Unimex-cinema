@@ -32,6 +32,8 @@
             this.btnNuevoCFform = new System.Windows.Forms.Button();
             this.btnActualizarCF = new System.Windows.Forms.Button();
             this.btnBorrarNew = new System.Windows.Forms.Button();
+            this.checNombreCF = new System.Windows.Forms.CheckBox();
+            this.cmbNombreCF = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClienteFrecuente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,11 +79,33 @@
             this.btnBorrarNew.UseVisualStyleBackColor = true;
             this.btnBorrarNew.Click += new System.EventHandler(this.btnBorrarNew_Click);
             // 
+            // checNombreCF
+            // 
+            this.checNombreCF.AutoSize = true;
+            this.checNombreCF.Location = new System.Drawing.Point(22, 171);
+            this.checNombreCF.Name = "checNombreCF";
+            this.checNombreCF.Size = new System.Drawing.Size(63, 17);
+            this.checNombreCF.TabIndex = 4;
+            this.checNombreCF.Text = "Nombre";
+            this.checNombreCF.UseVisualStyleBackColor = true;
+            this.checNombreCF.CheckedChanged += new System.EventHandler(this.checNombreCF_CheckedChanged);
+            // 
+            // cmbNombreCF
+            // 
+            this.cmbNombreCF.FormattingEnabled = true;
+            this.cmbNombreCF.Location = new System.Drawing.Point(7, 194);
+            this.cmbNombreCF.Name = "cmbNombreCF";
+            this.cmbNombreCF.Size = new System.Drawing.Size(121, 21);
+            this.cmbNombreCF.TabIndex = 5;
+            this.cmbNombreCF.SelectedIndexChanged += new System.EventHandler(this.cmbNombreCF_SelectedIndexChanged);
+            // 
             // ClientesFrecuentesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(490, 303);
+            this.Controls.Add(this.cmbNombreCF);
+            this.Controls.Add(this.checNombreCF);
             this.Controls.Add(this.btnBorrarNew);
             this.Controls.Add(this.btnActualizarCF);
             this.Controls.Add(this.btnNuevoCFform);
@@ -91,6 +115,7 @@
             this.Load += new System.EventHandler(this.ClientesFrecuentesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvClienteFrecuente)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -100,5 +125,7 @@
         private System.Windows.Forms.Button btnNuevoCFform;
         private System.Windows.Forms.Button btnActualizarCF;
         private System.Windows.Forms.Button btnBorrarNew;
+        private System.Windows.Forms.CheckBox checNombreCF;
+        private System.Windows.Forms.ComboBox cmbNombreCF;
     }
 }

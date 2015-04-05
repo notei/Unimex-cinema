@@ -82,5 +82,65 @@ namespace unimex.lenguajesv.cine.DAO
             comando.ExecuteNonQuery();
             con.Close();
         }
+        public DataTable cargaBusquedaCF (ClientesFrecuentesDTO busdtocf)
+        {
+            String SQL_Buscar_CF = "select clientes_frecuentes.id_cliente_frecuente AS Id , clientes_frecuentes.nombre AS Nombre, clientes_frecuentes.apellido_paterno AS ApellidoPaterno, clientes_frecuentes.user_name AS Usuario, clientes_frecuentes.habilitado AS Habilitado FROM clientes_frecuentes WHERE id_cliente_frecuente = "+busdtocf.id_ClienteFrecuente;
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            using (SqlDataAdapter adapter3 = new SqlDataAdapter(SQL_Buscar_CF, con))
+            {
+
+                DataTable tblcfbus = new DataTable();
+                adapter3.Fill(tblcfbus);
+                con.Close();
+                return tblcfbus;
+            }
+        }
+        public DataTable LoadNombreCF()
+        {
+            String SQL_Busc_CF = "select id_cliente_frecuente, nombre from clientes_frecuentes";
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            using (SqlDataAdapter adapter = new SqlDataAdapter(SQL_Busc_CF, con))
+            {
+
+                DataTable tbl = new DataTable();
+                adapter.Fill(tbl);
+                con.Close();
+                return tbl;
+            }
+        }
+        public DataTable LoadApellidoCF()
+        {
+            String SQL_Busc_CF = "select id_cliente_frecuente, apellido_paterno from clientes_frecuentes";
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            using (SqlDataAdapter adapter = new SqlDataAdapter(SQL_Busc_CF, con))
+            {
+
+                DataTable tbl = new DataTable();
+                adapter.Fill(tbl);
+                con.Close();
+                return tbl;
+            }
+        }
+        public DataTable LoadUserCF()
+        {
+            String SQL_Busc_CF = "select id_cliente_frecuente, user_name from clientes_frecuentes";
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            using (SqlDataAdapter adapter = new SqlDataAdapter(SQL_Busc_CF, con))
+            {
+
+                DataTable tbl = new DataTable();
+                adapter.Fill(tbl);
+                con.Close();
+                return tbl;
+            }
+        }
     }
 }

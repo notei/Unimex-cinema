@@ -21,6 +21,9 @@ namespace unimex.lenguajesv.cine.views
         private void ClientesFrecuentesForm_Load(object sender, EventArgs e)
         {
             consultaViewCF();
+            consultaBuscarNombreCF();
+            cmbNombreCF.Enabled = false;
+            cmbNombreCF.DataSource = null;
         }
         public void consultaViewCF ()
         {
@@ -29,7 +32,39 @@ namespace unimex.lenguajesv.cine.views
             dgvClienteFrecuente.DataSource = dtp;
             dgvClienteFrecuente.Columns[0].Visible = false;
         }
+        public void consultaBuscarNombreCF ()
+        {
+            ClientesFrecuentesDAO precf_dao = new ClientesFrecuentesDAO();
+            try
+            {
+                DataTable dtbus = precf_dao.LoadNombreCF();
+                cmbNombreCF.DataSource = dtbus;
+                cmbNombreCF.DisplayMember = "nombre";
+                cmbNombreCF.ValueMember = "id_cliente_frecuente";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
+        }
+        public void buscarNombreCF ()
+        {
+            String idcfbus = "" + cmbNombreCF.SelectedValue;
+            ClientesFrecuentesDTO cf_dto = new ClientesFrecuentesDTO();
+            try
+            {
+                cf_dto.id_ClienteFrecuente = Int32.Parse(idcfbus);
+                ClientesFrecuentesDAO cf_dao = new ClientesFrecuentesDAO();
+                DataTable dtbus2 = cf_dao.cargaBusquedaCF(cf_dto);
+                dgvClienteFrecuente.DataSource = dtbus2;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
 
+
+        }
         private void btnNuevoCFform_Click(object sender, EventArgs e)
         {
             NewClientesFrecuentes formnewcf = new NewClientesFrecuentes();
@@ -75,6 +110,29 @@ namespace unimex.lenguajesv.cine.views
             else
             {
 
+            }
+        }
+
+        private void checNombreCF_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checNombreCF.Checked)
+            {
+                cmbNombreCF.Enabled = true;
+                consultaBuscarNombreCF();
+            }
+            else
+            {
+                cmbNombreCF.Enabled = false;
+                cmbNombreCF.DataSource = null;
+                consultaViewCF();
+            }
+        }
+
+        private void cmbNombreCF_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (checNombreCF.Checked)
+            {
+                buscarNombreCF();
             }
         }
     }
