@@ -8,10 +8,10 @@ namespace unimex.lenguajesv.cine.DTO
     class ProductosDTO2
     {
 
-        private int id_produto; //verifica tus tipos de datos no todos son enteros
-        private int nombre; // por ejemplo este debe ser String
-        private int descripcion; //si tu campo en SQL te indica varchar o char pasalo a String
-        private int precio; //Nota: borra estas lineas cuando corrijas los errores 
+        private int id_produto; 
+        private string nombre; 
+        private string descripcion; 
+        private int precio;  
         private int disponibilidad;
         private int id_tipo_producto;
         private int id_proveedor;
@@ -25,7 +25,7 @@ namespace unimex.lenguajesv.cine.DTO
             set { id_produto = value; }
         }
 
-        public int Nombre
+        public string Nombre
         {
 
             get { return nombre; }
@@ -34,7 +34,7 @@ namespace unimex.lenguajesv.cine.DTO
             set { nombre = value; }
         }
 
-        public int Descripcion
+        public string Descripcion
         {
 
             get { return descripcion; }
