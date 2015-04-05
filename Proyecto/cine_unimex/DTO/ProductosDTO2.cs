@@ -9,8 +9,8 @@ namespace unimex.lenguajesv.cine.DTO
     {
 
         private int id_produto; 
-        private String nombre; 
-        private String descripcion; 
+        private string nombre; 
+        private string descripcion; 
         private int precio;  
         private int disponibilidad;
         private int id_tipo_producto;
@@ -25,7 +25,7 @@ namespace unimex.lenguajesv.cine.DTO
             set { id_produto = value; }
         }
 
-        public String Nombre
+        public string Nombre
         {
 
             get { return nombre; }
@@ -34,7 +34,7 @@ namespace unimex.lenguajesv.cine.DTO
             set { nombre = value; }
         }
 
-        public String Descripcion
+        public string Descripcion
         {
 
             get { return descripcion; }

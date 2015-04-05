@@ -69,6 +69,38 @@ using unimex.lenguajesv.cine.DTO;
         con.Open();
         return con;
     }
+        public DataTable cargaBusquedaCF(PeliculasDTO busdtocf)
+        {
+            String SQL_Buscar_peli = "select peliculas.id_pelicula AS Id , peliculas.pelicula AS pelicula, pelicula.duracion_min AS Duracion, peliculas.sinopsis AS Sinopsis, peliculas.idioma AS Idioma, peliculas.sonido as Sonido, peliculas.estreno as Estreno FROM peliculas WHERE id_pelicula = " + busdtocf.id_Pelicula;
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            using (SqlDataAdapter adapter3 = new SqlDataAdapter(SQL_Buscar_peli, con))
+            {
+
+                DataTable tblcfbus = new DataTable();
+                adapter3.Fill(tblcfbus);
+                con.Close();
+                return tblcfbus;
+            }
+        }
+
+
+        public DataTable LoadNombreCF()
+        {
+            String SQL_Busc_CF = "select id_pelicula, pelicula from peliculas";
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            using (SqlDataAdapter adapter = new SqlDataAdapter(SQL_Busc_CF, con))
+            {
+
+                DataTable tbl = new DataTable();
+                adapter.Fill(tbl);
+                con.Close();
+                return tbl;
+            }
+        }
 
         public void Newpeliculas(PeliculasDTO new_pel_DTO)
         {
