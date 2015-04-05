@@ -38,5 +38,37 @@ namespace unimex.lenguajesv.cine.DAO
             comando.ExecuteNonQuery();
             con.Close();
         }
+        public ClientesFrecuentesDTO cargarCFUpdate(int id)
+        {
+            String SQL_Cargar_CF = "select * from clientes_frecuentes where id_cliente_frecuente = " + id;
+            ClientesFrecuentesDTO cfre_dto = new ClientesFrecuentesDTO();
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            SqlCommand cmd = new SqlCommand(SQL_Cargar_CF, con);
+            SqlDataReader rd = cmd.ExecuteReader();
+            while (rd.Read())
+            {
+                cfre_dto.id_ClienteFrecuente = (int)rd.GetInt32(0);
+                cfre_dto.Nombre = (String)rd.GetString(1);
+                cfre_dto.Apellido_Paterno = (String)rd.GetString(2);
+                cfre_dto.User_Name = (String)rd.GetString(3);
+                cfre_dto.Habilitado = (Boolean)rd.GetBoolean(4);
+            }
+            con.Close();
+            return cfre_dto;
+        }
+        public void updateCFrecuenteDTO(ClientesFrecuentesDTO clientefdtoup)
+        {
+            String SQL_Update_CF = " UPDATE clientes_frecuentes SET nombre = '" + clientefdtoup.Nombre + "', apellido_paterno = '" + clientefdtoup.Apellido_Paterno + "', user_name = '" + clientefdtoup.User_Name + "', habilitado = '" + clientefdtoup.Habilitado + "' WHERE id_cliente_frecuente = " + clientefdtoup.id_ClienteFrecuente;
+            SqlConnection con;
+            con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            SqlCommand comando;
+            comando = new SqlCommand(SQL_Update_CF, con);
+            comando.ExecuteNonQuery();
+            con.Close();
+        }
     }
 }

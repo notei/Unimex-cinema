@@ -30,6 +30,7 @@
         {
             this.dgvClienteFrecuente = new System.Windows.Forms.DataGridView();
             this.btnNuevoCFform = new System.Windows.Forms.Button();
+            this.btnActualizarCF = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClienteFrecuente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,11 +56,22 @@
             this.btnNuevoCFform.UseVisualStyleBackColor = true;
             this.btnNuevoCFform.Click += new System.EventHandler(this.btnNuevoCFform_Click);
             // 
+            // btnActualizarCF
+            // 
+            this.btnActualizarCF.Location = new System.Drawing.Point(22, 85);
+            this.btnActualizarCF.Name = "btnActualizarCF";
+            this.btnActualizarCF.Size = new System.Drawing.Size(75, 23);
+            this.btnActualizarCF.TabIndex = 2;
+            this.btnActualizarCF.Text = "Actualizar";
+            this.btnActualizarCF.UseVisualStyleBackColor = true;
+            this.btnActualizarCF.Click += new System.EventHandler(this.btnActualizarCF_Click);
+            // 
             // ClientesFrecuentesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(490, 303);
+            this.Controls.Add(this.btnActualizarCF);
             this.Controls.Add(this.btnNuevoCFform);
             this.Controls.Add(this.dgvClienteFrecuente);
             this.Name = "ClientesFrecuentesForm";
@@ -74,5 +86,6 @@
 
         private System.Windows.Forms.DataGridView dgvClienteFrecuente;
         private System.Windows.Forms.Button btnNuevoCFform;
+        private System.Windows.Forms.Button btnActualizarCF;
     }
 }

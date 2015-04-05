@@ -143,6 +143,7 @@
             this.Controls.Add(this.chkHabilitadoNew);
             this.Name = "NewClientesFrecuentes";
             this.Text = "NewClientesFrecuentes";
+            this.Load += new System.EventHandler(this.NewClientesFrecuentes_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

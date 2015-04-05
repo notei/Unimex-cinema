@@ -35,5 +35,15 @@ namespace unimex.lenguajesv.cine.views
             formnewcf.ShowDialog();
             consultaViewCF();
         }
+
+        private void btnActualizarCF_Click(object sender, EventArgs e)
+        {
+            int fil = dgvClienteFrecuente.CurrentCell.RowIndex;
+            String valor = dgvClienteFrecuente.Rows[fil].Cells[0].Value.ToString();
+            int id = Int32.Parse(valor);
+            NewClientesFrecuentes formaupdate = new NewClientesFrecuentes(id);
+            formaupdate.ShowDialog();
+            consultaViewCF();
+        }
     }
 }
