@@ -36,6 +36,15 @@ namespace unimex.lenguajesv.cine.views
             formpre.ShowDialog();
             consultaPrecios();
         }
+
+        private void btnActualizarPrecios_Click(object sender, EventArgs e)
+        {
+            int fil = dgvPrecios.CurrentCell.RowIndex;
+            String valor = dgvPrecios.Rows[fil].Cells[0].Value.ToString();
+            int id = Int32.Parse(valor);
+            NewPrecios formaupdate = new NewPrecios(id);
+            formaupdate.Show();
+        }
             
     }
 }
