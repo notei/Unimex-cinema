@@ -70,5 +70,17 @@ namespace unimex.lenguajesv.cine.DAO
             comando.ExecuteNonQuery();
             con.Close();
         }
+        public void deleteCFDTO (ClientesFrecuentesDTO deletecfdto)
+        {
+            String SQL_Update_CF = " DELETE FROM clientes_frecuentes WHERE id_cliente_frecuente = " + deletecfdto.id_ClienteFrecuente;
+            SqlConnection con;
+            con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            SqlCommand comando;
+            comando = new SqlCommand(SQL_Update_CF, con);
+            comando.ExecuteNonQuery();
+            con.Close();
+        }
     }
 }

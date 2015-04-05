@@ -31,6 +31,7 @@
             this.dgvClienteFrecuente = new System.Windows.Forms.DataGridView();
             this.btnNuevoCFform = new System.Windows.Forms.Button();
             this.btnActualizarCF = new System.Windows.Forms.Button();
+            this.btnBorrarNew = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClienteFrecuente)).BeginInit();
             this.SuspendLayout();
             // 
@@ -66,11 +67,22 @@
             this.btnActualizarCF.UseVisualStyleBackColor = true;
             this.btnActualizarCF.Click += new System.EventHandler(this.btnActualizarCF_Click);
             // 
+            // btnBorrarNew
+            // 
+            this.btnBorrarNew.Location = new System.Drawing.Point(22, 124);
+            this.btnBorrarNew.Name = "btnBorrarNew";
+            this.btnBorrarNew.Size = new System.Drawing.Size(75, 23);
+            this.btnBorrarNew.TabIndex = 3;
+            this.btnBorrarNew.Text = "Borrar";
+            this.btnBorrarNew.UseVisualStyleBackColor = true;
+            this.btnBorrarNew.Click += new System.EventHandler(this.btnBorrarNew_Click);
+            // 
             // ClientesFrecuentesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(490, 303);
+            this.Controls.Add(this.btnBorrarNew);
             this.Controls.Add(this.btnActualizarCF);
             this.Controls.Add(this.btnNuevoCFform);
             this.Controls.Add(this.dgvClienteFrecuente);
@@ -87,5 +99,6 @@
         private System.Windows.Forms.DataGridView dgvClienteFrecuente;
         private System.Windows.Forms.Button btnNuevoCFform;
         private System.Windows.Forms.Button btnActualizarCF;
+        private System.Windows.Forms.Button btnBorrarNew;
     }
 }

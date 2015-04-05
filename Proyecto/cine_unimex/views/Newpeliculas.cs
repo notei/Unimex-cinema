@@ -60,7 +60,7 @@ namespace unimex.lenguajesv.cine.views
             peli_DTO.Sinopsis = texsinopsis.Text;
             peli_DTO.Idioma = texidioma.Text;
             peli_DTO.Sonido = texsonido.Text;
-            peli_DTO.Estreno = Int32.Parse(texestreno.Text);
+            peli_DTO.Estreno = Int32.Parse(chec.Text);
 
             try
             {
