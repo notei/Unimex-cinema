@@ -28,6 +28,41 @@ namespace unimex.lenguajesv.cine.DAO
             }
 
         }
+        public DataTable loadSonido()
+        {
+            String consultaSonido = "select id_tipo_sonido, tipo_sonido from cat_tipo_sonido";
+
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            using (SqlDataAdapter adapter = new SqlDataAdapter(consultaSonido, con))
+            {
+
+                DataTable tblp = new DataTable();
+                adapter.Fill(tblp);
+                con.Close();
+                return tblp;
+            }
+
+        }
+        public DataTable loadProyeccion()
+        {
+            String consultaProyeccion = "select id_tipo_proyeccion, tipo_proyeccion from cat_tipo_proyeccion";
+
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            using (SqlDataAdapter adapter = new SqlDataAdapter(consultaProyeccion, con))
+            {
+
+                DataTable tblp = new DataTable();
+                adapter.Fill(tblp);
+                con.Close();
+                return tblp;
+            }
+
+
+        }
         public void newSalas(SalasDTO new_salas_DTO)
         {
             String SQL_NewSalas = "insert into cat_salas_complejos values (" +new_salas_DTO.Id_Complejo +",'" + new_salas_DTO.Nombre_Sala + "'," + new_salas_DTO.Capacidad +","+ new_salas_DTO.Butacas_Numeradas+","+ new_salas_DTO.Id_Tipo_Sonido+","+new_salas_DTO.Id_Tipo_Proyeccion+")";

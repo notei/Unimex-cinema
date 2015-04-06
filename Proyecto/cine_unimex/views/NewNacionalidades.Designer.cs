@@ -28,44 +28,49 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewNacionalidades));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.txtNewNacionalidad = new System.Windows.Forms.TextBox();
             this.chkHabilitado = new System.Windows.Forms.CheckBox();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.lblTexto = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(13, 23);
+            this.label1.Location = new System.Drawing.Point(50, 69);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(72, 13);
+            this.label1.Size = new System.Drawing.Size(86, 16);
             this.label1.TabIndex = 0;
             this.label1.Text = "Nacionalidad:";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(16, 54);
+            this.label2.Location = new System.Drawing.Point(50, 107);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(57, 13);
+            this.label2.Size = new System.Drawing.Size(68, 16);
             this.label2.TabIndex = 1;
             this.label2.Text = "Habilitado:";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // txtNewNacionalidad
             // 
-            this.txtNewNacionalidad.Location = new System.Drawing.Point(91, 20);
+            this.txtNewNacionalidad.Location = new System.Drawing.Point(142, 69);
+            this.txtNewNacionalidad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNewNacionalidad.Name = "txtNewNacionalidad";
-            this.txtNewNacionalidad.Size = new System.Drawing.Size(100, 20);
+            this.txtNewNacionalidad.Size = new System.Drawing.Size(116, 21);
             this.txtNewNacionalidad.TabIndex = 2;
             this.txtNewNacionalidad.TextChanged += new System.EventHandler(this.txtNewNacionalidad_TextChanged);
             // 
             // chkHabilitado
             // 
             this.chkHabilitado.AutoSize = true;
-            this.chkHabilitado.Location = new System.Drawing.Point(91, 50);
+            this.chkHabilitado.Location = new System.Drawing.Point(142, 109);
+            this.chkHabilitado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkHabilitado.Name = "chkHabilitado";
             this.chkHabilitado.Size = new System.Drawing.Size(15, 14);
             this.chkHabilitado.TabIndex = 3;
@@ -74,9 +79,10 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(19, 112);
+            this.btnAceptar.Location = new System.Drawing.Point(49, 163);
+            this.btnAceptar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(75, 23);
+            this.btnAceptar.Size = new System.Drawing.Size(87, 28);
             this.btnAceptar.TabIndex = 4;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -84,27 +90,42 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(148, 112);
+            this.btnCancelar.Location = new System.Drawing.Point(191, 163);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(75, 23);
+            this.btnCancelar.Size = new System.Drawing.Size(87, 28);
             this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
+            // lblTexto
+            // 
+            this.lblTexto.AutoSize = true;
+            this.lblTexto.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTexto.Location = new System.Drawing.Point(43, 12);
+            this.lblTexto.Name = "lblTexto";
+            this.lblTexto.Size = new System.Drawing.Size(310, 32);
+            this.lblTexto.TabIndex = 6;
+            this.lblTexto.Text = "Agregar Nacionalidad";
+            // 
             // NewNacionalidades
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(281, 179);
+            this.ClientSize = new System.Drawing.Size(380, 246);
+            this.Controls.Add(this.lblTexto);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.chkHabilitado);
             this.Controls.Add(this.txtNewNacionalidad);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "NewNacionalidades";
-            this.Text = "NewNacionalidades";
+            this.Text = "Agregar Nacionalidades";
             this.Load += new System.EventHandler(this.NewNacionalidades_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -119,5 +140,6 @@
         private System.Windows.Forms.CheckBox chkHabilitado;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Label lblTexto;
     }
 }

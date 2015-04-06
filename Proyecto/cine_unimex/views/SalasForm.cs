@@ -29,7 +29,7 @@ namespace unimex.lenguajesv.cine.views
             {
                 DataTable dt = Com_DAO.loadSalas();
                 dataG.DataSource = dt;
-
+               
             }
             catch(Exception ex)
             {

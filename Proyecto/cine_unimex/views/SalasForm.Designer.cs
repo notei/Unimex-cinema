@@ -35,6 +35,9 @@
             // 
             // dataG
             // 
+            this.dataG.AllowUserToAddRows = false;
+            this.dataG.AllowUserToDeleteRows = false;
+            this.dataG.AllowUserToOrderColumns = true;
             this.dataG.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
