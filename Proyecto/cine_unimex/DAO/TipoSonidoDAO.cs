@@ -81,5 +81,35 @@ namespace unimex.lenguajesv.cine.DAO
             comando.ExecuteNonQuery();
             con.Close();
         }
+        public DataTable cargaBusquedaTsonido (TipoSonidoDTO busdtopre)
+        {
+            String SQL_Cargar_tsonido = "select cat_tipo_sonido.id_tipo_sonido AS Id , cat_tipo_sonido.tipo_sonido AS TipoSonido, cat_tipo_sonido.descripcion AS Descripcion, cat_tipo_sonido.habilitado AS Habilitado FROM cat_tipo_sonido WHERE cat_tipo_sonido.id_tipo_sonido =" + busdtopre.id_TipoSonido;
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            using (SqlDataAdapter adapter1 = new SqlDataAdapter(SQL_Cargar_tsonido, con))
+            {
+
+                DataTable tblpbus = new DataTable();
+                adapter1.Fill(tblpbus);
+                con.Close();
+                return tblpbus;
+            }
+        }
+        public DataTable LoadTipoSonido ()
+        {
+            String SQL_Busc_TSS = "select id_tipo_sonido, tipo_sonido from cat_tipo_sonido";
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            using (SqlDataAdapter adapter = new SqlDataAdapter(SQL_Busc_TSS, con))
+            {
+
+                DataTable tbl = new DataTable();
+                adapter.Fill(tbl);
+                con.Close();
+                return tbl;
+            }
+        }
     }
 }
