@@ -74,5 +74,17 @@ namespace unimex.lenguajesv.cine.DAO
             comando.ExecuteNonQuery();
             con.Close();
         }
+        public void deleteTPDTO(TipoProyeccionDTO deletedtotp)
+        {
+            String SQL_Update_TP = " DELETE FROM cat_tipo_proyeccion WHERE id_tipo_proyeccion = " + deletedtotp.id_TipoProyeccion;
+            SqlConnection con;
+            con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            SqlCommand comando;
+            comando = new SqlCommand(SQL_Update_TP, con);
+            comando.ExecuteNonQuery();
+            con.Close();
+        }
     }
 }
