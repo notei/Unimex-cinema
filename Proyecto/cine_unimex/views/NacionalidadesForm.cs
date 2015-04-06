@@ -44,6 +44,19 @@ namespace unimex.lenguajesv.cine.views
 
         }
 
+        private void btnActualizarNa_Click(object sender, EventArgs e)
+        {
+            //Guarda el elemento que seleccione
+            int fil = dgvNacionalidades.CurrentCell.RowIndex;
+
+            String valor = dgvNacionalidades.Rows[fil].Cells[0].Value.ToString();
+            int id = Int32.Parse(valor);
+            NewNacionalidades formup = new NewNacionalidades (id);
+            formup.ShowDialog();
+            consutaNacinalidades();
+
+        }
+
 
     }
 }

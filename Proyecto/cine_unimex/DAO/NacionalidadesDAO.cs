@@ -51,6 +51,39 @@ namespace unimex.lenguajesv.cine
 
         
         }
+
+        public NacionalidadesDTO cargarNacionalidadUpdate(int id)
+        {
+            String SQL_Cargar_nacionalidad = "select * from nacionalidades where id_nacionalidad = " + id;
+            NacionalidadesDTO na = new NacionalidadesDTO();
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            SqlCommand cmd = new SqlCommand(SQL_Cargar_nacionalidad, con);
+            SqlDataReader red = cmd.ExecuteReader();
+            while (red.Read())
+            {
+                na.id_Nacionalidad = (int)red.GetInt32(0);
+                na.Nacionalidad = (String)red.GetString(1);
+                na.Habilitado = (bool)red.GetBoolean(2);
+               
+            }
+            con.Close();
+            return na;
+        }
+
+        public void updateNacionalidadesDTO(NacionalidadesDTO nacionalidadup)
+        {
+            String SQL_Update_Nacionalidad = " UPDATE nacionalidades SET nacionalidad = '" + nacionalidadup.Nacionalidad + "', habilitado = '" + nacionalidadup.Habilitado + "' WHERE id_nacionalidad = " + nacionalidadup.id_Nacionalidad;
+            SqlConnection con;
+            con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            SqlCommand comando;
+            comando = new SqlCommand(SQL_Update_Nacionalidad, con);
+            comando.ExecuteNonQuery();
+            con.Close();
+        }
     }
 
 }
