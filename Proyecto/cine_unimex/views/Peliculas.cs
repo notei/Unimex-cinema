@@ -87,6 +87,64 @@ namespace unimex.lenguajesv.cine.views
             }
         }
 
+        private void checNombreCF_CheckedChanged(object sender, EventArgs e)
+       
+            {
+                if (checNombreCF.Checked)
+                {
+                    cmbNombreCF.Enabled = true;
+                    consultaBuscarNombreCF();
+                }
+                else
+                {
+                    cmbNombreCF.Enabled = false;
+                    cmbNombreCF.DataSource = null;
+                    consultaPeliculas();
+                }
+            }
+        public void buscarNombreCF()
+        {
+            String id_pelicula = "" + cmbNombreCF.SelectedValue;
+            PeliculasDTO cf_dto = new PeliculasDTO();
+            try
+            {
+                cf_dto.id_Pelicula = Int32.Parse(id_pelicula);
+                PeliculasDAO cf_dao = new PeliculasDAO();
+                DataTable dtbus2 = cf_dao.cargaBusquedaCF(cf_dto);
+                peliculasdgv.DataSource = dtbus2;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
+
+
+        }
+
+        public void consultaBuscarNombreCF()
+        {
+            PeliculasDAO precf_dao = new PeliculasDAO();
+            try
+            {
+                DataTable dtbus = precf_dao.LoadNombreCF();
+                cmbNombreCF.DataSource = dtbus;
+                cmbNombreCF.DisplayMember = "pelicula";
+                cmbNombreCF.ValueMember = "id_pelicula";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
+        }
+        private void cmbNombreCF_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (checNombreCF.Checked)
+            {
+                buscarNombreCF();
+            }
+        }
+        
+
 
     }
 }

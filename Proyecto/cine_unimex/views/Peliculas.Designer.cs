@@ -33,6 +33,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.cmbNombreCF = new System.Windows.Forms.ComboBox();
+            this.checNombreCF = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.peliculasdgv)).BeginInit();
             this.SuspendLayout();
             // 
@@ -93,11 +95,33 @@
             this.label5.TabIndex = 11;
             this.label5.Text = "Peliculas";
             // 
+            // cmbNombreCF
+            // 
+            this.cmbNombreCF.FormattingEnabled = true;
+            this.cmbNombreCF.Location = new System.Drawing.Point(12, 243);
+            this.cmbNombreCF.Name = "cmbNombreCF";
+            this.cmbNombreCF.Size = new System.Drawing.Size(121, 21);
+            this.cmbNombreCF.TabIndex = 13;
+            this.cmbNombreCF.SelectedIndexChanged += new System.EventHandler(this.cmbNombreCF_SelectedIndexChanged);
+            // 
+            // checNombreCF
+            // 
+            this.checNombreCF.AutoSize = true;
+            this.checNombreCF.Location = new System.Drawing.Point(27, 220);
+            this.checNombreCF.Name = "checNombreCF";
+            this.checNombreCF.Size = new System.Drawing.Size(63, 17);
+            this.checNombreCF.TabIndex = 12;
+            this.checNombreCF.Text = "Nombre";
+            this.checNombreCF.UseVisualStyleBackColor = true;
+            this.checNombreCF.CheckedChanged += new System.EventHandler(this.checNombreCF_CheckedChanged);
+            // 
             // Peliculas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(681, 322);
+            this.Controls.Add(this.cmbNombreCF);
+            this.Controls.Add(this.checNombreCF);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -119,5 +143,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.ComboBox cmbNombreCF;
+        private System.Windows.Forms.CheckBox checNombreCF;
     }
 }
