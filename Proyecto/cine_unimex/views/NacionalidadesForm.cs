@@ -19,6 +19,7 @@ namespace unimex.lenguajesv.cine.views
         private void NacionalidadesForm_Load(object sender, EventArgs e)
         {
             consutaNacinalidades();
+
         }
         public void consutaNacinalidades()
         {
