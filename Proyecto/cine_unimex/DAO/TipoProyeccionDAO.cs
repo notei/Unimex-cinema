@@ -86,5 +86,35 @@ namespace unimex.lenguajesv.cine.DAO
             comando.ExecuteNonQuery();
             con.Close();
         }
+        public DataTable cargaBusquedaTP (TipoProyeccionDTO busdtopre)
+        {
+            String SQL_Cargar_TP = "select cat_tipo_proyeccion.id_tipo_proyeccion AS Id , cat_tipo_proyeccion.tipo_proyeccion AS TipoProyeccion, cat_tipo_proyeccion.descripcion AS Descripcion, cat_tipo_proyeccion.habilitado AS Habilitado FROM cat_tipo_proyeccion WHERE cat_tipo_proyeccion.id_tipo_proyeccion =" +busdtopre.id_TipoProyeccion;
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            using (SqlDataAdapter adapter1 = new SqlDataAdapter(SQL_Cargar_TP, con))
+            {
+
+                DataTable tblpbus = new DataTable();
+                adapter1.Fill(tblpbus);
+                con.Close();
+                return tblpbus;
+            }
+        }
+        public DataTable LoadTipoProyeccion ()
+        {
+            String SQL_Busc_TP = "select id_tipo_proyeccion, tipo_proyeccion from cat_tipo_proyeccion";
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            using (SqlDataAdapter adapter = new SqlDataAdapter(SQL_Busc_TP, con))
+            {
+
+                DataTable tbl = new DataTable();
+                adapter.Fill(tbl);
+                con.Close();
+                return tbl;
+            }
+        }
     }
 }

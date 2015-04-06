@@ -32,6 +32,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.btnActualizar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
+            this.chkBuscarTP = new System.Windows.Forms.CheckBox();
+            this.cbxBuscarTP = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dtgTipoProyeccion)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,7 +47,7 @@
             this.dtgTipoProyeccion.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtgTipoProyeccion.Location = new System.Drawing.Point(209, 33);
             this.dtgTipoProyeccion.Name = "dtgTipoProyeccion";
-            this.dtgTipoProyeccion.Size = new System.Drawing.Size(385, 208);
+            this.dtgTipoProyeccion.Size = new System.Drawing.Size(385, 242);
             this.dtgTipoProyeccion.TabIndex = 0;
             // 
             // button1
@@ -77,11 +80,43 @@
             this.btnEliminar.UseVisualStyleBackColor = true;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
+            // chkBuscarTP
+            // 
+            this.chkBuscarTP.AutoSize = true;
+            this.chkBuscarTP.Location = new System.Drawing.Point(65, 217);
+            this.chkBuscarTP.Name = "chkBuscarTP";
+            this.chkBuscarTP.Size = new System.Drawing.Size(103, 17);
+            this.chkBuscarTP.TabIndex = 4;
+            this.chkBuscarTP.Text = "Tipo Proyeccion";
+            this.chkBuscarTP.UseVisualStyleBackColor = true;
+            this.chkBuscarTP.CheckedChanged += new System.EventHandler(this.chkBuscarTP_CheckedChanged);
+            // 
+            // cbxBuscarTP
+            // 
+            this.cbxBuscarTP.FormattingEnabled = true;
+            this.cbxBuscarTP.Location = new System.Drawing.Point(65, 240);
+            this.cbxBuscarTP.Name = "cbxBuscarTP";
+            this.cbxBuscarTP.Size = new System.Drawing.Size(121, 21);
+            this.cbxBuscarTP.TabIndex = 5;
+            this.cbxBuscarTP.SelectedIndexChanged += new System.EventHandler(this.cbxBuscarTP_SelectedIndexChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(84, 201);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "Buscar :";
+            // 
             // TipoProyeccionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(639, 279);
+            this.ClientSize = new System.Drawing.Size(639, 313);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.cbxBuscarTP);
+            this.Controls.Add(this.chkBuscarTP);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.button1);
@@ -91,6 +126,7 @@
             this.Load += new System.EventHandler(this.TipoProyeccionForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dtgTipoProyeccion)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -100,5 +136,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button btnActualizar;
         private System.Windows.Forms.Button btnEliminar;
+        private System.Windows.Forms.CheckBox chkBuscarTP;
+        private System.Windows.Forms.ComboBox cbxBuscarTP;
+        private System.Windows.Forms.Label label1;
     }
 }

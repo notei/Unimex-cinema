@@ -21,6 +21,9 @@ namespace unimex.lenguajesv.cine.views
         private void TipoProyeccionForm_Load(object sender, EventArgs e)
         {
             consultaDGVTipoProyecciones();
+            consultaBuscarTipoProyeccion();
+            cbxBuscarTP.Enabled = false;
+            cbxBuscarTP.DataSource = null;
         }
         public void consultaDGVTipoProyecciones ()
         {
@@ -29,7 +32,39 @@ namespace unimex.lenguajesv.cine.views
             dtgTipoProyeccion.DataSource = dtn;
             dtgTipoProyeccion.Columns[0].Visible = false;
         }
+        public void consultaBuscarTipoProyeccion ()
+        {
+            TipoProyeccionDAO pTP_dao = new TipoProyeccionDAO();
+            try
+            {
+                DataTable dtbus = pTP_dao.LoadTipoProyeccion();
+                cbxBuscarTP.DataSource = dtbus;
+                cbxBuscarTP.DisplayMember = "tipo_proyeccion";
+                cbxBuscarTP.ValueMember = "id_tipo_proyeccion";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
+        }
+        public void buscarTipoProyeccion ()
+        {
+            String idtpbus = "" + cbxBuscarTP.SelectedValue;
+            TipoProyeccionDTO ttp_dto = new TipoProyeccionDTO();
+            try
+            {
+                ttp_dto.id_TipoProyeccion = Int32.Parse(idtpbus);
+                TipoProyeccionDAO ttp_dao = new TipoProyeccionDAO();
+                DataTable dtbus1 = ttp_dao.cargaBusquedaTP(ttp_dto);
+                dtgTipoProyeccion.DataSource = dtbus1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
 
+
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             NewTipoproyeccion formaTipoPro = new NewTipoproyeccion();
@@ -74,6 +109,29 @@ namespace unimex.lenguajesv.cine.views
             else
             {
 
+            }
+        }
+
+        private void chkBuscarTP_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkBuscarTP.Checked)
+            {
+                cbxBuscarTP.Enabled = true;
+                consultaBuscarTipoProyeccion();
+            }
+            else 
+            {
+                cbxBuscarTP.Enabled = false;
+                cbxBuscarTP.DataSource = null;
+                consultaDGVTipoProyecciones();
+            }
+        }
+
+        private void cbxBuscarTP_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (chkBuscarTP.Checked)
+            {
+                buscarTipoProyeccion();
             }
         }
     }
