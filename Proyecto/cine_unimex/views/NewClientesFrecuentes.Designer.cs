@@ -43,11 +43,12 @@
             // chkHabilitadoNew
             // 
             this.chkHabilitadoNew.AutoSize = true;
-            this.chkHabilitadoNew.Location = new System.Drawing.Point(100, 155);
+            this.chkHabilitadoNew.Location = new System.Drawing.Point(98, 155);
             this.chkHabilitadoNew.Name = "chkHabilitadoNew";
             this.chkHabilitadoNew.Size = new System.Drawing.Size(15, 14);
             this.chkHabilitadoNew.TabIndex = 0;
             this.chkHabilitadoNew.UseVisualStyleBackColor = true;
+            this.chkHabilitadoNew.CheckedChanged += new System.EventHandler(this.chkHabilitadoNew_CheckedChanged);
             // 
             // btnCFNuevo
             // 

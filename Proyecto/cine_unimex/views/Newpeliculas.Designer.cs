@@ -130,9 +130,9 @@
             this.labelestreno.AutoSize = true;
             this.labelestreno.Location = new System.Drawing.Point(130, 196);
             this.labelestreno.Name = "labelestreno";
-            this.labelestreno.Size = new System.Drawing.Size(43, 13);
+            this.labelestreno.Size = new System.Drawing.Size(74, 13);
             this.labelestreno.TabIndex = 13;
-            this.labelestreno.Text = "Estreno";
+            this.labelestreno.Text = "Estreno Si/No";
             // 
             // btacept
             // 
@@ -168,13 +168,11 @@
             // chec
             // 
             this.chec.AutoSize = true;
-            this.chec.Location = new System.Drawing.Point(192, 196);
+            this.chec.Location = new System.Drawing.Point(228, 195);
             this.chec.Name = "chec";
-            this.chec.Size = new System.Drawing.Size(57, 17);
+            this.chec.Size = new System.Drawing.Size(15, 14);
             this.chec.TabIndex = 17;
-            this.chec.Text = "SI/NO";
             this.chec.UseVisualStyleBackColor = true;
-            this.chec.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // Newpeliculas
             // 

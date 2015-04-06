@@ -45,7 +45,7 @@ using unimex.lenguajesv.cine.DTO;
         {
             String SQL_Conocer_pelicula = "Select * From peliculas where id_pelicula = " + id;
             PeliculasDTO peli_DTO = new PeliculasDTO();
-            SqlConnection con = getConexion();
+            SqlConnection con = new SqlConnection();
             SqlCommand cmd = new SqlCommand(SQL_Conocer_pelicula, con);
             SqlDataReader red = cmd.ExecuteReader();
             while (red.Read())
@@ -55,7 +55,7 @@ using unimex.lenguajesv.cine.DTO;
                 peli_DTO.Sinopsis = (String)red.GetSqlString(2);
                 peli_DTO.Idioma = (String)red.GetSqlString(3);
                 peli_DTO.Sonido = (String)red.GetSqlString(4);
-                peli_DTO.Estreno = (int)red.GetSqlInt32(5);
+                peli_DTO.Estreno = (Boolean)red.GetSqlBoolean(5);
             }
             return peli_DTO;
 
@@ -100,6 +100,20 @@ using unimex.lenguajesv.cine.DTO;
                 con.Close();
                 return tbl;
             }
+
+        }
+
+        public void updateCFrecuenteDTO(PeliculasDTO clientefdtoup)
+        {
+            String SQL_Update_CF = " UPDATE peliculas SET pelicula = '" + clientefdtoup.Pelicula + "', Duracion = '" + clientefdtoup.Duracion_min + "', sinopsis = '" + clientefdtoup.Sinopsis + "', idioma = '" + clientefdtoup.Idioma + "', sonido = '" + clientefdtoup.Sonido + "', habilitado = '" + clientefdtoup.Estreno + "' WHERE id_pelicula = " + clientefdtoup.id_Pelicula;
+            SqlConnection con;
+            con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            SqlCommand comando;
+            comando = new SqlCommand(SQL_Update_CF, con);
+            comando.ExecuteNonQuery();
+            con.Close();
         }
 
         public void Newpeliculas(PeliculasDTO new_pel_DTO)
