@@ -35,5 +35,15 @@ namespace unimex.lenguajesv.cine.views
             formaTipoPro.ShowDialog();
             consultaDGVTipoProyecciones();
         }
+
+        private void btnActualizar_Click(object sender, EventArgs e)
+        {
+            int fil = dtgTipoProyeccion.CurrentCell.RowIndex;
+            String valor = dtgTipoProyeccion.Rows[fil].Cells[0].Value.ToString();
+            int id = Int32.Parse(valor);
+            NewTipoproyeccion formaupdateTP = new NewTipoproyeccion(id);
+            formaupdateTP.ShowDialog();
+            consultaDGVTipoProyecciones();
+        }
     }
 }

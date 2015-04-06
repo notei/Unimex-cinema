@@ -43,5 +43,36 @@ namespace unimex.lenguajesv.cine.DAO
             comando.ExecuteNonQuery();
             con.Close();
         }
+        public TipoProyeccionDTO cargarTPUpdate (int id)
+        {
+            String SQL_Cargar_TipoP = "select * from cat_tipo_proyeccion where id_tipo_proyeccion = " + id;
+            TipoProyeccionDTO TPdto = new TipoProyeccionDTO();
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            SqlCommand cmd = new SqlCommand(SQL_Cargar_TipoP, con);
+            SqlDataReader red = cmd.ExecuteReader();
+            while (red.Read())
+            {
+                TPdto.id_TipoProyeccion = (int)red.GetInt32(0);
+                TPdto.tipoProyeccion = (String)red.GetString(1);
+                TPdto.Descripcion = (String)red.GetString(2);
+                TPdto.Habilitado = (Boolean)red.GetBoolean(3);
+            }
+            con.Close();
+            return TPdto;
+        }
+        public void updateTipoProyeccionDTO (TipoProyeccionDTO TPdtoup)
+        {
+            String SQL_Update_TP = " UPDATE cat_tipo_proyeccion SET tipo_proyeccion = '" + TPdtoup.tipoProyeccion + "', descripcion = '" + TPdtoup.Descripcion + "', habilitado = '" + TPdtoup.Habilitado + "' WHERE id_tipo_proyeccion = " + TPdtoup.id_TipoProyeccion;
+            SqlConnection con;
+            con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            SqlCommand comando;
+            comando = new SqlCommand(SQL_Update_TP, con);
+            comando.ExecuteNonQuery();
+            con.Close();
+        }
     }
 }

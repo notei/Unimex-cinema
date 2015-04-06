@@ -30,6 +30,7 @@
         {
             this.dtgTipoProyeccion = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
+            this.btnActualizar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dtgTipoProyeccion)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,11 +56,22 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // btnActualizar
+            // 
+            this.btnActualizar.Location = new System.Drawing.Point(65, 109);
+            this.btnActualizar.Name = "btnActualizar";
+            this.btnActualizar.Size = new System.Drawing.Size(75, 23);
+            this.btnActualizar.TabIndex = 2;
+            this.btnActualizar.Text = "Actualizar";
+            this.btnActualizar.UseVisualStyleBackColor = true;
+            this.btnActualizar.Click += new System.EventHandler(this.btnActualizar_Click);
+            // 
             // TipoProyeccionForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(639, 279);
+            this.Controls.Add(this.btnActualizar);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dtgTipoProyeccion);
             this.Name = "TipoProyeccionForm";
@@ -74,5 +86,6 @@
 
         private System.Windows.Forms.DataGridView dtgTipoProyeccion;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnActualizar;
     }
 }
