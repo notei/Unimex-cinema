@@ -30,6 +30,8 @@
         {
             this.dgvTipoSonido = new System.Windows.Forms.DataGridView();
             this.btnNuevoTipoSonido = new System.Windows.Forms.Button();
+            this.btnActualizarNew = new System.Windows.Forms.Button();
+            this.btnEliminar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoSonido)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,11 +57,33 @@
             this.btnNuevoTipoSonido.UseVisualStyleBackColor = true;
             this.btnNuevoTipoSonido.Click += new System.EventHandler(this.btnNuevoTipoSonido_Click);
             // 
+            // btnActualizarNew
+            // 
+            this.btnActualizarNew.Location = new System.Drawing.Point(23, 84);
+            this.btnActualizarNew.Name = "btnActualizarNew";
+            this.btnActualizarNew.Size = new System.Drawing.Size(75, 23);
+            this.btnActualizarNew.TabIndex = 2;
+            this.btnActualizarNew.Text = "Actualizar";
+            this.btnActualizarNew.UseVisualStyleBackColor = true;
+            this.btnActualizarNew.Click += new System.EventHandler(this.btnActualizarNew_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.Location = new System.Drawing.Point(23, 132);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(75, 23);
+            this.btnEliminar.TabIndex = 3;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
             // TipoSonidoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(453, 308);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnActualizarNew);
             this.Controls.Add(this.btnNuevoTipoSonido);
             this.Controls.Add(this.dgvTipoSonido);
             this.Name = "TipoSonidoForm";
@@ -74,5 +98,7 @@
 
         private System.Windows.Forms.DataGridView dgvTipoSonido;
         private System.Windows.Forms.Button btnNuevoTipoSonido;
+        private System.Windows.Forms.Button btnActualizarNew;
+        private System.Windows.Forms.Button btnEliminar;
     }
 }
