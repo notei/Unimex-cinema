@@ -399,6 +399,9 @@
     <EmbeddedResource Include="views\TipoProyeccionForm.resx">
       <DependentUpon>TipoProyeccionForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\TipoSonidoForm.resx">
+      <DependentUpon>TipoSonidoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\UsuariosForm.resx">
       <DependentUpon>UsuariosForm.cs</DependentUpon>
     </EmbeddedResource>

@@ -28,11 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.dgvTipoSonido = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTipoSonido)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // dgvTipoSonido
+            // 
+            this.dgvTipoSonido.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dgvTipoSonido.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvTipoSonido.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvTipoSonido.Location = new System.Drawing.Point(128, 12);
+            this.dgvTipoSonido.Name = "dgvTipoSonido";
+            this.dgvTipoSonido.Size = new System.Drawing.Size(306, 277);
+            this.dgvTipoSonido.TabIndex = 0;
+            // 
+            // TipoSonidoForm
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(453, 308);
+            this.Controls.Add(this.dgvTipoSonido);
+            this.Name = "TipoSonidoForm";
             this.Text = "TipoSonidoForm";
+            this.Load += new System.EventHandler(this.TipoSonidoForm_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvTipoSonido)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.DataGridView dgvTipoSonido;
     }
 }

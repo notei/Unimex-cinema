@@ -168,6 +168,14 @@ namespace unimex.lenguajesv.cine.views
             formCF.Show();
         }
 
+        private void tipoSonidoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TipoSonidoForm formaTP = new TipoSonidoForm();
+            formaTP.MdiParent = this;
+            formaTP.StartPosition = FormStartPosition.CenterScreen;
+            formaTP.Show();
+        }
+
         
     }
 }
