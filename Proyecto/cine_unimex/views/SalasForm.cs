@@ -37,11 +37,17 @@ namespace unimex.lenguajesv.cine.views
  
             }
         }
-
+        public void disposeNew(object Source, EventArgs args)
+        {
+            consultaComplejos();
+        }
         private void button1_Click(object sender, EventArgs e)
         {
             NewSalas frmNewSalas = new NewSalas();
+            frmNewSalas.MdiParent = this.MdiParent;
             frmNewSalas.Show();
+            frmNewSalas.Disposed += new EventHandler(disposeNew);
+            
             
         }
 
@@ -51,7 +57,10 @@ namespace unimex.lenguajesv.cine.views
             String valor = dataG.Rows[renglon].Cells[0].Value.ToString();
             int id = Int32.Parse(valor);
             NewSalas frmNewSalas = new NewSalas(id);
+            frmNewSalas.MdiParent = this.MdiParent;
             frmNewSalas.Show();
+            frmNewSalas.Disposed += new EventHandler(disposeNew);
+            
         }
     }
 }

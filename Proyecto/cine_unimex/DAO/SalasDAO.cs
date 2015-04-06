@@ -65,7 +65,7 @@ namespace unimex.lenguajesv.cine.DAO
         }
         public void newSalas(SalasDTO new_salas_DTO)
         {
-            String SQL_NewSalas = "insert into cat_salas_complejos values (" +new_salas_DTO.Id_Complejo +",'" + new_salas_DTO.Nombre_Sala + "'," + new_salas_DTO.Capacidad +",'"+ new_salas_DTO.Butacas_Numeradas+"',"+ new_salas_DTO.Id_Tipo_Sonido+","+new_salas_DTO.Id_Tipo_Proyeccion+")";
+            String SQL_NewSalas = "insert into cat_salas_complejos values (" + new_salas_DTO.Id_Complejo + ",'" + new_salas_DTO.Nombre_Sala + "'," + new_salas_DTO.Capacidad + ",'" + new_salas_DTO.Butacas_Numeradas + "'," + new_salas_DTO.Id_Tipo_Sonido + "," + new_salas_DTO.Id_Tipo_Proyeccion + ")";
             SqlConnection con = new SqlConnection();
             con.ConnectionString = Cadena;
             con.Open();
@@ -84,7 +84,7 @@ namespace unimex.lenguajesv.cine.DAO
             SqlDataReader red = cmd.ExecuteReader();
             while (red.Read())
             {
-                sal_dto.Id_Sala = (int) red.GetSqlInt32(0);
+                sal_dto.Id_Sala = (int)red.GetSqlInt32(0);
                 sal_dto.Id_Complejo = (int)red.GetSqlInt32(1);
                 sal_dto.Nombre_Sala = (String)red.GetSqlString(2);
                 sal_dto.Capacidad = (int)red.GetSqlInt32(3);
@@ -94,22 +94,24 @@ namespace unimex.lenguajesv.cine.DAO
             }
             return sal_dto;
 
- 
+
         }
         public void upDataSalas(SalasDTO updata_Salas)
-    {
-        String SQL_Updata_Salas = "update cat_salas_complejos set  id_complejo = "+ updata_Salas.Id_Complejo +", nombre_sala = "+ updata_Salas.Nombre_Sala +", capacidad = "+ updata_Salas.Capacidad +" , butacas_numeradas = "+updata_Salas.Butacas_Numeradas +" ,id_tipo_sonido = "+updata_Salas.Id_Tipo_Sonido +", id_tipo_proyeccion = "+ updata_Salas.Id_Tipo_Proyeccion +" WHERE id_sala = "+updata_Salas.Id_Sala+" ";
-        SqlConnection con = new SqlConnection();
-        con.ConnectionString = Cadena;
-        con.Open();
-        SqlCommand cmd = new SqlCommand(SQL_Updata_Salas, con);
-        cmd.ExecuteNonQuery();
-        con.Close();
-        
-            
-            }
-        
+        {
+            String SQL_Updata_Salas = "update cat_salas_complejos set id_complejo = " + updata_Salas.Id_Complejo + ", nombre_sala = '" + updata_Salas.Nombre_Sala + "', capacidad = " + updata_Salas.Capacidad + " , butacas_numeradas ='" + updata_Salas.Butacas_Numeradas + "',id_tipo_sonido = " + updata_Salas.Id_Tipo_Sonido + ", id_tipo_proyeccion = " + updata_Salas.Id_Tipo_Proyeccion + " WHERE id_sala = " + updata_Salas.Id_Sala;
+            SqlConnection con;
+            con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            SqlCommand comando;
+            comando = new SqlCommand(SQL_Updata_Salas, con);
+            comando.ExecuteNonQuery();
+            con.Close();
+
+        }
+
 
     }
+
     
 }

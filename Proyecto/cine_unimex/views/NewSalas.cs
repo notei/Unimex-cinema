@@ -28,13 +28,14 @@ namespace unimex.lenguajesv.cine.views
             String idSonido = "" + salasCb.SelectedValue;
             String idProyeccion = "" + SalaCb2.SelectedValue;
             SalasDTO sala_dto = new SalasDTO();
+            sala_dto.Id_Sala = id;
             sala_dto.Id_Complejo = Int32.Parse(txtCom.Text);
             sala_dto.Nombre_Sala = txtSala.Text;
             sala_dto.Capacidad = Int32.Parse(txtCap.Text);
             sala_dto.Id_Tipo_Sonido = Int32.Parse(idSonido);
             sala_dto.Id_Tipo_Proyeccion = Int32.Parse(idProyeccion);
             sala_dto.Butacas_Numeradas = chebox.Checked;
-            sala_dto.Id_Sala = id;
+            
             try 
             {
                 SalasDAO upDateSalas = new SalasDAO();
@@ -92,6 +93,7 @@ namespace unimex.lenguajesv.cine.views
             else
             {
                 updataSalas();
+                this.Dispose();
             
             }
             
