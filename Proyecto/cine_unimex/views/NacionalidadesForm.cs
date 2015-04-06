@@ -6,6 +6,7 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using unimex.lenguajesv.cine.DTO;
 
 namespace unimex.lenguajesv.cine.views
 {
@@ -56,6 +57,34 @@ namespace unimex.lenguajesv.cine.views
             formup.ShowDialog();
             consutaNacinalidades();
 
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            int bf = dgvNacionalidades.CurrentCell.RowIndex;
+            String v = dgvNacionalidades.Rows[bf].Cells[0].Value.ToString();
+            int id3 = Int32.Parse(v);
+            String nab = dgvNacionalidades.Rows[bf].Cells[1].Value.ToString();
+            DialogResult gf = MessageBox.Show("Desea Eliminar la Nacionalidad: "+nab+"?", "Borrar Registro", MessageBoxButtons.OKCancel);
+            if (gf == DialogResult.OK)
+            {
+                NacionalidadesDTO nadto = new NacionalidadesDTO();
+                nadto.id_Nacionalidad = id3;
+                try
+                {
+                    NacionalidadesDAO nadao2 = new NacionalidadesDAO();
+                    nadao2.borrarNacionalidad(nadto);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("" + ex);
+                }
+                consutaNacinalidades();
+            }
+            else 
+            { 
+            
+            }
         }
 
 

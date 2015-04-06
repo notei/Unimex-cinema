@@ -84,6 +84,19 @@ namespace unimex.lenguajesv.cine
             comando.ExecuteNonQuery();
             con.Close();
         }
+
+        public void borrarNacionalidad(NacionalidadesDTO borrar)
+        {
+            String SQL_Borrar_Nacionalidad = " DELETE FROM nacionalidades WHERE id_nacionalidad = " + borrar.id_Nacionalidad;
+            SqlConnection con;
+            con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            SqlCommand comando;
+            comando = new SqlCommand(SQL_Borrar_Nacionalidad, con);
+            comando.ExecuteNonQuery();
+            con.Close();
+        }
     }
 
 }

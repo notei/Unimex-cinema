@@ -31,6 +31,7 @@
             this.dgvNacionalidades = new System.Windows.Forms.DataGridView();
             this.btnAgregarNac = new System.Windows.Forms.Button();
             this.btnActualizarNa = new System.Windows.Forms.Button();
+            this.btnBorrar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNacionalidades)).BeginInit();
             this.SuspendLayout();
             // 
@@ -69,11 +70,22 @@
             this.btnActualizarNa.UseVisualStyleBackColor = true;
             this.btnActualizarNa.Click += new System.EventHandler(this.btnActualizarNa_Click);
             // 
+            // btnBorrar
+            // 
+            this.btnBorrar.Location = new System.Drawing.Point(12, 121);
+            this.btnBorrar.Name = "btnBorrar";
+            this.btnBorrar.Size = new System.Drawing.Size(75, 23);
+            this.btnBorrar.TabIndex = 3;
+            this.btnBorrar.Text = "Borrar";
+            this.btnBorrar.UseVisualStyleBackColor = true;
+            this.btnBorrar.Click += new System.EventHandler(this.btnBorrar_Click);
+            // 
             // NacionalidadesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(392, 252);
+            this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnActualizarNa);
             this.Controls.Add(this.btnAgregarNac);
             this.Controls.Add(this.dgvNacionalidades);
@@ -90,5 +102,6 @@
         private System.Windows.Forms.DataGridView dgvNacionalidades;
         private System.Windows.Forms.Button btnAgregarNac;
         private System.Windows.Forms.Button btnActualizarNa;
+        private System.Windows.Forms.Button btnBorrar;
     }
 }
