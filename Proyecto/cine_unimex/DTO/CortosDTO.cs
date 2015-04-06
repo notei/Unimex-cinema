@@ -11,7 +11,7 @@ namespace unimex.lenguajesv.cine.DTO
         private int id_pelicula;
         private string nombre_corto;
         private int duracion;
-        private int habilitado;
+        private bool habilitado;
 
         public int Id_Corto
     {
@@ -47,7 +47,7 @@ set{ duracion = value;}
 
 }
 
-public int Habilitado
+public bool Habilitado
 {
 
 get{ return habilitado;}
