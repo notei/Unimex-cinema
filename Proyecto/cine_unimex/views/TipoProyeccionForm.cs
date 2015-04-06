@@ -19,14 +19,21 @@ namespace unimex.lenguajesv.cine.views
 
         private void TipoProyeccionForm_Load(object sender, EventArgs e)
         {
-            consutaNacinalidades();
+            consultaDGVTipoProyecciones();
         }
-        public void consutaNacinalidades()
+        public void consultaDGVTipoProyecciones ()
         {
             TipoProyeccionDAO daoTipoProyeccion = new TipoProyeccionDAO();
             DataTable dtn = daoTipoProyeccion.loadTipoProyeccion();
             dtgTipoProyeccion.DataSource = dtn;
             dtgTipoProyeccion.Columns[0].Visible = false;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            NewTipoproyeccion formaTipoPro = new NewTipoproyeccion();
+            formaTipoPro.ShowDialog();
+            consultaDGVTipoProyecciones();
         }
     }
 }

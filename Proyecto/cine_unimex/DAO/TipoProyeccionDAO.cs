@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using unimex.lenguajesv.cine.DTO;
 
 namespace unimex.lenguajesv.cine.DAO
 {
@@ -30,9 +31,17 @@ namespace unimex.lenguajesv.cine.DAO
 
         }
 
-        internal void agregarTipoProyeccion(DTO.TipoProyeccionDTO tp)
+        public void agregarTipoproyeccion (TipoProyeccionDTO proytidto)
         {
-            throw new NotImplementedException();
+            String SQL_Agregar_TP = " insert into cat_tipo_proyeccion (tipo_proyeccion, descripcion, habilitado) values ( '" + proytidto.tipoProyeccion + "' , '" + proytidto.Descripcion + "', '" + proytidto.Habilitado + "')";
+            SqlConnection con;
+            con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            SqlCommand comando;
+            comando = new SqlCommand(SQL_Agregar_TP, con);
+            comando.ExecuteNonQuery();
+            con.Close();
         }
     }
 }
