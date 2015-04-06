@@ -34,6 +34,8 @@
             this.btnActualizarNa = new System.Windows.Forms.Button();
             this.btnBorrar = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.chkNacionalidadBus = new System.Windows.Forms.CheckBox();
+            this.cmbNacionalida = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvNacionalidades)).BeginInit();
             this.SuspendLayout();
             // 
@@ -45,10 +47,10 @@
             this.dgvNacionalidades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvNacionalidades.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvNacionalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNacionalidades.Location = new System.Drawing.Point(141, 78);
+            this.dgvNacionalidades.Location = new System.Drawing.Point(157, 54);
             this.dgvNacionalidades.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvNacionalidades.Name = "dgvNacionalidades";
-            this.dgvNacionalidades.Size = new System.Drawing.Size(392, 251);
+            this.dgvNacionalidades.Size = new System.Drawing.Size(458, 290);
             this.dgvNacionalidades.TabIndex = 0;
             this.dgvNacionalidades.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNacionalidades_CellContentClick);
             // 
@@ -96,11 +98,33 @@
             this.label1.TabIndex = 4;
             this.label1.Text = "Nacionalidades";
             // 
+            // chkNacionalidadBus
+            // 
+            this.chkNacionalidadBus.AutoSize = true;
+            this.chkNacionalidadBus.Location = new System.Drawing.Point(13, 228);
+            this.chkNacionalidadBus.Name = "chkNacionalidadBus";
+            this.chkNacionalidadBus.Size = new System.Drawing.Size(102, 20);
+            this.chkNacionalidadBus.TabIndex = 5;
+            this.chkNacionalidadBus.Text = "Nacionalidad";
+            this.chkNacionalidadBus.UseVisualStyleBackColor = true;
+            this.chkNacionalidadBus.CheckedChanged += new System.EventHandler(this.chkNacionalidadBus_CheckedChanged);
+            // 
+            // cmbNacionalida
+            // 
+            this.cmbNacionalida.FormattingEnabled = true;
+            this.cmbNacionalida.Location = new System.Drawing.Point(12, 255);
+            this.cmbNacionalida.Name = "cmbNacionalida";
+            this.cmbNacionalida.Size = new System.Drawing.Size(121, 24);
+            this.cmbNacionalida.TabIndex = 6;
+            this.cmbNacionalida.SelectedIndexChanged += new System.EventHandler(this.cmbNacionalida_SelectedIndexChanged);
+            // 
             // NacionalidadesForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(561, 360);
+            this.ClientSize = new System.Drawing.Size(647, 399);
+            this.Controls.Add(this.cmbNacionalida);
+            this.Controls.Add(this.chkNacionalidadBus);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBorrar);
             this.Controls.Add(this.btnActualizarNa);
@@ -125,5 +149,7 @@
         private System.Windows.Forms.Button btnActualizarNa;
         private System.Windows.Forms.Button btnBorrar;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.CheckBox chkNacionalidadBus;
+        private System.Windows.Forms.ComboBox cmbNacionalida;
     }
 }

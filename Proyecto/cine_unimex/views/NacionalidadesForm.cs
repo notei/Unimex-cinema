@@ -15,11 +15,16 @@ namespace unimex.lenguajesv.cine.views
         public NacionalidadesForm()
         {
             InitializeComponent();
+           
+
         }
 
         private void NacionalidadesForm_Load(object sender, EventArgs e)
         {
             consutaNacinalidades();
+            ConsultaBuscar();
+            cmbNacionalida.Enabled = false;
+            cmbNacionalida.DataSource = null;
 
         }
         public void consutaNacinalidades()
@@ -30,6 +35,40 @@ namespace unimex.lenguajesv.cine.views
             dgvNacionalidades.Columns[0].Visible = false;
         }
 
+        public void ConsultaBuscar()
+        {
+            NacionalidadesDAO nadao3 = new NacionalidadesDAO();
+            try
+            {
+                DataTable dt = nadao3.LoadNacionalidades();
+                cmbNacionalida.DataSource = dt;
+                cmbNacionalida.DisplayMember = "nacionalidad";
+                cmbNacionalida.ValueMember = "id_nacionalidad";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
+        }
+
+        public void buscarNacionalidad()
+        {
+            String idnac = "" + cmbNacionalida.SelectedValue;
+            NacionalidadesDTO dtn_na = new NacionalidadesDTO();
+            try
+            {
+                dtn_na.id_Nacionalidad = Int32.Parse(idnac);
+               NacionalidadesDAO nacdao = new NacionalidadesDAO();
+               DataTable dtbuscar = nacdao.BusquedaNacionalidad(dtn_na);
+               dgvNacionalidades.DataSource = dtbuscar;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
+
+
+        }
         private void btnAgregarNac_Click(object sender, EventArgs e)
         {
             NewNacionalidades formanac = new NewNacionalidades();
@@ -84,6 +123,29 @@ namespace unimex.lenguajesv.cine.views
             else 
             { 
             
+            }
+        }
+
+        private void chkNacionalidadBus_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkNacionalidadBus.Checked)
+            {
+                cmbNacionalida.Enabled = true;
+                ConsultaBuscar();
+            }
+            else
+            {
+                cmbNacionalida.Enabled = false;
+                cmbNacionalida.DataSource = null;
+                consutaNacinalidades();
+            }
+        }
+
+        private void cmbNacionalida_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (chkNacionalidadBus.Checked)
+            {
+                buscarNacionalidad();
             }
         }
 
