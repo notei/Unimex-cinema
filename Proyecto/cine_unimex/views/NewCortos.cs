@@ -80,12 +80,10 @@ namespace unimex.lenguajesv.cine.views
             {
                 CortosDAO cortos_dao = new CortosDAO();
                 CortosDTO corto_dto = cortos_dao.LoadCortos(id);
-                cortos_dao.newCortos(corto_dto);
                 nombrectxt.Text = corto_dto.Nombre_Corto;
                 idptxt.Text = Convert.ToString(corto_dto.Id_Pelicula);
                 duraciontxt.Text = Convert.ToString(corto_dto.Duracion);
                 check.Checked = corto_dto.Habilitado;
-
             }
 
             catch (Exception ex)
@@ -108,9 +106,7 @@ namespace unimex.lenguajesv.cine.views
             try
             {
                 CortosDAO cortos_dao = new CortosDAO();
-                CortosDTO corto_dto = cortos_dao.LoadCortos(id);
-                cortos_dao.newCortos(corto_dto);
-
+                cortos_dao.newCortos(cortos_dto);
             }
 
             catch (Exception ex)

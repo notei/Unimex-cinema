@@ -62,10 +62,11 @@ namespace unimex.lenguajesv.cine.DAO
                 cortos_dto.Id_Corto = (int)rd.GetSqlInt32(0);
                 cortos_dto.Id_Pelicula = (int)rd.GetSqlInt32(1);
                 cortos_dto.Nombre_Corto = (string)rd.GetSqlString(2);
-                cortos_dto.Habilitado = (bool)rd.GetBoolean(3);
+                cortos_dto.Duracion = (int)rd.GetSqlInt32(3);
+                cortos_dto.Habilitado = (bool)rd.GetBoolean(4);
 
             }
-
+            con.Close();
             return cortos_dto;
 
 
