@@ -4,6 +4,7 @@ using System.Data;
 using System.Data.SqlClient;
 using System.Linq;
 using System.Text;
+using unimex.lenguajesv.cine.DTO;
 
 namespace unimex.lenguajesv.cine.DAO
 {
@@ -25,6 +26,17 @@ namespace unimex.lenguajesv.cine.DAO
                 return tbltts;
             }
         }
-
+        public void agregarTipoSonido(TipoSonidoDTO proytidto)
+        {
+            String SQL_Agregar_TS = " insert into cat_tipo_sonido (tipo_sonido, descripcion, habilitado) values ( '" + proytidto.tipoSonido + "' , '" + proytidto.Descripcion + "', '" + proytidto.Habilitado + "')";
+            SqlConnection con;
+            con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            SqlCommand comando;
+            comando = new SqlCommand(SQL_Agregar_TS, con);
+            comando.ExecuteNonQuery();
+            con.Close();
+        }
     }
 }

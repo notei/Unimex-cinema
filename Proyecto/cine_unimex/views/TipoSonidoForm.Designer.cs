@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dgvTipoSonido = new System.Windows.Forms.DataGridView();
+            this.btnNuevoTipoSonido = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTipoSonido)).BeginInit();
             this.SuspendLayout();
             // 
@@ -44,11 +45,22 @@
             this.dgvTipoSonido.Size = new System.Drawing.Size(306, 277);
             this.dgvTipoSonido.TabIndex = 0;
             // 
+            // btnNuevoTipoSonido
+            // 
+            this.btnNuevoTipoSonido.Location = new System.Drawing.Point(23, 38);
+            this.btnNuevoTipoSonido.Name = "btnNuevoTipoSonido";
+            this.btnNuevoTipoSonido.Size = new System.Drawing.Size(75, 23);
+            this.btnNuevoTipoSonido.TabIndex = 1;
+            this.btnNuevoTipoSonido.Text = "Nuevo";
+            this.btnNuevoTipoSonido.UseVisualStyleBackColor = true;
+            this.btnNuevoTipoSonido.Click += new System.EventHandler(this.btnNuevoTipoSonido_Click);
+            // 
             // TipoSonidoForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(453, 308);
+            this.Controls.Add(this.btnNuevoTipoSonido);
             this.Controls.Add(this.dgvTipoSonido);
             this.Name = "TipoSonidoForm";
             this.Text = "TipoSonidoForm";
@@ -61,5 +73,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvTipoSonido;
+        private System.Windows.Forms.Button btnNuevoTipoSonido;
     }
 }

@@ -28,5 +28,12 @@ namespace unimex.lenguajesv.cine.views
             dgvTipoSonido.DataSource = dtn;
             dgvTipoSonido.Columns[0].Visible = false;
         }
+
+        private void btnNuevoTipoSonido_Click(object sender, EventArgs e)
+        {
+            NewTipoSonido formasonido = new NewTipoSonido();
+            formasonido.ShowDialog();
+            consultaDGVTipoSonido();
+        }
     }
 }

@@ -311,6 +311,9 @@
     <EmbeddedResource Include="views\NewProductos2.resx">
       <DependentUpon>NewProductos2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\NewTipoSonido.resx">
+      <DependentUpon>NewTipoSonido.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\peliculas_estrenos.resx">
       <DependentUpon>peliculas_estrenos.cs</DependentUpon>
     </EmbeddedResource>
