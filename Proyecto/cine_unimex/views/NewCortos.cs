@@ -22,7 +22,7 @@ namespace unimex.lenguajesv.cine.views
 
         private void NewCortos_Load(object sender, EventArgs e)
         {
-            NuevosCortos();
+            
 
         }
 
@@ -33,7 +33,8 @@ namespace unimex.lenguajesv.cine.views
 
         private void aceptarbtn_Click(object sender, EventArgs e)
         {
-
+            NuevosCortos();
+            this.Dispose();
         }
 
         public void NuevosCortos()
@@ -43,6 +44,15 @@ namespace unimex.lenguajesv.cine.views
             cortos_dto.Nombre_Corto = nombrectxt.Text;
             cortos_dto.Duracion = Int32.Parse(duraciontxt.Text);
             cortos_dto.Habilitado = Int32.Parse(htxt.Text);
+            try
+            {
+                CortosDAO cortos_dao = new CortosDAO();
+                cortos_dao.newCortos(cortos_dto);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(""+ex);
+            }
 
         }
     

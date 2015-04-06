@@ -32,7 +32,7 @@ namespace unimex.lenguajesv.cine.DAO
 
         public void newCortos(CortosDTO new_Cortos_DTO)
         {
-            String SQL_NewCortos = "insert into cat_cortos values ('" + new_Cortos_DTO.Id_Corto + "','" + new_Cortos_DTO.Nombre_Corto + "','" + new_Cortos_DTO.Duracion + "', '" + new_Cortos_DTO.Habilitado + "')";
+            String SQL_NewCortos = "insert into cat_cortos values ("+ new_Cortos_DTO.Id_Pelicula+ ",'" + new_Cortos_DTO.Nombre_Corto + "'," + new_Cortos_DTO.Duracion + "," + new_Cortos_DTO.Habilitado + ")";
 
             SqlConnection con = new SqlConnection();
             con.ConnectionString = Cadena;
