@@ -74,17 +74,5 @@ namespace unimex.lenguajesv.cine.DAO
             comando.ExecuteNonQuery();
             con.Close();
         }
-        public void deleteTPDTO (TipoProyeccionDTO deleteTPdto)
-        {
-            String SQL_Update_YP = " DELETE FROM cat_tipo_proyeccion WHERE id_tipo_proyeccion = " + deleteTPdto.id_TipoProyeccion;
-            SqlConnection con;
-            con = new SqlConnection();
-            con.ConnectionString = Cadena;
-            con.Open();
-            SqlCommand comando;
-            comando = new SqlCommand(SQL_Update_YP, con);
-            comando.ExecuteNonQuery();
-            con.Close();
-        }
     }
 }
