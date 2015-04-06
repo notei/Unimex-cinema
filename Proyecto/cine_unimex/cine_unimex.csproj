@@ -72,6 +72,7 @@
     <Compile Include="DAO\peliculas_estrenosDAO.cs" />
     <Compile Include="DAO\ProductosDAO2.cs" />
     <Compile Include="DAO\SalasDAO.cs" />
+    <Compile Include="DAO\TipoSonidoDAO.cs" />
     <Compile Include="DTO\ActoresDTO.cs" />
     <Compile Include="DAO\PreciosDAO.cs" />
     <Compile Include="DAO\ProductosDAO.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="DTO\ProyeccionesDTO.cs" />
     <Compile Include="DTO\SalasDTO.cs" />
     <Compile Include="DTO\TipoProyeccionDTO.cs" />
+    <Compile Include="DTO\TipoSonidoDTO.cs" />
     <Compile Include="DTO\UsuarioDTO.cs" />
     <Compile Include="DAO\NacionalidadesDAO.cs" />
     <Compile Include="DTO\UsuariosDTO.cs" />
@@ -119,6 +121,12 @@
     </Compile>
     <Compile Include="views\NewProductos2.Designer.cs">
       <DependentUpon>NewProductos2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\NewTipoSonido.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\NewTipoSonido.Designer.cs">
+      <DependentUpon>NewTipoSonido.cs</DependentUpon>
     </Compile>
     <Compile Include="views\peliculas_estrenos.cs">
       <SubType>Form</SubType>
@@ -278,6 +286,12 @@
     </Compile>
     <Compile Include="views\TipoProyeccionForm.Designer.cs">
       <DependentUpon>TipoProyeccionForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\TipoSonidoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\TipoSonidoForm.Designer.cs">
+      <DependentUpon>TipoSonidoForm.cs</DependentUpon>
     </Compile>
     <Compile Include="views\UsuariosForm.cs">
       <SubType>Form</SubType>
