@@ -53,6 +53,7 @@ namespace unimex.lenguajesv.cine.views
             int id = Int32.Parse(valor);
             Newpeliculas frmNewProy = new Newpeliculas(id);
             frmNewProy.Show();
+            consultaPeliculas();
         }
 
         private void button2_Click(object sender, EventArgs e)
