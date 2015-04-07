@@ -53,6 +53,7 @@
             this.cmbComplejosPV.Name = "cmbComplejosPV";
             this.cmbComplejosPV.Size = new System.Drawing.Size(121, 24);
             this.cmbComplejosPV.TabIndex = 0;
+            this.cmbComplejosPV.SelectedIndexChanged += new System.EventHandler(this.cmbComplejosPV_SelectedIndexChanged);
             // 
             // label1
             // 

@@ -32,7 +32,38 @@ namespace unimex.lenguajesv.cine.views
                 MessageBox.Show("" + ex);
             }
         }
-        
+
+        public void buscarPeliculaPV()
+        {
+            PuntodeVentaBoletosDAO pre_dao = new PuntodeVentaBoletosDAO();
+            try
+            {
+                DataTable dtbus = pre_dao.cargarPeliculaPV();
+                cmbPeliculaPV.DataSource = dtbus;
+                cmbPeliculaPV.DisplayMember = "pelicula";
+                cmbPeliculaPV.ValueMember = "id_pelicula";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
+        }
+
+        public void buscarSalaPV()
+        {
+            PuntodeVentaBoletosDAO pre_dao = new PuntodeVentaBoletosDAO();
+            try
+            {
+                DataTable dtbus = pre_dao.cargarSalaPV();
+                cmbSalaPV.DataSource = dtbus;
+                cmbSalaPV.DisplayMember = "Sala";
+                cmbSalaPV.ValueMember = "nombre_sala";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
+        }
         private void label6_Click(object sender, EventArgs e)
         {
 
@@ -41,6 +72,14 @@ namespace unimex.lenguajesv.cine.views
         private void PuntodeVentaForm_Load(object sender, EventArgs e)
         {
             buscarComplejoPV();
+            buscarPeliculaPV();
+            buscarSalaPV();
+
+        }
+
+        private void cmbComplejosPV_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
