@@ -14,50 +14,106 @@ namespace unimex.lenguajesv.cine.views
 {
     public partial class NewProductos : Form
     {
+        private int id;
+        Boolean siestaAct = false;
         public NewProductos()
         {
-            //Si no recibe Id hace esto 
             InitializeComponent();
+            siestaAct = true;
+            btnaceptar.Text = "Agregar";
         }
         public NewProductos(int id)
         {
-            //si recive Id entonces hace esto Miranda.
+
             InitializeComponent();
+            this.id = id;
+            siestaAct = false;
+            btnaceptar.Text = "Actualizar";
+
         }
 
         private void NewProductos_Load(object sender, EventArgs e)
         {
+            if (siestaAct)
+            {
+                ProductosDAO predaao = new ProductosDAO();
+                predaao.LoadProductos();
+            }
+            else
+            {
+                cargarNewProductosUpdate();
+            }
         }
 
         private void btnaceptar_Click(object sender, EventArgs e)
         {
-
-
-            if (txtnombre.Text != "")
+            if (siestaAct)
             {
-                ProductosDTO n = new ProductosDTO();
-                n.Nombre = txtnombre.Text;
-                n.Descripcion = txtdescripcion.Text;
-                n.Habilitar = btncheck.Checked;
+
+                if (txtnombre.Text != "")
+                {
+                    ProductosDTO n = new ProductosDTO();
+                    n.Nombre = txtnombre.Text;
+                    n.Descripcion = txtdescripcion.Text;
+                    n.Habilitar = btncheck.Checked;
 
 
+                    try
+                    {
+                        ProductosDAO dao = new ProductosDAO();
+                        dao.agregarProducto(n);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("" + ex);
+                    }
+
+                }
+
+
+                else
+                {
+                    MessageBox.Show(" Ingrese un Producto ", " ERROR");
+                }
+                this.Dispose();
+            }
+            else
+            {
+                ProductosDTO pdtoup = new ProductosDTO();
+                pdtoup.IdTipoProducto = id;
+                pdtoup.Nombre = txtnombre.Text;
+                pdtoup.Descripcion = txtdescripcion.Text;
+                pdtoup.Habilitar = btncheck.Checked;
                 try
                 {
-                    ProductosDAO dao = new ProductosDAO();
-                    dao.agregarProducto(n);
+                    ProductosDAO daoprecio1 = new ProductosDAO();
+                    daoprecio1.updatePoductoDTO(pdtoup);
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("" + ex);
                 }
+                this.Dispose();
 
             }
 
-            else
+
+        }
+        public void cargarNewProductosUpdate()
+        {
+            try
             {
-                MessageBox.Show(" Ingrese un Producto ", " ERROR");
+                ProductosDAO presdao = new ProductosDAO();
+                ProductosDTO presdto = presdao.cargarProductosUpdate(id);
+                txtnombre.Text = presdto.Nombre;
+                txtdescripcion.Text = presdto.Descripcion;
+                btncheck.Checked = presdto.Habilitar;
             }
-            this.Dispose();
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
+
         }
 
         private void btncancelar_Click(object sender, EventArgs e)
@@ -65,8 +121,14 @@ namespace unimex.lenguajesv.cine.views
             this.Dispose();
         }
 
+        private void btncheck_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }
+
 
 
 
