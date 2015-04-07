@@ -40,6 +40,7 @@ namespace unimex.lenguajesv.cine.views
                 apuser.Text = presdto.ApPaterno;
                 nomus.Text = presdto.NomUsuario;
                 passuser.Text = presdto.Contrasena;
+                idtuser.Text = Convert.ToString(presdto.Id_Tipo_Usuario);
 
             }
             catch (Exception ex)
@@ -49,20 +50,19 @@ namespace unimex.lenguajesv.cine.views
 
         }
         private void NewUsuarios_Load(object sender, EventArgs e)
-        {
+          {
+              if (isInsertId)
+              {
+                  UsuariosDAO predaao = new UsuariosDAO();
+                  predaao.LoadUsuarios();
+              }
+              else
+              {
+                  cargarNewUsuariosUpdate();
+              }
+          }
 
-            if (isInsertId)
-            {
-                UsuariosDAO predaao = new UsuariosDAO();
-                predaao.LoadUsuarios();
-            }
-            else
-            {
-                //cargarNewUsuariosUpdate();
-            }
-        }
 
-       
 
         private void btnAceptar_Click_1(object sender, EventArgs e)
         {
@@ -76,9 +76,6 @@ namespace unimex.lenguajesv.cine.views
                     n.NomUsuario = nomus.Text;
                     n.Contrasena = passuser.Text;
                     n.Id_Tipo_Usuario = Int32.Parse(idtuser.Text);
-
-
-
 
                     try
                     {
@@ -125,39 +122,6 @@ namespace unimex.lenguajesv.cine.views
         {
             this.Dispose();
         }
-
-
-        /*  public void cargarNewUsuariosUpdate()
-          {
-              try
-              {
-                  UsuariosDAO presdao = new UsuariosDAO();
-                  UsuariosDTO presdto = presdao.cargarUsuariosUpdate(id);
-                  nombreuser.Text = presdto.Nombre;
-                  apuser.Text = presdto.ApPaterno;
-                  nomus.Text = presdto.NomUsuario;
-                  passuser.Text = presdto.Contrasena;
-                  idtuser.Text = Convert.ToString(presdto.Id_Tipo_Usuario);
-
-
-              }
-              catch (Exception ex)
-              {
-                  MessageBox.Show("" + ex);
-              }
-
-          }
-          private void NewUsuarios_Load(object sender, EventArgs e)
-          {
-              if (isInsertId)
-              {
-                  UsuariosDAO predaao = new UsuariosDAO();
-                  predaao.LoadUsuarios();
-              }
-              else
-              {
-                  //cargarNewUsuariosUpdate();
-              }
-          }*/
     }
 }
+

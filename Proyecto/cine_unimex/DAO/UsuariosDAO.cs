@@ -67,7 +67,7 @@ namespace unimex.lenguajesv.cine.DAO
 
         public void updateUsuariosDTO(UsuariosDTO preciodtoup)
         {
-            String SQL_Update_Usuario = " UPDATE usuarios SET nombre = '" + preciodtoup.Nombre + "', apellido_paterno = '" + preciodtoup.ApPaterno + "', nombre_usuario = " + preciodtoup.NomUsuario + "', contrasena = " + preciodtoup.Contrasena + "', id_tipo_usuario = " + preciodtoup.Id_Tipo_Usuario + " WHERE idUsuario = " + preciodtoup.idusuario;
+            String SQL_Update_Usuario = " UPDATE usuarios SET nombre = '" + preciodtoup.Nombre + "', apellido_paterno = '" + preciodtoup.ApPaterno + "', nombre_usuario = '" + preciodtoup.NomUsuario + "', contrasena = '" + preciodtoup.Contrasena + "', id_tipo_usuario = " + preciodtoup.Id_Tipo_Usuario + " WHERE idUsuario = " + preciodtoup.idusuario;
             SqlConnection con;
             con = new SqlConnection();
             con.ConnectionString = Cadena;
