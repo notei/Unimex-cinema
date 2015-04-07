@@ -21,6 +21,9 @@ namespace unimex.lenguajesv.cine.views
         private void Peliculas_Load(object sender, EventArgs e)
         {
             consultaPeliculas();
+            consultaBuscarNombreCF();
+            cmbNombreCF.Enabled = false;
+            cmbNombreCF.DataSource = null;
         }
 
         public void consultaPeliculas()
@@ -50,7 +53,8 @@ namespace unimex.lenguajesv.cine.views
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             Newpeliculas frmNewProy = new Newpeliculas();
-            frmNewProy.Show();
+            frmNewProy.ShowDialog();
+            consultaPeliculas();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -59,7 +63,7 @@ namespace unimex.lenguajesv.cine.views
             String valor = peliculasdgv.Rows[fil].Cells[0].Value.ToString();
             int id = Int32.Parse(valor);
             Newpeliculas frmNewProy = new Newpeliculas(id);
-            frmNewProy.Show();
+            frmNewProy.ShowDialog();
             consultaPeliculas();
         }
 
@@ -111,6 +115,7 @@ namespace unimex.lenguajesv.cine.views
             }
         public void buscarNombreCF()
         {
+
             String id_Pelicula = "" + cmbNombreCF.SelectedValue;
             PeliculasDTO cf_dto = new PeliculasDTO();
             try
