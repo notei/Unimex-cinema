@@ -47,7 +47,36 @@ namespace unimex.lenguajesv.cine.DAO
             con.Close();
 
         }
-
-
+        public ProductosDTO cargarProductosUpdate(int id)
+        {
+            String SQL_Cargar_Productos = "select * from cat_tipo_productos where id_tipo_producto = " + id;
+            ProductosDTO prdto = new ProductosDTO();
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            SqlCommand cmd = new SqlCommand(SQL_Cargar_Productos, con);
+            SqlDataReader red = cmd.ExecuteReader();
+            while (red.Read())
+            {
+                prdto.IdTipoProducto = (int)red.GetInt32(0);
+                prdto.Nombre = (String)red.GetString(1);
+                prdto.Descripcion = (String)red.GetString(2);
+                prdto.Habilitar = (Boolean)red.GetBoolean(3);
+            }
+            con.Close();
+            return prdto;
+        }
+        public void updatePoductoDTO(ProductosDTO prodtoup)
+        {
+            String SQL_Update_Producto = " UPDATE cat_tipo_productos SET nombre = '" + prodtoup.Nombre + "', descripcion = '" + prodtoup.Descripcion + "', habilitar = '" + prodtoup.Habilitar + "' WHERE id_tipo_producto = " + prodtoup.IdTipoProducto;
+            SqlConnection con;
+            con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            SqlCommand comando;
+            comando = new SqlCommand(SQL_Update_Producto, con);
+            comando.ExecuteNonQuery();
+            con.Close();
+        }
     }
 }
