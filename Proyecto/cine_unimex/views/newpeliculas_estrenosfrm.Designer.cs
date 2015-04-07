@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(peliculas_estrenosfrm));
-            this.txtfecha = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -38,15 +37,8 @@
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.txtpelicula = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.txtfecha = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
-            // 
-            // txtfecha
-            // 
-            this.txtfecha.Location = new System.Drawing.Point(155, 173);
-            this.txtfecha.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtfecha.Name = "txtfecha";
-            this.txtfecha.Size = new System.Drawing.Size(116, 21);
-            this.txtfecha.TabIndex = 2;
             // 
             // label2
             // 
@@ -113,8 +105,9 @@
             this.txtpelicula.Location = new System.Drawing.Point(155, 108);
             this.txtpelicula.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtpelicula.Name = "txtpelicula";
-            this.txtpelicula.Size = new System.Drawing.Size(116, 24);
+            this.txtpelicula.Size = new System.Drawing.Size(143, 24);
             this.txtpelicula.TabIndex = 13;
+            this.txtpelicula.SelectedIndexChanged += new System.EventHandler(this.txtpelicula_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -126,11 +119,20 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Agregar Estrenos";
             // 
+            // txtfecha
+            // 
+            this.txtfecha.FormattingEnabled = true;
+            this.txtfecha.Location = new System.Drawing.Point(155, 170);
+            this.txtfecha.Name = "txtfecha";
+            this.txtfecha.Size = new System.Drawing.Size(143, 24);
+            this.txtfecha.TabIndex = 15;
+            // 
             // peliculas_estrenosfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(335, 360);
+            this.Controls.Add(this.txtfecha);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtpelicula);
             this.Controls.Add(this.checkBox1);
@@ -139,7 +141,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.txtfecha);
             this.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -154,7 +155,6 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox txtfecha;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -163,5 +163,6 @@
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.ComboBox txtpelicula;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ComboBox txtfecha;
     }
 }

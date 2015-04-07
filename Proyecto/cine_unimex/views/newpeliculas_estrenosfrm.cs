@@ -13,10 +13,23 @@ namespace unimex.lenguajesv.cine.Resources
 {
     public partial class peliculas_estrenosfrm : Form
     {
+         private int id;
+        Boolean isInsertid = false;
+
         public peliculas_estrenosfrm()
         {
             InitializeComponent();
+            isInsertid = true;
+            btnAgregar.Text = "Agregar";
         }
+        public peliculas_estrenosfrm(int id)
+        {
+            InitializeComponent();
+            this.id = id;
+            isInsertid = false;
+            btnAgregar.Text = "Actualizar";
+        }
+        
 
         private void peliculas_estrenosfrm_Load(object sender, EventArgs e)
         {
@@ -42,6 +55,11 @@ namespace unimex.lenguajesv.cine.Resources
             dao.insertaestrenos(p);
 
             this.Dispose();
+
+        }
+
+        private void txtpelicula_SelectedIndexChanged(object sender, EventArgs e)
+        {
 
         }
     }
