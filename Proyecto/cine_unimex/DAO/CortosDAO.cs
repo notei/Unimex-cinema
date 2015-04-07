@@ -41,17 +41,15 @@ namespace unimex.lenguajesv.cine.DAO
             cmd.ExecuteNonQuery();
             con.Close();
 
-
-
-
-
-
         }
         public void updateCortos(CortosDTO update_cortos)
         {
 
-            String SQL_updatecortos = "update cat_Cortos set id_pelicula = " + update_cortos.Id_Pelicula + ", nombre_corto = " + update_cortos.Nombre_Corto + " , duracion = " + update_cortos.Duracion + ", habilitado = " + update_cortos.Habilitado + ", Where id_corto =" + update_cortos.Id_Corto;
+            String SQL_updatecortos = "update cat_cortos set  id_pelicula = " + update_cortos.Id_Pelicula + " , nombre_corto =' " + update_cortos.Nombre_Corto + "' , duracion = " + update_cortos.Duracion + "  , habilitado = '" + update_cortos.Habilitado + "'   where id_corto = " + update_cortos.Id_Corto;
+
             SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
             SqlCommand cmd = new SqlCommand(SQL_updatecortos, con);
             cmd.ExecuteNonQuery();
             con.Close();
