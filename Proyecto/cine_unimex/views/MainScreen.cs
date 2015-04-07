@@ -217,12 +217,21 @@ namespace unimex.lenguajesv.cine.views
             this.LayoutMdi(System.Windows.Forms.MdiLayout.Cascade);
         }
 
+
         private void cerrarTodasToolStripMenuItem_Click(object sender, EventArgs e)
         {
             foreach (Form frm in this.MdiChildren)
             {
                     frm.Dispose();
             }
+        }
+
+        private void carteleraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CarteleraForm formaCartel = new CarteleraForm();
+            formaCartel.MdiParent = this;
+            formaCartel.StartPosition = FormStartPosition.CenterScreen;
+            formaCartel.Show();
         }
 
         

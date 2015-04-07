@@ -69,7 +69,9 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+
             this.cerrarTodasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+
             this.menuBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -247,6 +249,7 @@
             this.carteleraToolStripMenuItem.Name = "carteleraToolStripMenuItem";
             this.carteleraToolStripMenuItem.Size = new System.Drawing.Size(159, 22);
             this.carteleraToolStripMenuItem.Text = "Cartelera";
+            this.carteleraToolStripMenuItem.Click += new System.EventHandler(this.carteleraToolStripMenuItem_Click);
             // 
             // estrenosToolStripMenuItem1
             // 
@@ -391,6 +394,7 @@
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
+
             // cerrarTodasToolStripMenuItem
             // 
             this.cerrarTodasToolStripMenuItem.Name = "cerrarTodasToolStripMenuItem";
@@ -398,6 +402,7 @@
             this.cerrarTodasToolStripMenuItem.Text = "Cerrar todas";
             this.cerrarTodasToolStripMenuItem.Click += new System.EventHandler(this.cerrarTodasToolStripMenuItem_Click);
             // 
+
             // MainScreen
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
