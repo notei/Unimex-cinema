@@ -50,19 +50,17 @@ namespace unimex.lenguajesv.cine.views
 
         }
         private void NewUsuarios_Load(object sender, EventArgs e)
-          {
-              if (isInsertId)
-              {
-                  UsuariosDAO predaao = new UsuariosDAO();
-                  predaao.LoadUsuarios();
-              }
-              else
-              {
-                  cargarNewUsuariosUpdate();
-              }
-          }
-
-
+        {
+            if (isInsertId)
+            {
+                UsuariosDAO predaao = new UsuariosDAO();
+                predaao.LoadUsuarios();
+            }
+            else
+            {
+                cargarNewUsuariosUpdate();
+            }
+        }
 
         private void btnAceptar_Click_1(object sender, EventArgs e)
         {
