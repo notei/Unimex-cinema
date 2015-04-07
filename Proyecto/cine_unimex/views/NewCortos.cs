@@ -18,7 +18,7 @@ namespace unimex.lenguajesv.cine.views
 
         public NewCortos()
         {
-            
+
 
             InitializeComponent();
             isInsertId = true;
@@ -39,14 +39,12 @@ namespace unimex.lenguajesv.cine.views
         {
             if (isInsertId)
             {
-                
-               
+
 
 
             }
 
             else
-
             {
                 LoadCortos();
             }
@@ -68,9 +66,11 @@ namespace unimex.lenguajesv.cine.views
             else
             {
                 //actualizar
+                updatecortos();
+                this.Dispose();
             }
 
-            
+
         }
         //Método LoadCortos
 
@@ -90,13 +90,32 @@ namespace unimex.lenguajesv.cine.views
             {
                 MessageBox.Show("" + ex);
             }
-            
 
-            
+
+        }
+        public void updatecortos()
+        {
+            CortosDTO cortos_dto = new CortosDTO();
+            cortos_dto.Id_Pelicula = Int32.Parse(idptxt.Text);
+            cortos_dto.Nombre_Corto = nombrectxt.Text;
+            cortos_dto.Duracion = Int32.Parse(duraciontxt.Text);
+            cortos_dto.Habilitado = check.Checked;
+            cortos_dto.Id_Corto = id;
+            try
+            {
+                CortosDAO cortos_dao = new CortosDAO();
+                cortos_dao.updateCortos(cortos_dto);
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
         }
 
         public void NuevosCortos()
         {
+
             CortosDTO cortos_dto = new CortosDTO();
             cortos_dto.Id_Pelicula = Int32.Parse(idptxt.Text);
             cortos_dto.Nombre_Corto = nombrectxt.Text;
@@ -111,10 +130,10 @@ namespace unimex.lenguajesv.cine.views
 
             catch (Exception ex)
             {
-                MessageBox.Show(""+ex);
+                MessageBox.Show("" + ex);
             }
 
         }
-    
+
     }
 }
