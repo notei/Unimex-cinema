@@ -16,8 +16,15 @@ namespace unimex.lenguajesv.cine.views
     {
         public NewProductos()
         {
+            //Si no recibe Id hace esto 
             InitializeComponent();
         }
+        public NewProductos(int id)
+        {
+            //si recive Id entonces hace esto Miranda.
+            InitializeComponent();
+        }
+
         private void NewProductos_Load(object sender, EventArgs e)
         {
         }

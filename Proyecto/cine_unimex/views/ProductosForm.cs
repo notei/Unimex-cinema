@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using unimex.lenguajesv.cine.DAO;
-
+using unimex.lenguajesv.cine.DTO;
 
 namespace unimex.lenguajesv.cine.views
 {
@@ -52,15 +52,17 @@ namespace unimex.lenguajesv.cine.views
             String reg = dataGridView1.Rows[fil].Cells[1].Value.ToString();
             String regproducto = dataGridView1.Rows[fil].Cells[3].Value.ToString();
             DialogResult boton = MessageBox.Show("Desea eliminar el producto que agrego: " + reg + " con el nombre de.." + regproducto, "Borrar Registro", MessageBoxButtons.OKCancel);
+            ProductosDTO nadto = new ProductosDTO();
             if (boton == DialogResult.OK)
             {
 
-                 ProductosDAO nadto = new ProductosDTO();
-                    nadto.id_Productos= id2;
+                
+                    nadto.IdTipoProducto= id2;
                     try
                     {
                         ProductosDAO nadao2 = new ProductosDAO();
-                        nadao2.borrarProductos(nadto);
+                        //nadao2.borrarProductos(nadto);
+                    //no existe el método borrar productos, verificalo porfa
                     }
                     catch (Exception ex)
                     {
@@ -73,7 +75,7 @@ namespace unimex.lenguajesv.cine.views
 
             }
         }
-
+        /*
         private void chkProducto_CheckedChanged(object sender, EventArgs e)
         {
             if (chkProducto.Checked)
@@ -96,7 +98,8 @@ namespace unimex.lenguajesv.cine.views
                 buscarProductos();
             }
         }
-
+        */
+        //Esto debe ir en NewProductos aquí no tienes ninguno de los elementos.
         private void btnactualizar_Click(object sender, EventArgs e)
         {
             int fil = dataGridView1.CurrentCell.RowIndex;
