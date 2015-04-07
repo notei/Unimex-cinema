@@ -44,5 +44,14 @@ namespace unimex.lenguajesv.cine.views
             frmNewSalas.Show();
             
         }
+
+        private void btnact_Click(object sender, EventArgs e)
+        {
+            int renglon = dataG.CurrentCell.RowIndex;
+            String valor = dataG.Rows[renglon].Cells[0].Value.ToString();
+            int id = Int32.Parse(valor);
+            NewSalas frmNewSalas = new NewSalas(id);
+            frmNewSalas.Show();
+        }
     }
 }

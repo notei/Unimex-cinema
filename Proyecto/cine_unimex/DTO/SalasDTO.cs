@@ -11,7 +11,7 @@ namespace unimex.lenguajesv.cine.DTO
         private int id_complejo;
         private String nombre_sala;
         private int capacidad;
-        private int butacas_numeradas;
+        private Boolean butacas_numeradas;
         private int id_tipo_sonido;
         private int id_tipo_proyeccion;
 
@@ -41,7 +41,7 @@ namespace unimex.lenguajesv.cine.DTO
             set { capacidad = value; }
 
         }
-        public int Butacas_Numeradas 
+        public Boolean Butacas_Numeradas 
         {
             get { return butacas_numeradas; }
             set{butacas_numeradas = value; }
