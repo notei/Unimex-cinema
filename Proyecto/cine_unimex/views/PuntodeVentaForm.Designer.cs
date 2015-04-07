@@ -161,6 +161,7 @@
             this.btnCancelarPV.TabIndex = 13;
             this.btnCancelarPV.Text = "Cancelar";
             this.btnCancelarPV.UseVisualStyleBackColor = true;
+            this.btnCancelarPV.Click += new System.EventHandler(this.btnCancelarPV_Click);
             // 
             // label7
             // 

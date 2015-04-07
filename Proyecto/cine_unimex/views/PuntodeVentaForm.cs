@@ -116,5 +116,10 @@ namespace unimex.lenguajesv.cine.views
         {
 
         }
+
+        private void btnCancelarPV_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
     }
 }

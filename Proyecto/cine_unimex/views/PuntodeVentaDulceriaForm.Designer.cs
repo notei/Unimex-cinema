@@ -108,6 +108,7 @@
             this.btnCancelarPVD.TabIndex = 7;
             this.btnCancelarPVD.Text = "Cancelar";
             this.btnCancelarPVD.UseVisualStyleBackColor = true;
+            this.btnCancelarPVD.Click += new System.EventHandler(this.btnCancelarPVD_Click);
             // 
             // PuntodeVentaDulceriaForm
             // 
