@@ -294,6 +294,12 @@
     <Compile Include="views\PuntodeVentaDulceriaForm.Designer.cs">
       <DependentUpon>PuntodeVentaDulceriaForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\PuntodeVentaElegirComplejo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\PuntodeVentaElegirComplejo.Designer.cs">
+      <DependentUpon>PuntodeVentaElegirComplejo.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\PuntodeVentaForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -432,6 +438,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\PuntodeVentaDulceriaForm.resx">
       <DependentUpon>PuntodeVentaDulceriaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\PuntodeVentaElegirComplejo.resx">
+      <DependentUpon>PuntodeVentaElegirComplejo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\PuntodeVentaForm.resx">
       <DependentUpon>PuntodeVentaForm.cs</DependentUpon>

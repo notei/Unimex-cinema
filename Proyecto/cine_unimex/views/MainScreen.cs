@@ -186,7 +186,7 @@ namespace unimex.lenguajesv.cine.views
 
         private void boletosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PuntodeVentaForm formaPV = new PuntodeVentaForm();         
+            PuntodeVentaElegirComplejo formaPV = new PuntodeVentaElegirComplejo();         
             formaPV.MdiParent = this;
             formaPV.StartPosition = FormStartPosition.CenterScreen;
             formaPV.Show();
