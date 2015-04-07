@@ -217,6 +217,14 @@ namespace unimex.lenguajesv.cine.views
             this.LayoutMdi(System.Windows.Forms.MdiLayout.Cascade);
         }
 
+        private void cerrarTodasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form frm in this.MdiChildren)
+            {
+                    frm.Dispose();
+            }
+        }
+
         
     }
 }
