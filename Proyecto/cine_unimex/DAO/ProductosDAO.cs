@@ -68,13 +68,25 @@ namespace unimex.lenguajesv.cine.DAO
         }
         public void updatePoductoDTO(ProductosDTO prodtoup)
         {
-            String SQL_Update_Producto = " UPDATE cat_tipo_productos SET nombre = '" + prodtoup.Nombre + "', descripcion = '" + prodtoup.Descripcion + "', habilitar = '" + prodtoup.Habilitar + "' WHERE id_tipo_producto = " + prodtoup.IdTipoProducto;
+            String SQL_Update_Producto = " UPDATE cat_tipo_productos SET nombre = '" + prodtoup.Nombre + "', descripcion = '" + prodtoup.Descripcion + "', habilitado = '" + prodtoup.Habilitar + "' WHERE id_tipo_producto = " + prodtoup.IdTipoProducto;
             SqlConnection con;
             con = new SqlConnection();
             con.ConnectionString = Cadena;
             con.Open();
             SqlCommand comando;
             comando = new SqlCommand(SQL_Update_Producto, con);
+            comando.ExecuteNonQuery();
+            con.Close();
+        }
+        public void deleteTPDTO(ProductosDTO deletedtotp)
+        {
+            String SQL_Update_TP = " DELETE FROM cat_tipo_productos WHERE id_tipo_producto = " + deletedtotp.IdTipoProducto;
+            SqlConnection con;
+            con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            SqlCommand comando;
+            comando = new SqlCommand(SQL_Update_TP, con);
             comando.ExecuteNonQuery();
             con.Close();
         }
