@@ -58,6 +58,37 @@ namespace unimex.lenguajesv.cine.DAO
             }
         }
 
+        public DataTable cargarHorarioPV()
+        {
+            String SQL_cargar_Horario = "select horario from proyecciones";
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            using (SqlDataAdapter adapter = new SqlDataAdapter(SQL_cargar_Horario, con))
+            {
+
+                DataTable tbl = new DataTable();
+                adapter.Fill(tbl);
+                con.Close();
+                return tbl;
+            }
+        }
+
+        public DataTable cargarTipoBoletoPV()
+        {
+            String SQL_cargar_Tipo_Boleto = "select nombre from cat_precios";
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            using (SqlDataAdapter adapter = new SqlDataAdapter(SQL_cargar_Tipo_Boleto, con))
+            {
+
+                DataTable tbl = new DataTable();
+                adapter.Fill(tbl);
+                con.Close();
+                return tbl;
+            }
+        }
         
     }
 }

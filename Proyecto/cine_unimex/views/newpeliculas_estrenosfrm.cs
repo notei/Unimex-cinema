@@ -32,10 +32,10 @@ namespace unimex.lenguajesv.cine.Resources
         {
             peliculas_estrenosDTO p = new peliculas_estrenosDTO();
 
-            p.Id_estreno = (int)txtestreno.Value;
+         
             p.Pelicula = txtpelicula.Text;
             p.Fecha_estreno = txtfecha.Text;
-
+            p.Habilitado = true;
 
 
            peliculas_estrenosDAO dao = new peliculas_estrenosDAO();

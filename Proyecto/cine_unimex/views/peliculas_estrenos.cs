@@ -8,6 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using unimex.lenguajesv.cine.DAO;
 using unimex.lenguajesv.cine.DTO;
+using unimex.lenguajesv.cine.Resources;
 
 
 namespace unimex.lenguajesv.cine.views
@@ -30,7 +31,7 @@ namespace unimex.lenguajesv.cine.views
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
-            peliculas_estrenos form = new peliculas_estrenos();
+            peliculas_estrenosfrm form = new peliculas_estrenosfrm();
             form.ShowDialog();
 
         }

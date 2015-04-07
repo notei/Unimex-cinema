@@ -13,14 +13,14 @@ namespace unimex.lenguajesv.cine.DAO
     {
         
         private String selectsql = "select peliculas_estrenos.id_estreno,peliculas_estrenos.fecha_estreno,peliculas.pelicula,peliculas_estrenos.habilitado from peliculas_estrenos  inner join peliculas on peliculas_estrenos.id_pelicula = peliculas.id_pelicula";
-        private String cadenacon = "Data Source=benny;Initial Catalog=unimex_cinema_db;Integrated Security=True";
+        private String Cadena = Properties.Resources.CADENA_CONEXION;
 
         public DataTable cargardatos()
         {
-            SqlConnection conx = null;
+            SqlConnection conx;
             conx = new SqlConnection();
 
-            conx.ConnectionString = cadenacon;
+            conx.ConnectionString = Cadena;
             conx.Open();
             using (SqlDataAdapter adaptador = new SqlDataAdapter(selectsql, conx))
             {
@@ -39,7 +39,7 @@ namespace unimex.lenguajesv.cine.DAO
             SqlConnection conx = null;
             conx = new SqlConnection();
 
-            conx.ConnectionString = cadenacon;
+            conx.ConnectionString = Cadena;
             conx.Open();
             SqlCommand comando;
             comando = new SqlCommand(sql, conx);

@@ -68,7 +68,7 @@ namespace unimex.lenguajesv.cine.DAO
         }
         public void updatePoductoDTO(ProductosDTO prodtoup)
         {
-            String SQL_Update_Producto = " UPDATE cat_tipo_productos SET nombre = '" + prodtoup.Nombre + "', descripcion = '" + prodtoup.Descripcion + "', habilitar = '" + prodtoup.Habilitar + "' WHERE id_tipo_producto = " + prodtoup.IdTipoProducto;
+            String SQL_Update_Producto = " UPDATE cat_tipo_productos SET nombre = '" + prodtoup.Nombre + "', descripcion = '" + prodtoup.Descripcion + "', habilitado = '" + prodtoup.Habilitar + "' WHERE id_tipo_producto = " + prodtoup.IdTipoProducto;
             SqlConnection con;
             con = new SqlConnection();
             con.ConnectionString = Cadena;
@@ -78,5 +78,63 @@ namespace unimex.lenguajesv.cine.DAO
             comando.ExecuteNonQuery();
             con.Close();
         }
-    }
+        public void deleteTPDTO(ProductosDTO deletedtotp)
+        {
+            String SQL_Update_TP = " DELETE FROM cat_tipo_productos WHERE id_tipo_producto = " + deletedtotp.IdTipoProducto;
+            SqlConnection con;
+            con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            SqlCommand comando;
+            comando = new SqlCommand(SQL_Update_TP, con);
+            comando.ExecuteNonQuery();
+            con.Close();
+        }
+
+        public DataTable cargaBusquedaPrecio(PreciosDTO busdtopre)
+        {
+            String SQL_Buscar_Precio = "select cat_precios.id_precio AS Id , cat_precios.nombre AS Boleto, cat_precios.descripcion AS Descripción, cat_precios.precio AS Precio from cat_precios where cat_precios.id_precio = " + busdtopre.id_Precios;
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            using (SqlDataAdapter adapter1 = new SqlDataAdapter(SQL_Buscar_Precio, con))
+            {
+
+                DataTable tblpbus = new DataTable();
+                adapter1.Fill(tblpbus);
+                con.Close();
+                return tblpbus;
+            }
+        }
+        public DataTable Loadz()
+        {
+            String SQL_Busc_nombre = "select id_tipo_producto, nombre from cat_producto";
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            using (SqlDataAdapter adapter = new SqlDataAdapter(SQL_Busc_nombre, con))
+            {
+
+                DataTable tbl = new DataTable();
+                adapter.Fill(tbl);
+                con.Close();
+                return tbl;
+            }
+        }
+        public DataTable LoadPrecProducto()
+        {
+            String SQL_Busc_nombre = "select id_tipo_producto, precio from cat_productos";
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            using (SqlDataAdapter adapter = new SqlDataAdapter(SQL_Busc_nombre, con))
+            {
+
+                DataTable tbl = new DataTable();
+                adapter.Fill(tbl);
+                con.Close();
+                return tbl;
+            }
+        }
+ }
 }
