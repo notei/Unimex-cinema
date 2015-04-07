@@ -96,6 +96,21 @@ namespace unimex.lenguajesv.cine.DAO
 
 
         }
+        public DataTable salaBus(SalasDTO SalaBus)
+        {
+            String SQL_Sala_Bus = "select cat_salas_complejos.id_sala, cat_complejos.nombre, cat_salas_complejos.nombre_sala, cat_salas_complejos.capacidad, cat_salas_complejos.butacas_numeradas, cat_tipo_sonido.tipo_sonido, cat_tipo_proyeccion.tipo_proyeccion from cat_salas_complejos inner join cat_complejos on cat_salas_complejos.id_complejo = cat_complejos.id_complejo inner join cat_tipo_sonido on cat_tipo_sonido.id_tipo_sonido = cat_salas_complejos.id_tipo_sonido inner join cat_tipo_proyeccion on cat_tipo_proyeccion.id_tipo_proyeccion = cat_salas_complejos.id_tipo_proyeccion Where cat_salas_complejos.id_tipo_proyeccion = " + SalaBus.Id_Tipo_Proyeccion;
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            using (SqlDataAdapter adapter = new SqlDataAdapter(SQL_Sala_Bus, con))
+            {
+
+                DataTable tblp = new DataTable();
+                adapter.Fill(tblp);
+                con.Close();
+                return tblp;
+            }
+        }
         public void upDataSalas(SalasDTO updata_Salas)
         {
             String SQL_Updata_Salas = "update cat_salas_complejos set id_complejo = " + updata_Salas.Id_Complejo + ", nombre_sala = '" + updata_Salas.Nombre_Sala + "', capacidad = " + updata_Salas.Capacidad + " , butacas_numeradas ='" + updata_Salas.Butacas_Numeradas + "',id_tipo_sonido = " + updata_Salas.Id_Tipo_Sonido + ", id_tipo_proyeccion = " + updata_Salas.Id_Tipo_Proyeccion + " WHERE id_sala = " + updata_Salas.Id_Sala;
