@@ -61,21 +61,20 @@ namespace unimex.lenguajesv.cine.views
     }
 }
 
-       
-
-        
-
-      
-        
 
 
 
 
 
-        
 
-      
-        
+
+
+
+
+
+
+
+
 
 
 

@@ -26,5 +26,38 @@ namespace unimex.lenguajesv.cine.DAO
                 return tbl;
             }
         }
+        public DataTable cargarPeliculaPV()
+        {
+            String SQL_cargar_Pelicula = "select pelicula from peliculas";
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            using (SqlDataAdapter adapter = new SqlDataAdapter(SQL_cargar_Pelicula, con))
+            {
+
+                DataTable tbl = new DataTable();
+                adapter.Fill(tbl);
+                con.Close();
+                return tbl;
+            }
+        }
+
+        public DataTable cargarSalaPV()
+        {
+            String SQL_cargar_Sala = "select nombre_sala from cat_salas_complejos";
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            using (SqlDataAdapter adapter = new SqlDataAdapter(SQL_cargar_Sala, con))
+            {
+
+                DataTable tbl = new DataTable();
+                adapter.Fill(tbl);
+                con.Close();
+                return tbl;
+            }
+        }
+
+        
     }
 }
