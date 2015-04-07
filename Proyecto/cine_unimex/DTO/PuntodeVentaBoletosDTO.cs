@@ -11,6 +11,7 @@ namespace unimex.lenguajesv.cine.DTO
         private String pelicula;
         private String sala;
         private String horario;
+        private int id_complejo;
         
 
         public String nombreComplejo
@@ -46,7 +47,13 @@ namespace unimex.lenguajesv.cine.DTO
             get { return nombre; }
             set { nombre = value;}
             }
+        public int Id_Complejo
+        
+        {
+            get { return id_complejo; }
+            set { id_complejo = value;}
+            
         }
-
     }
+}
 
