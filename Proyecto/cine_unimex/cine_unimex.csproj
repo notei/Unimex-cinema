@@ -66,6 +66,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\ActoresDAO.cs" />
+    <Compile Include="DAO\CarteleraDAO.cs" />
     <Compile Include="DAO\ClientesFrecuentesDAO.cs" />
     <Compile Include="DAO\CortosDAO.cs" />
     <Compile Include="DAO\PeliculasDAO.cs" />
@@ -84,6 +85,7 @@
     <Compile Include="DAO\TipoProyeccionDAO.cs" />
     <Compile Include="DAO\UsuarioDAO.cs" />
     <Compile Include="DAO\UsuariosDAO.cs" />
+    <Compile Include="DTO\CarteleraDTO.cs" />
     <Compile Include="DTO\ClientesFrecuentesDTO.cs" />
     <Compile Include="DTO\CortosDTO.cs" />
     <Compile Include="DTO\NacionalidadesDTO.cs" />
@@ -103,6 +105,12 @@
     <Compile Include="DAO\NacionalidadesDAO.cs" />
     <Compile Include="DTO\UsuariosDTO.cs" />
     <Compile Include="DTO\NacionalidadesActoresDTO.cs" />
+    <Compile Include="views\CarteleraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\CarteleraForm.Designer.cs">
+      <DependentUpon>CarteleraForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\ClientesFrecuentesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -322,6 +330,9 @@
     <Compile Include="views\UsuariosForm.Designer.cs">
       <DependentUpon>UsuariosForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="views\CarteleraForm.resx">
+      <DependentUpon>CarteleraForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\ClientesFrecuentesForm.resx">
       <DependentUpon>ClientesFrecuentesForm.cs</DependentUpon>
     </EmbeddedResource>
