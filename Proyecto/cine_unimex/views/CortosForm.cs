@@ -19,7 +19,7 @@ namespace unimex.lenguajesv.cine.views
 
         private void CortosForm_Load(object sender, EventArgs e)
         {
-            
+
             consultaCorto();
         }
 

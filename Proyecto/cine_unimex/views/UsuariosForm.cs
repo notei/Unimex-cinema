@@ -25,8 +25,8 @@ namespace unimex.lenguajesv.cine.views
 
         private void UsuariosForm_Load(object sender, EventArgs e)
         {
-            ConsultaBuscarUsuario();
             consultaUsuarios();
+            consultaBuscarPUsu();
             cbxbuscarnombre.DataSource = null;
             cbxbuscarnombre.Enabled = false;
         }
@@ -54,7 +54,24 @@ namespace unimex.lenguajesv.cine.views
                 MessageBox.Show("" + ex);
             }
         }
+        public void buscarUsuarioQuery()
+        {
+            String idpreciobus = "" + cbxbuscarnombre.SelectedValue;
+            UsuariosDTO precio_dto = new UsuariosDTO();
+            try
+            {
+                precio_dto.idusuario = Int32.Parse(idpreciobus);
+                UsuariosDAO pre_dao = new UsuariosDAO();
+                DataTable dtbus1 = pre_dao.cargaBusquedaUsuario(precio_dto);
+                dataGridView1.DataSource = dtbus1;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
 
+
+        }
         public void ConsultaBuscarUsuario()
         {
             UsuariosDAO U_DAO = new UsuariosDAO();
@@ -93,7 +110,7 @@ namespace unimex.lenguajesv.cine.views
             int id2 = Int32.Parse(valor);
             String reg = dataGridView1.Rows[fil].Cells[1].Value.ToString();
             String regprecio = dataGridView1.Rows[fil].Cells[2].Value.ToString();
-            DialogResult boton = MessageBox.Show("Desea Eliminar el Usuario: " + reg + " con el Apellido: $" + regprecio, "Borrar Registro", MessageBoxButtons.OKCancel);
+            DialogResult boton = MessageBox.Show("Desea Eliminar el Usuario: " + reg + " con el Apellido: " + regprecio, "Borrar Registro", MessageBoxButtons.OKCancel);
             if (boton == DialogResult.OK)
             {
                 UsuariosDTO pdtoup = new UsuariosDTO();
@@ -121,7 +138,7 @@ namespace unimex.lenguajesv.cine.views
             if (checkNombre.Checked)
             {
                 cbxbuscarnombre.Enabled = true;
-                ConsultaBuscarUsuario();
+                consultaBuscarPUsu();
             }
             else
             {
@@ -135,7 +152,7 @@ namespace unimex.lenguajesv.cine.views
         {
             if (checkNombre.Checked)
             {
-                ConsultaBuscarUsuario();
+                buscarUsuarioQuery();
             }
         }
     }

@@ -32,25 +32,32 @@ namespace unimex.lenguajesv.cine.DAO
 
         public void newCortos(CortosDTO new_Cortos_DTO)
         {
-            String SQL_NewCortos = "insert into cat_cortos values ("+ new_Cortos_DTO.Id_Pelicula+ ",'" + new_Cortos_DTO.Nombre_Corto + "'," + new_Cortos_DTO.Duracion + ",'" + new_Cortos_DTO.Habilitado + "')";
+            String SQL_NewCortos = "insert into cat_cortos values (" + new_Cortos_DTO.Id_Pelicula + ",'" + new_Cortos_DTO.Nombre_Corto + "'," + new_Cortos_DTO.Duracion + ",'" + new_Cortos_DTO.Habilitado + "')";
 
             SqlConnection con = new SqlConnection();
             con.ConnectionString = Cadena;
             con.Open();
             SqlCommand cmd = new SqlCommand(SQL_NewCortos, con);
-            cmd.ExecuteNonQuery(); 
+            cmd.ExecuteNonQuery();
             con.Close();
 
+        }
+        public void updateCortos(CortosDTO update_cortos)
+        {
 
+            String SQL_updatecortos = "update cat_cortos set  id_pelicula = " + update_cortos.Id_Pelicula + " , nombre_corto =' " + update_cortos.Nombre_Corto + "' , duracion = " + update_cortos.Duracion + "  , habilitado = '" + update_cortos.Habilitado + "'   where id_corto = " + update_cortos.Id_Corto;
 
-
-
-
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            SqlCommand cmd = new SqlCommand(SQL_updatecortos, con);
+            cmd.ExecuteNonQuery();
+            con.Close();
         }
 
         public CortosDTO LoadCortos(int id)
         {
-            String SQL_Connocer_Corto = "select * from cat_cortos where id_corto = " + id ;
+            String SQL_Connocer_Corto = "select * from cat_cortos where id_corto = " + id;
             CortosDTO cortos_dto = new CortosDTO();
             SqlConnection con = new SqlConnection();
             con.ConnectionString = Cadena;

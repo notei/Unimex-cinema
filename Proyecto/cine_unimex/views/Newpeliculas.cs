@@ -98,8 +98,8 @@ namespace unimex.lenguajesv.cine.views
                 
             }
             catch (Exception ex)
-            { 
-            
+            {
+                MessageBox.Show("" + ex);
             }
         }
         public void consultarIdgenero()

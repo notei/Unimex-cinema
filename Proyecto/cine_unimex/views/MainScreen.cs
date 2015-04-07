@@ -201,5 +201,22 @@ namespace unimex.lenguajesv.cine.views
         }
 
         
+
+        private void organizarVentanasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void horizontalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(System.Windows.Forms.MdiLayout.TileHorizontal);
+        }
+
+        private void cascadaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(System.Windows.Forms.MdiLayout.Cascade);
+        }
+
+        
     }
 }
