@@ -320,6 +320,7 @@
             this.dulceríaToolStripMenuItem.Name = "dulceríaToolStripMenuItem";
             this.dulceríaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.dulceríaToolStripMenuItem.Text = "Dulcería";
+            this.dulceríaToolStripMenuItem.Click += new System.EventHandler(this.dulceríaToolStripMenuItem_Click);
             // 
             // corteDeCajaToolStripMenuItem
             // 

@@ -9,28 +9,44 @@ namespace unimex.lenguajesv.cine.DTO
     {
         private String nombre;
         private String pelicula;
-
+        private String sala;
+        private String horario;
+        
 
         public String nombreComplejo
         {
-            get { return nombre;}
-            set { nombre = value;}
+            get { return nombre; }
+            set { nombre = value; }
 
         }
 
         public String Pelicula
-       
         {
             get { return pelicula; }
             set { pelicula = value; }
         }
 
         public String Sala
-       
         {
-            get { return Sala; }
-            set { Sala = value; }
+            get { return sala; }
+            set { sala = value; }
+        }
+
+
+        public String Horario
+        {
+            get { return horario; }
+            set { horario = value; }
+        }
+
+
+        public String Nombre
+        
+        {
+            get { return nombre; }
+            set { nombre = value;}
+            }
         }
 
     }
-}
+

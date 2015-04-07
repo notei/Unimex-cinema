@@ -192,6 +192,14 @@ namespace unimex.lenguajesv.cine.views
             formaPV.Show();
         }
 
+        private void dulceríaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PuntodeVentaDulceriaForm formaPVD = new PuntodeVentaDulceriaForm();
+            formaPVD.MdiParent = this;
+            formaPVD.StartPosition = FormStartPosition.CenterScreen;
+            formaPVD.Show();
+        }
+
         
     }
 }
