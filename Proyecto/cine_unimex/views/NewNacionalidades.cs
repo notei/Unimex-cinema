@@ -22,6 +22,7 @@ namespace unimex.lenguajesv.cine.views
             InitializeComponent();
             idb = true;
             btnAceptar.Text = "Agregar";
+            lblTexto.Text = "Agregar Nacionalidad";
             
         }
 
@@ -30,6 +31,7 @@ namespace unimex.lenguajesv.cine.views
             InitializeComponent();
             this.id = id;
             btnAceptar.Text = "Actualizar";
+            lblTexto.Text = "Actualizar Nacionalidad";
             
         }
 
@@ -124,6 +126,11 @@ namespace unimex.lenguajesv.cine.views
         }
 
         private void chkHabilitado_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }

@@ -30,6 +30,7 @@
         {
             this.dgvcortos = new System.Windows.Forms.DataGridView();
             this.Agregarbtn = new System.Windows.Forms.Button();
+            this.updatebtn = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvcortos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -47,6 +48,7 @@
             // 
             // Agregarbtn
             // 
+            this.Agregarbtn.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Agregarbtn.Location = new System.Drawing.Point(47, 56);
             this.Agregarbtn.Name = "Agregarbtn";
             this.Agregarbtn.Size = new System.Drawing.Size(75, 23);
@@ -55,11 +57,23 @@
             this.Agregarbtn.UseVisualStyleBackColor = true;
             this.Agregarbtn.Click += new System.EventHandler(this.Agregarbtn_Click);
             // 
+            // updatebtn
+            // 
+            this.updatebtn.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updatebtn.Location = new System.Drawing.Point(47, 139);
+            this.updatebtn.Name = "updatebtn";
+            this.updatebtn.Size = new System.Drawing.Size(75, 23);
+            this.updatebtn.TabIndex = 2;
+            this.updatebtn.Text = "Actualizar";
+            this.updatebtn.UseVisualStyleBackColor = true;
+            this.updatebtn.Click += new System.EventHandler(this.updatebtn_Click);
+            // 
             // CortosForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(894, 411);
+            this.Controls.Add(this.updatebtn);
             this.Controls.Add(this.Agregarbtn);
             this.Controls.Add(this.dgvcortos);
             this.Name = "CortosForm";
@@ -74,5 +88,6 @@
 
         private System.Windows.Forms.DataGridView dgvcortos;
         private System.Windows.Forms.Button Agregarbtn;
+        private System.Windows.Forms.Button updatebtn;
     }
 }

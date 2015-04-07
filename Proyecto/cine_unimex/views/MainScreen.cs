@@ -184,6 +184,14 @@ namespace unimex.lenguajesv.cine.views
             frmReporte.Show();
         }
 
+        private void boletosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PuntodeVentaForm formaPV = new PuntodeVentaForm();         
+            formaPV.MdiParent = this;
+            formaPV.StartPosition = FormStartPosition.CenterScreen;
+            formaPV.Show();
+        }
+
         
     }
 }
