@@ -90,5 +90,51 @@ namespace unimex.lenguajesv.cine.DAO
             comando.ExecuteNonQuery();
             con.Close();
         }
-    }
+
+        public DataTable cargaBusquedaPrecio(PreciosDTO busdtopre)
+        {
+            String SQL_Buscar_Precio = "select cat_precios.id_precio AS Id , cat_precios.nombre AS Boleto, cat_precios.descripcion AS Descripción, cat_precios.precio AS Precio from cat_precios where cat_precios.id_precio = " + busdtopre.id_Precios;
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            using (SqlDataAdapter adapter1 = new SqlDataAdapter(SQL_Buscar_Precio, con))
+            {
+
+                DataTable tblpbus = new DataTable();
+                adapter1.Fill(tblpbus);
+                con.Close();
+                return tblpbus;
+            }
+        }
+        public DataTable Loadz()
+        {
+            String SQL_Busc_nombre = "select id_tipo_producto, nombre from cat_producto";
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            using (SqlDataAdapter adapter = new SqlDataAdapter(SQL_Busc_nombre, con))
+            {
+
+                DataTable tbl = new DataTable();
+                adapter.Fill(tbl);
+                con.Close();
+                return tbl;
+            }
+        }
+        public DataTable LoadPrecProducto()
+        {
+            String SQL_Busc_nombre = "select id_tipo_producto, precio from cat_productos";
+            SqlConnection con = new SqlConnection();
+            con.ConnectionString = Cadena;
+            con.Open();
+            using (SqlDataAdapter adapter = new SqlDataAdapter(SQL_Busc_nombre, con))
+            {
+
+                DataTable tbl = new DataTable();
+                adapter.Fill(tbl);
+                con.Close();
+                return tbl;
+            }
+        }
+ }
 }
