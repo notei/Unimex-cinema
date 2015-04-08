@@ -21,13 +21,13 @@ namespace unimex.lenguajesv.cine.views
 
         private void NacionalidadesForm_Load(object sender, EventArgs e)
         {
-            consutaNacinalidades();
+            consultaNacionalidades();
             ConsultaBuscar();
             cmbNacionalida.Enabled = false;
             cmbNacionalida.DataSource = null;
 
         }
-        public void consutaNacinalidades()
+        public void consultaNacionalidades()
         {
             NacionalidadesDAO daoNacionalidad = new NacionalidadesDAO();
             DataTable dtn = daoNacionalidad.loadNacionalidades();
@@ -73,7 +73,7 @@ namespace unimex.lenguajesv.cine.views
         {
             NewNacionalidades formanac = new NewNacionalidades();
             formanac.ShowDialog();
-            consutaNacinalidades();
+            consultaNacionalidades();
             /* Por favor agrega un evento para que al cerrar el formulario automaticamente
              * actualize el dataGridView sin necesidad de volverlo a abrir. atte Alex. */
 
@@ -94,7 +94,7 @@ namespace unimex.lenguajesv.cine.views
             int id = Int32.Parse(valor);
             NewNacionalidades formup = new NewNacionalidades (id);
             formup.ShowDialog();
-            consutaNacinalidades();
+            consultaNacionalidades();
 
         }
 
@@ -118,7 +118,7 @@ namespace unimex.lenguajesv.cine.views
                 {
                     MessageBox.Show("" + ex);
                 }
-                consutaNacinalidades();
+                consultaNacionalidades();
             }
             else 
             { 
@@ -137,7 +137,7 @@ namespace unimex.lenguajesv.cine.views
             {
                 cmbNacionalida.Enabled = false;
                 cmbNacionalida.DataSource = null;
-                consutaNacinalidades();
+                consultaNacionalidades();
             }
         }
 
