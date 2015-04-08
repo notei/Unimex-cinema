@@ -125,6 +125,7 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "NewNacionalidades";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Agregar Nacionalidades";
             this.Load += new System.EventHandler(this.NewNacionalidades_Load);
             this.ResumeLayout(false);

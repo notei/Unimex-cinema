@@ -19,7 +19,7 @@ namespace unimex.lenguajesv.cine.views
 
         private void EstrenosdelaSemana_Load(object sender, EventArgs e)
         {
-            EstrenosdelaSemana();
+            EstrenosdelaSemana2();
             dgvLoad.DefaultCellStyle.BackColor = Color.LightGray;
             dgvLoad.AlternatingRowsDefaultCellStyle.BackColor = Color.LightYellow;
 
@@ -41,7 +41,7 @@ namespace unimex.lenguajesv.cine.views
                 return tbl;
             }
         }
-        public void EstrenosdelaSemana()
+        public void EstrenosdelaSemana2()
         {
             try
             {
