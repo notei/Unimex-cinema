@@ -35,9 +35,9 @@
             this.btnCancelar = new System.Windows.Forms.Button();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.txtpelicula = new System.Windows.Forms.ComboBox();
+            this.cmbpelicula = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.txtfecha = new System.Windows.Forms.ComboBox();
+            this.Horario = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label2
@@ -69,7 +69,7 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(33, 311);
+            this.btnCancelar.Location = new System.Drawing.Point(33, 296);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(87, 28);
@@ -80,7 +80,7 @@
             // 
             // btnAgregar
             // 
-            this.btnAgregar.Location = new System.Drawing.Point(184, 311);
+            this.btnAgregar.Location = new System.Drawing.Point(189, 296);
             this.btnAgregar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAgregar.Name = "btnAgregar";
             this.btnAgregar.Size = new System.Drawing.Size(87, 28);
@@ -98,16 +98,17 @@
             this.checkBox1.Size = new System.Drawing.Size(15, 14);
             this.checkBox1.TabIndex = 12;
             this.checkBox1.UseVisualStyleBackColor = true;
+            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // txtpelicula
+            // cmbpelicula
             // 
-            this.txtpelicula.FormattingEnabled = true;
-            this.txtpelicula.Location = new System.Drawing.Point(155, 108);
-            this.txtpelicula.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.txtpelicula.Name = "txtpelicula";
-            this.txtpelicula.Size = new System.Drawing.Size(143, 24);
-            this.txtpelicula.TabIndex = 13;
-            this.txtpelicula.SelectedIndexChanged += new System.EventHandler(this.txtpelicula_SelectedIndexChanged);
+            this.cmbpelicula.FormattingEnabled = true;
+            this.cmbpelicula.Location = new System.Drawing.Point(123, 108);
+            this.cmbpelicula.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.cmbpelicula.Name = "cmbpelicula";
+            this.cmbpelicula.Size = new System.Drawing.Size(143, 24);
+            this.cmbpelicula.TabIndex = 13;
+            this.cmbpelicula.SelectedIndexChanged += new System.EventHandler(this.txtpelicula_SelectedIndexChanged);
             // 
             // label1
             // 
@@ -119,22 +120,21 @@
             this.label1.TabIndex = 14;
             this.label1.Text = "Agregar Estrenos";
             // 
-            // txtfecha
+            // Horario
             // 
-            this.txtfecha.FormattingEnabled = true;
-            this.txtfecha.Location = new System.Drawing.Point(155, 170);
-            this.txtfecha.Name = "txtfecha";
-            this.txtfecha.Size = new System.Drawing.Size(143, 24);
-            this.txtfecha.TabIndex = 15;
+            this.Horario.Location = new System.Drawing.Point(123, 174);
+            this.Horario.Name = "Horario";
+            this.Horario.Size = new System.Drawing.Size(200, 21);
+            this.Horario.TabIndex = 15;
             // 
             // peliculas_estrenosfrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(335, 360);
-            this.Controls.Add(this.txtfecha);
+            this.ClientSize = new System.Drawing.Size(335, 339);
+            this.Controls.Add(this.Horario);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.txtpelicula);
+            this.Controls.Add(this.cmbpelicula);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.btnCancelar);
@@ -146,7 +146,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "peliculas_estrenosfrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "peliculas_estrenosfrm";
+            this.Text = "Estrenos";
             this.Load += new System.EventHandler(this.peliculas_estrenosfrm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -161,8 +161,8 @@
         private System.Windows.Forms.Button btnCancelar;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.ComboBox txtpelicula;
+        private System.Windows.Forms.ComboBox cmbpelicula;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox txtfecha;
+        private System.Windows.Forms.DateTimePicker Horario;
     }
 }
