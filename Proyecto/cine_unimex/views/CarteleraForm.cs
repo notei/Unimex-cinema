@@ -26,17 +26,7 @@ namespace unimex.lenguajesv.cine.views
             CarteleraDAO daocartelera = new CarteleraDAO();
             DataTable dtp = daocartelera.consultaCartelera();
             dgvCartelera.DataSource = dtp;
-            dgvCartelera.Columns[0].Visible = false;
             
-        }
-
-        private void btnDetallesCar_Click(object sender, EventArgs e)
-        {
-            int fil = dgvCartelera.CurrentCell.RowIndex;
-            String valor = dgvCartelera.Rows[fil].Cells[0].Value.ToString();
-            int id = Int32.Parse(valor);
-            DetallesCarteleraForm formaCarteleraProy = new DetallesCarteleraForm(id);
-            formaCarteleraProy.ShowDialog();
         }
     }
 }

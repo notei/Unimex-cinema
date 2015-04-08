@@ -13,16 +13,12 @@ namespace unimex.lenguajesv.cine.views
 {
     public partial class ProyeccionesForm : Form
     {
-        private int id;
+        
         public ProyeccionesForm()
         {
             InitializeComponent();
         }
-        public ProyeccionesForm(int id)
-        {
-            InitializeComponent();
-            this.id = id;
-        }
+
         private void ProyeccionesForm_Load(object sender, EventArgs e)
         {
             
