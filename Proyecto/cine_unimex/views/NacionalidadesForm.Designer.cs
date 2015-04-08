@@ -47,20 +47,20 @@
             this.dgvNacionalidades.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvNacionalidades.BackgroundColor = System.Drawing.Color.Silver;
             this.dgvNacionalidades.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvNacionalidades.Location = new System.Drawing.Point(157, 54);
+            this.dgvNacionalidades.Location = new System.Drawing.Point(145, 96);
             this.dgvNacionalidades.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvNacionalidades.Name = "dgvNacionalidades";
-            this.dgvNacionalidades.Size = new System.Drawing.Size(458, 290);
+            this.dgvNacionalidades.Size = new System.Drawing.Size(509, 312);
             this.dgvNacionalidades.TabIndex = 0;
             this.dgvNacionalidades.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvNacionalidades_CellContentClick);
             // 
             // btnAgregarNac
             // 
             this.btnAgregarNac.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarNac.Location = new System.Drawing.Point(13, 78);
+            this.btnAgregarNac.Location = new System.Drawing.Point(25, 134);
             this.btnAgregarNac.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAgregarNac.Name = "btnAgregarNac";
-            this.btnAgregarNac.Size = new System.Drawing.Size(87, 28);
+            this.btnAgregarNac.Size = new System.Drawing.Size(87, 61);
             this.btnAgregarNac.TabIndex = 1;
             this.btnAgregarNac.Text = "Agregar";
             this.btnAgregarNac.UseVisualStyleBackColor = true;
@@ -68,10 +68,10 @@
             // 
             // btnActualizarNa
             // 
-            this.btnActualizarNa.Location = new System.Drawing.Point(13, 130);
+            this.btnActualizarNa.Location = new System.Drawing.Point(25, 214);
             this.btnActualizarNa.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnActualizarNa.Name = "btnActualizarNa";
-            this.btnActualizarNa.Size = new System.Drawing.Size(87, 28);
+            this.btnActualizarNa.Size = new System.Drawing.Size(87, 61);
             this.btnActualizarNa.TabIndex = 2;
             this.btnActualizarNa.Text = "Actualizar";
             this.btnActualizarNa.UseVisualStyleBackColor = true;
@@ -79,10 +79,10 @@
             // 
             // btnBorrar
             // 
-            this.btnBorrar.Location = new System.Drawing.Point(12, 179);
+            this.btnBorrar.Location = new System.Drawing.Point(25, 301);
             this.btnBorrar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBorrar.Name = "btnBorrar";
-            this.btnBorrar.Size = new System.Drawing.Size(87, 28);
+            this.btnBorrar.Size = new System.Drawing.Size(87, 61);
             this.btnBorrar.TabIndex = 3;
             this.btnBorrar.Text = "Borrar";
             this.btnBorrar.UseVisualStyleBackColor = true;
@@ -101,7 +101,7 @@
             // chkNacionalidadBus
             // 
             this.chkNacionalidadBus.AutoSize = true;
-            this.chkNacionalidadBus.Location = new System.Drawing.Point(13, 228);
+            this.chkNacionalidadBus.Location = new System.Drawing.Point(425, 67);
             this.chkNacionalidadBus.Name = "chkNacionalidadBus";
             this.chkNacionalidadBus.Size = new System.Drawing.Size(102, 20);
             this.chkNacionalidadBus.TabIndex = 5;
@@ -112,7 +112,7 @@
             // cmbNacionalida
             // 
             this.cmbNacionalida.FormattingEnabled = true;
-            this.cmbNacionalida.Location = new System.Drawing.Point(12, 255);
+            this.cmbNacionalida.Location = new System.Drawing.Point(533, 65);
             this.cmbNacionalida.Name = "cmbNacionalida";
             this.cmbNacionalida.Size = new System.Drawing.Size(121, 24);
             this.cmbNacionalida.TabIndex = 6;
@@ -122,7 +122,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(647, 399);
+            this.ClientSize = new System.Drawing.Size(666, 421);
             this.Controls.Add(this.cmbNacionalida);
             this.Controls.Add(this.chkNacionalidadBus);
             this.Controls.Add(this.label1);

@@ -41,7 +41,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(50, 69);
+            this.label1.Location = new System.Drawing.Point(15, 81);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(86, 16);
             this.label1.TabIndex = 0;
@@ -50,7 +50,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(50, 107);
+            this.label2.Location = new System.Drawing.Point(15, 121);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(68, 16);
             this.label2.TabIndex = 1;
@@ -59,7 +59,7 @@
             // 
             // txtNewNacionalidad
             // 
-            this.txtNewNacionalidad.Location = new System.Drawing.Point(142, 69);
+            this.txtNewNacionalidad.Location = new System.Drawing.Point(107, 81);
             this.txtNewNacionalidad.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtNewNacionalidad.Name = "txtNewNacionalidad";
             this.txtNewNacionalidad.Size = new System.Drawing.Size(116, 21);
@@ -69,7 +69,7 @@
             // chkHabilitado
             // 
             this.chkHabilitado.AutoSize = true;
-            this.chkHabilitado.Location = new System.Drawing.Point(142, 109);
+            this.chkHabilitado.Location = new System.Drawing.Point(107, 121);
             this.chkHabilitado.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.chkHabilitado.Name = "chkHabilitado";
             this.chkHabilitado.Size = new System.Drawing.Size(15, 14);
@@ -79,10 +79,10 @@
             // 
             // btnAceptar
             // 
-            this.btnAceptar.Location = new System.Drawing.Point(49, 163);
+            this.btnAceptar.Location = new System.Drawing.Point(12, 154);
             this.btnAceptar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAceptar.Name = "btnAceptar";
-            this.btnAceptar.Size = new System.Drawing.Size(87, 28);
+            this.btnAceptar.Size = new System.Drawing.Size(87, 53);
             this.btnAceptar.TabIndex = 4;
             this.btnAceptar.Text = "Aceptar";
             this.btnAceptar.UseVisualStyleBackColor = true;
@@ -90,10 +90,10 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.Location = new System.Drawing.Point(191, 163);
+            this.btnCancelar.Location = new System.Drawing.Point(136, 154);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(87, 28);
+            this.btnCancelar.Size = new System.Drawing.Size(87, 53);
             this.btnCancelar.TabIndex = 5;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = true;
@@ -103,17 +103,17 @@
             // 
             this.lblTexto.AutoSize = true;
             this.lblTexto.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTexto.Location = new System.Drawing.Point(43, 12);
+            this.lblTexto.Location = new System.Drawing.Point(12, 9);
             this.lblTexto.Name = "lblTexto";
-            this.lblTexto.Size = new System.Drawing.Size(310, 32);
+            this.lblTexto.Size = new System.Drawing.Size(193, 64);
             this.lblTexto.TabIndex = 6;
-            this.lblTexto.Text = "Agregar Nacionalidad";
+            this.lblTexto.Text = "Agregar\r\nNacionalidad";
             // 
             // NewNacionalidades
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 246);
+            this.ClientSize = new System.Drawing.Size(241, 225);
             this.Controls.Add(this.lblTexto);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
