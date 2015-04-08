@@ -134,6 +134,12 @@
     <Compile Include="views\DetallesCarteleraForm.Designer.cs">
       <DependentUpon>DetallesCarteleraForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\EstrenosdelaSemana.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\EstrenosdelaSemana.Designer.cs">
+      <DependentUpon>EstrenosdelaSemana.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\Form2.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -385,6 +391,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\DetallesCarteleraForm.resx">
       <DependentUpon>DetallesCarteleraForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\EstrenosdelaSemana.resx">
+      <DependentUpon>EstrenosdelaSemana.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
