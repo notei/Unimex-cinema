@@ -258,6 +258,14 @@ namespace unimex.lenguajesv.cine.views
             formacomple.Show();
         }
 
+        private void estrenosDeLaSemanaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EstrenosdelaSemana frmProy = new EstrenosdelaSemana();
+            frmProy.MdiParent = this;
+            frmProy.StartPosition = FormStartPosition.CenterScreen;
+            frmProy.Show();
+        }
+
         
     }
 }

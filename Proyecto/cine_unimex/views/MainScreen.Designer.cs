@@ -49,6 +49,7 @@
             this.salasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.complejosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productosCombosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionalidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.carteleraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estrenosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -71,7 +72,7 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.productosCombosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.estrenosDeLaSemanaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -84,7 +85,8 @@
             this.reportesToolStripMenuItem,
             this.ventasToolStripMenuItem,
             this.ventanaToolStripMenuItem,
-            this.toolStripMenuItem1});
+            this.toolStripMenuItem1,
+            this.estrenosDeLaSemanaToolStripMenuItem});
             this.menuBar.Location = new System.Drawing.Point(0, 0);
             this.menuBar.Name = "menuBar";
             this.menuBar.Padding = new System.Windows.Forms.Padding(2, 1, 0, 1);
@@ -242,6 +244,13 @@
             this.complejosToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.complejosToolStripMenuItem.Text = "Complejos";
             this.complejosToolStripMenuItem.Click += new System.EventHandler(this.complejosToolStripMenuItem_Click);
+            // 
+            // productosCombosToolStripMenuItem
+            // 
+            this.productosCombosToolStripMenuItem.Name = "productosCombosToolStripMenuItem";
+            this.productosCombosToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.productosCombosToolStripMenuItem.Text = "Productos Combos";
+            this.productosCombosToolStripMenuItem.Click += new System.EventHandler(this.productosCombosToolStripMenuItem_Click);
             // 
             // funcionalidadesToolStripMenuItem
             // 
@@ -411,12 +420,12 @@
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // productosCombosToolStripMenuItem
+            // estrenosDeLaSemanaToolStripMenuItem
             // 
-            this.productosCombosToolStripMenuItem.Name = "productosCombosToolStripMenuItem";
-            this.productosCombosToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.productosCombosToolStripMenuItem.Text = "Productos Combos";
-            this.productosCombosToolStripMenuItem.Click += new System.EventHandler(this.productosCombosToolStripMenuItem_Click);
+            this.estrenosDeLaSemanaToolStripMenuItem.Name = "estrenosDeLaSemanaToolStripMenuItem";
+            this.estrenosDeLaSemanaToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
+            this.estrenosDeLaSemanaToolStripMenuItem.Text = "Estrenos de la Semana";
+            this.estrenosDeLaSemanaToolStripMenuItem.Click += new System.EventHandler(this.estrenosDeLaSemanaToolStripMenuItem_Click);
             // 
             // MainScreen
             // 
@@ -487,6 +496,7 @@
         private System.Windows.Forms.ToolStripMenuItem cerrarTodasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem complejosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem productosCombosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem estrenosDeLaSemanaToolStripMenuItem;
     }
 }
 
