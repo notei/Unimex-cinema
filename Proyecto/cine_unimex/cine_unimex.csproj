@@ -103,6 +103,7 @@
     <Compile Include="DTO\ProyeccionesDTO.cs" />
     <Compile Include="DTO\PuntodeVentaBoletosDTO.cs" />
     <Compile Include="DTO\PuntodeVentaDulceriaDTO.cs" />
+    <Compile Include="DTO\ReportesDTO.cs" />
     <Compile Include="DTO\SalasDTO.cs" />
     <Compile Include="DTO\TipoProyeccionDTO.cs" />
     <Compile Include="DTO\TipoSonidoDTO.cs" />
@@ -110,6 +111,7 @@
     <Compile Include="DAO\NacionalidadesDAO.cs" />
     <Compile Include="DTO\UsuariosDTO.cs" />
     <Compile Include="DTO\NacionalidadesActoresDTO.cs" />
+    <Compile Include="DTO\VentaProyecciones.cs" />
     <Compile Include="views\CarteleraForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -389,6 +391,9 @@
     <EmbeddedResource Include="views\ClientesFrecuentesForm.resx">
       <DependentUpon>ClientesFrecuentesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\ComplejoForm.resx">
+      <DependentUpon>ComplejoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\DetallesCarteleraForm.resx">
       <DependentUpon>DetallesCarteleraForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -400,6 +405,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\NewClientesFrecuentes.resx">
       <DependentUpon>NewClientesFrecuentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\NewComplejo.resx">
+      <DependentUpon>NewComplejo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\NewPrecios.resx">
       <DependentUpon>NewPrecios.cs</DependentUpon>

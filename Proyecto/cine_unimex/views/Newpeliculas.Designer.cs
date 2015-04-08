@@ -47,102 +47,114 @@
             this.cmbidClasificacionNew = new System.Windows.Forms.ComboBox();
             this.cmbNacioPeliNew = new System.Windows.Forms.ComboBox();
             this.cmbPelicGenero = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // texpeli
             // 
-            this.texpeli.Location = new System.Drawing.Point(247, 53);
+            this.texpeli.Location = new System.Drawing.Point(206, 60);
             this.texpeli.Name = "texpeli";
-            this.texpeli.Size = new System.Drawing.Size(100, 20);
+            this.texpeli.Size = new System.Drawing.Size(122, 20);
             this.texpeli.TabIndex = 2;
             // 
             // texduracion
             // 
-            this.texduracion.Location = new System.Drawing.Point(247, 79);
+            this.texduracion.Location = new System.Drawing.Point(207, 118);
             this.texduracion.Name = "texduracion";
-            this.texduracion.Size = new System.Drawing.Size(100, 20);
+            this.texduracion.Size = new System.Drawing.Size(120, 20);
             this.texduracion.TabIndex = 3;
             // 
             // texsinopsis
             // 
-            this.texsinopsis.Location = new System.Drawing.Point(247, 108);
+            this.texsinopsis.Location = new System.Drawing.Point(207, 151);
             this.texsinopsis.Name = "texsinopsis";
-            this.texsinopsis.Size = new System.Drawing.Size(100, 20);
+            this.texsinopsis.Size = new System.Drawing.Size(120, 20);
             this.texsinopsis.TabIndex = 4;
             // 
             // texidioma
             // 
-            this.texidioma.Location = new System.Drawing.Point(247, 136);
+            this.texidioma.Location = new System.Drawing.Point(206, 178);
             this.texidioma.Name = "texidioma";
-            this.texidioma.Size = new System.Drawing.Size(100, 20);
+            this.texidioma.Size = new System.Drawing.Size(122, 20);
             this.texidioma.TabIndex = 5;
             // 
             // texsonido
             // 
-            this.texsonido.Location = new System.Drawing.Point(247, 162);
+            this.texsonido.Location = new System.Drawing.Point(206, 206);
             this.texsonido.Name = "texsonido";
-            this.texsonido.Size = new System.Drawing.Size(100, 20);
+            this.texsonido.Size = new System.Drawing.Size(121, 20);
             this.texsonido.TabIndex = 6;
             // 
             // peli
             // 
             this.peli.AutoSize = true;
-            this.peli.Location = new System.Drawing.Point(184, 56);
+            this.peli.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.peli.Location = new System.Drawing.Point(143, 63);
+            this.peli.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.peli.Name = "peli";
-            this.peli.Size = new System.Drawing.Size(44, 13);
-            this.peli.TabIndex = 8;
+            this.peli.Size = new System.Drawing.Size(50, 16);
+            this.peli.TabIndex = 9;
             this.peli.Text = "Pelicula";
             // 
             // labeldura
             // 
             this.labeldura.AutoSize = true;
-            this.labeldura.Location = new System.Drawing.Point(180, 86);
+            this.labeldura.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labeldura.Location = new System.Drawing.Point(136, 120);
+            this.labeldura.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.labeldura.Name = "labeldura";
-            this.labeldura.Size = new System.Drawing.Size(50, 13);
+            this.labeldura.Size = new System.Drawing.Size(57, 16);
             this.labeldura.TabIndex = 9;
             this.labeldura.Text = "Duracion";
             // 
             // labelsinop
             // 
             this.labelsinop.AutoSize = true;
-            this.labelsinop.Location = new System.Drawing.Point(184, 115);
+            this.labelsinop.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelsinop.Location = new System.Drawing.Point(143, 155);
             this.labelsinop.Name = "labelsinop";
-            this.labelsinop.Size = new System.Drawing.Size(46, 13);
+            this.labelsinop.Size = new System.Drawing.Size(48, 16);
             this.labelsinop.TabIndex = 10;
             this.labelsinop.Text = "Sinopsis";
             // 
             // labelidioma
             // 
             this.labelidioma.AutoSize = true;
-            this.labelidioma.Location = new System.Drawing.Point(184, 143);
+            this.labelidioma.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelidioma.Location = new System.Drawing.Point(143, 183);
             this.labelidioma.Name = "labelidioma";
-            this.labelidioma.Size = new System.Drawing.Size(38, 13);
+            this.labelidioma.Size = new System.Drawing.Size(46, 16);
             this.labelidioma.TabIndex = 11;
             this.labelidioma.Text = "Idioma";
             // 
             // labelsonido
             // 
             this.labelsonido.AutoSize = true;
-            this.labelsonido.Location = new System.Drawing.Point(184, 169);
+            this.labelsonido.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelsonido.Location = new System.Drawing.Point(143, 209);
             this.labelsonido.Name = "labelsonido";
-            this.labelsonido.Size = new System.Drawing.Size(40, 13);
+            this.labelsonido.Size = new System.Drawing.Size(45, 16);
             this.labelsonido.TabIndex = 12;
             this.labelsonido.Text = "Sonido";
             // 
             // labelestreno
             // 
             this.labelestreno.AutoSize = true;
-            this.labelestreno.Location = new System.Drawing.Point(185, 196);
+            this.labelestreno.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelestreno.Location = new System.Drawing.Point(152, 299);
             this.labelestreno.Name = "labelestreno";
-            this.labelestreno.Size = new System.Drawing.Size(74, 13);
+            this.labelestreno.Size = new System.Drawing.Size(77, 16);
             this.labelestreno.TabIndex = 13;
             this.labelestreno.Text = "Estreno Si/No";
             // 
             // btacept
             // 
-            this.btacept.Location = new System.Drawing.Point(91, 264);
+            this.btacept.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btacept.Location = new System.Drawing.Point(273, 340);
             this.btacept.Name = "btacept";
-            this.btacept.Size = new System.Drawing.Size(75, 23);
+            this.btacept.Size = new System.Drawing.Size(82, 47);
             this.btacept.TabIndex = 14;
             this.btacept.Text = "Aceptar";
             this.btacept.UseVisualStyleBackColor = true;
@@ -150,9 +162,10 @@
             // 
             // btcancel
             // 
-            this.btcancel.Location = new System.Drawing.Point(246, 264);
+            this.btcancel.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btcancel.Location = new System.Drawing.Point(117, 340);
             this.btcancel.Name = "btcancel";
-            this.btcancel.Size = new System.Drawing.Size(75, 23);
+            this.btcancel.Size = new System.Drawing.Size(82, 47);
             this.btcancel.TabIndex = 15;
             this.btcancel.Text = "Cancelar";
             this.btcancel.UseVisualStyleBackColor = true;
@@ -162,7 +175,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(127, 9);
+            this.label5.Location = new System.Drawing.Point(149, 9);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(145, 32);
@@ -172,7 +185,7 @@
             // chec
             // 
             this.chec.AutoSize = true;
-            this.chec.Location = new System.Drawing.Point(283, 195);
+            this.chec.Location = new System.Drawing.Point(250, 298);
             this.chec.Name = "chec";
             this.chec.Size = new System.Drawing.Size(15, 14);
             this.chec.TabIndex = 17;
@@ -181,7 +194,7 @@
             // cmbidClasificacionNew
             // 
             this.cmbidClasificacionNew.FormattingEnabled = true;
-            this.cmbidClasificacionNew.Location = new System.Drawing.Point(24, 66);
+            this.cmbidClasificacionNew.Location = new System.Drawing.Point(207, 86);
             this.cmbidClasificacionNew.Name = "cmbidClasificacionNew";
             this.cmbidClasificacionNew.Size = new System.Drawing.Size(121, 21);
             this.cmbidClasificacionNew.TabIndex = 18;
@@ -189,7 +202,7 @@
             // cmbNacioPeliNew
             // 
             this.cmbNacioPeliNew.FormattingEnabled = true;
-            this.cmbNacioPeliNew.Location = new System.Drawing.Point(24, 108);
+            this.cmbNacioPeliNew.Location = new System.Drawing.Point(206, 237);
             this.cmbNacioPeliNew.Name = "cmbNacioPeliNew";
             this.cmbNacioPeliNew.Size = new System.Drawing.Size(121, 21);
             this.cmbNacioPeliNew.TabIndex = 19;
@@ -197,16 +210,49 @@
             // cmbPelicGenero
             // 
             this.cmbPelicGenero.FormattingEnabled = true;
-            this.cmbPelicGenero.Location = new System.Drawing.Point(24, 143);
+            this.cmbPelicGenero.Location = new System.Drawing.Point(206, 271);
             this.cmbPelicGenero.Name = "cmbPelicGenero";
             this.cmbPelicGenero.Size = new System.Drawing.Size(121, 21);
             this.cmbPelicGenero.TabIndex = 20;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(114, 91);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(92, 16);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "id_Clasificacion";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(97, 242);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(99, 16);
+            this.label2.TabIndex = 22;
+            this.label2.Text = "id_Nacionalidad";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(126, 276);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(65, 16);
+            this.label3.TabIndex = 23;
+            this.label3.Text = "id_Genero";
             // 
             // Newpeliculas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(393, 299);
+            this.ClientSize = new System.Drawing.Size(444, 399);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.cmbPelicGenero);
             this.Controls.Add(this.cmbNacioPeliNew);
             this.Controls.Add(this.cmbidClasificacionNew);
@@ -254,5 +300,8 @@
         private System.Windows.Forms.ComboBox cmbidClasificacionNew;
         private System.Windows.Forms.ComboBox cmbNacioPeliNew;
         private System.Windows.Forms.ComboBox cmbPelicGenero;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
     }
 }
