@@ -33,7 +33,7 @@ namespace unimex.lenguajesv.cine.DAO
         }
         public void insertaestrenos(peliculas_estrenosDTO p)
         {
-            String sql = "INSERT INTO películas_estrenos(id_estrenos,id_peliculas,fecha_estreno,habilitado) value('" + p.Id_estreno + "," + p.Pelicula + "," + p.Fecha_estreno + "," + p.Habilitado + ")";
+            String sql = "INSERT INTO peliculas_estrenos(id_estrenos,id_peliculas,fecha_estreno,habilitado) value('" + p.Id_estreno + "," + p.Pelicula + "," + p.Fecha_estreno + "," + p.Habilitado + ")";
 
 
             SqlConnection conx = null;

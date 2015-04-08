@@ -186,7 +186,7 @@ namespace unimex.lenguajesv.cine.views
 
         private void boletosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            PuntodeVentaForm formaPV = new PuntodeVentaForm();         
+            PuntodeVentaElegirComplejo formaPV = new PuntodeVentaElegirComplejo();         
             formaPV.MdiParent = this;
             formaPV.StartPosition = FormStartPosition.CenterScreen;
             formaPV.Show();
@@ -215,6 +215,55 @@ namespace unimex.lenguajesv.cine.views
         private void cascadaToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.LayoutMdi(System.Windows.Forms.MdiLayout.Cascade);
+        }
+
+
+        private void cerrarTodasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form frm in this.MdiChildren)
+            {
+                    frm.Dispose();
+            }
+        }
+
+        private void carteleraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CarteleraForm formaCartel = new CarteleraForm();
+            formaCartel.MdiParent = this;
+            formaCartel.StartPosition = FormStartPosition.CenterScreen;
+            formaCartel.Show();
+        }
+
+        private void corteDeCajaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 forma = new Form2();
+            forma.MdiParent = this;
+            forma.StartPosition = FormStartPosition.CenterScreen;
+            forma.Show();
+        }
+
+        private void complejosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ComplejoForm formacomple = new ComplejoForm();
+            formacomple.MdiParent = this;
+            formacomple.StartPosition = FormStartPosition.CenterScreen;
+            formacomple.Show();
+        }
+
+        private void productosCombosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProductosCombosForm formacomple = new ProductosCombosForm();
+            formacomple.MdiParent = this;
+            formacomple.StartPosition = FormStartPosition.CenterScreen;
+            formacomple.Show();
+        }
+
+        private void estrenosDeLaSemanaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            EstrenosdelaSemana frmProy = new EstrenosdelaSemana();
+            frmProy.MdiParent = this;
+            frmProy.StartPosition = FormStartPosition.CenterScreen;
+            frmProy.Show();
         }
 
         

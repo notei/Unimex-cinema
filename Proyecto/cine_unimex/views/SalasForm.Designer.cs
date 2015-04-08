@@ -28,11 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SalasForm));
             this.dataG = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
             this.btnact = new System.Windows.Forms.Button();
             this.combox1 = new System.Windows.Forms.ComboBox();
             this.Checksala = new System.Windows.Forms.CheckBox();
+            this.Salas = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataG)).BeginInit();
             this.SuspendLayout();
             // 
@@ -92,16 +94,28 @@
             this.Checksala.UseVisualStyleBackColor = true;
             this.Checksala.CheckedChanged += new System.EventHandler(this.Checksala_CheckedChanged);
             // 
+            // Salas
+            // 
+            this.Salas.AutoSize = true;
+            this.Salas.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Salas.Location = new System.Drawing.Point(398, 42);
+            this.Salas.Name = "Salas";
+            this.Salas.Size = new System.Drawing.Size(102, 40);
+            this.Salas.TabIndex = 5;
+            this.Salas.Text = "Salas";
+            // 
             // SalasForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(953, 629);
+            this.Controls.Add(this.Salas);
             this.Controls.Add(this.Checksala);
             this.Controls.Add(this.combox1);
             this.Controls.Add(this.btnact);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataG);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SalasForm";
             this.Text = "SalasForm";
             this.Load += new System.EventHandler(this.ComplejosForm_Load);
@@ -118,6 +132,7 @@
         private System.Windows.Forms.Button btnact;
         private System.Windows.Forms.ComboBox combox1;
         private System.Windows.Forms.CheckBox Checksala;
+        private System.Windows.Forms.Label Salas;
 
     }
 }

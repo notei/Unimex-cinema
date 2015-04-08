@@ -20,6 +20,8 @@ namespace unimex.lenguajesv.cine.views
 
         private void TipoProyeccionForm_Load(object sender, EventArgs e)
         {
+            dtgTipoProyeccion.DefaultCellStyle.BackColor = Color.LightGray;
+            dtgTipoProyeccion.AlternatingRowsDefaultCellStyle.BackColor = Color.LightYellow;
             consultaDGVTipoProyecciones();
             consultaBuscarTipoProyeccion();
             cbxBuscarTP.Enabled = false;
@@ -97,8 +99,8 @@ namespace unimex.lenguajesv.cine.views
 
                 try
                 {
-                    TipoProyeccionDAO daoprecio1 = new TipoProyeccionDAO();
-                    daoprecio1.deleteTPDTO(pdtoup);
+                    TipoProyeccionDAO daotproyeccion = new TipoProyeccionDAO();
+                    daotproyeccion.deleteTPDTO(pdtoup);
                 }
                 catch (Exception ex)
                 {
