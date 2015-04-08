@@ -20,6 +20,8 @@ namespace unimex.lenguajesv.cine.views
 
         private void Peliculas_Load(object sender, EventArgs e)
         {
+            peliculasdgv.DefaultCellStyle.BackColor = Color.LightGray;
+           peliculasdgv.AlternatingRowsDefaultCellStyle.BackColor = Color.LightYellow;
             consultaPeliculas();
             consultaBuscarNombreCF();
             cmbNombreCF.Enabled = false;
