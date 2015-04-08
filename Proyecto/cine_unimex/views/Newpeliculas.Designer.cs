@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Newpeliculas));
             this.texpeli = new System.Windows.Forms.TextBox();
             this.texduracion = new System.Windows.Forms.TextBox();
             this.texsinopsis = new System.Windows.Forms.TextBox();
@@ -43,39 +44,42 @@
             this.btcancel = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.chec = new System.Windows.Forms.CheckBox();
+            this.cmbidClasificacionNew = new System.Windows.Forms.ComboBox();
+            this.cmbNacioPeliNew = new System.Windows.Forms.ComboBox();
+            this.cmbPelicGenero = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
             // 
             // texpeli
             // 
-            this.texpeli.Location = new System.Drawing.Point(192, 53);
+            this.texpeli.Location = new System.Drawing.Point(247, 53);
             this.texpeli.Name = "texpeli";
             this.texpeli.Size = new System.Drawing.Size(100, 20);
             this.texpeli.TabIndex = 2;
             // 
             // texduracion
             // 
-            this.texduracion.Location = new System.Drawing.Point(192, 79);
+            this.texduracion.Location = new System.Drawing.Point(247, 79);
             this.texduracion.Name = "texduracion";
             this.texduracion.Size = new System.Drawing.Size(100, 20);
             this.texduracion.TabIndex = 3;
             // 
             // texsinopsis
             // 
-            this.texsinopsis.Location = new System.Drawing.Point(192, 108);
+            this.texsinopsis.Location = new System.Drawing.Point(247, 108);
             this.texsinopsis.Name = "texsinopsis";
             this.texsinopsis.Size = new System.Drawing.Size(100, 20);
             this.texsinopsis.TabIndex = 4;
             // 
             // texidioma
             // 
-            this.texidioma.Location = new System.Drawing.Point(192, 136);
+            this.texidioma.Location = new System.Drawing.Point(247, 136);
             this.texidioma.Name = "texidioma";
             this.texidioma.Size = new System.Drawing.Size(100, 20);
             this.texidioma.TabIndex = 5;
             // 
             // texsonido
             // 
-            this.texsonido.Location = new System.Drawing.Point(192, 162);
+            this.texsonido.Location = new System.Drawing.Point(247, 162);
             this.texsonido.Name = "texsonido";
             this.texsonido.Size = new System.Drawing.Size(100, 20);
             this.texsonido.TabIndex = 6;
@@ -83,7 +87,7 @@
             // peli
             // 
             this.peli.AutoSize = true;
-            this.peli.Location = new System.Drawing.Point(129, 56);
+            this.peli.Location = new System.Drawing.Point(184, 56);
             this.peli.Name = "peli";
             this.peli.Size = new System.Drawing.Size(44, 13);
             this.peli.TabIndex = 8;
@@ -92,7 +96,7 @@
             // labeldura
             // 
             this.labeldura.AutoSize = true;
-            this.labeldura.Location = new System.Drawing.Point(125, 86);
+            this.labeldura.Location = new System.Drawing.Point(180, 86);
             this.labeldura.Name = "labeldura";
             this.labeldura.Size = new System.Drawing.Size(50, 13);
             this.labeldura.TabIndex = 9;
@@ -101,7 +105,7 @@
             // labelsinop
             // 
             this.labelsinop.AutoSize = true;
-            this.labelsinop.Location = new System.Drawing.Point(129, 115);
+            this.labelsinop.Location = new System.Drawing.Point(184, 115);
             this.labelsinop.Name = "labelsinop";
             this.labelsinop.Size = new System.Drawing.Size(46, 13);
             this.labelsinop.TabIndex = 10;
@@ -110,7 +114,7 @@
             // labelidioma
             // 
             this.labelidioma.AutoSize = true;
-            this.labelidioma.Location = new System.Drawing.Point(129, 143);
+            this.labelidioma.Location = new System.Drawing.Point(184, 143);
             this.labelidioma.Name = "labelidioma";
             this.labelidioma.Size = new System.Drawing.Size(38, 13);
             this.labelidioma.TabIndex = 11;
@@ -119,7 +123,7 @@
             // labelsonido
             // 
             this.labelsonido.AutoSize = true;
-            this.labelsonido.Location = new System.Drawing.Point(129, 169);
+            this.labelsonido.Location = new System.Drawing.Point(184, 169);
             this.labelsonido.Name = "labelsonido";
             this.labelsonido.Size = new System.Drawing.Size(40, 13);
             this.labelsonido.TabIndex = 12;
@@ -128,11 +132,11 @@
             // labelestreno
             // 
             this.labelestreno.AutoSize = true;
-            this.labelestreno.Location = new System.Drawing.Point(130, 196);
+            this.labelestreno.Location = new System.Drawing.Point(185, 196);
             this.labelestreno.Name = "labelestreno";
-            this.labelestreno.Size = new System.Drawing.Size(43, 13);
+            this.labelestreno.Size = new System.Drawing.Size(74, 13);
             this.labelestreno.TabIndex = 13;
-            this.labelestreno.Text = "Estreno";
+            this.labelestreno.Text = "Estreno Si/No";
             // 
             // btacept
             // 
@@ -168,19 +172,44 @@
             // chec
             // 
             this.chec.AutoSize = true;
-            this.chec.Location = new System.Drawing.Point(192, 196);
+            this.chec.Location = new System.Drawing.Point(283, 195);
             this.chec.Name = "chec";
-            this.chec.Size = new System.Drawing.Size(57, 17);
+            this.chec.Size = new System.Drawing.Size(15, 14);
             this.chec.TabIndex = 17;
-            this.chec.Text = "SI/NO";
             this.chec.UseVisualStyleBackColor = true;
-            this.chec.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            // 
+            // cmbidClasificacionNew
+            // 
+            this.cmbidClasificacionNew.FormattingEnabled = true;
+            this.cmbidClasificacionNew.Location = new System.Drawing.Point(24, 66);
+            this.cmbidClasificacionNew.Name = "cmbidClasificacionNew";
+            this.cmbidClasificacionNew.Size = new System.Drawing.Size(121, 21);
+            this.cmbidClasificacionNew.TabIndex = 18;
+            // 
+            // cmbNacioPeliNew
+            // 
+            this.cmbNacioPeliNew.FormattingEnabled = true;
+            this.cmbNacioPeliNew.Location = new System.Drawing.Point(24, 108);
+            this.cmbNacioPeliNew.Name = "cmbNacioPeliNew";
+            this.cmbNacioPeliNew.Size = new System.Drawing.Size(121, 21);
+            this.cmbNacioPeliNew.TabIndex = 19;
+            // 
+            // cmbPelicGenero
+            // 
+            this.cmbPelicGenero.FormattingEnabled = true;
+            this.cmbPelicGenero.Location = new System.Drawing.Point(24, 143);
+            this.cmbPelicGenero.Name = "cmbPelicGenero";
+            this.cmbPelicGenero.Size = new System.Drawing.Size(121, 21);
+            this.cmbPelicGenero.TabIndex = 20;
             // 
             // Newpeliculas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(393, 299);
+            this.Controls.Add(this.cmbPelicGenero);
+            this.Controls.Add(this.cmbNacioPeliNew);
+            this.Controls.Add(this.cmbidClasificacionNew);
             this.Controls.Add(this.chec);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btcancel);
@@ -196,6 +225,7 @@
             this.Controls.Add(this.texsinopsis);
             this.Controls.Add(this.texduracion);
             this.Controls.Add(this.texpeli);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Newpeliculas";
             this.Text = "Newpeliculas";
             this.Load += new System.EventHandler(this.Newpeliculas_Load);
@@ -221,5 +251,8 @@
         private System.Windows.Forms.Button btcancel;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.CheckBox chec;
+        private System.Windows.Forms.ComboBox cmbidClasificacionNew;
+        private System.Windows.Forms.ComboBox cmbNacioPeliNew;
+        private System.Windows.Forms.ComboBox cmbPelicGenero;
     }
 }

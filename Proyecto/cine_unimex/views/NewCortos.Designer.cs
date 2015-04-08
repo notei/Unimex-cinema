@@ -31,13 +31,13 @@
             this.idptxt = new System.Windows.Forms.TextBox();
             this.nombrectxt = new System.Windows.Forms.TextBox();
             this.duraciontxt = new System.Windows.Forms.TextBox();
-            this.htxt = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.aceptarbtn = new System.Windows.Forms.Button();
             this.cancelarbtn = new System.Windows.Forms.Button();
+            this.check = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // idptxt
@@ -61,17 +61,10 @@
             this.duraciontxt.Size = new System.Drawing.Size(166, 20);
             this.duraciontxt.TabIndex = 2;
             // 
-            // htxt
-            // 
-            this.htxt.Location = new System.Drawing.Point(113, 204);
-            this.htxt.Name = "htxt";
-            this.htxt.Size = new System.Drawing.Size(166, 20);
-            this.htxt.TabIndex = 3;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(29, 39);
+            this.label1.Location = new System.Drawing.Point(32, 39);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(62, 13);
             this.label1.TabIndex = 4;
@@ -124,18 +117,27 @@
             this.cancelarbtn.UseVisualStyleBackColor = true;
             this.cancelarbtn.Click += new System.EventHandler(this.cancelarbtn_Click);
             // 
+            // check
+            // 
+            this.check.AutoSize = true;
+            this.check.Location = new System.Drawing.Point(113, 206);
+            this.check.Name = "check";
+            this.check.Size = new System.Drawing.Size(15, 14);
+            this.check.TabIndex = 10;
+            this.check.UseVisualStyleBackColor = true;
+            // 
             // NewCortos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(416, 368);
+            this.Controls.Add(this.check);
             this.Controls.Add(this.cancelarbtn);
             this.Controls.Add(this.aceptarbtn);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.htxt);
             this.Controls.Add(this.duraciontxt);
             this.Controls.Add(this.nombrectxt);
             this.Controls.Add(this.idptxt);
@@ -151,7 +153,6 @@
 
         private System.Windows.Forms.TextBox idptxt;
         private System.Windows.Forms.TextBox duraciontxt;
-        private System.Windows.Forms.TextBox htxt;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
@@ -159,5 +160,6 @@
         private System.Windows.Forms.Button aceptarbtn;
         private System.Windows.Forms.Button cancelarbtn;
         public System.Windows.Forms.TextBox nombrectxt;
+        private System.Windows.Forms.CheckBox check;
     }
 }

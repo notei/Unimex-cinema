@@ -11,16 +11,16 @@ namespace unimex.lenguajesv.cine.DAO
 {
     class peliculas_estrenosDAO
     {
-        
+
         private String selectsql = "select peliculas_estrenos.id_estreno,peliculas_estrenos.fecha_estreno,peliculas.pelicula,peliculas_estrenos.habilitado from peliculas_estrenos  inner join peliculas on peliculas_estrenos.id_pelicula = peliculas.id_pelicula";
-        private String cadenacon = "Data Source=benny;Initial Catalog=unimex_cinema_db;Integrated Security=True";
+        private String Cadena = Properties.Resources.CADENA_CONEXION;
 
         public DataTable cargardatos()
         {
-            SqlConnection conx = null;
+            SqlConnection conx;
             conx = new SqlConnection();
 
-            conx.ConnectionString = cadenacon;
+            conx.ConnectionString = Cadena;
             conx.Open();
             using (SqlDataAdapter adaptador = new SqlDataAdapter(selectsql, conx))
             {
@@ -34,12 +34,12 @@ namespace unimex.lenguajesv.cine.DAO
         public void insertaestrenos(peliculas_estrenosDTO p)
         {
             String sql = "INSERT INTO películas_estrenos(id_estrenos,id_peliculas,fecha_estreno,habilitado) value('" + p.Id_estreno + "," + p.Pelicula + "," + p.Fecha_estreno + "," + p.Habilitado + ")";
-           
+
 
             SqlConnection conx = null;
             conx = new SqlConnection();
 
-            conx.ConnectionString = cadenacon;
+            conx.ConnectionString = Cadena;
             conx.Open();
             SqlCommand comando;
             comando = new SqlCommand(sql, conx);
@@ -47,12 +47,29 @@ namespace unimex.lenguajesv.cine.DAO
             conx.Close();
 
         }
-        public void modificar(peliculas_estrenosDTO q)
+        public DataTable busqueda(peliculas_estrenosDTO buscaDTO)
         {
-           
+            String busquedaPeliculas = "select peliculas_estrenos.id_estreno,peliculas_estrenos.fecha_estreno,peliculas.pelicula,peliculas_estrenos.habilitado from peliculas_estrenos  inner join peliculas on peliculas_estrenos.id_pelicula = " + buscaDTO.Pelicula;
+            SqlConnection conx = getConexion();
+            using (SqlDataAdapter adapter = new SqlDataAdapter(busquedaPeliculas, conx))
+            {
+
+                DataTable tbl = new DataTable();
+                adapter.Fill(tbl);
+                conx.Close();
+               return tbl;
+
+            }
+        
 
         }
+        private SqlConnection getConexion()
+        {
+            SqlConnection conx = new SqlConnection();
+            conx.ConnectionString = Cadena;
+            conx.Open();
+            return conx;
+        }
     }
-}
 
-   
+}

@@ -176,6 +176,47 @@ namespace unimex.lenguajesv.cine.views
             formaTP.Show();
         }
 
+        private void películasYComplejoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ReportePyCDAOForm frmReporte = new ReportePyCDAOForm();
+            frmReporte.MdiParent = this;
+            frmReporte.StartPosition = FormStartPosition.CenterScreen;
+            frmReporte.Show();
+        }
+
+        private void boletosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PuntodeVentaForm formaPV = new PuntodeVentaForm();         
+            formaPV.MdiParent = this;
+            formaPV.StartPosition = FormStartPosition.CenterScreen;
+            formaPV.Show();
+        }
+
+        private void dulceríaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PuntodeVentaDulceriaForm formaPVD = new PuntodeVentaDulceriaForm();
+            formaPVD.MdiParent = this;
+            formaPVD.StartPosition = FormStartPosition.CenterScreen;
+            formaPVD.Show();
+        }
+
+        
+
+        private void organizarVentanasToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void horizontalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(System.Windows.Forms.MdiLayout.TileHorizontal);
+        }
+
+        private void cascadaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.LayoutMdi(System.Windows.Forms.MdiLayout.Cascade);
+        }
+
         
     }
 }

@@ -102,5 +102,10 @@ namespace unimex.lenguajesv.cine.views
                 cargarNewCFUpdate();
             }
         }
+
+        private void chkHabilitadoNew_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

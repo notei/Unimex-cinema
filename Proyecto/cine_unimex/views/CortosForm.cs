@@ -19,6 +19,7 @@ namespace unimex.lenguajesv.cine.views
 
         private void CortosForm_Load(object sender, EventArgs e)
         {
+
             consultaCorto();
         }
 
@@ -43,6 +44,17 @@ namespace unimex.lenguajesv.cine.views
         {
             NewCortos frmNewCorto = new NewCortos();
             frmNewCorto.Show();
+        }
+
+        private void updatebtn_Click(object sender, EventArgs e)
+        {
+            int fila = dgvcortos.CurrentCell.RowIndex;
+            String valor = dgvcortos.Rows[fila].Cells[0].Value.ToString();
+            int id = Int32.Parse(valor);
+            NewCortos frmNewCorto = new NewCortos(id);
+            frmNewCorto.Show();
+
+
         }
     }
 }

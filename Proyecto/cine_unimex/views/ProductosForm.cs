@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using unimex.lenguajesv.cine.DAO;
+using unimex.lenguajesv.cine.DTO;
 
 
 namespace unimex.lenguajesv.cine.views
@@ -43,5 +44,58 @@ namespace unimex.lenguajesv.cine.views
             NewProductos frmNewPro = new NewProductos();
             frmNewPro.Show();
         }
+
+        private void btnactualizar_Click(object sender, EventArgs e)
+        {
+            int fil = dataGridView1.CurrentCell.RowIndex;
+            String valor = dataGridView1.Rows[fil].Cells[0].Value.ToString();
+            int id = Int32.Parse(valor);
+
+            NewProductos formapro = new NewProductos(id);
+            formapro.ShowDialog();
+            ConsultarProducto();
+
+        }
+
+
+        private void btnborrar_Click(object sender, EventArgs e)
+        {
+            {
+                int fil = dataGridView1.CurrentCell.RowIndex;
+                String valor = dataGridView1.Rows[fil].Cells[0].Value.ToString();
+                int id2 = Int32.Parse(valor);
+                String reg = dataGridView1.Rows[fil].Cells[1].Value.ToString();
+                DialogResult boton = MessageBox.Show("Desea Eliminar el Tipo Producto: " + reg + " ?", "Borrar Registro", MessageBoxButtons.OKCancel);
+                if (boton == DialogResult.OK)
+                {
+
+                    ProductosDTO protoup = new ProductosDTO();
+                    protoup.IdTipoProducto = id2;
+
+                    try
+                    {
+                      ProductosDAO daoproducto1 = new ProductosDAO();
+                        daoproducto1.deleteTPDTO(protoup);
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("" + ex);
+                    }
+                    ConsultarProducto();
+                }
+                else
+                {
+
+                }
+            }
+
+                {
+
+
+                   
+        }
+
+
     }
+        }
 }

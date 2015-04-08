@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Peliculas));
             this.btnAgregar = new System.Windows.Forms.Button();
             this.peliculasdgv = new System.Windows.Forms.DataGridView();
             this.button1 = new System.Windows.Forms.Button();
@@ -59,7 +60,7 @@
             this.peliculasdgv.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.peliculasdgv.Location = new System.Drawing.Point(155, 77);
             this.peliculasdgv.Name = "peliculasdgv";
-            this.peliculasdgv.Size = new System.Drawing.Size(484, 187);
+            this.peliculasdgv.Size = new System.Drawing.Size(544, 187);
             this.peliculasdgv.TabIndex = 2;
             // 
             // button1
@@ -119,7 +120,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(681, 322);
+            this.ClientSize = new System.Drawing.Size(741, 322);
             this.Controls.Add(this.cmbNombreCF);
             this.Controls.Add(this.checNombreCF);
             this.Controls.Add(this.label5);
@@ -127,6 +128,7 @@
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.peliculasdgv);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Peliculas";
             this.Text = "Peliculas";
             this.Load += new System.EventHandler(this.Peliculas_Load);

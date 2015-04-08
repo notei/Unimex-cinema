@@ -21,7 +21,7 @@ namespace unimex.lenguajesv.cine.views
 
         private void ProyeccionesForm_Load(object sender, EventArgs e)
         {
-
+            
             ProyeccionesDgv.DefaultCellStyle.BackColor = Color.LightGray;
             ProyeccionesDgv.AlternatingRowsDefaultCellStyle.BackColor = Color.LightYellow;
             consultaProyecciones();
@@ -52,8 +52,10 @@ namespace unimex.lenguajesv.cine.views
         private void NewProy_Click(object sender, EventArgs e)
         {
             NewProyecciones frmNewProy = new NewProyecciones();
+            frmNewProy.MdiParent = this.MdiParent;
             frmNewProy.Show();
             frmNewProy.Disposed += new EventHandler(disposeNew);
+            
            
         }
 
@@ -63,6 +65,7 @@ namespace unimex.lenguajesv.cine.views
             String valor = ProyeccionesDgv.Rows[fila].Cells[0].Value.ToString();
             int id = Int32.Parse(valor);
             NewProyecciones frmNewProy = new NewProyecciones(id);
+            frmNewProy.MdiParent = this.MdiParent;
             frmNewProy.Show();
             frmNewProy.Disposed += new EventHandler(disposeNew);
 

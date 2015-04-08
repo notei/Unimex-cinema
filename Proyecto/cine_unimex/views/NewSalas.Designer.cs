@@ -31,9 +31,6 @@
             this.txtCom = new System.Windows.Forms.TextBox();
             this.txtSala = new System.Windows.Forms.TextBox();
             this.txtCap = new System.Windows.Forms.TextBox();
-            this.txtBu = new System.Windows.Forms.TextBox();
-            this.txtSoni = new System.Windows.Forms.TextBox();
-            this.txtProyec = new System.Windows.Forms.TextBox();
             this.lblcomplejo = new System.Windows.Forms.Label();
             this.lblNombreSa = new System.Windows.Forms.Label();
             this.lblCapacidad = new System.Windows.Forms.Label();
@@ -42,6 +39,9 @@
             this.lblProyeccion = new System.Windows.Forms.Label();
             this.btnAc = new System.Windows.Forms.Button();
             this.btnCa = new System.Windows.Forms.Button();
+            this.salasCb = new System.Windows.Forms.ComboBox();
+            this.SalaCb2 = new System.Windows.Forms.ComboBox();
+            this.chebox = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // txtCom
@@ -64,27 +64,6 @@
             this.txtCap.Name = "txtCap";
             this.txtCap.Size = new System.Drawing.Size(315, 22);
             this.txtCap.TabIndex = 2;
-            // 
-            // txtBu
-            // 
-            this.txtBu.Location = new System.Drawing.Point(163, 227);
-            this.txtBu.Name = "txtBu";
-            this.txtBu.Size = new System.Drawing.Size(315, 22);
-            this.txtBu.TabIndex = 3;
-            // 
-            // txtSoni
-            // 
-            this.txtSoni.Location = new System.Drawing.Point(163, 277);
-            this.txtSoni.Name = "txtSoni";
-            this.txtSoni.Size = new System.Drawing.Size(315, 22);
-            this.txtSoni.TabIndex = 4;
-            // 
-            // txtProyec
-            // 
-            this.txtProyec.Location = new System.Drawing.Point(163, 338);
-            this.txtProyec.Name = "txtProyec";
-            this.txtProyec.Size = new System.Drawing.Size(315, 22);
-            this.txtProyec.TabIndex = 5;
             // 
             // lblcomplejo
             // 
@@ -144,7 +123,7 @@
             // 
             this.btnAc.Location = new System.Drawing.Point(45, 450);
             this.btnAc.Name = "btnAc";
-            this.btnAc.Size = new System.Drawing.Size(75, 23);
+            this.btnAc.Size = new System.Drawing.Size(85, 23);
             this.btnAc.TabIndex = 12;
             this.btnAc.Text = "Aceptar";
             this.btnAc.UseVisualStyleBackColor = true;
@@ -160,11 +139,41 @@
             this.btnCa.UseVisualStyleBackColor = true;
             this.btnCa.Click += new System.EventHandler(this.btnCa_Click);
             // 
+            // salasCb
+            // 
+            this.salasCb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.salasCb.FormattingEnabled = true;
+            this.salasCb.Location = new System.Drawing.Point(163, 280);
+            this.salasCb.Name = "salasCb";
+            this.salasCb.Size = new System.Drawing.Size(315, 24);
+            this.salasCb.TabIndex = 14;
+            // 
+            // SalaCb2
+            // 
+            this.SalaCb2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SalaCb2.FormattingEnabled = true;
+            this.SalaCb2.Location = new System.Drawing.Point(163, 338);
+            this.SalaCb2.Name = "SalaCb2";
+            this.SalaCb2.Size = new System.Drawing.Size(315, 24);
+            this.SalaCb2.TabIndex = 15;
+            // 
+            // chebox
+            // 
+            this.chebox.AutoSize = true;
+            this.chebox.Location = new System.Drawing.Point(173, 232);
+            this.chebox.Name = "chebox";
+            this.chebox.Size = new System.Drawing.Size(18, 17);
+            this.chebox.TabIndex = 16;
+            this.chebox.UseVisualStyleBackColor = true;
+            // 
             // NewSalas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(768, 492);
+            this.Controls.Add(this.chebox);
+            this.Controls.Add(this.SalaCb2);
+            this.Controls.Add(this.salasCb);
             this.Controls.Add(this.btnCa);
             this.Controls.Add(this.btnAc);
             this.Controls.Add(this.lblProyeccion);
@@ -173,9 +182,6 @@
             this.Controls.Add(this.lblCapacidad);
             this.Controls.Add(this.lblNombreSa);
             this.Controls.Add(this.lblcomplejo);
-            this.Controls.Add(this.txtProyec);
-            this.Controls.Add(this.txtSoni);
-            this.Controls.Add(this.txtBu);
             this.Controls.Add(this.txtCap);
             this.Controls.Add(this.txtSala);
             this.Controls.Add(this.txtCom);
@@ -192,9 +198,6 @@
         private System.Windows.Forms.TextBox txtCom;
         private System.Windows.Forms.TextBox txtSala;
         private System.Windows.Forms.TextBox txtCap;
-        private System.Windows.Forms.TextBox txtBu;
-        private System.Windows.Forms.TextBox txtSoni;
-        private System.Windows.Forms.TextBox txtProyec;
         private System.Windows.Forms.Label lblcomplejo;
         private System.Windows.Forms.Label lblNombreSa;
         private System.Windows.Forms.Label lblCapacidad;
@@ -203,5 +206,8 @@
         private System.Windows.Forms.Label lblProyeccion;
         private System.Windows.Forms.Button btnAc;
         private System.Windows.Forms.Button btnCa;
+        private System.Windows.Forms.ComboBox salasCb;
+        private System.Windows.Forms.ComboBox SalaCb2;
+        private System.Windows.Forms.CheckBox chebox;
     }
 }

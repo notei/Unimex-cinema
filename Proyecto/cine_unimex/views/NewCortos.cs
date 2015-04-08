@@ -13,16 +13,41 @@ namespace unimex.lenguajesv.cine.views
 {
     public partial class NewCortos : Form
     {
+        private int id;
+        Boolean isInsertId = false;
+
         public NewCortos()
         {
-            
+
 
             InitializeComponent();
+            isInsertId = true;
+            aceptarbtn.Text = "Agregar";
+        }
+
+        public NewCortos(int id)
+        {
+
+
+            InitializeComponent();
+            this.id = id;
+            isInsertId = false;
+            aceptarbtn.Text = "Actalizarr";
         }
 
         private void NewCortos_Load(object sender, EventArgs e)
         {
-            NuevosCortos();
+            if (isInsertId)
+            {
+
+
+
+            }
+
+            else
+            {
+                LoadCortos();
+            }
 
         }
 
@@ -33,18 +58,82 @@ namespace unimex.lenguajesv.cine.views
 
         private void aceptarbtn_Click(object sender, EventArgs e)
         {
+            if (isInsertId)
+            {
+                NuevosCortos();
+                this.Dispose();
+            }
+            else
+            {
+                //actualizar
+                updatecortos();
+                this.Dispose();
+            }
+
 
         }
+        //Método LoadCortos
 
-        public void NuevosCortos()
+        public void LoadCortos()
+        {
+            try
+            {
+                CortosDAO cortos_dao = new CortosDAO();
+                CortosDTO corto_dto = cortos_dao.LoadCortos(id);
+                nombrectxt.Text = corto_dto.Nombre_Corto;
+                idptxt.Text = Convert.ToString(corto_dto.Id_Pelicula);
+                duraciontxt.Text = Convert.ToString(corto_dto.Duracion);
+                check.Checked = corto_dto.Habilitado;
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
+
+
+        }
+        public void updatecortos()
         {
             CortosDTO cortos_dto = new CortosDTO();
             cortos_dto.Id_Pelicula = Int32.Parse(idptxt.Text);
             cortos_dto.Nombre_Corto = nombrectxt.Text;
             cortos_dto.Duracion = Int32.Parse(duraciontxt.Text);
-            cortos_dto.Habilitado = Int32.Parse(htxt.Text);
+            cortos_dto.Habilitado = check.Checked;
+            cortos_dto.Id_Corto = id;
+            try
+            {
+                CortosDAO cortos_dao = new CortosDAO();
+                cortos_dao.updateCortos(cortos_dto);
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
+        }
+
+        public void NuevosCortos()
+        {
+
+            CortosDTO cortos_dto = new CortosDTO();
+            cortos_dto.Id_Pelicula = Int32.Parse(idptxt.Text);
+            cortos_dto.Nombre_Corto = nombrectxt.Text;
+            cortos_dto.Duracion = Int32.Parse(duraciontxt.Text);
+            cortos_dto.Habilitado = check.Checked;
+
+            try
+            {
+                CortosDAO cortos_dao = new CortosDAO();
+                cortos_dao.newCortos(cortos_dto);
+            }
+
+            catch (Exception ex)
+            {
+                MessageBox.Show("" + ex);
+            }
 
         }
-    
+
     }
 }

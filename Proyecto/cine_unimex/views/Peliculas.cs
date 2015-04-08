@@ -21,6 +21,9 @@ namespace unimex.lenguajesv.cine.views
         private void Peliculas_Load(object sender, EventArgs e)
         {
             consultaPeliculas();
+            consultaBuscarNombreCF();
+            cmbNombreCF.Enabled = false;
+            cmbNombreCF.DataSource = null;
         }
 
         public void consultaPeliculas()
@@ -39,11 +42,19 @@ namespace unimex.lenguajesv.cine.views
                 
             }
         }
+        public void consultaViewCF()
+        {
+            PeliculasDAO daoClientesFrecuentes = new PeliculasDAO();
+            DataTable dtp = daoClientesFrecuentes.loadPeliculas();
+            peliculasdgv.DataSource = dtp;
+            peliculasdgv.Columns[0].Visible = false;
+        }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             Newpeliculas frmNewProy = new Newpeliculas();
-            frmNewProy.Show();
+            frmNewProy.ShowDialog();
+            consultaPeliculas();
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -52,7 +63,7 @@ namespace unimex.lenguajesv.cine.views
             String valor = peliculasdgv.Rows[fil].Cells[0].Value.ToString();
             int id = Int32.Parse(valor);
             Newpeliculas frmNewProy = new Newpeliculas(id);
-            frmNewProy.Show();
+            frmNewProy.ShowDialog();
             consultaPeliculas();
         }
 
@@ -63,7 +74,7 @@ namespace unimex.lenguajesv.cine.views
             int id2 = Int32.Parse(valor);
             String reg = peliculasdgv.Rows[fil].Cells[1].Value.ToString();
             String regpelicula = peliculasdgv.Rows[fil].Cells[3].Value.ToString();
-            DialogResult boton = MessageBox.Show("Desea Eliminar la Pelicula: " + reg + " con el precio: $" + regpelicula, "Borrar Registro", MessageBoxButtons.OKCancel);
+            DialogResult boton = MessageBox.Show("Desea Eliminar la Pelicula: " + reg + " con la pelicula: $" + regpelicula, "Borrar Registro", MessageBoxButtons.OKCancel);
             if (boton == DialogResult.OK)
             {
 
@@ -104,11 +115,12 @@ namespace unimex.lenguajesv.cine.views
             }
         public void buscarNombreCF()
         {
-            String id_pelicula = "" + cmbNombreCF.SelectedValue;
+
+            String id_Pelicula = "" + cmbNombreCF.SelectedValue;
             PeliculasDTO cf_dto = new PeliculasDTO();
             try
             {
-                cf_dto.id_Pelicula = Int32.Parse(id_pelicula);
+                cf_dto.id_Pelicula = Int32.Parse(id_Pelicula);
                 PeliculasDAO cf_dao = new PeliculasDAO();
                 DataTable dtbus2 = cf_dao.cargaBusquedaCF(cf_dto);
                 peliculasdgv.DataSource = dtbus2;
@@ -129,7 +141,7 @@ namespace unimex.lenguajesv.cine.views
                 DataTable dtbus = precf_dao.LoadNombreCF();
                 cmbNombreCF.DataSource = dtbus;
                 cmbNombreCF.DisplayMember = "pelicula";
-                cmbNombreCF.ValueMember = "id_pelicula";
+                cmbNombreCF.ValueMember = "id_Pelicula";
             }
             catch (Exception ex)
             {
