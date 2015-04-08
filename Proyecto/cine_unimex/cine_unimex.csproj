@@ -369,6 +369,9 @@
     <EmbeddedResource Include="views\ClientesFrecuentesForm.resx">
       <DependentUpon>ClientesFrecuentesForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\ComplejoForm.resx">
+      <DependentUpon>ComplejoForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\DetallesCarteleraForm.resx">
       <DependentUpon>DetallesCarteleraForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -377,6 +380,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\NewClientesFrecuentes.resx">
       <DependentUpon>NewClientesFrecuentes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\NewComplejo.resx">
+      <DependentUpon>NewComplejo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\NewPrecios.resx">
       <DependentUpon>NewPrecios.cs</DependentUpon>
