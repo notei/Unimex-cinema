@@ -49,19 +49,19 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvPrecios.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvPrecios.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPrecios.Location = new System.Drawing.Point(181, 55);
+            this.dgvPrecios.Location = new System.Drawing.Point(130, 132);
             this.dgvPrecios.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.dgvPrecios.Name = "dgvPrecios";
-            this.dgvPrecios.Size = new System.Drawing.Size(491, 479);
+            this.dgvPrecios.Size = new System.Drawing.Size(556, 298);
             this.dgvPrecios.TabIndex = 0;
             // 
             // btnAgregarprecio
             // 
             this.btnAgregarprecio.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAgregarprecio.Location = new System.Drawing.Point(35, 76);
+            this.btnAgregarprecio.Location = new System.Drawing.Point(25, 129);
             this.btnAgregarprecio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnAgregarprecio.Name = "btnAgregarprecio";
-            this.btnAgregarprecio.Size = new System.Drawing.Size(87, 28);
+            this.btnAgregarprecio.Size = new System.Drawing.Size(87, 58);
             this.btnAgregarprecio.TabIndex = 1;
             this.btnAgregarprecio.Text = "Agregar";
             this.btnAgregarprecio.UseVisualStyleBackColor = true;
@@ -70,10 +70,10 @@
             // btnActualizarPrecios
             // 
             this.btnActualizarPrecios.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnActualizarPrecios.Location = new System.Drawing.Point(35, 129);
+            this.btnActualizarPrecios.Location = new System.Drawing.Point(25, 252);
             this.btnActualizarPrecios.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnActualizarPrecios.Name = "btnActualizarPrecios";
-            this.btnActualizarPrecios.Size = new System.Drawing.Size(87, 28);
+            this.btnActualizarPrecios.Size = new System.Drawing.Size(87, 58);
             this.btnActualizarPrecios.TabIndex = 2;
             this.btnActualizarPrecios.Text = "Actualizar";
             this.btnActualizarPrecios.UseVisualStyleBackColor = true;
@@ -82,10 +82,10 @@
             // btnBorrarPrecio
             // 
             this.btnBorrarPrecio.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBorrarPrecio.Location = new System.Drawing.Point(35, 180);
+            this.btnBorrarPrecio.Location = new System.Drawing.Point(25, 372);
             this.btnBorrarPrecio.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnBorrarPrecio.Name = "btnBorrarPrecio";
-            this.btnBorrarPrecio.Size = new System.Drawing.Size(87, 28);
+            this.btnBorrarPrecio.Size = new System.Drawing.Size(87, 58);
             this.btnBorrarPrecio.TabIndex = 3;
             this.btnBorrarPrecio.Text = "Borrar";
             this.btnBorrarPrecio.UseVisualStyleBackColor = true;
@@ -95,10 +95,10 @@
             // 
             this.checkPreciosbus.AutoSize = true;
             this.checkPreciosbus.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkPreciosbus.Location = new System.Drawing.Point(22, 261);
+            this.checkPreciosbus.Location = new System.Drawing.Point(547, 62);
             this.checkPreciosbus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkPreciosbus.Name = "checkPreciosbus";
-            this.checkPreciosbus.Size = new System.Drawing.Size(60, 20);
+            this.checkPreciosbus.Size = new System.Drawing.Size(74, 23);
             this.checkPreciosbus.TabIndex = 4;
             this.checkPreciosbus.Text = "Boleto";
             this.checkPreciosbus.UseVisualStyleBackColor = true;
@@ -107,10 +107,10 @@
             // cbxPreciosBuscar
             // 
             this.cbxPreciosBuscar.FormattingEnabled = true;
-            this.cbxPreciosBuscar.Location = new System.Drawing.Point(21, 289);
+            this.cbxPreciosBuscar.Location = new System.Drawing.Point(546, 90);
             this.cbxPreciosBuscar.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbxPreciosBuscar.Name = "cbxPreciosBuscar";
-            this.cbxPreciosBuscar.Size = new System.Drawing.Size(140, 24);
+            this.cbxPreciosBuscar.Size = new System.Drawing.Size(140, 27);
             this.cbxPreciosBuscar.TabIndex = 5;
             this.cbxPreciosBuscar.SelectedIndexChanged += new System.EventHandler(this.cbxPreciosBuscar_SelectedIndexChanged);
             // 
@@ -118,10 +118,10 @@
             // 
             this.checkPreciobolbus.AutoSize = true;
             this.checkPreciobolbus.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.checkPreciobolbus.Location = new System.Drawing.Point(21, 334);
+            this.checkPreciobolbus.Location = new System.Drawing.Point(384, 62);
             this.checkPreciobolbus.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.checkPreciobolbus.Name = "checkPreciobolbus";
-            this.checkPreciobolbus.Size = new System.Drawing.Size(114, 20);
+            this.checkPreciobolbus.Size = new System.Drawing.Size(143, 23);
             this.checkPreciobolbus.TabIndex = 6;
             this.checkPreciobolbus.Text = "Precio de Boleto";
             this.checkPreciobolbus.UseVisualStyleBackColor = true;
@@ -130,10 +130,10 @@
             // cbxPrecioBuscpre
             // 
             this.cbxPrecioBuscpre.FormattingEnabled = true;
-            this.cbxPrecioBuscpre.Location = new System.Drawing.Point(21, 362);
+            this.cbxPrecioBuscpre.Location = new System.Drawing.Point(384, 90);
             this.cbxPrecioBuscpre.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cbxPrecioBuscpre.Name = "cbxPrecioBuscpre";
-            this.cbxPrecioBuscpre.Size = new System.Drawing.Size(140, 24);
+            this.cbxPrecioBuscpre.Size = new System.Drawing.Size(140, 27);
             this.cbxPrecioBuscpre.TabIndex = 7;
             this.cbxPrecioBuscpre.SelectedIndexChanged += new System.EventHandler(this.cbxPrecioBuscpre_SelectedIndexChanged);
             // 
@@ -141,9 +141,9 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(51, 224);
+            this.label1.Location = new System.Drawing.Point(248, 93);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 16);
+            this.label1.Size = new System.Drawing.Size(87, 19);
             this.label1.TabIndex = 8;
             this.label1.Text = "Busqueda :";
             // 
@@ -154,15 +154,15 @@
             this.label2.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(122, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(472, 33);
+            this.label2.Size = new System.Drawing.Size(566, 40);
             this.label2.TabIndex = 9;
             this.label2.Text = "CATÁLOGO PRECIOS DE BOLETOS";
             // 
             // PreciosForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 19F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(698, 564);
+            this.ClientSize = new System.Drawing.Size(698, 440);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cbxPrecioBuscpre);
