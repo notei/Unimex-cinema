@@ -70,6 +70,7 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.complejosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -122,7 +123,8 @@
             this.tipoProyeccionToolStripMenuItem,
             this.tipoSonidoToolStripMenuItem,
             this.salasToolStripMenuItem,
-            this.usuariosToolStripMenuItem});
+            this.usuariosToolStripMenuItem,
+            this.complejosToolStripMenuItem});
             this.catálogosToolStripMenuItem.Name = "catálogosToolStripMenuItem";
             this.catálogosToolStripMenuItem.Size = new System.Drawing.Size(72, 22);
             this.catálogosToolStripMenuItem.Text = "Catálogos";
@@ -318,21 +320,21 @@
             // boletosToolStripMenuItem
             // 
             this.boletosToolStripMenuItem.Name = "boletosToolStripMenuItem";
-            this.boletosToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.boletosToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.boletosToolStripMenuItem.Text = "Boletos";
             this.boletosToolStripMenuItem.Click += new System.EventHandler(this.boletosToolStripMenuItem_Click);
             // 
             // dulceríaToolStripMenuItem
             // 
             this.dulceríaToolStripMenuItem.Name = "dulceríaToolStripMenuItem";
-            this.dulceríaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.dulceríaToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.dulceríaToolStripMenuItem.Text = "Dulcería";
             this.dulceríaToolStripMenuItem.Click += new System.EventHandler(this.dulceríaToolStripMenuItem_Click);
             // 
             // corteDeCajaToolStripMenuItem
             // 
             this.corteDeCajaToolStripMenuItem.Name = "corteDeCajaToolStripMenuItem";
-            this.corteDeCajaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.corteDeCajaToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
             this.corteDeCajaToolStripMenuItem.Text = "Corte de caja";
             this.corteDeCajaToolStripMenuItem.Click += new System.EventHandler(this.corteDeCajaToolStripMenuItem_Click);
             // 
@@ -399,6 +401,13 @@
             this.statusStrip1.Size = new System.Drawing.Size(728, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // complejosToolStripMenuItem
+            // 
+            this.complejosToolStripMenuItem.Name = "complejosToolStripMenuItem";
+            this.complejosToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.complejosToolStripMenuItem.Text = "Complejos";
+            this.complejosToolStripMenuItem.Click += new System.EventHandler(this.complejosToolStripMenuItem_Click);
             // 
             // MainScreen
             // 
@@ -467,6 +476,7 @@
         private System.Windows.Forms.ToolStripMenuItem horizontalToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cascadaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarTodasToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem complejosToolStripMenuItem;
     }
 }
 

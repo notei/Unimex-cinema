@@ -185,6 +185,7 @@
             this.cmbidClasificacionNew.Name = "cmbidClasificacionNew";
             this.cmbidClasificacionNew.Size = new System.Drawing.Size(121, 21);
             this.cmbidClasificacionNew.TabIndex = 18;
+            this.cmbidClasificacionNew.SelectedIndexChanged += new System.EventHandler(this.cmbidClasificacionNew_SelectedIndexChanged);
             // 
             // cmbNacioPeliNew
             // 

@@ -192,5 +192,10 @@ namespace unimex.lenguajesv.cine.views
         {
 
         }
+
+        private void cmbidClasificacionNew_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
