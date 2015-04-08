@@ -20,6 +20,8 @@ namespace unimex.lenguajesv.cine.views
 
         private void PreciosForm_Load(object sender, EventArgs e)
         {
+            dgvPrecios.DefaultCellStyle.BackColor = Color.LightGray;
+            dgvPrecios.AlternatingRowsDefaultCellStyle.BackColor = Color.LightYellow;
             consultaPrecios();
             consultaBuscarPrecios();
             queryBuscarPre();
@@ -50,6 +52,10 @@ namespace unimex.lenguajesv.cine.views
             {
                 MessageBox.Show(""+ex);
             }
+        }
+        public void disposeNew(object Source, EventArgs args)
+        {
+            consultaPrecios();
         }
         public void queryBuscarPre()
         {
@@ -104,8 +110,9 @@ namespace unimex.lenguajesv.cine.views
         }
         private void btnAgregarprecio_Click(object sender, EventArgs e)
         {
-            NewPrecios formpre = new NewPrecios();
-            formpre.ShowDialog();
+            NewPrecios frmnew = new NewPrecios();
+            frmnew.MdiParent = this.MdiParent;
+            frmnew.Show();
             consultaPrecios();
         }
 
@@ -115,7 +122,8 @@ namespace unimex.lenguajesv.cine.views
             String valor = dgvPrecios.Rows[fil].Cells[0].Value.ToString();
             int id = Int32.Parse(valor);
             NewPrecios formaupdate = new NewPrecios(id);
-            formaupdate.ShowDialog();
+            formaupdate.MdiParent = this.MdiParent;
+            formaupdate.Show();
             consultaPrecios();
         }
 

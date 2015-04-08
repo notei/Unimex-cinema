@@ -108,5 +108,8 @@ namespace unimex.lenguajesv.cine.views
         {
             this.Dispose();
         }
+
+        
+        }
     }
-}
+

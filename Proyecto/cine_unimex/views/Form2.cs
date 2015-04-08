@@ -51,5 +51,10 @@ namespace unimex.lenguajesv.cine.views
             //ejecuta el metodo sumar dela clase matematicas, el cual desarrolla la operacion 
             mate.sumar(a, b, c, d);
         }
+
+        private void resultado_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
