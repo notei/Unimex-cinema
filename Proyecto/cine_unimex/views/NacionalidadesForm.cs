@@ -21,6 +21,8 @@ namespace unimex.lenguajesv.cine.views
 
         private void NacionalidadesForm_Load(object sender, EventArgs e)
         {
+            dgvNacionalidades.DefaultCellStyle.BackColor = Color.LightGray;
+          dgvNacionalidades.AlternatingRowsDefaultCellStyle.BackColor = Color.LightYellow;
             consultaNacionalidades();
             ConsultaBuscar();
             cmbNacionalida.Enabled = false;
