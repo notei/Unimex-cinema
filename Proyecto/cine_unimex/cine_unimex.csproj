@@ -103,6 +103,7 @@
     <Compile Include="DTO\ProyeccionesDTO.cs" />
     <Compile Include="DTO\PuntodeVentaBoletosDTO.cs" />
     <Compile Include="DTO\PuntodeVentaDulceriaDTO.cs" />
+    <Compile Include="DTO\ReportesDTO.cs" />
     <Compile Include="DTO\SalasDTO.cs" />
     <Compile Include="DTO\TipoProyeccionDTO.cs" />
     <Compile Include="DTO\TipoSonidoDTO.cs" />
@@ -110,6 +111,7 @@
     <Compile Include="DAO\NacionalidadesDAO.cs" />
     <Compile Include="DTO\UsuariosDTO.cs" />
     <Compile Include="DTO\NacionalidadesActoresDTO.cs" />
+    <Compile Include="DTO\VentaProyecciones.cs" />
     <Compile Include="views\CarteleraForm.cs">
       <SubType>Form</SubType>
     </Compile>
