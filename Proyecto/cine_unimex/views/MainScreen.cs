@@ -242,6 +242,14 @@ namespace unimex.lenguajesv.cine.views
             forma.Show();
         }
 
+        private void complejosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ComplejoForm formacomple = new ComplejoForm();
+            formacomple.MdiParent = this;
+            formacomple.StartPosition = FormStartPosition.CenterScreen;
+            formacomple.Show();
+        }
+
         
     }
 }

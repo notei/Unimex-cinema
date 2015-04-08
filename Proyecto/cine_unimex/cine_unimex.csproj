@@ -68,6 +68,7 @@
     <Compile Include="DAO\ActoresDAO.cs" />
     <Compile Include="DAO\CarteleraDAO.cs" />
     <Compile Include="DAO\ClientesFrecuentesDAO.cs" />
+    <Compile Include="DAO\ComplejoDAO.cs" />
     <Compile Include="DAO\CortosDAO.cs" />
     <Compile Include="DAO\Matematicas.cs" />
     <Compile Include="DAO\PeliculasDAO.cs" />
@@ -88,6 +89,7 @@
     <Compile Include="DAO\UsuariosDAO.cs" />
     <Compile Include="DTO\CarteleraDTO.cs" />
     <Compile Include="DTO\ClientesFrecuentesDTO.cs" />
+    <Compile Include="DTO\ComplejoDTO.cs" />
     <Compile Include="DTO\CortosDTO.cs" />
     <Compile Include="DTO\NacionalidadesDTO.cs" />
     <Compile Include="DTO\PeliculasDTO.cs" />
@@ -118,7 +120,15 @@
     <Compile Include="views\ClientesFrecuentesForm.Designer.cs">
       <DependentUpon>ClientesFrecuentesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\DetallesCarteleraForm.cs" />
+    <Compile Include="views\ComplejoForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\ComplejoForm.Designer.cs">
+      <DependentUpon>ComplejoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\DetallesCarteleraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="views\DetallesCarteleraForm.Designer.cs">
       <DependentUpon>DetallesCarteleraForm.cs</DependentUpon>
     </Compile>
@@ -133,6 +143,12 @@
     </Compile>
     <Compile Include="views\NewClientesFrecuentes.Designer.cs">
       <DependentUpon>NewClientesFrecuentes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\NewComplejo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\NewComplejo.Designer.cs">
+      <DependentUpon>NewComplejo.cs</DependentUpon>
     </Compile>
     <Compile Include="views\NewPrecios.cs">
       <SubType>Form</SubType>
