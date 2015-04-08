@@ -234,6 +234,14 @@ namespace unimex.lenguajesv.cine.views
             formaCartel.Show();
         }
 
+        private void corteDeCajaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 forma = new Form2();
+            forma.MdiParent = this;
+            forma.StartPosition = FormStartPosition.CenterScreen;
+            forma.Show();
+        }
+
         
     }
 }
