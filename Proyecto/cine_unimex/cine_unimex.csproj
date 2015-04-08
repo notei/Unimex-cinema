@@ -117,6 +117,12 @@
     <Compile Include="views\ClientesFrecuentesForm.Designer.cs">
       <DependentUpon>ClientesFrecuentesForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\DetallesCarteleraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\DetallesCarteleraForm.Designer.cs">
+      <DependentUpon>DetallesCarteleraForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\NewClientesFrecuentes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -341,6 +347,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\ClientesFrecuentesForm.resx">
       <DependentUpon>ClientesFrecuentesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\DetallesCarteleraForm.resx">
+      <DependentUpon>DetallesCarteleraForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\NewClientesFrecuentes.resx">
       <DependentUpon>NewClientesFrecuentes.cs</DependentUpon>
