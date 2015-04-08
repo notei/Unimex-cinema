@@ -66,10 +66,13 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DAO\ActoresDAO.cs" />
+    <Compile Include="DAO\CarteleraDAO.cs" />
     <Compile Include="DAO\ClientesFrecuentesDAO.cs" />
+    <Compile Include="DAO\ComplejoDAO.cs" />
     <Compile Include="DAO\CortosDAO.cs" />
-    <Compile Include="DAO\EstrenosDAO.cs" />
+    <Compile Include="DAO\Matematicas.cs" />
     <Compile Include="DAO\PeliculasDAO.cs" />
+    <Compile Include="DAO\peliculas_estrenosDAO.cs" />
     <Compile Include="DAO\ProductosDAO2.cs" />
     <Compile Include="DAO\PuntodeVentaBoletosDAO.cs" />
     <Compile Include="DAO\PuntodeVentaDulceriaDAO.cs" />
@@ -84,11 +87,13 @@
     <Compile Include="DAO\TipoProyeccionDAO.cs" />
     <Compile Include="DAO\UsuarioDAO.cs" />
     <Compile Include="DAO\UsuariosDAO.cs" />
+    <Compile Include="DTO\CarteleraDTO.cs" />
     <Compile Include="DTO\ClientesFrecuentesDTO.cs" />
+    <Compile Include="DTO\ComplejoDTO.cs" />
     <Compile Include="DTO\CortosDTO.cs" />
-    <Compile Include="DTO\EstrenosDTO.cs" />
     <Compile Include="DTO\NacionalidadesDTO.cs" />
     <Compile Include="DTO\PeliculasDTO.cs" />
+    <Compile Include="DTO\peliculas_estrenosDTO.cs" />
     <Compile Include="DTO\PreciosDTO.cs" />
     <Compile Include="DTO\ProductosDTO.cs" />
     <Compile Include="DTO\ProductosDTO2.cs" />
@@ -96,7 +101,6 @@
     <Compile Include="DTO\ProyeccionesDTO.cs" />
     <Compile Include="DTO\PuntodeVentaBoletosDTO.cs" />
     <Compile Include="DTO\PuntodeVentaDulceriaDTO.cs" />
-    <Compile Include="DTO\ReporteVentas.cs" />
     <Compile Include="DTO\SalasDTO.cs" />
     <Compile Include="DTO\TipoProyeccionDTO.cs" />
     <Compile Include="DTO\TipoSonidoDTO.cs" />
@@ -104,27 +108,35 @@
     <Compile Include="DAO\NacionalidadesDAO.cs" />
     <Compile Include="DTO\UsuariosDTO.cs" />
     <Compile Include="DTO\NacionalidadesActoresDTO.cs" />
-<<<<<<< HEAD
-    <Compile Include="DTO\VentaProyeccionesDTO.cs" />
     <Compile Include="views\CarteleraForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="views\CarteleraForm.Designer.cs">
       <DependentUpon>CarteleraForm.cs</DependentUpon>
     </Compile>
-=======
->>>>>>> origin/master
     <Compile Include="views\ClientesFrecuentesForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="views\ClientesFrecuentesForm.Designer.cs">
       <DependentUpon>ClientesFrecuentesForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\EstrenosForm.cs">
+    <Compile Include="views\ComplejoForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\EstrenosForm.Designer.cs">
-      <DependentUpon>EstrenosForm.cs</DependentUpon>
+    <Compile Include="views\ComplejoForm.Designer.cs">
+      <DependentUpon>ComplejoForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\DetallesCarteleraForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\DetallesCarteleraForm.Designer.cs">
+      <DependentUpon>DetallesCarteleraForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\Form2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\Form2.Designer.cs">
+      <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
     <Compile Include="views\NewClientesFrecuentes.cs">
       <SubType>Form</SubType>
@@ -132,11 +144,11 @@
     <Compile Include="views\NewClientesFrecuentes.Designer.cs">
       <DependentUpon>NewClientesFrecuentes.cs</DependentUpon>
     </Compile>
-    <Compile Include="views\NewEstrenos.cs">
+    <Compile Include="views\NewComplejo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="views\NewEstrenos.Designer.cs">
-      <DependentUpon>NewEstrenos.cs</DependentUpon>
+    <Compile Include="views\NewComplejo.Designer.cs">
+      <DependentUpon>NewComplejo.cs</DependentUpon>
     </Compile>
     <Compile Include="views\NewPrecios.cs">
       <SubType>Form</SubType>
@@ -155,6 +167,18 @@
     </Compile>
     <Compile Include="views\NewTipoSonido.Designer.cs">
       <DependentUpon>NewTipoSonido.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\peliculas_estrenos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\peliculas_estrenos.Designer.cs">
+      <DependentUpon>peliculas_estrenos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\newpeliculas_estrenosfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\newpeliculas_estrenosfrm.Designer.cs">
+      <DependentUpon>newpeliculas_estrenosfrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Sesion.cs" />
     <Compile Include="views\AcercaDeScreen.cs">
@@ -339,17 +363,20 @@
     <Compile Include="views\UsuariosForm.Designer.cs">
       <DependentUpon>UsuariosForm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="views\CarteleraForm.resx">
+      <DependentUpon>CarteleraForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\ClientesFrecuentesForm.resx">
       <DependentUpon>ClientesFrecuentesForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="views\EstrenosForm.resx">
-      <DependentUpon>EstrenosForm.cs</DependentUpon>
+    <EmbeddedResource Include="views\DetallesCarteleraForm.resx">
+      <DependentUpon>DetallesCarteleraForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\Form2.resx">
+      <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\NewClientesFrecuentes.resx">
       <DependentUpon>NewClientesFrecuentes.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="views\NewEstrenos.resx">
-      <DependentUpon>NewEstrenos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\NewPrecios.resx">
       <DependentUpon>NewPrecios.cs</DependentUpon>
@@ -359,6 +386,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\NewTipoSonido.resx">
       <DependentUpon>NewTipoSonido.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\peliculas_estrenos.resx">
+      <DependentUpon>peliculas_estrenos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\newpeliculas_estrenosfrm.resx">
+      <DependentUpon>newpeliculas_estrenosfrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\AcercaDeScreen.resx">
       <DependentUpon>AcercaDeScreen.cs</DependentUpon>

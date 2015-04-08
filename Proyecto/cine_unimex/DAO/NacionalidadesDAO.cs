@@ -36,7 +36,10 @@ namespace unimex.lenguajesv.cine
 
 
             String SQL_Agregar_Nacionalidad = " insert into nacionalidades (nacionalidad, habilitado) values ( '" + n.Nacionalidad + "' , '" + n.Habilitado + "')";
- SqlConnection con;
+
+
+
+            SqlConnection con;
             con = new SqlConnection();
             con.ConnectionString = Cadena;
             con.Open();

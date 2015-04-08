@@ -92,7 +92,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Century Gothic", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(214, 18);
+            this.label1.Location = new System.Drawing.Point(176, 18);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(222, 32);
             this.label1.TabIndex = 4;
@@ -134,7 +134,6 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "NacionalidadesForm";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Nacionalidades";
             this.Load += new System.EventHandler(this.NacionalidadesForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvNacionalidades)).EndInit();

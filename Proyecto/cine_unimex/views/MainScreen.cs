@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using unimex.lenguajesv.cine.DTO;
-using unimex.lenguajesv.cine.DAO;
 
 
 namespace unimex.lenguajesv.cine.views
@@ -146,7 +145,7 @@ namespace unimex.lenguajesv.cine.views
 
         private void estrenosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           EstrenosForm formestrenos = new EstrenosForm();
+            peliculas_estrenos formestrenos = new peliculas_estrenos();
             formestrenos.MdiParent = this;
             formestrenos.StartPosition = FormStartPosition.CenterParent;
             formestrenos.Show();
