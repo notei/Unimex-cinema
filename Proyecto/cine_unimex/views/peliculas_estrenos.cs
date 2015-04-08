@@ -26,13 +26,13 @@ namespace unimex.lenguajesv.cine.views
             DataTable dt = dao.cargardatos();
             dataGrid.DataSource = dt;
 
-
         }
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             peliculas_estrenosfrm form = new peliculas_estrenosfrm();
             form.ShowDialog();
+           
 
         }
     }
