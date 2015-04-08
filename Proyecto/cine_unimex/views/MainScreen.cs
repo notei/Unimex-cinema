@@ -218,6 +218,39 @@ namespace unimex.lenguajesv.cine.views
             this.LayoutMdi(System.Windows.Forms.MdiLayout.Cascade);
         }
 
+
+        private void cerrarTodasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (Form frm in this.MdiChildren)
+            {
+                    frm.Dispose();
+            }
+        }
+
+        private void carteleraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            CarteleraForm formaCartel = new CarteleraForm();
+            formaCartel.MdiParent = this;
+            formaCartel.StartPosition = FormStartPosition.CenterScreen;
+            formaCartel.Show();
+        }
+
+        private void corteDeCajaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form2 forma = new Form2();
+            forma.MdiParent = this;
+            forma.StartPosition = FormStartPosition.CenterScreen;
+            forma.Show();
+        }
+
+        private void complejosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ComplejoForm formacomple = new ComplejoForm();
+            formacomple.MdiParent = this;
+            formacomple.StartPosition = FormStartPosition.CenterScreen;
+            formacomple.Show();
+        }
+
         
     }
 }
