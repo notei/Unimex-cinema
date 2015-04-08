@@ -74,6 +74,7 @@
     <Compile Include="DAO\PeliculasDAO.cs" />
     <Compile Include="DAO\peliculas_estrenosDAO.cs" />
     <Compile Include="DAO\ProductosDAO2.cs" />
+    <Compile Include="DAO\ProximosDAO.cs" />
     <Compile Include="DAO\PuntodeVentaBoletosDAO.cs" />
     <Compile Include="DAO\PuntodeVentaDulceriaDAO.cs" />
     <Compile Include="DAO\ReportePyCDAO.cs" />
@@ -98,6 +99,7 @@
     <Compile Include="DTO\ProductosDTO.cs" />
     <Compile Include="DTO\ProductosDTO2.cs" />
     <Compile Include="DTO\ProveedoresDTO.cs" />
+    <Compile Include="DTO\Proximos DTO.cs" />
     <Compile Include="DTO\ProyeccionesDTO.cs" />
     <Compile Include="DTO\PuntodeVentaBoletosDTO.cs" />
     <Compile Include="DTO\PuntodeVentaDulceriaDTO.cs" />
@@ -309,6 +311,12 @@
     <Compile Include="views\ProveedoresForm.Designer.cs">
       <DependentUpon>ProveedoresForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\Proximos_Estrenos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\Proximos_Estrenos.Designer.cs">
+      <DependentUpon>Proximos_Estrenos.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\ProyeccionesForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -465,6 +473,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\ProveedoresForm.resx">
       <DependentUpon>ProveedoresForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\Proximos_Estrenos.resx">
+      <DependentUpon>Proximos_Estrenos.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\ProyeccionesForm.resx">
       <DependentUpon>ProyeccionesForm.cs</DependentUpon>

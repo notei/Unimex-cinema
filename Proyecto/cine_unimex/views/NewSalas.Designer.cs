@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(NewSalas));
             this.txtCom = new System.Windows.Forms.TextBox();
             this.txtSala = new System.Windows.Forms.TextBox();
             this.txtCap = new System.Windows.Forms.TextBox();
@@ -42,6 +43,7 @@
             this.salasCb = new System.Windows.Forms.ComboBox();
             this.SalaCb2 = new System.Windows.Forms.ComboBox();
             this.chebox = new System.Windows.Forms.CheckBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtCom
@@ -166,11 +168,22 @@
             this.chebox.TabIndex = 16;
             this.chebox.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Century Gothic", 19.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(255, 20);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(171, 40);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "SalasCon";
+            // 
             // NewSalas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(768, 492);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.chebox);
             this.Controls.Add(this.SalaCb2);
             this.Controls.Add(this.salasCb);
@@ -185,6 +198,7 @@
             this.Controls.Add(this.txtCap);
             this.Controls.Add(this.txtSala);
             this.Controls.Add(this.txtCom);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "NewSalas";
             this.Text = "NewSalas";
             this.Load += new System.EventHandler(this.NewSalas_Load);
@@ -209,5 +223,6 @@
         private System.Windows.Forms.ComboBox salasCb;
         private System.Windows.Forms.ComboBox SalaCb2;
         private System.Windows.Forms.CheckBox chebox;
+        private System.Windows.Forms.Label label1;
     }
 }
