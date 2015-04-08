@@ -48,6 +48,7 @@
             this.tipoSonidoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.salasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.usuariosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.complejosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.funcionalidadesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.carteleraToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.estrenosToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,7 +71,7 @@
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
-            this.complejosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.productosCombosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuBar.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -124,7 +125,8 @@
             this.tipoSonidoToolStripMenuItem,
             this.salasToolStripMenuItem,
             this.usuariosToolStripMenuItem,
-            this.complejosToolStripMenuItem});
+            this.complejosToolStripMenuItem,
+            this.productosCombosToolStripMenuItem});
             this.catálogosToolStripMenuItem.Name = "catálogosToolStripMenuItem";
             this.catálogosToolStripMenuItem.Size = new System.Drawing.Size(72, 22);
             this.catálogosToolStripMenuItem.Text = "Catálogos";
@@ -233,6 +235,13 @@
             this.usuariosToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
             this.usuariosToolStripMenuItem.Text = "Usuarios";
             this.usuariosToolStripMenuItem.Click += new System.EventHandler(this.usuariosToolStripMenuItem_Click);
+            // 
+            // complejosToolStripMenuItem
+            // 
+            this.complejosToolStripMenuItem.Name = "complejosToolStripMenuItem";
+            this.complejosToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.complejosToolStripMenuItem.Text = "Complejos";
+            this.complejosToolStripMenuItem.Click += new System.EventHandler(this.complejosToolStripMenuItem_Click);
             // 
             // funcionalidadesToolStripMenuItem
             // 
@@ -402,12 +411,12 @@
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
-            // complejosToolStripMenuItem
+            // productosCombosToolStripMenuItem
             // 
-            this.complejosToolStripMenuItem.Name = "complejosToolStripMenuItem";
-            this.complejosToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
-            this.complejosToolStripMenuItem.Text = "Complejos";
-            this.complejosToolStripMenuItem.Click += new System.EventHandler(this.complejosToolStripMenuItem_Click);
+            this.productosCombosToolStripMenuItem.Name = "productosCombosToolStripMenuItem";
+            this.productosCombosToolStripMenuItem.Size = new System.Drawing.Size(176, 22);
+            this.productosCombosToolStripMenuItem.Text = "Productos Combos";
+            this.productosCombosToolStripMenuItem.Click += new System.EventHandler(this.productosCombosToolStripMenuItem_Click);
             // 
             // MainScreen
             // 
@@ -477,6 +486,7 @@
         private System.Windows.Forms.ToolStripMenuItem cascadaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem cerrarTodasToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem complejosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem productosCombosToolStripMenuItem;
     }
 }
 

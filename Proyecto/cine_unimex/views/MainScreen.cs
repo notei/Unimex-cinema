@@ -250,6 +250,14 @@ namespace unimex.lenguajesv.cine.views
             formacomple.Show();
         }
 
+        private void productosCombosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProductosCombosForm formacomple = new ProductosCombosForm();
+            formacomple.MdiParent = this;
+            formacomple.StartPosition = FormStartPosition.CenterScreen;
+            formacomple.Show();
+        }
+
         
     }
 }

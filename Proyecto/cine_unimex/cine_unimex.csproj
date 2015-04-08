@@ -73,6 +73,7 @@
     <Compile Include="DAO\Matematicas.cs" />
     <Compile Include="DAO\PeliculasDAO.cs" />
     <Compile Include="DAO\peliculas_estrenosDAO.cs" />
+    <Compile Include="DAO\ProductosCombosDAO.cs" />
     <Compile Include="DAO\ProductosDAO2.cs" />
     <Compile Include="DAO\PuntodeVentaBoletosDAO.cs" />
     <Compile Include="DAO\PuntodeVentaDulceriaDAO.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="DTO\PeliculasDTO.cs" />
     <Compile Include="DTO\peliculas_estrenosDTO.cs" />
     <Compile Include="DTO\PreciosDTO.cs" />
+    <Compile Include="DTO\ProductosCombosDTO.cs" />
     <Compile Include="DTO\ProductosDTO.cs" />
     <Compile Include="DTO\ProductosDTO2.cs" />
     <Compile Include="DTO\ProveedoresDTO.cs" />
@@ -161,6 +163,12 @@
     </Compile>
     <Compile Include="views\NewProductos2.Designer.cs">
       <DependentUpon>NewProductos2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="views\NewProductosCombos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\NewProductosCombos.Designer.cs">
+      <DependentUpon>NewProductosCombos.cs</DependentUpon>
     </Compile>
     <Compile Include="views\NewTipoSonido.cs">
       <SubType>Form</SubType>
@@ -291,6 +299,12 @@
     <Compile Include="views\PreciosForm.designer.cs">
       <DependentUpon>PreciosForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="views\ProductosCombosForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="views\ProductosCombosForm.Designer.cs">
+      <DependentUpon>ProductosCombosForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="views\ProductosForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -384,6 +398,9 @@
     <EmbeddedResource Include="views\NewProductos2.resx">
       <DependentUpon>NewProductos2.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="views\NewProductosCombos.resx">
+      <DependentUpon>NewProductosCombos.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="views\NewTipoSonido.resx">
       <DependentUpon>NewTipoSonido.cs</DependentUpon>
     </EmbeddedResource>
@@ -456,6 +473,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="views\PreciosForm.resx">
       <DependentUpon>PreciosForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="views\ProductosCombosForm.resx">
+      <DependentUpon>ProductosCombosForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="views\ProductosForm.resx">
       <DependentUpon>ProductosForm.cs</DependentUpon>
