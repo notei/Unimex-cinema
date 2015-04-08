@@ -43,7 +43,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(24, 31);
+            this.label4.Location = new System.Drawing.Point(27, 36);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 16);
             this.label4.TabIndex = 0;
@@ -93,7 +93,7 @@
             // 
             this.btnAgregar.Location = new System.Drawing.Point(42, 190);
             this.btnAgregar.Name = "btnAgregar";
-            this.btnAgregar.Size = new System.Drawing.Size(68, 45);
+            this.btnAgregar.Size = new System.Drawing.Size(69, 45);
             this.btnAgregar.TabIndex = 6;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
@@ -101,9 +101,9 @@
             // 
             // button4
             // 
-            this.button4.Location = new System.Drawing.Point(160, 190);
+            this.button4.Location = new System.Drawing.Point(155, 190);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(69, 45);
+            this.button4.Size = new System.Drawing.Size(74, 45);
             this.button4.TabIndex = 7;
             this.button4.Text = "Cancelar";
             this.button4.UseVisualStyleBackColor = true;
