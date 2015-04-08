@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.dgvCartelera = new System.Windows.Forms.DataGridView();
+            this.btnDetallesCar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCartelera)).BeginInit();
             this.SuspendLayout();
             // 
@@ -39,16 +40,27 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCartelera.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCartelera.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCartelera.Location = new System.Drawing.Point(97, 42);
+            this.dgvCartelera.Location = new System.Drawing.Point(152, 12);
             this.dgvCartelera.Name = "dgvCartelera";
-            this.dgvCartelera.Size = new System.Drawing.Size(326, 274);
+            this.dgvCartelera.Size = new System.Drawing.Size(471, 344);
             this.dgvCartelera.TabIndex = 0;
+            // 
+            // btnDetallesCar
+            // 
+            this.btnDetallesCar.Location = new System.Drawing.Point(31, 94);
+            this.btnDetallesCar.Name = "btnDetallesCar";
+            this.btnDetallesCar.Size = new System.Drawing.Size(75, 23);
+            this.btnDetallesCar.TabIndex = 1;
+            this.btnDetallesCar.Text = "Detalles";
+            this.btnDetallesCar.UseVisualStyleBackColor = true;
+            this.btnDetallesCar.Click += new System.EventHandler(this.btnDetallesCar_Click);
             // 
             // CarteleraForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(490, 356);
+            this.ClientSize = new System.Drawing.Size(635, 368);
+            this.Controls.Add(this.btnDetallesCar);
             this.Controls.Add(this.dgvCartelera);
             this.Name = "CarteleraForm";
             this.Text = "CarteleraForm";
@@ -61,5 +73,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvCartelera;
+        private System.Windows.Forms.Button btnDetallesCar;
     }
 }
